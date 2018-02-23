@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link href="static/css/index.css" rel="stylesheet">
+    <link rel="icon" href="static/favicon.ico">
+  </head>
+  <body>
+    <!-- SVG-->
+    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon-vintage-logo" viewBox="0 0 84.1 115.5">
+          <style>
+            .st0 {
+              fill: #000
+            }
+          </style>
+          <path d="M21.7 0H0l5.1 19.8h21.5z" />
+          <path d="M63.2 0L33.7 115.5h21L84.1 0z" />
+        </symbol>
+      </svg>
+    </div>
+    <!-- picture element HTML5 shiv-->
+    <script>
+      document.createElement('picture');
+    </script>
+    <!-- Header-->
+    <header></header>
+    <!-- Main content-->
+    <main class="content" data-page="home">
+      <section class="screen">
+        <svg data-section-svg="a" data-section-svg-fill="#51E3C2" width="1280px" height="577px" viewBox="0 0 1280 577">
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g fill="#51E3C2">
+              <g transform="translate(334.000000, 0.000000)">
+                <path id="a-big" d="M504.8,547 L421.6,547 C381.6,547 370,538.5 363.9,514.7 L346.2,459.3 L179.9,459.3 L162.2,514.7 C154.5,538.6 144.5,547 106,547 L25.2,547 C1.3,547 -3.3,536.2 4.4,515.4 L181.5,27.3 C189.2,5 199.2,0.4 221.5,0.4 L309.3,0.4 C331.6,0.4 341.6,5.8 349.3,25.8 L527.1,515.5 C534.9,536.2 527.9,547 504.8,547 Z"></path>
+                <path id="a-small" d="M766.6,135 C902.9,135 946,202.8 946,301.3 L946,490.7 C946,519.2 939.8,527.7 916.7,536.9 C885.9,550 834.3,558.5 764.3,558.5 C619.6,558.5 581.1,516.9 581.1,430.7 C581.1,330.6 636.5,302.1 768.2,302.1 C781.3,302.1 794.4,302.9 802.8,302.9 L802.8,283.7 C802.8,258.3 791.3,244.4 759.7,244.4 C734.3,244.4 720.4,255.9 709.7,270.6 C699.7,284.5 692,290.6 667.4,280.6 L612,257.5 C591.2,248.3 584.3,237.5 595.8,215.2 C623.4,162 680.4,135 766.6,135 Z"></path>
+              </g>
+              <path id="a-circle-bottom" d="M70,486.9a90.1,90.1 0 1,0 180.2,0a90.1,90.1 0 1,0 -180.2,0"></path>
+              <path id="a-circle-top" d="M0,80.1a80.1,80.1 0 1,0 160.2,0a80.1,80.1 0 1,0 -160.2,0"></path>
+            </g>
+          </g>
+        </svg>
+        <canvas class="screen__canvas" id="canvas"></canvas>
+        <button id="button" type="button">toggle BLUR</button>
+      </section>
+    </main>
+    <!-- Footer-->
+    <footer></footer>
+    <!-- Scripts-->
+    <script src="static/js/index.js"></script>
+  </body>
+</html>
