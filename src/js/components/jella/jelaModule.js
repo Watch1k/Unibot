@@ -41,7 +41,6 @@ export default class Jelateria {
 		this.container.y = 0;
 		this.mPixi = new Mouse(this.app.view);
 		const graphics = new PIXI.Graphics();
-		this.graphics2 = new PIXI.Graphics();
 		const gradient = new PIXI.Sprite.fromImage('static/img/gradient.png');
 		
 		gradient.anchor.set(0.5, 0.5);
@@ -56,17 +55,13 @@ export default class Jelateria {
 			island.dots.forEach(dot => {
 				dot.move(this.mPixi);
 				dot.drawPixi(graphics);
-				dot.drawPixi(this.graphics2);
 			});
 			//this.ConnectDots(island);
 		});
 		this.container.addChild(gradient);
 		this.app.stage.addChild(this.container);
 		this.app.stage.addChild(graphics);
-		this.app.stage.addChild(this.graphics2);
-		this.graphics2.scale.set(1.2);
 		this.container.mask = graphics;
-		this.graphics2.mask = graphics;
 		
 		this.app.ticker.add(() => {
 			graphics.clear();
@@ -78,10 +73,8 @@ export default class Jelateria {
 				island.dots.forEach(dot => {
 					dot.move(this.mPixi);
 					dot.drawPixi(graphics);
-					dot.drawPixi(this.graphics2);
 				});
 				this.ConnectDotsPixi(island, graphics);
-				this.ConnectDotsPixi(island, this.graphics2);
 			});
 		});
 	}
@@ -208,9 +201,9 @@ export default class Jelateria {
 			const blurFilter = new PIXI.filters.BlurFilter(3);
 			const glowFilter = new filters.GlowFilter(20, 0.25, 0.25, 0xffffff);
 			if (this.blurState) {
-				this.graphics2.filters = [glowFilter, blurFilter];
+				this.container.filters = [blurFilter];
 			} else {
-				this.graphics2.filters = [glowFilter];
+				this.container.filters = [];
 			}
 			//graphics.fillStyle = island.color;
 			//graphics.fill();
