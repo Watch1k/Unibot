@@ -21303,6 +21303,7 @@ var Jelateria = function () {
 			this.container.y = 0;
 			this.mPixi = new _Mouse2.default(this.app.view);
 			var graphics = new PIXI.Graphics();
+			this.graphics2 = new PIXI.Graphics();
 			var gradient = new PIXI.Sprite.fromImage('static/img/gradient.png');
 
 			gradient.anchor.set(0.5, 0.5);
@@ -21317,13 +21318,17 @@ var Jelateria = function () {
 				island.dots.forEach(function (dot) {
 					dot.move(_this.mPixi);
 					dot.drawPixi(graphics);
+					dot.drawPixi(_this.graphics2);
 				});
 				//this.ConnectDots(island);
 			});
 			this.container.addChild(gradient);
 			this.app.stage.addChild(this.container);
 			this.app.stage.addChild(graphics);
+			this.app.stage.addChild(this.graphics2);
+			this.graphics2.scale.set(1.2);
 			this.container.mask = graphics;
+			this.graphics2.mask = graphics;
 
 			this.app.ticker.add(function () {
 				graphics.clear();
@@ -21335,8 +21340,10 @@ var Jelateria = function () {
 					island.dots.forEach(function (dot) {
 						dot.move(_this.mPixi);
 						dot.drawPixi(graphics);
+						dot.drawPixi(_this.graphics2);
 					});
 					_this.ConnectDotsPixi(island, graphics);
+					_this.ConnectDotsPixi(island, _this.graphics2);
 				});
 			});
 		}
@@ -21442,14 +21449,12 @@ var Jelateria = function () {
 				//graphics.lineStyle(4, 0xffd900, 1);
 				graphics.lineStyle(0);
 				graphics.endFill();
-				var fxaaFilter = new PIXI.filters.FXAAFilter();
 				var blurFilter = new PIXI.filters.BlurFilter(3);
 				var glowFilter = new filters.GlowFilter(20, 0.25, 0.25, 0xffffff);
-				this.app.filters = [fxaaFilter];
 				if (this.blurState) {
-					this.container.filters = [glowFilter, blurFilter];
+					this.graphics2.filters = [glowFilter, blurFilter];
 				} else {
-					this.container.filters = [glowFilter];
+					this.graphics2.filters = [glowFilter];
 				}
 				//graphics.fillStyle = island.color;
 				//graphics.fill();
