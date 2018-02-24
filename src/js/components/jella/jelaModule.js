@@ -1,5 +1,4 @@
 import * as filters from 'pixi-filters';
-import { hex2number } from '../../modules/dev/_helpers';
 import Ball from './ball';
 import Dot from './jellydot';
 import Mouse from './Mouse';
@@ -49,13 +48,6 @@ export default class Jelateria {
 		gradient.x = 300;
 		gradient.y = 150;
 		
-		// mouse draw
-		this.centerBall.x = this.mPixi.pos.x;
-		this.centerBall.y = this.mPixi.pos.y;
-		this.centerBall.draw(this.ctx);
-		// end
-		
-		graphics.lineStyle(2, 0xFF00FF, 1);
 		this.islands.forEach(island => {
 			island.dots.forEach(dot => {
 				dot.think();
@@ -73,7 +65,6 @@ export default class Jelateria {
 		
 		this.app.ticker.add(() => {
 			graphics.clear();
-			graphics.lineStyle(2, 0xFF00FF, 1);
 			
 			this.islands.forEach(island => {
 				island.dots.forEach(dot => {
@@ -207,8 +198,10 @@ export default class Jelateria {
 			//graphics.lineStyle(4, 0xffd900, 1);
 			graphics.lineStyle(0);
 			graphics.endFill();
+			const fxaaFilter = new PIXI.filters.FXAAFilter();
 			const blurFilter = new PIXI.filters.BlurFilter(3);
-			const glowFilter = new filters.GlowFilter(20, 0, 0.25, 0xffffff);
+			const glowFilter = new filters.GlowFilter(20, 0.25, 0.25, 0xffffff);
+			this.app.filters = [fxaaFilter];
 			if (this.blurState) {
 				this.container.filters = [glowFilter, blurFilter];
 			} else {
