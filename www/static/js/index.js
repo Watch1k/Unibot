@@ -20876,6 +20876,14 @@ var Home = function () {
 					points: 15,
 					scale: 32,
 					blur: 4
+				}, {
+					radius: 70,
+					path: '#path-screen-4',
+					offsetX: 0,
+					offsetY: 270,
+					points: 15,
+					scale: 32,
+					blur: 7
 				}],
 				gradients: [{
 					name: 'screen-gradient-1-1'
@@ -20883,6 +20891,8 @@ var Home = function () {
 					name: 'screen-gradient-2-1'
 				}, {
 					name: 'screen-gradient-3-1'
+				}, {
+					name: 'screen-gradient-4-1'
 				}]
 			});
 
