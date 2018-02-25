@@ -11,6 +11,7 @@ export default class Jelateria {
 		this.paths = opts.paths;
 		this.islands = [];
 		this.radius = opts.radius || 50;
+		this.jellyArray = [];
 		this.parsePaths();
 		this.offsetX = opts.paths[0].offsetX;
 		this.offsetY = opts.paths[0].offsetY;
@@ -31,47 +32,61 @@ export default class Jelateria {
 		this.height = parseInt(style.height);
 		this.width = parseInt(style.width);
 		
-		this.container = new PIXI.Container();
-		this.container.x = 0;
-		this.container.y = 0;
 		this.mPixi = new Mouse(this.app.view);
-		const graphics = new PIXI.Graphics();
-		const gradient = new PIXI.Sprite.fromImage(`static/img/${this.gradients[0].name}.png`);
 		const blurFilter = new PIXI.filters.BlurFilter(this.paths[0].blur);
+		
+		this.paths.forEach((el, index) => {
+			this.jellyArray.push(this.initJelly(index));
+		});
+		
+		this.app.ticker.add(() => {
+			this.jellyArray.forEach((jelly, index) => {
+				jelly.graphics.clear();
+				
+				this.islands[index].dots.forEach(dot => {
+					dot.think();
+				});
+				this.islands[index].dots.forEach(dot => {
+					dot.move(this.mPixi);
+					dot.drawPixi(jelly.graphics);
+				});
+				this.ConnectDotsPixi(this.islands[index], jelly.graphics);
+			});
+			//this.paths[0].blur ? this.container.filters = [blurFilter] : this.container.filters = [];
+		});
+	}
+	
+	initJelly(curIndex) {
+		const graphics = new PIXI.Graphics();
+		const container = new PIXI.Container();
+		const gradient = new PIXI.Sprite.fromImage(`static/img/${this.gradients[curIndex].name}.png`);
+		
+		container.x = 0;
+		container.y = 0;
 		
 		gradient.texture.baseTexture.on('loaded', () => {
 			const curWidth = gradient.width;
 			const curHeight = gradient.height;
 			gradient.anchor.set(0.5, 0.5);
 			gradient.scale.set(1.4);
-			gradient.x = this.canvasWidth / 2 + this.offsetX + curWidth / 2;
-			gradient.y = this.offsetY + curHeight / 2;
+			gradient.x = this.canvasWidth / 2 + this.paths[curIndex].offsetX + curWidth / 2;
+			gradient.y = this.paths[curIndex].offsetY + curHeight / 2;
 		});
 		
-		this.container.addChild(gradient);
-		this.app.stage.addChild(this.container);
+		container.addChild(gradient);
+		this.app.stage.addChild(container);
 		this.app.stage.addChild(graphics);
-		this.container.mask = graphics;
+		container.mask = graphics;
 		
-		this.app.ticker.add(() => {
-			graphics.clear();
-			
-			this.islands.forEach(island => {
-				island.dots.forEach(dot => {
-					dot.think();
-				});
-				island.dots.forEach(dot => {
-					dot.move(this.mPixi);
-					dot.drawPixi(graphics);
-				});
-				this.ConnectDotsPixi(island, graphics);
-			});
-			this.paths[0].blur ? this.container.filters = [blurFilter] : this.container.filters = [];
-		});
+		return {
+			graphics: graphics,
+			container: container,
+			gradient: gradient
+		};
 	}
 	
 	parsePaths() {
-		this.paths.forEach(path => {
+		this.paths.forEach((path, index) => {
 			let island = {};
 			island.dots = [];
 			const offsetX = this.canvasWidth / 2 + path.offsetX;
@@ -86,7 +101,7 @@ export default class Jelateria {
 				path.backlash,
 				path.route
 			).forEach(dot => {
-				island.dots.push(new Dot(dot[0], dot[1], this.radius));
+				island.dots.push(new Dot(dot[0], dot[1], this.paths[index].radius));
 			});
 			island.color = path.color;
 			island.float = path.float;
