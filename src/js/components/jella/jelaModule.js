@@ -33,7 +33,6 @@ export default class Jelateria {
 		this.width = parseInt(style.width);
 		
 		this.mPixi = new Mouse(this.app.view);
-		const blurFilter = new PIXI.filters.BlurFilter(this.paths[0].blur);
 		
 		this.paths.forEach((el, index) => {
 			this.jellyArray.push(this.initJelly(index));
@@ -52,7 +51,6 @@ export default class Jelateria {
 				});
 				this.ConnectDotsPixi(this.islands[index], jelly.graphics);
 			});
-			//this.paths[0].blur ? this.container.filters = [blurFilter] : this.container.filters = [];
 		});
 	}
 	
@@ -77,6 +75,11 @@ export default class Jelateria {
 		this.app.stage.addChild(container);
 		this.app.stage.addChild(graphics);
 		container.mask = graphics;
+		
+		if (this.paths[curIndex].blur) {
+			const blurFilter = new PIXI.filters.BlurFilter(this.paths[curIndex].blur);
+			container.filters = [blurFilter];
+		}
 		
 		return {
 			graphics: graphics,

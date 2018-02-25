@@ -20868,11 +20868,21 @@ var Home = function () {
 					offsetY: -45,
 					points: 25,
 					scale: 37
+				}, {
+					radius: 70,
+					path: '#path-screen-3',
+					offsetX: -660,
+					offsetY: 570,
+					points: 15,
+					scale: 32,
+					blur: 4
 				}],
 				gradients: [{
 					name: 'screen-gradient-1-1'
 				}, {
 					name: 'screen-gradient-2-1'
+				}, {
+					name: 'screen-gradient-3-1'
 				}]
 			});
 
@@ -20952,7 +20962,6 @@ var Jelateria = function () {
 			this.width = parseInt(style.width);
 
 			this.mPixi = new _Mouse2.default(this.app.view);
-			var blurFilter = new PIXI.filters.BlurFilter(this.paths[0].blur);
 
 			this.paths.forEach(function (el, index) {
 				_this.jellyArray.push(_this.initJelly(index));
@@ -20971,7 +20980,6 @@ var Jelateria = function () {
 					});
 					_this.ConnectDotsPixi(_this.islands[index], jelly.graphics);
 				});
-				//this.paths[0].blur ? this.container.filters = [blurFilter] : this.container.filters = [];
 			});
 		}
 	}, {
@@ -20999,6 +21007,11 @@ var Jelateria = function () {
 			this.app.stage.addChild(container);
 			this.app.stage.addChild(graphics);
 			container.mask = graphics;
+
+			if (this.paths[curIndex].blur) {
+				var blurFilter = new PIXI.filters.BlurFilter(this.paths[curIndex].blur);
+				container.filters = [blurFilter];
+			}
 
 			return {
 				graphics: graphics,
