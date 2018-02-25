@@ -33,11 +33,18 @@ export default class Home {
 			}, {
 				radius: 70,
 				path: '#path-screen-4',
-				offsetX: 0,
-				offsetY: 270,
+				offsetX: 160,
+				offsetY: 425,
 				points: 15,
 				scale: 32,
 				blur: 7
+			}, {
+				radius: 100,
+				path: '#path-screen-5',
+				offsetX: 290,
+				offsetY: 450,
+				points: 25,
+				scale: 32
 			}],
 			gradients: [{
 				name: 'screen-gradient-1-1'
@@ -47,6 +54,8 @@ export default class Home {
 				name: 'screen-gradient-3-1'
 			}, {
 				name: 'screen-gradient-4-1'
+			}, {
+				name: 'screen-gradient-5-1'
 			}]
 		});
 		
