@@ -20864,10 +20864,11 @@ var Home = function () {
 				}, {
 					radius: 100,
 					path: '#path-screen-2',
-					offsetX: 365,
+					offsetX: -300,
 					offsetY: -45,
 					points: 25,
-					scale: 37
+					scale: 37,
+					right: true
 				}, {
 					radius: 70,
 					path: '#path-screen-3',
@@ -21016,10 +21017,10 @@ var Jelateria = function () {
 			gradient.texture.baseTexture.on('loaded', function () {
 				var curWidth = gradient.width;
 				var curHeight = gradient.height;
-				gradient.anchor.set(0.5, 0.5);
-				gradient.scale.set(1.4);
-				gradient.x = _this2.canvasWidth / 2 + _this2.paths[curIndex].offsetX + curWidth / 2;
-				gradient.y = _this2.paths[curIndex].offsetY + curHeight / 2;
+				//gradient.anchor.set(0.5, 0.5);
+				//gradient.scale.set(1.4);
+				gradient.x = _this2.paths[curIndex].right ? _this2.canvasWidth + _this2.paths[curIndex].offsetX - 10 : _this2.canvasWidth / 2 + _this2.paths[curIndex].offsetX - 10;
+				gradient.y = _this2.paths[curIndex].offsetY - 10;
 			});
 
 			container.addChild(gradient);
@@ -21046,7 +21047,7 @@ var Jelateria = function () {
 			this.paths.forEach(function (path, index) {
 				var island = {};
 				island.dots = [];
-				var offsetX = _this3.canvasWidth / 2 + path.offsetX;
+				var offsetX = _this3.paths[index].right ? _this3.canvasWidth + path.offsetX : _this3.canvasWidth / 2 + path.offsetX;
 				(0, _SvgParse2.default)(path.path, path.points, offsetX, path.offsetY, path.scale, path.speedIsland, path.motion, path.backlash, path.route).forEach(function (dot) {
 					island.dots.push(new _jellydot2.default(dot[0], dot[1], _this3.paths[index].radius));
 				});

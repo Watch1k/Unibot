@@ -65,10 +65,16 @@ export default class Jelateria {
 		gradient.texture.baseTexture.on('loaded', () => {
 			const curWidth = gradient.width;
 			const curHeight = gradient.height;
-			gradient.anchor.set(0.5, 0.5);
-			gradient.scale.set(1.4);
-			gradient.x = this.canvasWidth / 2 + this.paths[curIndex].offsetX + curWidth / 2;
-			gradient.y = this.paths[curIndex].offsetY + curHeight / 2;
+			//gradient.anchor.set(0.5, 0.5);
+			//gradient.scale.set(1.4);
+			gradient.x = do {
+				if (this.paths[curIndex].right) {
+					this.canvasWidth + this.paths[curIndex].offsetX - 10;
+				} else {
+					this.canvasWidth / 2 + this.paths[curIndex].offsetX - 10;
+				}
+			};
+			gradient.y = this.paths[curIndex].offsetY - 10;
 		});
 		
 		container.addChild(gradient);
@@ -92,7 +98,7 @@ export default class Jelateria {
 		this.paths.forEach((path, index) => {
 			let island = {};
 			island.dots = [];
-			const offsetX = this.canvasWidth / 2 + path.offsetX;
+			const offsetX = this.paths[index].right ? this.canvasWidth + path.offsetX : this.canvasWidth / 2 + path.offsetX;
 			SvgParse(
 				path.path,
 				path.points,

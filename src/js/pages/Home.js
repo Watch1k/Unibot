@@ -18,10 +18,11 @@ export default class Home {
 			}, {
 				radius: 100,
 				path: '#path-screen-2',
-				offsetX: 365,
+				offsetX: -300,
 				offsetY: -45,
 				points: 25,
-				scale: 37
+				scale: 37,
+				right: true
 			}, {
 				radius: 70,
 				path: '#path-screen-3',
