@@ -15,13 +15,12 @@ export default function SvgParse(SvgSelector,
 	// Смещение картинки относительно левого верхнего угла в пикселях
 	leftOffset = leftOffset || 0;
 	topOffset = topOffset || 0;
-	let XOFF = 100 + leftOffset;
-	let YOFF = 100 + topOffset;
+	let XOFF = leftOffset;
+	let YOFF = topOffset;
 	let RANDOM_OFFSET = false;
 	// Итоговый размер картинки в ширину который мы хотим
 	
 	scale = scale || 150;
-	strokeFlag = strokeFlag;
 	speedIsland = 0;
 	motion = motion;
 	backlash = backlash;

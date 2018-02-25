@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 91);
+/******/ 	return __webpack_require__(__webpack_require__.s = 90);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -169,7 +169,7 @@ Object.defineProperty(exports, 'Sprite', {
   }
 });
 
-var _CanvasSpriteRenderer = __webpack_require__(128);
+var _CanvasSpriteRenderer = __webpack_require__(127);
 
 Object.defineProperty(exports, 'CanvasSpriteRenderer', {
   enumerable: true,
@@ -187,7 +187,7 @@ Object.defineProperty(exports, 'CanvasTinter', {
   }
 });
 
-var _SpriteRenderer = __webpack_require__(131);
+var _SpriteRenderer = __webpack_require__(130);
 
 Object.defineProperty(exports, 'SpriteRenderer', {
   enumerable: true,
@@ -196,7 +196,7 @@ Object.defineProperty(exports, 'SpriteRenderer', {
   }
 });
 
-var _Text = __webpack_require__(147);
+var _Text = __webpack_require__(146);
 
 Object.defineProperty(exports, 'Text', {
   enumerable: true,
@@ -223,7 +223,7 @@ Object.defineProperty(exports, 'TextMetrics', {
   }
 });
 
-var _Graphics = __webpack_require__(149);
+var _Graphics = __webpack_require__(148);
 
 Object.defineProperty(exports, 'Graphics', {
   enumerable: true,
@@ -241,7 +241,7 @@ Object.defineProperty(exports, 'GraphicsData', {
   }
 });
 
-var _GraphicsRenderer = __webpack_require__(151);
+var _GraphicsRenderer = __webpack_require__(150);
 
 Object.defineProperty(exports, 'GraphicsRenderer', {
   enumerable: true,
@@ -250,7 +250,7 @@ Object.defineProperty(exports, 'GraphicsRenderer', {
   }
 });
 
-var _CanvasGraphicsRenderer = __webpack_require__(158);
+var _CanvasGraphicsRenderer = __webpack_require__(157);
 
 Object.defineProperty(exports, 'CanvasGraphicsRenderer', {
   enumerable: true,
@@ -259,7 +259,7 @@ Object.defineProperty(exports, 'CanvasGraphicsRenderer', {
   }
 });
 
-var _Spritesheet = __webpack_require__(159);
+var _Spritesheet = __webpack_require__(158);
 
 Object.defineProperty(exports, 'Spritesheet', {
   enumerable: true,
@@ -812,7 +812,7 @@ var UPDATE_PRIORITY = exports.UPDATE_PRIORITY = {
 exports.__esModule = true;
 exports.loader = exports.prepare = exports.particles = exports.mesh = exports.loaders = exports.interaction = exports.filters = exports.extras = exports.extract = exports.accessibility = undefined;
 
-var _polyfill = __webpack_require__(99);
+var _polyfill = __webpack_require__(98);
 
 Object.keys(_polyfill).forEach(function (key) {
     if (key === "default" || key === "__esModule") return;
@@ -836,15 +836,15 @@ Object.keys(_core).forEach(function (key) {
     });
 });
 
-var _deprecation = __webpack_require__(160);
+var _deprecation = __webpack_require__(159);
 
 var _deprecation2 = _interopRequireDefault(_deprecation);
 
-var _accessibility = __webpack_require__(161);
+var _accessibility = __webpack_require__(160);
 
 var accessibility = _interopRequireWildcard(_accessibility);
 
-var _extract = __webpack_require__(163);
+var _extract = __webpack_require__(162);
 
 var extract = _interopRequireWildcard(_extract);
 
@@ -852,27 +852,27 @@ var _extras = __webpack_require__(70);
 
 var extras = _interopRequireWildcard(_extras);
 
-var _filters = __webpack_require__(173);
+var _filters = __webpack_require__(172);
 
 var filters = _interopRequireWildcard(_filters);
 
-var _interaction = __webpack_require__(180);
+var _interaction = __webpack_require__(179);
 
 var interaction = _interopRequireWildcard(_interaction);
 
-var _loaders = __webpack_require__(182);
+var _loaders = __webpack_require__(181);
 
 var loaders = _interopRequireWildcard(_loaders);
 
-var _mesh = __webpack_require__(186);
+var _mesh = __webpack_require__(185);
 
 var mesh = _interopRequireWildcard(_mesh);
 
-var _particles = __webpack_require__(191);
+var _particles = __webpack_require__(190);
 
 var particles = _interopRequireWildcard(_particles);
 
-var _prepare = __webpack_require__(196);
+var _prepare = __webpack_require__(195);
 
 var prepare = _interopRequireWildcard(_prepare);
 
@@ -958,11 +958,11 @@ var _eventemitter = __webpack_require__(9);
 
 var _eventemitter2 = _interopRequireDefault(_eventemitter);
 
-var _pluginTarget = __webpack_require__(116);
+var _pluginTarget = __webpack_require__(115);
 
 var _pluginTarget2 = _interopRequireDefault(_pluginTarget);
 
-var _mixin = __webpack_require__(117);
+var _mixin = __webpack_require__(116);
 
 var mixins = _interopRequireWildcard(_mixin);
 
@@ -970,11 +970,11 @@ var _ismobilejs = __webpack_require__(27);
 
 var isMobile = _interopRequireWildcard(_ismobilejs);
 
-var _removeArrayItems = __webpack_require__(118);
+var _removeArrayItems = __webpack_require__(117);
 
 var _removeArrayItems2 = _interopRequireDefault(_removeArrayItems);
 
-var _mapPremultipliedBlendModes = __webpack_require__(119);
+var _mapPremultipliedBlendModes = __webpack_require__(118);
 
 var _mapPremultipliedBlendModes2 = _interopRequireDefault(_mapPremultipliedBlendModes);
 
@@ -1411,11 +1411,11 @@ function premultiplyTintToRgba(tint, alpha, out, premultiply) {
 
 exports.__esModule = true;
 
-var _maxRecommendedTextures = __webpack_require__(114);
+var _maxRecommendedTextures = __webpack_require__(113);
 
 var _maxRecommendedTextures2 = _interopRequireDefault(_maxRecommendedTextures);
 
-var _canUploadSameBuffer = __webpack_require__(115);
+var _canUploadSameBuffer = __webpack_require__(114);
 
 var _canUploadSameBuffer2 = _interopRequireDefault(_canUploadSameBuffer);
 
@@ -1697,7 +1697,7 @@ Object.defineProperty(exports, 'GroupD8', {
   }
 });
 
-var _Circle = __webpack_require__(104);
+var _Circle = __webpack_require__(103);
 
 Object.defineProperty(exports, 'Circle', {
   enumerable: true,
@@ -1706,7 +1706,7 @@ Object.defineProperty(exports, 'Circle', {
   }
 });
 
-var _Ellipse = __webpack_require__(105);
+var _Ellipse = __webpack_require__(104);
 
 Object.defineProperty(exports, 'Ellipse', {
   enumerable: true,
@@ -1715,7 +1715,7 @@ Object.defineProperty(exports, 'Ellipse', {
   }
 });
 
-var _Polygon = __webpack_require__(106);
+var _Polygon = __webpack_require__(105);
 
 Object.defineProperty(exports, 'Polygon', {
   enumerable: true,
@@ -1733,7 +1733,7 @@ Object.defineProperty(exports, 'Rectangle', {
   }
 });
 
-var _RoundedRectangle = __webpack_require__(107);
+var _RoundedRectangle = __webpack_require__(106);
 
 Object.defineProperty(exports, 'RoundedRectangle', {
   enumerable: true,
@@ -1750,14 +1750,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /***/ (function(module, exports, __webpack_require__) {
 
 var gl = {
-    createContext:          __webpack_require__(108),
+    createContext:          __webpack_require__(107),
     setVertexAttribArrays:  __webpack_require__(39),
-    GLBuffer:               __webpack_require__(109),
-    GLFramebuffer:          __webpack_require__(110),
-    GLShader:               __webpack_require__(111),
+    GLBuffer:               __webpack_require__(108),
+    GLFramebuffer:          __webpack_require__(109),
+    GLShader:               __webpack_require__(110),
     GLTexture:              __webpack_require__(40),
-    VertexArrayObject:      __webpack_require__(112),
-    shader:                 __webpack_require__(113)
+    VertexArrayObject:      __webpack_require__(111),
+    shader:                 __webpack_require__(112)
 };
 
 // Export for Node-compatible environments
@@ -2005,7 +2005,7 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(134)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(133)))
 
 /***/ }),
 /* 8 */
@@ -4509,7 +4509,7 @@ var _SystemRenderer2 = __webpack_require__(55);
 
 var _SystemRenderer3 = _interopRequireDefault(_SystemRenderer2);
 
-var _CanvasMaskManager = __webpack_require__(129);
+var _CanvasMaskManager = __webpack_require__(128);
 
 var _CanvasMaskManager2 = _interopRequireDefault(_CanvasMaskManager);
 
@@ -4517,7 +4517,7 @@ var _CanvasRenderTarget = __webpack_require__(57);
 
 var _CanvasRenderTarget2 = _interopRequireDefault(_CanvasRenderTarget);
 
-var _mapCanvasBlendModesToPixi = __webpack_require__(130);
+var _mapCanvasBlendModesToPixi = __webpack_require__(129);
 
 var _mapCanvasBlendModesToPixi2 = _interopRequireDefault(_mapCanvasBlendModesToPixi);
 
@@ -5012,7 +5012,7 @@ exports.default = Shader;
 
 /* eslint-disable no-undef */
 
-var Loader = __webpack_require__(183).default;
+var Loader = __webpack_require__(182).default;
 var Resource = __webpack_require__(35).default;
 var async = __webpack_require__(83);
 var b64 = __webpack_require__(84);
@@ -5497,15 +5497,15 @@ var _SystemRenderer2 = __webpack_require__(55);
 
 var _SystemRenderer3 = _interopRequireDefault(_SystemRenderer2);
 
-var _MaskManager = __webpack_require__(132);
+var _MaskManager = __webpack_require__(131);
 
 var _MaskManager2 = _interopRequireDefault(_MaskManager);
 
-var _StencilManager = __webpack_require__(135);
+var _StencilManager = __webpack_require__(134);
 
 var _StencilManager2 = _interopRequireDefault(_StencilManager);
 
-var _FilterManager = __webpack_require__(136);
+var _FilterManager = __webpack_require__(135);
 
 var _FilterManager2 = _interopRequireDefault(_FilterManager);
 
@@ -5517,7 +5517,7 @@ var _ObjectRenderer = __webpack_require__(17);
 
 var _ObjectRenderer2 = _interopRequireDefault(_ObjectRenderer);
 
-var _TextureManager = __webpack_require__(138);
+var _TextureManager = __webpack_require__(137);
 
 var _TextureManager2 = _interopRequireDefault(_TextureManager);
 
@@ -5525,19 +5525,19 @@ var _BaseTexture = __webpack_require__(10);
 
 var _BaseTexture2 = _interopRequireDefault(_BaseTexture);
 
-var _TextureGarbageCollector = __webpack_require__(139);
+var _TextureGarbageCollector = __webpack_require__(138);
 
 var _TextureGarbageCollector2 = _interopRequireDefault(_TextureGarbageCollector);
 
-var _WebGLState = __webpack_require__(140);
+var _WebGLState = __webpack_require__(139);
 
 var _WebGLState2 = _interopRequireDefault(_WebGLState);
 
-var _mapWebGLDrawModesToPixi = __webpack_require__(142);
+var _mapWebGLDrawModesToPixi = __webpack_require__(141);
 
 var _mapWebGLDrawModesToPixi2 = _interopRequireDefault(_mapWebGLDrawModesToPixi);
 
-var _validateContext = __webpack_require__(143);
+var _validateContext = __webpack_require__(142);
 
 var _validateContext2 = _interopRequireDefault(_validateContext);
 
@@ -9327,7 +9327,7 @@ exports.nextCombination = function(v) {
 exports.__esModule = true;
 exports.Ticker = exports.shared = undefined;
 
-var _Ticker = __webpack_require__(126);
+var _Ticker = __webpack_require__(125);
 
 var _Ticker2 = _interopRequireDefault(_Ticker);
 
@@ -13870,8 +13870,8 @@ function determineCrossOrigin(url) {
 
 
 
-var punycode = __webpack_require__(120);
-var util = __webpack_require__(122);
+var punycode = __webpack_require__(119);
+var util = __webpack_require__(121);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -13946,7 +13946,7 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
       'gopher:': true,
       'file:': true
     },
-    querystring = __webpack_require__(123);
+    querystring = __webpack_require__(122);
 
 function urlParse(url, parseQueryString, slashesDenoteHost) {
   if (url && util.isObject(url) && url instanceof Url) return url;
@@ -15874,7 +15874,7 @@ exports.__esModule = true;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _extractUniformsFromSrc = __webpack_require__(133);
+var _extractUniformsFromSrc = __webpack_require__(132);
 
 var _extractUniformsFromSrc2 = _interopRequireDefault(_extractUniformsFromSrc);
 
@@ -18707,7 +18707,7 @@ exports.default = {
 exports.__esModule = true;
 exports.BitmapText = exports.TilingSpriteRenderer = exports.TilingSprite = exports.AnimatedSprite = undefined;
 
-var _AnimatedSprite = __webpack_require__(166);
+var _AnimatedSprite = __webpack_require__(165);
 
 Object.defineProperty(exports, 'AnimatedSprite', {
   enumerable: true,
@@ -18716,7 +18716,7 @@ Object.defineProperty(exports, 'AnimatedSprite', {
   }
 });
 
-var _TilingSprite = __webpack_require__(167);
+var _TilingSprite = __webpack_require__(166);
 
 Object.defineProperty(exports, 'TilingSprite', {
   enumerable: true,
@@ -18725,7 +18725,7 @@ Object.defineProperty(exports, 'TilingSprite', {
   }
 });
 
-var _TilingSpriteRenderer = __webpack_require__(168);
+var _TilingSpriteRenderer = __webpack_require__(167);
 
 Object.defineProperty(exports, 'TilingSpriteRenderer', {
   enumerable: true,
@@ -18734,7 +18734,7 @@ Object.defineProperty(exports, 'TilingSpriteRenderer', {
   }
 });
 
-var _BitmapText = __webpack_require__(169);
+var _BitmapText = __webpack_require__(168);
 
 Object.defineProperty(exports, 'BitmapText', {
   enumerable: true,
@@ -18743,11 +18743,11 @@ Object.defineProperty(exports, 'BitmapText', {
   }
 });
 
+__webpack_require__(169);
+
 __webpack_require__(170);
 
 __webpack_require__(171);
-
-__webpack_require__(172);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20739,231 +20739,8 @@ exports.default = CountLimiter;
 //# sourceMappingURL=CountLimiter.js.map
 
 /***/ }),
-/* 89 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KawaseBlurFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-kawase-blur - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-kawase-blur is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="\nvarying vec2 vTextureCoord;\nuniform sampler2D uSampler;\n\nuniform vec2 uOffset;\n\nvoid main(void)\n{\n    vec4 color = vec4(0.0);\n\n    // Sample top left pixel\n    color += texture2D(uSampler, vec2(vTextureCoord.x - uOffset.x, vTextureCoord.y + uOffset.y));\n\n    // Sample top right pixel\n    color += texture2D(uSampler, vec2(vTextureCoord.x + uOffset.x, vTextureCoord.y + uOffset.y));\n\n    // Sample bottom right pixel\n    color += texture2D(uSampler, vec2(vTextureCoord.x + uOffset.x, vTextureCoord.y - uOffset.y));\n\n    // Sample bottom left pixel\n    color += texture2D(uSampler, vec2(vTextureCoord.x - uOffset.x, vTextureCoord.y - uOffset.y));\n\n    // Average\n    color *= 0.25;\n\n    gl_FragColor = color;\n}\n",KawaseBlurFilter=function(e){function t(t,i){void 0===t&&(t=4),void 0===i&&(i=3),e.call(this,vertex,fragment),this._pixelSize=new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"],this.pixelSize=1,this._kernels=null,Array.isArray(t)?this.kernels=t:(this._blur=t,this.quality=i)}e&&(t.__proto__=e),t.prototype=Object.create(e&&e.prototype),t.prototype.constructor=t;var i={kernels:{configurable:!0},pixelSize:{configurable:!0},quality:{configurable:!0},blur:{configurable:!0}};return t.prototype.apply=function(e,t,i,r){var n,o=this.pixelSize.x/t.size.width,s=this.pixelSize.y/t.size.height;if(1===this._quality||0===this._blur)n=this._kernels[0]+.5,this.uniforms.uOffset[0]=n*o,this.uniforms.uOffset[1]=n*s,e.applyFilter(this,t,i,r);else{for(var l,u=e.getRenderTarget(!0),a=t,f=u,p=this._quality-1,x=0;x<p;x++)n=this._kernels[x]+.5,this.uniforms.uOffset[0]=n*o,this.uniforms.uOffset[1]=n*s,e.applyFilter(this,a,f,!0),l=a,a=f,f=l;n=this._kernels[p]+.5,this.uniforms.uOffset[0]=n*o,this.uniforms.uOffset[1]=n*s,e.applyFilter(this,a,i,r),e.returnRenderTarget(u)}},t.prototype._generateKernels=function(){var e=this._blur,t=this._quality,i=[e];if(e>0)for(var r=e,n=e/t,o=1;o<t;o++)r-=n,i.push(r);this._kernels=i},i.kernels.get=function(){return this._kernels},i.kernels.set=function(e){Array.isArray(e)&&e.length>0?(this._kernels=e,this._quality=e.length,this._blur=Math.max.apply(Math,e)):(this._kernels=[0],this._quality=1)},i.pixelSize.set=function(e){"number"==typeof e?(this._pixelSize.x=e,this._pixelSize.y=e):Array.isArray(e)?(this._pixelSize.x=e[0],this._pixelSize.y=e[1]):e instanceof __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"]?(this._pixelSize.x=e.x,this._pixelSize.y=e.y):(this._pixelSize.x=1,this._pixelSize.y=1)},i.pixelSize.get=function(){return this._pixelSize},i.quality.get=function(){return this._quality},i.quality.set=function(e){this._quality=Math.max(1,Math.round(e)),this._generateKernels()},i.blur.get=function(){return this._blur},i.blur.set=function(e){this._blur=e,this._generateKernels()},Object.defineProperties(t.prototype,i),t}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-kawase-blur.es.js.map
-
-
-/***/ }),
+/* 89 */,
 /* 90 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-var _arguments = arguments;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-/**
- * Commonly used constants and functions.
- *
- * @module Helpers
- */
-
-/**
- * Detect current page.
- *
- * @constant
- * @type {String}
- */
-var currentPage = exports.currentPage = document.querySelector('main').dataset.page;
-
-/**
- * Match media device indicator.
- */
-
-var Resp = exports.Resp = function () {
-	function Resp() {
-		_classCallCheck(this, Resp);
-	}
-
-	_createClass(Resp, null, [{
-		key: 'currWidth',
-
-		/**
-   * Get window's current width.
-   *
-   * @get
-   * @static
-   * @return {Number}
-   */
-		get: function get() {
-			return window.innerWidth;
-		}
-
-		/**
-   * Detect touch events.
-   *
-   * @get
-   * @static
-   * @return {Boolean}
-   */
-
-	}, {
-		key: 'isTouch',
-		get: function get() {
-			return 'ontouchstart' in window;
-		}
-
-		/**
-   * Detect desktop device.
-   *
-   * @get
-   * @static
-   * @return {Boolean}
-   */
-
-	}, {
-		key: 'isDesk',
-		get: function get() {
-			return window.matchMedia('(min-width: 1280px)').matches;
-		}
-
-		/**
-   * Detect tablet device.
-   *
-   * @get
-   * @static
-   * @return {Boolean}
-   */
-
-	}, {
-		key: 'isTablet',
-		get: function get() {
-			return window.matchMedia('(min-width: 768px) and (max-width: 1279px)').matches;
-		}
-
-		/**
-   * Detect mobile device.
-   *
-   * @get
-   * @static
-   * @return {Boolean}
-   */
-
-	}, {
-		key: 'isMobile',
-		get: function get() {
-			return window.matchMedia('(max-width: 767px)').matches;
-		}
-	}]);
-
-	return Resp;
-}();
-
-/**
- * Css class names.
- *
- * @constant
- * @type {Object}
- */
-
-
-var css = exports.css = {
-	active: 'active'
-};
-
-/**
- * Generate string of random letters.
- *
- * @param {Number} length
- */
-var randomString = exports.randomString = function randomString() {
-	var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 10;
-	return Math.random().toString(36).substr(2, length > 10 ? length : 10);
-};
-
-/**
- * Returns a function, that, as long as it continues to be invoked, will not be triggered.
- *
- * @param {Function} func
- * @param {Object} context
- * @param {Number} wait
- * @param {Boolean} [immediate]
- * @returns {Function}
- */
-var debounce = exports.debounce = function debounce(func, context, wait, immediate) {
-	var timeout = void 0;
-
-	return function () {
-		var args = _arguments;
-
-		var later = function later() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-};
-
-/**
- * Throttle function.
- *
- * @param {Function} fn
- * @param {Number} [threshold]
- * @param {Object} [scope]
- * @returns {Function}
- */
-var throttle = exports.throttle = function throttle(fn) {
-	var threshold = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 250;
-	var scope = arguments[2];
-
-	var last = void 0,
-	    deferTimer = void 0;
-
-	return function () {
-		var context = scope || this;
-		var now = +new Date();
-		var args = arguments;
-
-		if (last && now < last + threshold) {
-			clearTimeout(deferTimer);
-			deferTimer = setTimeout(function () {
-				last = now;
-				fn.apply(context, args);
-			}, threshold);
-		} else {
-			last = now;
-			fn.apply(context, args);
-		}
-	};
-};
-
-/**
- * Converts a hex color number to 16 number
- *
- * @param hex {String}
- * @return {Number}
- */
-var hex2number = exports.hex2number = function hex2number(hex) {
-	return parseInt(hex.substring(1), 16);
-};
-
-/***/ }),
-/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20977,15 +20754,15 @@ var hex2number = exports.hex2number = function hex2number(hex) {
 
 /** Import initialized-by-default modules/libs */
 
+__webpack_require__(91);
+
 __webpack_require__(92);
 
-__webpack_require__(93);
-
-var _Home = __webpack_require__(95);
+var _Home = __webpack_require__(94);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _helpers = __webpack_require__(90);
+var _helpers = __webpack_require__(231);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21006,7 +20783,7 @@ switch (_helpers.currentPage) {
 }
 
 /***/ }),
-/* 92 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21025,7 +20802,7 @@ var Common = exports.Common = function Common() {
 exports.default = new Common();
 
 /***/ }),
-/* 93 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21043,7 +20820,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * @module PublicAPI
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */
 
-var _Timer = __webpack_require__(94);
+var _Timer = __webpack_require__(93);
 
 var _Timer2 = _interopRequireDefault(_Timer);
 
@@ -21084,7 +20861,7 @@ var PublicAPI = exports.PublicAPI = function () {
 exports.default = window.PublicAPI = PublicAPI;
 
 /***/ }),
-/* 94 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21164,7 +20941,7 @@ var Timer = exports.Timer = function Timer() {
 exports.default = new Timer();
 
 /***/ }),
-/* 95 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21176,7 +20953,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _jelaModule = __webpack_require__(96);
+var _jelaModule = __webpack_require__(95);
 
 var _jelaModule2 = _interopRequireDefault(_jelaModule);
 
@@ -21195,21 +20972,18 @@ var Home = function () {
 		key: 'init',
 		value: function init() {
 			var paymentPartsFirst = new _jelaModule2.default({
-				canvas: 'canvas',
-				radius: 75,
+				container: document.querySelector('.screen__canvas'),
+				radius: 70,
 				paths: [{
-					path: '#a-big',
-					offsetX: 160,
-					offsetY: 10,
-					points: 40,
-					color: '#51E3C2',
-					scale: 15
+					path: '#path-screen-1',
+					offsetX: -75,
+					offsetY: 575,
+					points: 15,
+					scale: 32
+				}],
+				gradients: [{
+					name: 'screen-gradient-1-1'
 				}]
-			});
-
-			var button = document.getElementById('button');
-			button.addEventListener('click', function () {
-				paymentPartsFirst.blurToggle();
 			});
 
 			paymentPartsFirst.play();
@@ -21222,7 +20996,7 @@ var Home = function () {
 exports.default = Home;
 
 /***/ }),
-/* 96 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21234,29 +21008,21 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _pixiFilters = __webpack_require__(97);
+__webpack_require__(2);
 
-var filters = _interopRequireWildcard(_pixiFilters);
-
-var _ball = __webpack_require__(227);
-
-var _ball2 = _interopRequireDefault(_ball);
-
-var _jellydot = __webpack_require__(228);
+var _jellydot = __webpack_require__(227);
 
 var _jellydot2 = _interopRequireDefault(_jellydot);
 
-var _Mouse = __webpack_require__(229);
+var _Mouse = __webpack_require__(228);
 
 var _Mouse2 = _interopRequireDefault(_Mouse);
 
-var _SvgParse = __webpack_require__(231);
+var _SvgParse = __webpack_require__(230);
 
 var _SvgParse2 = _interopRequireDefault(_SvgParse);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -21264,27 +21030,16 @@ var Jelateria = function () {
 	function Jelateria(opts) {
 		_classCallCheck(this, Jelateria);
 
-		this.canvas = document.getElementById(opts.canvas);
-		this.ctx = this.canvas.getContext('2d');
+		this.canvasContainer = opts.container;
+		this.canvasWidth = this.canvasContainer.offsetWidth;
+		this.canvasHeight = this.canvasContainer.offsetHeight;
 		this.paths = opts.paths;
 		this.islands = [];
 		this.radius = opts.radius || 50;
-		this.m = new _Mouse2.default(this.canvas);
 		this.parsePaths();
-		this.paused = true;
-		this.centerBall = new _ball2.default(this.radius, 'transparent');
-		this.draw();
-
-		this.blurState = false;
-
-		this.canvas.setAttribute('width', this.canvas.offsetWidth + 'px');
-		this.canvas.setAttribute('height', this.canvas.offsetHeight + 'px');
-		var style = window.getComputedStyle(this.canvas);
-		this.height = parseInt(style.height);
-		this.width = parseInt(style.width);
-		this.time = 0;
-
-		this.tick();
+		this.offsetX = opts.paths[0].offsetX;
+		this.offsetY = opts.paths[0].offsetY;
+		this.gradients = opts.gradients;
 
 		this.initPixi();
 	}
@@ -21295,31 +21050,33 @@ var Jelateria = function () {
 			var _this = this;
 
 			PIXI.utils.skipHello();
-			this.app = new PIXI.Application(800, 600, { antialias: true, transparent: true, resolution: window.devicePixelRatio });
-			document.querySelector('main').appendChild(this.app.view);
-			this.app.view.classList.add('canvas2');
+			this.app = new PIXI.Application(this.canvasWidth, this.canvasHeight, { antialias: true, transparent: true });
+			this.canvasContainer.appendChild(this.app.view);
+			this.canvas = this.app.view;
+			this.canvas.setAttribute('width', this.canvasWidth + 'px');
+			this.canvas.setAttribute('height', this.canvasHeight + 'px');
+			this.canvas.setAttribute('data-jelly', 'true');
+			var style = window.getComputedStyle(this.canvas);
+			this.height = parseInt(style.height);
+			this.width = parseInt(style.width);
+
 			this.container = new PIXI.Container();
 			this.container.x = 0;
 			this.container.y = 0;
 			this.mPixi = new _Mouse2.default(this.app.view);
 			var graphics = new PIXI.Graphics();
-			var gradient = new PIXI.Sprite.fromImage('static/img/gradient.png');
+			var gradient = new PIXI.Sprite.fromImage('static/img/' + this.gradients[0].name + '.png');
+			var blurFilter = new PIXI.filters.BlurFilter(this.paths[0].blur);
 
-			gradient.anchor.set(0.5, 0.5);
-			gradient.scale.set(2.5);
-			gradient.x = 300;
-			gradient.y = 150;
-
-			this.islands.forEach(function (island) {
-				island.dots.forEach(function (dot) {
-					dot.think();
-				});
-				island.dots.forEach(function (dot) {
-					dot.move(_this.mPixi);
-					dot.drawPixi(graphics);
-				});
-				//this.ConnectDots(island);
+			gradient.texture.baseTexture.on('loaded', function () {
+				var curWidth = gradient.width;
+				var curHeight = gradient.height;
+				gradient.anchor.set(0.5, 0.5);
+				gradient.scale.set(1.4);
+				gradient.x = _this.canvasWidth / 2 + _this.offsetX + curWidth / 2;
+				gradient.y = _this.offsetY + curHeight / 2;
 			});
+
 			this.container.addChild(gradient);
 			this.app.stage.addChild(this.container);
 			this.app.stage.addChild(graphics);
@@ -21338,6 +21095,7 @@ var Jelateria = function () {
 					});
 					_this.ConnectDotsPixi(island, graphics);
 				});
+				_this.paths[0].blur ? _this.container.filters = [blurFilter] : _this.container.filters = [];
 			});
 		}
 	}, {
@@ -21348,70 +21106,18 @@ var Jelateria = function () {
 			this.paths.forEach(function (path) {
 				var island = {};
 				island.dots = [];
-				(0, _SvgParse2.default)(path.path, path.points, path.offsetX, path.offsetY, path.scale, path.strokeFlag, path.speedIsland, path.motion, path.backlash, path.route).forEach(function (dot) {
+				var offsetX = _this2.canvasWidth / 2 + path.offsetX;
+				(0, _SvgParse2.default)(path.path, path.points, offsetX, path.offsetY, path.scale, path.speedIsland, path.motion, path.backlash, path.route).forEach(function (dot) {
 					island.dots.push(new _jellydot2.default(dot[0], dot[1], _this2.radius));
 				});
 				island.color = path.color;
 				island.float = path.float;
 				island.speedIsland = path.speedIsland;
-				island.strokeFlag = path.strokeFlag || false;
 				island.motion = path.motion || false;
 				island.backlash = path.backlash || 0;
 				island.route = path.route || null;
 				_this2.islands.push(island);
 			});
-		}
-	}, {
-		key: 'floatEffect',
-		value: function floatEffect(island) {
-			//
-			var amplitude = island.float;
-			var motion = island.motion;
-			var speed = island.speedIsland;
-			var backlash = island.backlash;
-			var route = island.route;
-			island.dots.forEach(function (dot) {
-				if (parseInt(dot.x) === parseInt(dot.originalX) && parseInt(dot.y) === parseInt(dot.originalY)) {
-					dot.floatMe(amplitude + amplitude * Math.random() * 2);
-					if (motion) {
-						dot.floatMotion(motion, speed, backlash, route);
-					}
-				}
-			});
-		}
-	}, {
-		key: 'ConnectDots',
-		value: function ConnectDots(island) {
-			var dots = island.dots;
-
-			if (island.strokeFlag) {
-				this.ctx.beginPath();
-				this.ctx.moveTo(dots[0].x, dots[0].y);
-
-				var i = 1;
-				for (var _i = 1; _i < dots.length - 2; _i++) {
-					var xc = (dots[_i].x + dots[_i + 1].x) / 2;
-					var yc = (dots[_i].y + dots[_i + 1].y) / 2;
-					this.ctx.quadraticCurveTo(dots[_i].x, dots[_i].y, xc, yc);
-				}
-				this.ctx.quadraticCurveTo(dots[i].x, dots[i].y, dots[i + 1].x, dots[i + 1].y);
-				this.ctx.quadraticCurveTo(dots[i + 1].x, dots[i + 1].y, dots[0].x, dots[0].y);
-
-				this.ctx.strokeStyle = island.color;
-				this.ctx.stroke();
-			} else {
-				this.ctx.beginPath();
-
-				for (var _i2 = 0, jLen = dots.length; _i2 <= jLen; ++_i2) {
-					var p0 = dots[_i2 >= jLen ? _i2 - jLen : _i2];
-					var p1 = dots[_i2 + 1 >= jLen ? _i2 + 1 - jLen : _i2 + 1];
-					this.ctx.quadraticCurveTo(p0.x, p0.y, (p0.x + p1.x) * 0.5, (p0.y + p1.y) * 0.5);
-				}
-
-				this.ctx.closePath();
-				this.ctx.fillStyle = island.color;
-				this.ctx.fill();
-			}
 		}
 	}, {
 		key: 'ConnectDotsPixi',
@@ -21421,89 +21127,19 @@ var Jelateria = function () {
 			graphics.beginFill();
 			graphics.moveTo(dots[0].x, dots[0].y);
 
-			if (island.strokeFlag) {
-				var i = 1;
-				for (var _i3 = 1; _i3 < dots.length - 2; _i3++) {
-					var xc = (dots[_i3].x + dots[_i3 + 1].x) / 2;
-					var yc = (dots[_i3].y + dots[_i3 + 1].y) / 2;
-					graphics.quadraticCurveTo(dots[_i3].x, dots[_i3].y, xc, yc);
-				}
-				graphics.quadraticCurveTo(dots[i].x, dots[i].y, dots[i + 1].x, dots[i + 1].y);
-				graphics.quadraticCurveTo(dots[i + 1].x, dots[i + 1].y, dots[0].x, dots[0].y);
-
-				graphics.strokeStyle = island.color;
-				graphics.stroke();
-			} else {
-				for (var _i4 = 0, jLen = dots.length; _i4 <= jLen; ++_i4) {
-					var p0 = dots[_i4 >= jLen ? _i4 - jLen : _i4];
-					var p1 = dots[_i4 + 1 >= jLen ? _i4 + 1 - jLen : _i4 + 1];
-					graphics.quadraticCurveTo(p0.x, p0.y, (p0.x + p1.x) * 0.5, (p0.y + p1.y) * 0.5);
-				}
-				//graphics.lineStyle(4, 0xffd900, 1);
-				graphics.lineStyle(0);
-				graphics.endFill();
-				var blurFilter = new PIXI.filters.BlurFilter(3);
-				var glowFilter = new filters.GlowFilter(20, 0.25, 0.25, 0xffffff);
-				if (this.blurState) {
-					this.container.filters = [blurFilter];
-				} else {
-					this.container.filters = [];
-				}
-				//graphics.fillStyle = island.color;
-				//graphics.fill();
+			for (var i = 0, jLen = dots.length; i <= jLen; ++i) {
+				var p0 = dots[i >= jLen ? i - jLen : i];
+				var p1 = dots[i + 1 >= jLen ? i + 1 - jLen : i + 1];
+				graphics.quadraticCurveTo(p0.x, p0.y, (p0.x + p1.x) * 0.5, (p0.y + p1.y) * 0.5);
 			}
-		}
-	}, {
-		key: 'blurToggle',
-		value: function blurToggle() {
-			this.blurState = !this.blurState;
-		}
-	}, {
-		key: 'draw',
-		value: function draw() {
-			var _this3 = this;
-
-			this.ctx.clearRect(0, 0, this.width, this.height);
-
-			// mouse draw
-			this.centerBall.x = this.m.pos.x;
-			this.centerBall.y = this.m.pos.y;
-			this.centerBall.draw(this.ctx);
-			// end
-
-			this.islands.forEach(function (island) {
-				_this3.floatEffect(island);
-				island.dots.forEach(function (dot) {
-					dot.think();
-				});
-				island.dots.forEach(function (dot) {
-					dot.move(_this3.m);
-					dot.draw(_this3.ctx);
-					dot.drawAnchor(_this3.ctx);
-				});
-				//this.ConnectDots(island);
-			});
-			cancelAnimationFrame(this.fr);
-		}
-	}, {
-		key: 'tick',
-		value: function tick() {
-			if (!this.paused) {
-				this.time++;
-				this.draw();
-			}
-			this.fr = window.requestAnimationFrame(this.tick.bind(this));
+			graphics.endFill();
 		}
 	}, {
 		key: 'pause',
-		value: function pause() {
-			this.paused = true;
-		}
+		value: function pause() {}
 	}, {
 		key: 'play',
-		value: function play() {
-			this.paused = false;
-		}
+		value: function play() {}
 	}]);
 
 	return Jelateria;
@@ -21512,114 +21148,19 @@ var Jelateria = function () {
 exports.default = Jelateria;
 
 /***/ }),
-/* 97 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pixi_filter_adjustment__ = __webpack_require__(98);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "AdjustmentFilter", function() { return __WEBPACK_IMPORTED_MODULE_0__pixi_filter_adjustment__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pixi_filter_advanced_bloom__ = __webpack_require__(200);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "AdvancedBloomFilter", function() { return __WEBPACK_IMPORTED_MODULE_1__pixi_filter_advanced_bloom__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pixi_filter_ascii__ = __webpack_require__(201);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "AsciiFilter", function() { return __WEBPACK_IMPORTED_MODULE_2__pixi_filter_ascii__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pixi_filter_bloom__ = __webpack_require__(202);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BloomFilter", function() { return __WEBPACK_IMPORTED_MODULE_3__pixi_filter_bloom__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pixi_filter_bulge_pinch__ = __webpack_require__(203);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "BulgePinchFilter", function() { return __WEBPACK_IMPORTED_MODULE_4__pixi_filter_bulge_pinch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pixi_filter_color_replace__ = __webpack_require__(204);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ColorReplaceFilter", function() { return __WEBPACK_IMPORTED_MODULE_5__pixi_filter_color_replace__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pixi_filter_convolution__ = __webpack_require__(205);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ConvolutionFilter", function() { return __WEBPACK_IMPORTED_MODULE_6__pixi_filter_convolution__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pixi_filter_cross_hatch__ = __webpack_require__(206);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CrossHatchFilter", function() { return __WEBPACK_IMPORTED_MODULE_7__pixi_filter_cross_hatch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pixi_filter_crt__ = __webpack_require__(207);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CRTFilter", function() { return __WEBPACK_IMPORTED_MODULE_8__pixi_filter_crt__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pixi_filter_dot__ = __webpack_require__(208);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "DotFilter", function() { return __WEBPACK_IMPORTED_MODULE_9__pixi_filter_dot__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pixi_filter_drop_shadow__ = __webpack_require__(209);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "DropShadowFilter", function() { return __WEBPACK_IMPORTED_MODULE_10__pixi_filter_drop_shadow__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pixi_filter_emboss__ = __webpack_require__(210);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EmbossFilter", function() { return __WEBPACK_IMPORTED_MODULE_11__pixi_filter_emboss__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pixi_filter_glitch__ = __webpack_require__(211);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "GlitchFilter", function() { return __WEBPACK_IMPORTED_MODULE_12__pixi_filter_glitch__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pixi_filter_glow__ = __webpack_require__(212);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "GlowFilter", function() { return __WEBPACK_IMPORTED_MODULE_13__pixi_filter_glow__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pixi_filter_godray__ = __webpack_require__(213);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "GodrayFilter", function() { return __WEBPACK_IMPORTED_MODULE_14__pixi_filter_godray__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pixi_filter_kawase_blur__ = __webpack_require__(89);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "KawaseBlurFilter", function() { return __WEBPACK_IMPORTED_MODULE_15__pixi_filter_kawase_blur__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pixi_filter_motion_blur__ = __webpack_require__(214);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MotionBlurFilter", function() { return __WEBPACK_IMPORTED_MODULE_16__pixi_filter_motion_blur__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pixi_filter_multi_color_replace__ = __webpack_require__(215);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MultiColorReplaceFilter", function() { return __WEBPACK_IMPORTED_MODULE_17__pixi_filter_multi_color_replace__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pixi_filter_old_film__ = __webpack_require__(216);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "OldFilmFilter", function() { return __WEBPACK_IMPORTED_MODULE_18__pixi_filter_old_film__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pixi_filter_outline__ = __webpack_require__(217);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "OutlineFilter", function() { return __WEBPACK_IMPORTED_MODULE_19__pixi_filter_outline__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pixi_filter_pixelate__ = __webpack_require__(218);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "PixelateFilter", function() { return __WEBPACK_IMPORTED_MODULE_20__pixi_filter_pixelate__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pixi_filter_radial_blur__ = __webpack_require__(219);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RadialBlurFilter", function() { return __WEBPACK_IMPORTED_MODULE_21__pixi_filter_radial_blur__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pixi_filter_reflection__ = __webpack_require__(220);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ReflectionFilter", function() { return __WEBPACK_IMPORTED_MODULE_22__pixi_filter_reflection__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pixi_filter_rgb_split__ = __webpack_require__(221);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RGBSplitFilter", function() { return __WEBPACK_IMPORTED_MODULE_23__pixi_filter_rgb_split__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pixi_filter_shockwave__ = __webpack_require__(222);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ShockwaveFilter", function() { return __WEBPACK_IMPORTED_MODULE_24__pixi_filter_shockwave__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pixi_filter_simple_lightmap__ = __webpack_require__(223);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "SimpleLightmapFilter", function() { return __WEBPACK_IMPORTED_MODULE_25__pixi_filter_simple_lightmap__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pixi_filter_tilt_shift__ = __webpack_require__(224);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TiltShiftFilter", function() { return __WEBPACK_IMPORTED_MODULE_26__pixi_filter_tilt_shift__["b"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TiltShiftAxisFilter", function() { return __WEBPACK_IMPORTED_MODULE_26__pixi_filter_tilt_shift__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TiltShiftXFilter", function() { return __WEBPACK_IMPORTED_MODULE_26__pixi_filter_tilt_shift__["c"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TiltShiftYFilter", function() { return __WEBPACK_IMPORTED_MODULE_26__pixi_filter_tilt_shift__["d"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pixi_filter_twist__ = __webpack_require__(225);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TwistFilter", function() { return __WEBPACK_IMPORTED_MODULE_27__pixi_filter_twist__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pixi_filter_zoom_blur__ = __webpack_require__(226);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ZoomBlurFilter", function() { return __WEBPACK_IMPORTED_MODULE_28__pixi_filter_zoom_blur__["a"]; });
-/*!
- * pixi-filters - v2.5.1
- * Compiled Wed, 17 Jan 2018 02:35:33 UTC
- *
- * pixi-filters is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-
-//# sourceMappingURL=pixi-filters.es.js.map
-
-
-/***/ }),
+/* 96 */,
+/* 97 */,
 /* 98 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdjustmentFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-adjustment - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-adjustment is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\n\nuniform float gamma;\nuniform float contrast;\nuniform float saturation;\nuniform float brightness;\nuniform float red;\nuniform float green;\nuniform float blue;\nuniform float alpha;\n\nvoid main(void)\n{\n    vec4 c = texture2D(uSampler, vTextureCoord);\n\n    if (c.a > 0.0) {\n        c.rgb /= c.a;\n\n        vec3 rgb = pow(c.rgb, vec3(1. / gamma));\n        rgb = mix(vec3(.5), mix(vec3(dot(vec3(.2125, .7154, .0721), rgb)), rgb, saturation), contrast);\n        rgb.r *= red;\n        rgb.g *= green;\n        rgb.b *= blue;\n        c.rgb = rgb * brightness;\n\n        c.rgb *= c.a;\n    }\n\n    gl_FragColor = c * alpha;\n}\n",AdjustmentFilter=function(t){function r(r){t.call(this,vertex,fragment),Object.assign(this,{gamma:1,saturation:1,contrast:1,brightness:1,red:1,green:1,blue:1,alpha:1},r)}return t&&(r.__proto__=t),r.prototype=Object.create(t&&t.prototype),r.prototype.constructor=r,r.prototype.apply=function(t,r,n,e){this.uniforms.gamma=Math.max(this.gamma,1e-4),this.uniforms.saturation=this.saturation,this.uniforms.contrast=this.contrast,this.uniforms.brightness=this.brightness,this.uniforms.red=this.red,this.uniforms.green=this.green,this.uniforms.blue=this.blue,this.uniforms.alpha=this.alpha,t.applyFilter(this,r,n,e)},r}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-adjustment.es.js.map
-
-
-/***/ }),
-/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(100);
+__webpack_require__(99);
+
+__webpack_require__(101);
 
 __webpack_require__(102);
-
-__webpack_require__(103);
 
 if (!window.ArrayBuffer) {
     window.ArrayBuffer = Array;
@@ -21639,13 +21180,13 @@ if (!window.Uint16Array) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 100 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _objectAssign = __webpack_require__(101);
+var _objectAssign = __webpack_require__(100);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -21659,7 +21200,7 @@ if (!Object.assign) {
 //# sourceMappingURL=Object.assign.js.map
 
 /***/ }),
-/* 101 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21756,7 +21297,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21837,7 +21378,7 @@ if (!global.cancelAnimationFrame) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(21)))
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21860,7 +21401,7 @@ if (!Math.sign) {
 //# sourceMappingURL=Math.sign.js.map
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21979,7 +21520,7 @@ exports.default = Circle;
 //# sourceMappingURL=Circle.js.map
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22106,7 +21647,7 @@ exports.default = Ellipse;
 //# sourceMappingURL=Ellipse.js.map
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22242,7 +21783,7 @@ exports.default = Polygon;
 //# sourceMappingURL=Polygon.js.map
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22380,7 +21921,7 @@ exports.default = RoundedRectangle;
 //# sourceMappingURL=RoundedRectangle.js.map
 
 /***/ }),
-/* 108 */
+/* 107 */
 /***/ (function(module, exports) {
 
 
@@ -22412,7 +21953,7 @@ module.exports = createContext;
 
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, exports) {
 
 var EMPTY_ARRAY_BUFFER = new ArrayBuffer(0);
@@ -22537,7 +22078,7 @@ module.exports = Buffer;
 
 
 /***/ }),
-/* 110 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -22769,7 +22310,7 @@ module.exports = Framebuffer;
 
 
 /***/ }),
-/* 111 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -22869,7 +22410,7 @@ module.exports = Shader;
 
 
 /***/ }),
-/* 112 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -23141,7 +22682,7 @@ VertexArrayObject.prototype.getSize = function()
 
 
 /***/ }),
-/* 113 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = {
@@ -23156,7 +22697,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 114 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23183,7 +22724,7 @@ function maxRecommendedTextures(max) {
 //# sourceMappingURL=maxRecommendedTextures.js.map
 
 /***/ }),
-/* 115 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23202,7 +22743,7 @@ function canUploadSameBuffer() {
 //# sourceMappingURL=canUploadSameBuffer.js.map
 
 /***/ }),
-/* 116 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23273,7 +22814,7 @@ exports.default = {
 //# sourceMappingURL=pluginTarget.js.map
 
 /***/ }),
-/* 117 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23340,7 +22881,7 @@ function performMixins() {
 //# sourceMappingURL=mixin.js.map
 
 /***/ }),
-/* 118 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23375,7 +22916,7 @@ module.exports = function removeItems(arr, startIdx, removeCount)
 
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23423,7 +22964,7 @@ function mapPremultipliedBlendModes() {
 //# sourceMappingURL=mapPremultipliedBlendModes.js.map
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
@@ -23959,10 +23500,10 @@ function mapPremultipliedBlendModes() {
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(121)(module), __webpack_require__(21)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(120)(module), __webpack_require__(21)))
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -23990,7 +23531,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24013,18 +23554,18 @@ module.exports = {
 
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(124);
-exports.encode = exports.stringify = __webpack_require__(125);
+exports.decode = exports.parse = __webpack_require__(123);
+exports.encode = exports.stringify = __webpack_require__(124);
 
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24115,7 +23656,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 125 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24207,7 +23748,7 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 126 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24223,7 +23764,7 @@ var _settings2 = _interopRequireDefault(_settings);
 
 var _const = __webpack_require__(1);
 
-var _TickerListener = __webpack_require__(127);
+var _TickerListener = __webpack_require__(126);
 
 var _TickerListener2 = _interopRequireDefault(_TickerListener);
 
@@ -24685,7 +24226,7 @@ exports.default = Ticker;
 //# sourceMappingURL=Ticker.js.map
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24864,7 +24405,7 @@ exports.default = TickerListener;
 //# sourceMappingURL=TickerListener.js.map
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25022,7 +24563,7 @@ _CanvasRenderer2.default.registerPlugin('sprite', CanvasSpriteRenderer);
 //# sourceMappingURL=CanvasSpriteRenderer.js.map
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25196,7 +24737,7 @@ exports.default = CanvasMaskManager;
 //# sourceMappingURL=CanvasMaskManager.js.map
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25273,7 +24814,7 @@ function mapCanvasBlendModesToPixi() {
 //# sourceMappingURL=mapCanvasBlendModesToPixi.js.map
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25293,15 +24834,15 @@ var _createIndicesForQuads = __webpack_require__(34);
 
 var _createIndicesForQuads2 = _interopRequireDefault(_createIndicesForQuads);
 
-var _generateMultiTextureShader = __webpack_require__(144);
+var _generateMultiTextureShader = __webpack_require__(143);
 
 var _generateMultiTextureShader2 = _interopRequireDefault(_generateMultiTextureShader);
 
-var _checkMaxIfStatmentsInShader = __webpack_require__(145);
+var _checkMaxIfStatmentsInShader = __webpack_require__(144);
 
 var _checkMaxIfStatmentsInShader2 = _interopRequireDefault(_checkMaxIfStatmentsInShader);
 
-var _BatchBuffer = __webpack_require__(146);
+var _BatchBuffer = __webpack_require__(145);
 
 var _BatchBuffer2 = _interopRequireDefault(_BatchBuffer);
 
@@ -25829,7 +25370,7 @@ _WebGLRenderer2.default.registerPlugin('sprite', SpriteRenderer);
 //# sourceMappingURL=SpriteRenderer.js.map
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26044,7 +25585,7 @@ exports.default = MaskManager;
 //# sourceMappingURL=MaskManager.js.map
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26111,7 +25652,7 @@ function extractUniformsFromString(string) {
 //# sourceMappingURL=extractUniformsFromSrc.js.map
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -26301,7 +25842,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26459,7 +26000,7 @@ exports.default = StencilManager;
 //# sourceMappingURL=StencilManager.js.map
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26485,7 +26026,7 @@ var _Shader = __webpack_require__(14);
 
 var _Shader2 = _interopRequireDefault(_Shader);
 
-var _filterTransforms = __webpack_require__(137);
+var _filterTransforms = __webpack_require__(136);
 
 var filterTransforms = _interopRequireWildcard(_filterTransforms);
 
@@ -27058,7 +26599,7 @@ exports.default = FilterManager;
 //# sourceMappingURL=FilterManager.js.map
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27123,7 +26664,7 @@ function calculateSpriteMatrix(outputMatrix, filterArea, textureSize, sprite) {
 //# sourceMappingURL=filterTransforms.js.map
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27384,7 +26925,7 @@ exports.default = TextureManager;
 //# sourceMappingURL=TextureManager.js.map
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27509,7 +27050,7 @@ exports.default = TextureGarbageCollector;
 //# sourceMappingURL=TextureGarbageCollector.js.map
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27517,7 +27058,7 @@ exports.default = TextureGarbageCollector;
 
 exports.__esModule = true;
 
-var _mapWebGLBlendModesToPixi = __webpack_require__(141);
+var _mapWebGLBlendModesToPixi = __webpack_require__(140);
 
 var _mapWebGLBlendModesToPixi2 = _interopRequireDefault(_mapWebGLBlendModesToPixi);
 
@@ -27794,7 +27335,7 @@ exports.default = WebGLState;
 //# sourceMappingURL=WebGLState.js.map
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27848,7 +27389,7 @@ function mapWebGLBlendModesToPixi(gl) {
 //# sourceMappingURL=mapWebGLBlendModesToPixi.js.map
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27885,7 +27426,7 @@ function mapWebGLDrawModesToPixi(gl) {
 //# sourceMappingURL=mapWebGLDrawModesToPixi.js.map
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27906,7 +27447,7 @@ function validateContext(gl) {
 //# sourceMappingURL=validateContext.js.map
 
 /***/ }),
-/* 144 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27974,7 +27515,7 @@ function generateSampleSrc(maxTextures) {
 //# sourceMappingURL=generateMultiTextureShader.js.map
 
 /***/ }),
-/* 145 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28054,7 +27595,7 @@ function generateIfTestSrc(maxIfs) {
 //# sourceMappingURL=checkMaxIfStatmentsInShader.js.map
 
 /***/ }),
-/* 146 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28112,7 +27653,7 @@ exports.default = Buffer;
 //# sourceMappingURL=BatchBuffer.js.map
 
 /***/ }),
-/* 147 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28148,7 +27689,7 @@ var _TextMetrics = __webpack_require__(64);
 
 var _TextMetrics2 = _interopRequireDefault(_TextMetrics);
 
-var _trimCanvas = __webpack_require__(148);
+var _trimCanvas = __webpack_require__(147);
 
 var _trimCanvas2 = _interopRequireDefault(_trimCanvas);
 
@@ -28772,7 +28313,7 @@ exports.default = Text;
 //# sourceMappingURL=Text.js.map
 
 /***/ }),
-/* 148 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28853,7 +28394,7 @@ function trimCanvas(canvas) {
 //# sourceMappingURL=trimCanvas.js.map
 
 /***/ }),
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28891,7 +28432,7 @@ var _Bounds = __webpack_require__(26);
 
 var _Bounds2 = _interopRequireDefault(_Bounds);
 
-var _bezierCurveTo2 = __webpack_require__(150);
+var _bezierCurveTo2 = __webpack_require__(149);
 
 var _bezierCurveTo3 = _interopRequireDefault(_bezierCurveTo2);
 
@@ -30063,7 +29604,7 @@ Graphics._SPRITE_TEXTURE = null;
 //# sourceMappingURL=Graphics.js.map
 
 /***/ }),
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30118,7 +29659,7 @@ function bezierCurveTo(fromX, fromY, cpX, cpY, cpX2, cpY2, toX, toY) {
 //# sourceMappingURL=bezierCurveTo.js.map
 
 /***/ }),
-/* 151 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30138,27 +29679,27 @@ var _WebGLRenderer = __webpack_require__(18);
 
 var _WebGLRenderer2 = _interopRequireDefault(_WebGLRenderer);
 
-var _WebGLGraphicsData = __webpack_require__(152);
+var _WebGLGraphicsData = __webpack_require__(151);
 
 var _WebGLGraphicsData2 = _interopRequireDefault(_WebGLGraphicsData);
 
-var _PrimitiveShader = __webpack_require__(153);
+var _PrimitiveShader = __webpack_require__(152);
 
 var _PrimitiveShader2 = _interopRequireDefault(_PrimitiveShader);
 
-var _buildPoly = __webpack_require__(154);
+var _buildPoly = __webpack_require__(153);
 
 var _buildPoly2 = _interopRequireDefault(_buildPoly);
 
-var _buildRectangle = __webpack_require__(155);
+var _buildRectangle = __webpack_require__(154);
 
 var _buildRectangle2 = _interopRequireDefault(_buildRectangle);
 
-var _buildRoundedRectangle = __webpack_require__(156);
+var _buildRoundedRectangle = __webpack_require__(155);
 
 var _buildRoundedRectangle2 = _interopRequireDefault(_buildRoundedRectangle);
 
-var _buildCircle = __webpack_require__(157);
+var _buildCircle = __webpack_require__(156);
 
 var _buildCircle2 = _interopRequireDefault(_buildCircle);
 
@@ -30388,7 +29929,7 @@ _WebGLRenderer2.default.registerPlugin('graphics', GraphicsRenderer);
 //# sourceMappingURL=GraphicsRenderer.js.map
 
 /***/ }),
-/* 152 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30536,7 +30077,7 @@ exports.default = WebGLGraphicsData;
 //# sourceMappingURL=WebGLGraphicsData.js.map
 
 /***/ }),
-/* 153 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30586,7 +30127,7 @@ exports.default = PrimitiveShader;
 //# sourceMappingURL=PrimitiveShader.js.map
 
 /***/ }),
-/* 154 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30677,7 +30218,7 @@ function buildPoly(graphicsData, webGLData, webGLDataNativeLines) {
 //# sourceMappingURL=buildPoly.js.map
 
 /***/ }),
-/* 155 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30758,7 +30299,7 @@ function buildRectangle(graphicsData, webGLData, webGLDataNativeLines) {
 //# sourceMappingURL=buildRectangle.js.map
 
 /***/ }),
-/* 156 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30919,7 +30460,7 @@ function quadraticBezierCurve(fromX, fromY, cpX, cpY, toX, toY) {
 //# sourceMappingURL=buildRoundedRectangle.js.map
 
 /***/ }),
-/* 157 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31017,7 +30558,7 @@ function buildCircle(graphicsData, webGLData, webGLDataNativeLines) {
 //# sourceMappingURL=buildCircle.js.map
 
 /***/ }),
-/* 158 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31291,7 +30832,7 @@ _CanvasRenderer2.default.registerPlugin('graphics', CanvasGraphicsRenderer);
 //# sourceMappingURL=CanvasGraphicsRenderer.js.map
 
 /***/ }),
-/* 159 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31561,7 +31102,7 @@ exports.default = Spritesheet;
 //# sourceMappingURL=Spritesheet.js.map
 
 /***/ }),
-/* 160 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32710,7 +32251,7 @@ function deprecation(core) {
 //# sourceMappingURL=deprecation.js.map
 
 /***/ }),
-/* 161 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32727,7 +32268,7 @@ Object.defineProperty(exports, 'accessibleTarget', {
   }
 });
 
-var _AccessibilityManager = __webpack_require__(162);
+var _AccessibilityManager = __webpack_require__(161);
 
 Object.defineProperty(exports, 'AccessibilityManager', {
   enumerable: true,
@@ -32740,7 +32281,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 162 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33239,7 +32780,7 @@ core.CanvasRenderer.registerPlugin('accessibility', AccessibilityManager);
 //# sourceMappingURL=AccessibilityManager.js.map
 
 /***/ }),
-/* 163 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33247,7 +32788,7 @@ core.CanvasRenderer.registerPlugin('accessibility', AccessibilityManager);
 
 exports.__esModule = true;
 
-var _WebGLExtract = __webpack_require__(164);
+var _WebGLExtract = __webpack_require__(163);
 
 Object.defineProperty(exports, 'webgl', {
   enumerable: true,
@@ -33256,7 +32797,7 @@ Object.defineProperty(exports, 'webgl', {
   }
 });
 
-var _CanvasExtract = __webpack_require__(165);
+var _CanvasExtract = __webpack_require__(164);
 
 Object.defineProperty(exports, 'canvas', {
   enumerable: true,
@@ -33269,7 +32810,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 164 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33509,7 +33050,7 @@ core.WebGLRenderer.registerPlugin('extract', WebGLExtract);
 //# sourceMappingURL=WebGLExtract.js.map
 
 /***/ }),
-/* 165 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33694,7 +33235,7 @@ core.CanvasRenderer.registerPlugin('extract', CanvasExtract);
 //# sourceMappingURL=CanvasExtract.js.map
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34108,7 +33649,7 @@ exports.default = AnimatedSprite;
 //# sourceMappingURL=AnimatedSprite.js.map
 
 /***/ }),
-/* 167 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34559,7 +34100,7 @@ exports.default = TilingSprite;
 //# sourceMappingURL=TilingSprite.js.map
 
 /***/ }),
-/* 168 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34726,7 +34267,7 @@ core.WebGLRenderer.registerPlugin('tilingSprite', TilingSpriteRenderer);
 //# sourceMappingURL=TilingSpriteRenderer.js.map
 
 /***/ }),
-/* 169 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35322,7 +34863,7 @@ BitmapText.fonts = {};
 //# sourceMappingURL=BitmapText.js.map
 
 /***/ }),
-/* 170 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35731,7 +35272,7 @@ DisplayObject.prototype._cacheAsBitmapDestroy = function _cacheAsBitmapDestroy(o
 //# sourceMappingURL=cacheAsBitmap.js.map
 
 /***/ }),
-/* 171 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35771,7 +35312,7 @@ core.Container.prototype.getChildByName = function getChildByName(name) {
 //# sourceMappingURL=getChildByName.js.map
 
 /***/ }),
-/* 172 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35810,7 +35351,7 @@ core.DisplayObject.prototype.getGlobalPosition = function getGlobalPosition() {
 //# sourceMappingURL=getGlobalPosition.js.map
 
 /***/ }),
-/* 173 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35818,7 +35359,7 @@ core.DisplayObject.prototype.getGlobalPosition = function getGlobalPosition() {
 
 exports.__esModule = true;
 
-var _FXAAFilter = __webpack_require__(174);
+var _FXAAFilter = __webpack_require__(173);
 
 Object.defineProperty(exports, 'FXAAFilter', {
   enumerable: true,
@@ -35827,7 +35368,7 @@ Object.defineProperty(exports, 'FXAAFilter', {
   }
 });
 
-var _NoiseFilter = __webpack_require__(175);
+var _NoiseFilter = __webpack_require__(174);
 
 Object.defineProperty(exports, 'NoiseFilter', {
   enumerable: true,
@@ -35836,7 +35377,7 @@ Object.defineProperty(exports, 'NoiseFilter', {
   }
 });
 
-var _DisplacementFilter = __webpack_require__(176);
+var _DisplacementFilter = __webpack_require__(175);
 
 Object.defineProperty(exports, 'DisplacementFilter', {
   enumerable: true,
@@ -35845,7 +35386,7 @@ Object.defineProperty(exports, 'DisplacementFilter', {
   }
 });
 
-var _BlurFilter = __webpack_require__(177);
+var _BlurFilter = __webpack_require__(176);
 
 Object.defineProperty(exports, 'BlurFilter', {
   enumerable: true,
@@ -35872,7 +35413,7 @@ Object.defineProperty(exports, 'BlurYFilter', {
   }
 });
 
-var _ColorMatrixFilter = __webpack_require__(178);
+var _ColorMatrixFilter = __webpack_require__(177);
 
 Object.defineProperty(exports, 'ColorMatrixFilter', {
   enumerable: true,
@@ -35881,7 +35422,7 @@ Object.defineProperty(exports, 'ColorMatrixFilter', {
   }
 });
 
-var _AlphaFilter = __webpack_require__(179);
+var _AlphaFilter = __webpack_require__(178);
 
 Object.defineProperty(exports, 'AlphaFilter', {
   enumerable: true,
@@ -35894,7 +35435,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 174 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35953,7 +35494,7 @@ exports.default = FXAAFilter;
 //# sourceMappingURL=FXAAFilter.js.map
 
 /***/ }),
-/* 175 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36055,7 +35596,7 @@ exports.default = NoiseFilter;
 //# sourceMappingURL=NoiseFilter.js.map
 
 /***/ }),
-/* 176 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36168,7 +35709,7 @@ exports.default = DisplacementFilter;
 //# sourceMappingURL=DisplacementFilter.js.map
 
 /***/ }),
-/* 177 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36347,7 +35888,7 @@ exports.default = BlurFilter;
 //# sourceMappingURL=BlurFilter.js.map
 
 /***/ }),
-/* 178 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36903,7 +36444,7 @@ ColorMatrixFilter.prototype.grayscale = ColorMatrixFilter.prototype.greyscale;
 //# sourceMappingURL=ColorMatrixFilter.js.map
 
 /***/ }),
-/* 179 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36992,7 +36533,7 @@ exports.default = AlphaFilter;
 //# sourceMappingURL=AlphaFilter.js.map
 
 /***/ }),
-/* 180 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37009,7 +36550,7 @@ Object.defineProperty(exports, 'InteractionData', {
   }
 });
 
-var _InteractionManager = __webpack_require__(181);
+var _InteractionManager = __webpack_require__(180);
 
 Object.defineProperty(exports, 'InteractionManager', {
   enumerable: true,
@@ -37049,7 +36590,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 181 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38825,7 +38366,7 @@ core.CanvasRenderer.registerPlugin('interaction', InteractionManager);
 //# sourceMappingURL=InteractionManager.js.map
 
 /***/ }),
-/* 182 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38886,7 +38427,7 @@ var _Application = __webpack_require__(67);
 
 var _Application2 = _interopRequireDefault(_Application);
 
-var _loader = __webpack_require__(184);
+var _loader = __webpack_require__(183);
 
 var _loader2 = _interopRequireDefault(_loader);
 
@@ -38958,7 +38499,7 @@ AppPrototype.destroy = function destroy(removeView) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 183 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39616,7 +39157,7 @@ exports.default = Loader;
 //# sourceMappingURL=Loader.js.map
 
 /***/ }),
-/* 184 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39628,7 +39169,7 @@ var _resourceLoader = __webpack_require__(15);
 
 var _resourceLoader2 = _interopRequireDefault(_resourceLoader);
 
-var _blob = __webpack_require__(185);
+var _blob = __webpack_require__(184);
 
 var _eventemitter = __webpack_require__(9);
 
@@ -39792,7 +39333,7 @@ Resource.setExtensionXhrType('fnt', Resource.XHR_RESPONSE_TYPE.DOCUMENT);
 //# sourceMappingURL=loader.js.map
 
 /***/ }),
-/* 185 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39885,7 +39426,7 @@ function blobMiddlewareFactory() {
 //# sourceMappingURL=blob.js.map
 
 /***/ }),
-/* 186 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39902,7 +39443,7 @@ Object.defineProperty(exports, 'Mesh', {
   }
 });
 
-var _MeshRenderer = __webpack_require__(187);
+var _MeshRenderer = __webpack_require__(186);
 
 Object.defineProperty(exports, 'MeshRenderer', {
   enumerable: true,
@@ -39911,7 +39452,7 @@ Object.defineProperty(exports, 'MeshRenderer', {
   }
 });
 
-var _CanvasMeshRenderer = __webpack_require__(188);
+var _CanvasMeshRenderer = __webpack_require__(187);
 
 Object.defineProperty(exports, 'CanvasMeshRenderer', {
   enumerable: true,
@@ -39929,7 +39470,7 @@ Object.defineProperty(exports, 'Plane', {
   }
 });
 
-var _NineSlicePlane = __webpack_require__(189);
+var _NineSlicePlane = __webpack_require__(188);
 
 Object.defineProperty(exports, 'NineSlicePlane', {
   enumerable: true,
@@ -39938,7 +39479,7 @@ Object.defineProperty(exports, 'NineSlicePlane', {
   }
 });
 
-var _Rope = __webpack_require__(190);
+var _Rope = __webpack_require__(189);
 
 Object.defineProperty(exports, 'Rope', {
   enumerable: true,
@@ -39951,7 +39492,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 187 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40107,7 +39648,7 @@ core.WebGLRenderer.registerPlugin('mesh', MeshRenderer);
 //# sourceMappingURL=MeshRenderer.js.map
 
 /***/ }),
-/* 188 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40398,7 +39939,7 @@ core.CanvasRenderer.registerPlugin('mesh', MeshSpriteRenderer);
 //# sourceMappingURL=CanvasMeshRenderer.js.map
 
 /***/ }),
-/* 189 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40790,7 +40331,7 @@ exports.default = NineSlicePlane;
 //# sourceMappingURL=NineSlicePlane.js.map
 
 /***/ }),
-/* 190 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41031,7 +40572,7 @@ exports.default = Rope;
 //# sourceMappingURL=Rope.js.map
 
 /***/ }),
-/* 191 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41039,7 +40580,7 @@ exports.default = Rope;
 
 exports.__esModule = true;
 
-var _ParticleContainer = __webpack_require__(192);
+var _ParticleContainer = __webpack_require__(191);
 
 Object.defineProperty(exports, 'ParticleContainer', {
   enumerable: true,
@@ -41048,7 +40589,7 @@ Object.defineProperty(exports, 'ParticleContainer', {
   }
 });
 
-var _ParticleRenderer = __webpack_require__(193);
+var _ParticleRenderer = __webpack_require__(192);
 
 Object.defineProperty(exports, 'ParticleRenderer', {
   enumerable: true,
@@ -41061,7 +40602,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 192 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41446,7 +40987,7 @@ exports.default = ParticleContainer;
 //# sourceMappingURL=ParticleContainer.js.map
 
 /***/ }),
-/* 193 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41458,11 +40999,11 @@ var _core = __webpack_require__(0);
 
 var core = _interopRequireWildcard(_core);
 
-var _ParticleShader = __webpack_require__(194);
+var _ParticleShader = __webpack_require__(193);
 
 var _ParticleShader2 = _interopRequireDefault(_ParticleShader);
 
-var _ParticleBuffer = __webpack_require__(195);
+var _ParticleBuffer = __webpack_require__(194);
 
 var _ParticleBuffer2 = _interopRequireDefault(_ParticleBuffer);
 
@@ -41927,7 +41468,7 @@ core.WebGLRenderer.registerPlugin('particle', ParticleRenderer);
 //# sourceMappingURL=ParticleRenderer.js.map
 
 /***/ }),
-/* 194 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41975,7 +41516,7 @@ exports.default = ParticleShader;
 //# sourceMappingURL=ParticleShader.js.map
 
 /***/ }),
-/* 195 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42227,7 +41768,7 @@ exports.default = ParticleBuffer;
 //# sourceMappingURL=ParticleBuffer.js.map
 
 /***/ }),
-/* 196 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42235,7 +41776,7 @@ exports.default = ParticleBuffer;
 
 exports.__esModule = true;
 
-var _WebGLPrepare = __webpack_require__(197);
+var _WebGLPrepare = __webpack_require__(196);
 
 Object.defineProperty(exports, 'webgl', {
   enumerable: true,
@@ -42244,7 +41785,7 @@ Object.defineProperty(exports, 'webgl', {
   }
 });
 
-var _CanvasPrepare = __webpack_require__(198);
+var _CanvasPrepare = __webpack_require__(197);
 
 Object.defineProperty(exports, 'canvas', {
   enumerable: true,
@@ -42271,7 +41812,7 @@ Object.defineProperty(exports, 'CountLimiter', {
   }
 });
 
-var _TimeLimiter = __webpack_require__(199);
+var _TimeLimiter = __webpack_require__(198);
 
 Object.defineProperty(exports, 'TimeLimiter', {
   enumerable: true,
@@ -42284,7 +41825,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 197 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42411,7 +41952,7 @@ core.WebGLRenderer.registerPlugin('prepare', WebGLPrepare);
 //# sourceMappingURL=WebGLPrepare.js.map
 
 /***/ }),
-/* 198 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42536,7 +42077,7 @@ core.CanvasRenderer.registerPlugin('prepare', CanvasPrepare);
 //# sourceMappingURL=CanvasPrepare.js.map
 
 /***/ }),
-/* 199 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42599,616 +42140,35 @@ exports.default = TimeLimiter;
 //# sourceMappingURL=TimeLimiter.js.map
 
 /***/ }),
-/* 200 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AdvancedBloomFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pixi_filter_kawase_blur__ = __webpack_require__(89);
-/*!
- * @pixi/filter-advanced-bloom - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-advanced-bloom is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="\nuniform sampler2D uSampler;\nvarying vec2 vTextureCoord;\n\nuniform float threshold;\n\nvoid main() {\n    vec4 color = texture2D(uSampler, vTextureCoord);\n\n    // A simple & fast algorithm for getting brightness.\n    // It's inaccuracy , but good enought for this feature.\n    float _max = max(max(color.r, color.g), color.b);\n    float _min = min(min(color.r, color.g), color.b);\n    float brightness = (_max + _min) * 0.5;\n\n    if(brightness > threshold) {\n        gl_FragColor = color;\n    } else {\n        gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);\n    }\n}\n",ExtractBrightnessFilter=function(e){function t(t){void 0===t&&(t=.5),e.call(this,vertex,fragment),this.threshold=t}e&&(t.__proto__=e),t.prototype=Object.create(e&&e.prototype),t.prototype.constructor=t;var r={threshold:{configurable:!0}};return r.threshold.get=function(){return this.uniforms.threshold},r.threshold.set=function(e){this.uniforms.threshold=e},Object.defineProperties(t.prototype,r),t}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]),fragment$1="uniform sampler2D uSampler;\nvarying vec2 vTextureCoord;\n\nuniform sampler2D bloomTexture;\nuniform float bloomScale;\nuniform float brightness;\n\nvoid main() {\n    vec4 color = texture2D(uSampler, vTextureCoord);\n    color.rgb *= brightness;\n    vec4 bloomColor = vec4(texture2D(bloomTexture, vTextureCoord).rgb, 0.0);\n    bloomColor.rgb *= bloomScale;\n    gl_FragColor = color + bloomColor;\n}\n",AdvancedBloomFilter=function(e){function t(t){e.call(this,vertex,fragment$1),"number"==typeof t&&(t={threshold:t}),t=Object.assign({threshold:.5,bloomScale:1,brightness:1,kernels:null,blur:8,quality:4,pixelSize:1,resolution:__WEBPACK_IMPORTED_MODULE_0_pixi_js__["settings"].RESOLUTION},t),this.bloomScale=t.bloomScale,this.brightness=t.brightness;var r=t.kernels,o=t.blur,i=t.quality,n=t.pixelSize,l=t.resolution;this._extractFilter=new ExtractBrightnessFilter(t.threshold),this._extractFilter.resolution=l,this._blurFilter=r?new __WEBPACK_IMPORTED_MODULE_1__pixi_filter_kawase_blur__["a" /* KawaseBlurFilter */](r):new __WEBPACK_IMPORTED_MODULE_1__pixi_filter_kawase_blur__["a" /* KawaseBlurFilter */](o,i),this.pixelSize=n,this.resolution=l}e&&(t.__proto__=e),t.prototype=Object.create(e&&e.prototype),t.prototype.constructor=t;var r={resolution:{configurable:!0},threshold:{configurable:!0},blur:{configurable:!0},kernels:{configurable:!0},quality:{configurable:!0},pixelSize:{configurable:!0}};return t.prototype.apply=function(e,t,r,o,i){var n=e.getRenderTarget(!0);this._extractFilter.apply(e,t,n,!0,i);var l=e.getRenderTarget(!0);this._blurFilter.apply(e,n,l,!0,i),this.uniforms.bloomScale=this.bloomScale,this.uniforms.brightness=this.brightness,this.uniforms.bloomTexture=l,e.applyFilter(this,t,r,o),e.returnRenderTarget(l),e.returnRenderTarget(n)},r.resolution.get=function(){return this._resolution},r.resolution.set=function(e){this._resolution=e,this._blurFilter&&(this._blurFilter.resolution=e)},r.threshold.get=function(){return this._extractFilter.threshold},r.threshold.set=function(e){this._extractFilter.threshold=e},r.blur.get=function(){return this._blurFilter.blur},r.blur.set=function(e){this._blurFilter.blur=e},r.kernels.get=function(){return this._blurFilter.kernels},r.kernels.set=function(e){this._blurFilter.kernels=e},r.quality.get=function(){return this._blurFilter.quality},r.quality.set=function(e){this._blurFilter.quality=e},r.pixelSize.get=function(){return this._blurFilter.pixelSize},r.pixelSize.set=function(e){this._blurFilter.pixelSize=e},Object.defineProperties(t.prototype,r),t}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-advanced-bloom.es.js.map
-
-
-/***/ }),
-/* 201 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AsciiFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-ascii - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-ascii is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\n\nuniform vec4 filterArea;\nuniform float pixelSize;\nuniform sampler2D uSampler;\n\nvec2 mapCoord( vec2 coord )\n{\n    coord *= filterArea.xy;\n    coord += filterArea.zw;\n\n    return coord;\n}\n\nvec2 unmapCoord( vec2 coord )\n{\n    coord -= filterArea.zw;\n    coord /= filterArea.xy;\n\n    return coord;\n}\n\nvec2 pixelate(vec2 coord, vec2 size)\n{\n    return floor( coord / size ) * size;\n}\n\nvec2 getMod(vec2 coord, vec2 size)\n{\n    return mod( coord , size) / size;\n}\n\nfloat character(float n, vec2 p)\n{\n    p = floor(p*vec2(4.0, -4.0) + 2.5);\n    if (clamp(p.x, 0.0, 4.0) == p.x && clamp(p.y, 0.0, 4.0) == p.y)\n    {\n        if (int(mod(n/exp2(p.x + 5.0*p.y), 2.0)) == 1) return 1.0;\n    }\n    return 0.0;\n}\n\nvoid main()\n{\n    vec2 coord = mapCoord(vTextureCoord);\n\n    // get the rounded color..\n    vec2 pixCoord = pixelate(coord, vec2(pixelSize));\n    pixCoord = unmapCoord(pixCoord);\n\n    vec4 color = texture2D(uSampler, pixCoord);\n\n    // determine the character to use\n    float gray = (color.r + color.g + color.b) / 3.0;\n\n    float n =  65536.0;             // .\n    if (gray > 0.2) n = 65600.0;    // :\n    if (gray > 0.3) n = 332772.0;   // *\n    if (gray > 0.4) n = 15255086.0; // o\n    if (gray > 0.5) n = 23385164.0; // &\n    if (gray > 0.6) n = 15252014.0; // 8\n    if (gray > 0.7) n = 13199452.0; // @\n    if (gray > 0.8) n = 11512810.0; // #\n\n    // get the mod..\n    vec2 modd = getMod(coord, vec2(pixelSize));\n\n    gl_FragColor = color * character( n, vec2(-1.0) + modd * 2.0);\n\n}",AsciiFilter=function(e){function n(n){void 0===n&&(n=8),e.call(this,vertex,fragment),this.size=n}e&&(n.__proto__=e),n.prototype=Object.create(e&&e.prototype),n.prototype.constructor=n;var o={size:{configurable:!0}};return o.size.get=function(){return this.uniforms.pixelSize},o.size.set=function(e){this.uniforms.pixelSize=e},Object.defineProperties(n.prototype,o),n}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-ascii.es.js.map
-
-
-/***/ }),
-/* 202 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BloomFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-bloom - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-bloom is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var ref=__WEBPACK_IMPORTED_MODULE_0_pixi_js__["filters"],BlurXFilter=ref.BlurXFilter,BlurYFilter=ref.BlurYFilter,AlphaFilter=ref.AlphaFilter,BloomFilter=function(r){function t(t,e,l,i){var u,o;void 0===t&&(t=2),void 0===e&&(e=4),void 0===l&&(l=__WEBPACK_IMPORTED_MODULE_0_pixi_js__["settings"].RESOLUTION),void 0===i&&(i=5),r.call(this),"number"==typeof t?(u=t,o=t):t instanceof __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"]?(u=t.x,o=t.y):Array.isArray(t)&&(u=t[0],o=t[1]),this.blurXFilter=new BlurXFilter(u,e,l,i),this.blurYFilter=new BlurYFilter(o,e,l,i),this.blurYFilter.blendMode=__WEBPACK_IMPORTED_MODULE_0_pixi_js__["BLEND_MODES"].SCREEN,this.defaultFilter=new AlphaFilter}r&&(t.__proto__=r),t.prototype=Object.create(r&&r.prototype),t.prototype.constructor=t;var e={blur:{configurable:!0},blurX:{configurable:!0},blurY:{configurable:!0}};return t.prototype.apply=function(r,t,e){var l=r.getRenderTarget(!0);this.defaultFilter.apply(r,t,e),this.blurXFilter.apply(r,t,l),this.blurYFilter.apply(r,l,e),r.returnRenderTarget(l)},e.blur.get=function(){return this.blurXFilter.blur},e.blur.set=function(r){this.blurXFilter.blur=this.blurYFilter.blur=r},e.blurX.get=function(){return this.blurXFilter.blur},e.blurX.set=function(r){this.blurXFilter.blur=r},e.blurY.get=function(){return this.blurYFilter.blur},e.blurY.set=function(r){this.blurYFilter.blur=r},Object.defineProperties(t.prototype,e),t}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-bloom.es.js.map
-
-
-/***/ }),
-/* 203 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BulgePinchFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-bulge-pinch - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-bulge-pinch is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="uniform float radius;\nuniform float strength;\nuniform vec2 center;\nuniform sampler2D uSampler;\nvarying vec2 vTextureCoord;\n\nuniform vec4 filterArea;\nuniform vec4 filterClamp;\nuniform vec2 dimensions;\n\nvoid main()\n{\n    vec2 coord = vTextureCoord * filterArea.xy;\n    coord -= center * dimensions.xy;\n    float distance = length(coord);\n    if (distance < radius) {\n        float percent = distance / radius;\n        if (strength > 0.0) {\n            coord *= mix(1.0, smoothstep(0.0, radius / distance, percent), strength * 0.75);\n        } else {\n            coord *= mix(1.0, pow(percent, 1.0 + strength * 0.75) * radius / distance, 1.0 - percent);\n        }\n    }\n    coord += center * dimensions.xy;\n    coord /= filterArea.xy;\n    vec2 clampedCoord = clamp(coord, filterClamp.xy, filterClamp.zw);\n    gl_FragColor = texture2D(uSampler, clampedCoord);\n    if (coord != clampedCoord) {\n        gl_FragColor *= max(0.0, 1.0 - length(coord - clampedCoord));\n    }\n}\n",BulgePinchFilter=function(e){function r(r,n,t){e.call(this,vertex,fragment),this.center=r||[.5,.5],this.radius=n||100,this.strength=t||1}e&&(r.__proto__=e),r.prototype=Object.create(e&&e.prototype),r.prototype.constructor=r;var n={radius:{configurable:!0},strength:{configurable:!0},center:{configurable:!0}};return r.prototype.apply=function(e,r,n,t){this.uniforms.dimensions[0]=r.sourceFrame.width,this.uniforms.dimensions[1]=r.sourceFrame.height,e.applyFilter(this,r,n,t)},n.radius.get=function(){return this.uniforms.radius},n.radius.set=function(e){this.uniforms.radius=e},n.strength.get=function(){return this.uniforms.strength},n.strength.set=function(e){this.uniforms.strength=e},n.center.get=function(){return this.uniforms.center},n.center.set=function(e){this.uniforms.center=e},Object.defineProperties(r.prototype,n),r}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-bulge-pinch.es.js.map
-
-
-/***/ }),
-/* 204 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ColorReplaceFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-color-replace - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-color-replace is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D texture;\nuniform vec3 originalColor;\nuniform vec3 newColor;\nuniform float epsilon;\nvoid main(void) {\n    vec4 currentColor = texture2D(texture, vTextureCoord);\n    vec3 colorDiff = originalColor - (currentColor.rgb / max(currentColor.a, 0.0000000001));\n    float colorDistance = length(colorDiff);\n    float doReplace = step(colorDistance, epsilon);\n    gl_FragColor = vec4(mix(currentColor.rgb, (newColor + colorDiff) * currentColor.a, doReplace), currentColor.a);\n}\n",ColorReplaceFilter=function(o){function r(r,e,n){void 0===r&&(r=16711680),void 0===e&&(e=0),void 0===n&&(n=.4),o.call(this,vertex,fragment),this.originalColor=r,this.newColor=e,this.epsilon=n}o&&(r.__proto__=o),r.prototype=Object.create(o&&o.prototype),r.prototype.constructor=r;var e={originalColor:{configurable:!0},newColor:{configurable:!0},epsilon:{configurable:!0}};return e.originalColor.set=function(o){var r=this.uniforms.originalColor;"number"==typeof o?(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].hex2rgb(o,r),this._originalColor=o):(r[0]=o[0],r[1]=o[1],r[2]=o[2],this._originalColor=__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].rgb2hex(r))},e.originalColor.get=function(){return this._originalColor},e.newColor.set=function(o){var r=this.uniforms.newColor;"number"==typeof o?(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].hex2rgb(o,r),this._newColor=o):(r[0]=o[0],r[1]=o[1],r[2]=o[2],this._newColor=__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].rgb2hex(r))},e.newColor.get=function(){return this._newColor},e.epsilon.set=function(o){this.uniforms.epsilon=o},e.epsilon.get=function(){return this.uniforms.epsilon},Object.defineProperties(r.prototype,e),r}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-color-replace.es.js.map
-
-
-/***/ }),
-/* 205 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConvolutionFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-convolution - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-convolution is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="precision mediump float;\n\nvarying mediump vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform vec2 texelSize;\nuniform float matrix[9];\n\nvoid main(void)\n{\n   vec4 c11 = texture2D(uSampler, vTextureCoord - texelSize); // top left\n   vec4 c12 = texture2D(uSampler, vec2(vTextureCoord.x, vTextureCoord.y - texelSize.y)); // top center\n   vec4 c13 = texture2D(uSampler, vec2(vTextureCoord.x + texelSize.x, vTextureCoord.y - texelSize.y)); // top right\n\n   vec4 c21 = texture2D(uSampler, vec2(vTextureCoord.x - texelSize.x, vTextureCoord.y)); // mid left\n   vec4 c22 = texture2D(uSampler, vTextureCoord); // mid center\n   vec4 c23 = texture2D(uSampler, vec2(vTextureCoord.x + texelSize.x, vTextureCoord.y)); // mid right\n\n   vec4 c31 = texture2D(uSampler, vec2(vTextureCoord.x - texelSize.x, vTextureCoord.y + texelSize.y)); // bottom left\n   vec4 c32 = texture2D(uSampler, vec2(vTextureCoord.x, vTextureCoord.y + texelSize.y)); // bottom center\n   vec4 c33 = texture2D(uSampler, vTextureCoord + texelSize); // bottom right\n\n   gl_FragColor =\n       c11 * matrix[0] + c12 * matrix[1] + c13 * matrix[2] +\n       c21 * matrix[3] + c22 * matrix[4] + c23 * matrix[5] +\n       c31 * matrix[6] + c32 * matrix[7] + c33 * matrix[8];\n\n   gl_FragColor.a = c22.a;\n}\n",ConvolutionFilter=function(e){function t(t,r,o){e.call(this,vertex,fragment),this.matrix=t,this.width=r,this.height=o}e&&(t.__proto__=e),t.prototype=Object.create(e&&e.prototype),t.prototype.constructor=t;var r={matrix:{configurable:!0},width:{configurable:!0},height:{configurable:!0}};return r.matrix.get=function(){return this.uniforms.matrix},r.matrix.set=function(e){this.uniforms.matrix=new Float32Array(e)},r.width.get=function(){return 1/this.uniforms.texelSize[0]},r.width.set=function(e){this.uniforms.texelSize[0]=1/e},r.height.get=function(){return 1/this.uniforms.texelSize[1]},r.height.set=function(e){this.uniforms.texelSize[1]=1/e},Object.defineProperties(t.prototype,r),t}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-convolution.es.js.map
-
-
-/***/ }),
-/* 206 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CrossHatchFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-cross-hatch - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-cross-hatch is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="precision mediump float;\n\nvarying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\n\nvoid main(void)\n{\n    float lum = length(texture2D(uSampler, vTextureCoord.xy).rgb);\n\n    gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);\n\n    if (lum < 1.00)\n    {\n        if (mod(gl_FragCoord.x + gl_FragCoord.y, 10.0) == 0.0)\n        {\n            gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);\n        }\n    }\n\n    if (lum < 0.75)\n    {\n        if (mod(gl_FragCoord.x - gl_FragCoord.y, 10.0) == 0.0)\n        {\n            gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);\n        }\n    }\n\n    if (lum < 0.50)\n    {\n        if (mod(gl_FragCoord.x + gl_FragCoord.y - 5.0, 10.0) == 0.0)\n        {\n            gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);\n        }\n    }\n\n    if (lum < 0.3)\n    {\n        if (mod(gl_FragCoord.x - gl_FragCoord.y - 5.0, 10.0) == 0.0)\n        {\n            gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);\n        }\n    }\n}\n",CrossHatchFilter=function(r){function o(){r.call(this,vertex,fragment)}return r&&(o.__proto__=r),o.prototype=Object.create(r&&r.prototype),o.prototype.constructor=o,o}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-cross-hatch.es.js.map
-
-
-/***/ }),
-/* 207 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CRTFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-crt - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-crt is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\n\nuniform vec4 filterArea;\nuniform vec2 dimensions;\n\nconst float SQRT_2 = 1.414213;\n\nconst float light = 1.0;\n\nuniform float curvature;\nuniform float lineWidth;\nuniform float lineContrast;\nuniform bool verticalLine;\nuniform float noise;\nuniform float noiseSize;\n\nuniform float vignetting;\nuniform float vignettingAlpha;\nuniform float vignettingBlur;\n\nuniform float seed;\nuniform float time;\n\nfloat rand(vec2 co) {\n    return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);\n}\n\nvoid main(void)\n{\n    vec2 pixelCoord = vTextureCoord.xy * filterArea.xy;\n    vec2 coord = pixelCoord / dimensions;\n\n    vec2 dir = vec2(coord - vec2(0.5, 0.5));\n\n    float _c = curvature > 0. ? curvature : 1.;\n    float k = curvature > 0. ?(length(dir * dir) * 0.25 * _c * _c + 0.935 * _c) : 1.;\n    vec2 uv = dir * k;\n\n    gl_FragColor = texture2D(uSampler, vTextureCoord);\n    vec3 rgb = gl_FragColor.rgb;\n\n\n    if (noise > 0.0 && noiseSize > 0.0)\n    {\n        pixelCoord.x = floor(pixelCoord.x / noiseSize);\n        pixelCoord.y = floor(pixelCoord.y / noiseSize);\n        float _noise = rand(pixelCoord * noiseSize * seed) - 0.5;\n        rgb += _noise * noise;\n    }\n\n    if (lineWidth > 0.0) {\n        float v = (verticalLine ? uv.x * dimensions.x : uv.y * dimensions.y) * min(1.0, 2.0 / lineWidth ) / _c;\n        float j = 1. + cos(v * 1.2 - time) * 0.5 * lineContrast;\n        rgb *= j;\n        float segment = verticalLine ? mod((dir.x + .5) * dimensions.x, 4.) : mod((dir.y + .5) * dimensions.y, 4.);\n        rgb *= 0.99 + ceil(segment) * 0.015;\n    }\n\n    if (vignetting > 0.0)\n    {\n        float outter = SQRT_2 - vignetting * SQRT_2;\n        float darker = clamp((outter - length(dir) * SQRT_2) / ( 0.00001 + vignettingBlur * SQRT_2), 0.0, 1.0);\n        rgb *= darker + (1.0 - darker) * (1.0 - vignettingAlpha);\n    }\n\n    gl_FragColor.rgb = rgb;\n}\n",CRTFilter=function(n){function i(i){n.call(this,vertex,fragment),this.time=0,this.seed=0,Object.assign(this,{curvature:1,lineWidth:1,lineContrast:.25,verticalLine:!1,noise:0,noiseSize:1,seed:0,vignetting:.3,vignettingAlpha:1,vignettingBlur:.3,time:0},i)}n&&(i.__proto__=n),i.prototype=Object.create(n&&n.prototype),i.prototype.constructor=i;var t={curvature:{configurable:!0},lineWidth:{configurable:!0},lineContrast:{configurable:!0},verticalLine:{configurable:!0},noise:{configurable:!0},noiseSize:{configurable:!0},vignetting:{configurable:!0},vignettingAlpha:{configurable:!0},vignettingBlur:{configurable:!0}};return i.prototype.apply=function(n,i,t,e){this.uniforms.dimensions[0]=i.sourceFrame.width,this.uniforms.dimensions[1]=i.sourceFrame.height,this.uniforms.seed=this.seed,this.uniforms.time=this.time,n.applyFilter(this,i,t,e)},t.curvature.set=function(n){this.uniforms.curvature=n},t.curvature.get=function(){return this.uniforms.curvature},t.lineWidth.set=function(n){this.uniforms.lineWidth=n},t.lineWidth.get=function(){return this.uniforms.lineWidth},t.lineContrast.set=function(n){this.uniforms.lineContrast=n},t.lineContrast.get=function(){return this.uniforms.lineContrast},t.verticalLine.set=function(n){this.uniforms.verticalLine=n},t.verticalLine.get=function(){return this.uniforms.verticalLine},t.noise.set=function(n){this.uniforms.noise=n},t.noise.get=function(){return this.uniforms.noise},t.noiseSize.set=function(n){this.uniforms.noiseSize=n},t.noiseSize.get=function(){return this.uniforms.noiseSize},t.vignetting.set=function(n){this.uniforms.vignetting=n},t.vignetting.get=function(){return this.uniforms.vignetting},t.vignettingAlpha.set=function(n){this.uniforms.vignettingAlpha=n},t.vignettingAlpha.get=function(){return this.uniforms.vignettingAlpha},t.vignettingBlur.set=function(n){this.uniforms.vignettingBlur=n},t.vignettingBlur.get=function(){return this.uniforms.vignettingBlur},Object.defineProperties(i.prototype,t),i}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-crt.es.js.map
-
-
-/***/ }),
-/* 208 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DotFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-dot - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-dot is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="precision mediump float;\n\nvarying vec2 vTextureCoord;\nvarying vec4 vColor;\n\nuniform vec4 filterArea;\nuniform sampler2D uSampler;\n\nuniform float angle;\nuniform float scale;\n\nfloat pattern()\n{\n   float s = sin(angle), c = cos(angle);\n   vec2 tex = vTextureCoord * filterArea.xy;\n   vec2 point = vec2(\n       c * tex.x - s * tex.y,\n       s * tex.x + c * tex.y\n   ) * scale;\n   return (sin(point.x) * sin(point.y)) * 4.0;\n}\n\nvoid main()\n{\n   vec4 color = texture2D(uSampler, vTextureCoord);\n   float average = (color.r + color.g + color.b) / 3.0;\n   gl_FragColor = vec4(vec3(average * 10.0 - 5.0 + pattern()), color.a);\n}\n",DotFilter=function(e){function n(n,t){void 0===n&&(n=1),void 0===t&&(t=5),e.call(this,vertex,fragment),this.scale=n,this.angle=t}e&&(n.__proto__=e),n.prototype=Object.create(e&&e.prototype),n.prototype.constructor=n;var t={scale:{configurable:!0},angle:{configurable:!0}};return t.scale.get=function(){return this.uniforms.scale},t.scale.set=function(e){this.uniforms.scale=e},t.angle.get=function(){return this.uniforms.angle},t.angle.set=function(e){this.uniforms.angle=e},Object.defineProperties(n.prototype,t),n}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-dot.es.js.map
-
-
-/***/ }),
-/* 209 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DropShadowFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-drop-shadow - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-drop-shadow is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform float alpha;\nuniform vec3 color;\nvoid main(void){\n    vec4 sample = texture2D(uSampler, vTextureCoord);\n\n    // Un-premultiply alpha before applying the color\n    if (sample.a > 0.0) {\n        sample.rgb /= sample.a;\n    }\n\n    // Premultiply alpha again\n    sample.rgb = color.rgb * sample.a;\n\n    // alpha user alpha\n    sample *= alpha;\n\n    gl_FragColor = sample;\n}",DropShadowFilter=function(t){function r(r,i,e,n,o){void 0===r&&(r=45),void 0===i&&(i=5),void 0===e&&(e=2),void 0===n&&(n=0),void 0===o&&(o=.5),t.call(this),this.tintFilter=new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"](vertex,fragment),this.blurFilter=new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["filters"].BlurFilter,this.blurFilter.blur=e,this.targetTransform=new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Matrix"],this.rotation=r,this.padding=i,this.distance=i,this.alpha=o,this.color=n}t&&(r.__proto__=t),r.prototype=Object.create(t&&t.prototype),r.prototype.constructor=r;var i={distance:{configurable:!0},rotation:{configurable:!0},blur:{configurable:!0},alpha:{configurable:!0},color:{configurable:!0}};return r.prototype.apply=function(t,r,i,e){var n=t.getRenderTarget();n.transform=this.targetTransform,this.tintFilter.apply(t,r,n,!0),this.blurFilter.apply(t,n,i),t.applyFilter(this,r,i,e),n.transform=null,t.returnRenderTarget(n)},r.prototype._updatePadding=function(){this.padding=this.distance+2*this.blur},r.prototype._updateTargetTransform=function(){this.targetTransform.tx=this.distance*Math.cos(this.angle),this.targetTransform.ty=this.distance*Math.sin(this.angle)},i.distance.get=function(){return this._distance},i.distance.set=function(t){this._distance=t,this._updatePadding(),this._updateTargetTransform()},i.rotation.get=function(){return this.angle/__WEBPACK_IMPORTED_MODULE_0_pixi_js__["DEG_TO_RAD"]},i.rotation.set=function(t){this.angle=t*__WEBPACK_IMPORTED_MODULE_0_pixi_js__["DEG_TO_RAD"],this._updateTargetTransform()},i.blur.get=function(){return this.blurFilter.blur},i.blur.set=function(t){this.blurFilter.blur=t,this._updatePadding()},i.alpha.get=function(){return this.tintFilter.uniforms.alpha},i.alpha.set=function(t){this.tintFilter.uniforms.alpha=t},i.color.get=function(){return __WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].rgb2hex(this.tintFilter.uniforms.color)},i.color.set=function(t){__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].hex2rgb(t,this.tintFilter.uniforms.color)},Object.defineProperties(r.prototype,i),r}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-drop-shadow.es.js.map
-
-
-/***/ }),
-/* 210 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmbossFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-emboss - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-emboss is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="precision mediump float;\n\nvarying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform float strength;\nuniform vec4 filterArea;\n\n\nvoid main(void)\n{\n\tvec2 onePixel = vec2(1.0 / filterArea);\n\n\tvec4 color;\n\n\tcolor.rgb = vec3(0.5);\n\n\tcolor -= texture2D(uSampler, vTextureCoord - onePixel) * strength;\n\tcolor += texture2D(uSampler, vTextureCoord + onePixel) * strength;\n\n\tcolor.rgb = vec3((color.r + color.g + color.b) / 3.0);\n\n\tfloat alpha = texture2D(uSampler, vTextureCoord).a;\n\n\tgl_FragColor = vec4(color.rgb * alpha, alpha);\n}\n",EmbossFilter=function(t){function e(e){void 0===e&&(e=5),t.call(this,vertex,fragment),this.strength=e}t&&(e.__proto__=t),e.prototype=Object.create(t&&t.prototype),e.prototype.constructor=e;var r={strength:{configurable:!0}};return r.strength.get=function(){return this.uniforms.strength},r.strength.set=function(t){this.uniforms.strength=t},Object.defineProperties(e.prototype,r),e}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-emboss.es.js.map
-
-
-/***/ }),
-/* 211 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlitchFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-glitch - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-glitch is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="// precision highp float;\n\nvarying vec2 vTextureCoord;\nuniform sampler2D uSampler;\n\nuniform vec4 filterArea;\nuniform vec4 filterClamp;\nuniform vec2 dimensions;\nuniform float aspect;\n\nuniform sampler2D displacementMap;\nuniform float offset;\nuniform float sinDir;\nuniform float cosDir;\nuniform int fillMode;\n\nuniform float seed;\nuniform vec2 red;\nuniform vec2 green;\nuniform vec2 blue;\n\nconst int TRANSPARENT = 0;\nconst int ORIGINAL = 1;\nconst int LOOP = 2;\nconst int CLAMP = 3;\nconst int MIRROR = 4;\n\nvoid main(void)\n{\n    vec2 coord = (vTextureCoord * filterArea.xy) / dimensions;\n\n    if (coord.x > 1.0 || coord.y > 1.0) {\n        return;\n    }\n\n    float cx = coord.x - 0.5;\n    float cy = (coord.y - 0.5) * aspect;\n    float ny = (-sinDir * cx + cosDir * cy) / aspect + 0.5;\n\n    // displacementMap: repeat\n    // ny = ny > 1.0 ? ny - 1.0 : (ny < 0.0 ? 1.0 + ny : ny);\n\n    // displacementMap: mirror\n    ny = ny > 1.0 ? 2.0 - ny : (ny < 0.0 ? -ny : ny);\n\n    vec4 dc = texture2D(displacementMap, vec2(0.5, ny));\n\n    float displacement = (dc.r - dc.g) * (offset / filterArea.x);\n\n    coord = vTextureCoord + vec2(cosDir * displacement, sinDir * displacement * aspect);\n\n    if (fillMode == CLAMP) {\n        coord = clamp(coord, filterClamp.xy, filterClamp.zw);\n    } else {\n        if( coord.x > filterClamp.z ) {\n            if (fillMode == ORIGINAL) {\n                gl_FragColor = texture2D(uSampler, vTextureCoord);\n                return;\n            } else if (fillMode == LOOP) {\n                coord.x -= filterClamp.z;\n            } else if (fillMode == MIRROR) {\n                coord.x = filterClamp.z * 2.0 - coord.x;\n            } else {\n                gl_FragColor = vec4(0., 0., 0., 0.);\n                return;\n            }\n        } else if( coord.x < filterClamp.x ) {\n            if (fillMode == ORIGINAL) {\n                gl_FragColor = texture2D(uSampler, vTextureCoord);\n                return;\n            } else if (fillMode == LOOP) {\n                coord.x += filterClamp.z;\n            } else if (fillMode == MIRROR) {\n                coord.x *= -filterClamp.z;\n            } else {\n                gl_FragColor = vec4(0., 0., 0., 0.);\n                return;\n            }\n        }\n\n        if( coord.y > filterClamp.w ) {\n            if (fillMode == ORIGINAL) {\n                gl_FragColor = texture2D(uSampler, vTextureCoord);\n                return;\n            } else if (fillMode == LOOP) {\n                coord.y -= filterClamp.w;\n            } else if (fillMode == MIRROR) {\n                coord.y = filterClamp.w * 2.0 - coord.y;\n            } else {\n                gl_FragColor = vec4(0., 0., 0., 0.);\n                return;\n            }\n        } else if( coord.y < filterClamp.y ) {\n            if (fillMode == ORIGINAL) {\n                gl_FragColor = texture2D(uSampler, vTextureCoord);\n                return;\n            } else if (fillMode == LOOP) {\n                coord.y += filterClamp.w;\n            } else if (fillMode == MIRROR) {\n                coord.y *= -filterClamp.w;\n            } else {\n                gl_FragColor = vec4(0., 0., 0., 0.);\n                return;\n            }\n        }\n    }\n\n    gl_FragColor.r = texture2D(uSampler, coord + red * (1.0 - seed * 0.4) / filterArea.xy).r;\n    gl_FragColor.g = texture2D(uSampler, coord + green * (1.0 - seed * 0.3) / filterArea.xy).g;\n    gl_FragColor.b = texture2D(uSampler, coord + blue * (1.0 - seed * 0.2) / filterArea.xy).b;\n    gl_FragColor.a = texture2D(uSampler, coord).a;\n}\n",GlitchFilter=function(e){function i(i){void 0===i&&(i={}),e.call(this,vertex,fragment),i=Object.assign({slices:5,offset:100,direction:0,fillMode:0,average:!1,seed:0,red:[0,0],green:[0,0],blue:[0,0],minSize:8,sampleSize:512},i),this.direction=i.direction,this.red=i.red,this.green=i.green,this.blue=i.blue,this.offset=i.offset,this.fillMode=i.fillMode,this.average=i.average,this.seed=i.seed,this.minSize=i.minSize,this.sampleSize=i.sampleSize,this._canvas=document.createElement("canvas"),this._canvas.width=4,this._canvas.height=this.sampleSize,this.texture=__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Texture"].fromCanvas(this._canvas,__WEBPACK_IMPORTED_MODULE_0_pixi_js__["SCALE_MODES"].NEAREST),this._slices=0,this.slices=i.slices}e&&(i.__proto__=e),i.prototype=Object.create(e&&e.prototype),i.prototype.constructor=i;var t={sizes:{configurable:!0},offsets:{configurable:!0},slices:{configurable:!0},direction:{configurable:!0},red:{configurable:!0},green:{configurable:!0},blue:{configurable:!0}};return i.prototype.apply=function(e,i,t,r){var n=i.sourceFrame.width,s=i.sourceFrame.height;this.uniforms.dimensions[0]=n,this.uniforms.dimensions[1]=s,this.uniforms.aspect=s/n,this.uniforms.seed=this.seed,this.uniforms.offset=this.offset,this.uniforms.fillMode=this.fillMode,e.applyFilter(this,i,t,r)},i.prototype._randomizeSizes=function(){var e=this._sizes,i=this._slices-1,t=this.sampleSize,r=Math.min(this.minSize/t,.9/this._slices);if(this.average){for(var n=this._slices,s=1,o=0;o<i;o++){var l=s/(n-o),f=Math.max(l*(1-.6*Math.random()),r);e[o]=f,s-=f}e[i]=s}else{for(var a=1,c=Math.sqrt(1/this._slices),u=0;u<i;u++){var d=Math.max(c*a*Math.random(),r);e[u]=d,a-=d}e[i]=a}this.shuffle()},i.prototype.shuffle=function(){for(var e=this._sizes,i=this._slices-1;i>0;i--){var t=Math.random()*i>>0,r=e[i];e[i]=e[t],e[t]=r}},i.prototype._randomizeOffsets=function(){for(var e=0;e<this._slices;e++)this._offsets[e]=Math.random()*(Math.random()<.5?-1:1)},i.prototype.refresh=function(){this._randomizeSizes(),this._randomizeOffsets(),this.redraw()},i.prototype.redraw=function(){var e,i=this.sampleSize,t=this.texture,r=this._canvas.getContext("2d");r.clearRect(0,0,8,i);for(var n=0,s=0;s<this._slices;s++){e=Math.floor(256*this._offsets[s]);var o=this._sizes[s]*i,l=e>0?e:0,f=e<0?-e:0;r.fillStyle="rgba("+l+", "+f+", 0, 1)",r.fillRect(0,n>>0,i,o+1>>0),n+=o}t._updateID++,t.baseTexture.emit("update",t.baseTexture),this.uniforms.displacementMap=t},t.sizes.set=function(e){for(var i=Math.min(this._slices,e.length),t=0;t<i;t++)this._sizes[t]=e[t]},t.sizes.get=function(){return this._sizes},t.offsets.set=function(e){for(var i=Math.min(this._slices,e.length),t=0;t<i;t++)this._offsets[t]=e[t]},t.offsets.get=function(){return this._offsets},t.slices.get=function(){return this._slices},t.slices.set=function(e){this._slices!==e&&(this._slices=e,this.uniforms.slices=e,this._sizes=this.uniforms.slicesWidth=new Float32Array(e),this._offsets=this.uniforms.slicesOffset=new Float32Array(e),this.refresh())},t.direction.get=function(){return this._direction},t.direction.set=function(e){if(this._direction!==e){this._direction=e;var i=e*__WEBPACK_IMPORTED_MODULE_0_pixi_js__["DEG_TO_RAD"];this.uniforms.sinDir=Math.sin(i),this.uniforms.cosDir=Math.cos(i)}},t.red.get=function(){return this.uniforms.red},t.red.set=function(e){this.uniforms.red=e},t.green.get=function(){return this.uniforms.green},t.green.set=function(e){this.uniforms.green=e},t.blue.get=function(){return this.uniforms.blue},t.blue.set=function(e){this.uniforms.blue=e},i.prototype.destroy=function(){this.texture.destroy(!0),this.texture=null,this._canvas=null,this.red=null,this.green=null,this.blue=null,this._sizes=null,this._offsets=null},Object.defineProperties(i.prototype,t),i}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);GlitchFilter.TRANSPARENT=0,GlitchFilter.ORIGINAL=1,GlitchFilter.LOOP=2,GlitchFilter.CLAMP=3,GlitchFilter.MIRROR=4;
-//# sourceMappingURL=filter-glitch.es.js.map
-
-
-/***/ }),
-/* 212 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlowFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-glow - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-glow is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nvarying vec4 vColor;\n\nuniform sampler2D uSampler;\n\nuniform float distance;\nuniform float outerStrength;\nuniform float innerStrength;\nuniform vec4 glowColor;\nuniform vec4 filterArea;\nuniform vec4 filterClamp;\nconst float PI = 3.14159265358979323846264;\n\nvoid main(void) {\n    vec2 px = vec2(1.0 / filterArea.x, 1.0 / filterArea.y);\n    vec4 ownColor = texture2D(uSampler, vTextureCoord);\n    vec4 curColor;\n    float totalAlpha = 0.0;\n    float maxTotalAlpha = 0.0;\n    float cosAngle;\n    float sinAngle;\n    vec2 displaced;\n    for (float angle = 0.0; angle <= PI * 2.0; angle += %QUALITY_DIST%) {\n       cosAngle = cos(angle);\n       sinAngle = sin(angle);\n       for (float curDistance = 1.0; curDistance <= %DIST%; curDistance++) {\n           displaced.x = vTextureCoord.x + cosAngle * curDistance * px.x;\n           displaced.y = vTextureCoord.y + sinAngle * curDistance * px.y;\n           curColor = texture2D(uSampler, clamp(displaced, filterClamp.xy, filterClamp.zw));\n           totalAlpha += (distance - curDistance) * curColor.a;\n           maxTotalAlpha += (distance - curDistance);\n       }\n    }\n    maxTotalAlpha = max(maxTotalAlpha, 0.0001);\n\n    ownColor.a = max(ownColor.a, 0.0001);\n    ownColor.rgb = ownColor.rgb / ownColor.a;\n    float outerGlowAlpha = (totalAlpha / maxTotalAlpha)  * outerStrength * (1. - ownColor.a);\n    float innerGlowAlpha = ((maxTotalAlpha - totalAlpha) / maxTotalAlpha) * innerStrength * ownColor.a;\n    float resultAlpha = (ownColor.a + outerGlowAlpha);\n    gl_FragColor = vec4(mix(mix(ownColor.rgb, glowColor.rgb, innerGlowAlpha / ownColor.a), glowColor.rgb, outerGlowAlpha / resultAlpha) * resultAlpha, resultAlpha);\n}\n",GlowFilter=function(o){function t(t,n,r,e,l){void 0===t&&(t=10),void 0===n&&(n=4),void 0===r&&(r=0),void 0===e&&(e=16777215),void 0===l&&(l=.1),o.call(this,vertex,fragment.replace(/%QUALITY_DIST%/gi,""+(1/l/t).toFixed(7)).replace(/%DIST%/gi,""+t.toFixed(7))),this.uniforms.glowColor=new Float32Array([0,0,0,1]),this.distance=t,this.color=e,this.outerStrength=n,this.innerStrength=r}o&&(t.__proto__=o),t.prototype=Object.create(o&&o.prototype),t.prototype.constructor=t;var n={color:{configurable:!0},distance:{configurable:!0},outerStrength:{configurable:!0},innerStrength:{configurable:!0}};return n.color.get=function(){return __WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].rgb2hex(this.uniforms.glowColor)},n.color.set=function(o){__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].hex2rgb(o,this.uniforms.glowColor)},n.distance.get=function(){return this.uniforms.distance},n.distance.set=function(o){this.uniforms.distance=o},n.outerStrength.get=function(){return this.uniforms.outerStrength},n.outerStrength.set=function(o){this.uniforms.outerStrength=o},n.innerStrength.get=function(){return this.uniforms.innerStrength},n.innerStrength.set=function(o){this.uniforms.innerStrength=o},Object.defineProperties(t.prototype,n),t}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-glow.es.js.map
-
-
-/***/ }),
-/* 213 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GodrayFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-godray - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-godray is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",perlin="vec3 mod289(vec3 x)\n{\n    return x - floor(x * (1.0 / 289.0)) * 289.0;\n}\nvec4 mod289(vec4 x)\n{\n    return x - floor(x * (1.0 / 289.0)) * 289.0;\n}\nvec4 permute(vec4 x)\n{\n    return mod289(((x * 34.0) + 1.0) * x);\n}\nvec4 taylorInvSqrt(vec4 r)\n{\n    return 1.79284291400159 - 0.85373472095314 * r;\n}\nvec3 fade(vec3 t)\n{\n    return t * t * t * (t * (t * 6.0 - 15.0) + 10.0);\n}\n// Classic Perlin noise, periodic variant\nfloat pnoise(vec3 P, vec3 rep)\n{\n    vec3 Pi0 = mod(floor(P), rep); // Integer part, modulo period\n    vec3 Pi1 = mod(Pi0 + vec3(1.0), rep); // Integer part + 1, mod period\n    Pi0 = mod289(Pi0);\n    Pi1 = mod289(Pi1);\n    vec3 Pf0 = fract(P); // Fractional part for interpolation\n    vec3 Pf1 = Pf0 - vec3(1.0); // Fractional part - 1.0\n    vec4 ix = vec4(Pi0.x, Pi1.x, Pi0.x, Pi1.x);\n    vec4 iy = vec4(Pi0.yy, Pi1.yy);\n    vec4 iz0 = Pi0.zzzz;\n    vec4 iz1 = Pi1.zzzz;\n    vec4 ixy = permute(permute(ix) + iy);\n    vec4 ixy0 = permute(ixy + iz0);\n    vec4 ixy1 = permute(ixy + iz1);\n    vec4 gx0 = ixy0 * (1.0 / 7.0);\n    vec4 gy0 = fract(floor(gx0) * (1.0 / 7.0)) - 0.5;\n    gx0 = fract(gx0);\n    vec4 gz0 = vec4(0.5) - abs(gx0) - abs(gy0);\n    vec4 sz0 = step(gz0, vec4(0.0));\n    gx0 -= sz0 * (step(0.0, gx0) - 0.5);\n    gy0 -= sz0 * (step(0.0, gy0) - 0.5);\n    vec4 gx1 = ixy1 * (1.0 / 7.0);\n    vec4 gy1 = fract(floor(gx1) * (1.0 / 7.0)) - 0.5;\n    gx1 = fract(gx1);\n    vec4 gz1 = vec4(0.5) - abs(gx1) - abs(gy1);\n    vec4 sz1 = step(gz1, vec4(0.0));\n    gx1 -= sz1 * (step(0.0, gx1) - 0.5);\n    gy1 -= sz1 * (step(0.0, gy1) - 0.5);\n    vec3 g000 = vec3(gx0.x, gy0.x, gz0.x);\n    vec3 g100 = vec3(gx0.y, gy0.y, gz0.y);\n    vec3 g010 = vec3(gx0.z, gy0.z, gz0.z);\n    vec3 g110 = vec3(gx0.w, gy0.w, gz0.w);\n    vec3 g001 = vec3(gx1.x, gy1.x, gz1.x);\n    vec3 g101 = vec3(gx1.y, gy1.y, gz1.y);\n    vec3 g011 = vec3(gx1.z, gy1.z, gz1.z);\n    vec3 g111 = vec3(gx1.w, gy1.w, gz1.w);\n    vec4 norm0 = taylorInvSqrt(vec4(dot(g000, g000), dot(g010, g010), dot(g100, g100), dot(g110, g110)));\n    g000 *= norm0.x;\n    g010 *= norm0.y;\n    g100 *= norm0.z;\n    g110 *= norm0.w;\n    vec4 norm1 = taylorInvSqrt(vec4(dot(g001, g001), dot(g011, g011), dot(g101, g101), dot(g111, g111)));\n    g001 *= norm1.x;\n    g011 *= norm1.y;\n    g101 *= norm1.z;\n    g111 *= norm1.w;\n    float n000 = dot(g000, Pf0);\n    float n100 = dot(g100, vec3(Pf1.x, Pf0.yz));\n    float n010 = dot(g010, vec3(Pf0.x, Pf1.y, Pf0.z));\n    float n110 = dot(g110, vec3(Pf1.xy, Pf0.z));\n    float n001 = dot(g001, vec3(Pf0.xy, Pf1.z));\n    float n101 = dot(g101, vec3(Pf1.x, Pf0.y, Pf1.z));\n    float n011 = dot(g011, vec3(Pf0.x, Pf1.yz));\n    float n111 = dot(g111, Pf1);\n    vec3 fade_xyz = fade(Pf0);\n    vec4 n_z = mix(vec4(n000, n100, n010, n110), vec4(n001, n101, n011, n111), fade_xyz.z);\n    vec2 n_yz = mix(n_z.xy, n_z.zw, fade_xyz.y);\n    float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x);\n    return 2.2 * n_xyz;\n}\nfloat turb(vec3 P, vec3 rep, float lacunarity, float gain)\n{\n    float sum = 0.0;\n    float sc = 1.0;\n    float totalgain = 1.0;\n    for (float i = 0.0; i < 6.0; i++)\n    {\n        sum += totalgain * pnoise(P * sc, rep);\n        sc *= lacunarity;\n        totalgain *= gain;\n    }\n    return abs(sum);\n}\n",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform vec4 filterArea;\nuniform vec2 dimensions;\n\nuniform vec2 light;\nuniform bool parallel;\nuniform float aspect;\n\nuniform float gain;\nuniform float lacunarity;\nuniform float time;\n\n${perlin}\n\nvoid main(void) {\n    gl_FragColor = texture2D(uSampler, vTextureCoord);\n    vec2 coord = vTextureCoord * filterArea.xy / dimensions.xy;\n\n    float d;\n\n    if (parallel) {\n        float _cos = light.x;\n        float _sin = light.y;\n        d = (_cos * coord.x) + (_sin * coord.y * aspect);\n    } else {\n        float dx = coord.x - light.x / dimensions.x;\n        float dy = (coord.y - light.y / dimensions.y) * aspect;\n        float dis = sqrt(dx * dx + dy * dy) + 0.00001;\n        d = dy / dis;\n    }\n\n    vec3 dir = vec3(d, d, 0.0);\n\n    float noise = turb(dir + vec3(time, 0.0, 62.1 + time) * 0.05, vec3(480.0, 320.0, 480.0), lacunarity, gain);\n    noise = mix(noise, 0.0, 0.3);\n    //fade vertically.\n    vec4 mist = vec4(noise, noise, noise, 1.0) * (1.0 - coord.y);\n    mist.a = 1.0;\n    gl_FragColor += mist;\n}\n",GodrayFilter=function(n){function e(e){n.call(this,vertex,fragment.replace("${perlin}",perlin)),"number"==typeof e&&(console.warn("GodrayFilter now uses options instead of (angle, gain, lacunarity, time)"),e={angle:e},void 0!==arguments[1]&&(e.gain=arguments[1]),void 0!==arguments[2]&&(e.lacunarity=arguments[2]),void 0!==arguments[3]&&(e.time=arguments[3])),e=Object.assign({angle:30,gain:.5,lacunarity:2.5,time:0,parallel:!0,center:[0,0]},e),this._angleLight=new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"],this.angle=e.angle,this.gain=e.gain,this.lacunarity=e.lacunarity,this.parallel=e.parallel,this.center=e.center,this.time=e.time}n&&(e.__proto__=n),e.prototype=Object.create(n&&n.prototype),e.prototype.constructor=e;var t={angle:{configurable:!0},gain:{configurable:!0},lacunarity:{configurable:!0}};return e.prototype.apply=function(n,e,t,i){var o=e.sourceFrame,r=o.width,a=o.height;this.uniforms.light=this.parallel?this._angleLight:this.center,this.uniforms.parallel=this.parallel,this.uniforms.dimensions[0]=r,this.uniforms.dimensions[1]=a,this.uniforms.aspect=a/r,this.uniforms.time=this.time,n.applyFilter(this,e,t,i)},t.angle.get=function(){return this._angle},t.angle.set=function(n){this._angle=n;var e=n*__WEBPACK_IMPORTED_MODULE_0_pixi_js__["DEG_TO_RAD"];this._angleLight.x=Math.cos(e),this._angleLight.y=Math.sin(e)},t.gain.get=function(){return this.uniforms.gain},t.gain.set=function(n){this.uniforms.gain=n},t.lacunarity.get=function(){return this.uniforms.lacunarity},t.lacunarity.set=function(n){this.uniforms.lacunarity=n},Object.defineProperties(e.prototype,t),e}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-godray.es.js.map
-
-
-/***/ }),
-/* 214 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MotionBlurFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-motion-blur - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-motion-blur is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform vec4 filterArea;\n\nuniform vec2 uVelocity;\nuniform int uKernelSize;\nuniform float uOffset;\n\nconst int MAX_KERNEL_SIZE = 2048;\nconst int ITERATION = MAX_KERNEL_SIZE - 1;\n\nvec2 velocity = uVelocity / filterArea.xy;\n\n// float kernelSize = min(float(uKernelSize), float(MAX_KERNELSIZE));\n\n// In real use-case , uKernelSize < MAX_KERNELSIZE almost always.\n// So use uKernelSize directly.\nfloat kernelSize = float(uKernelSize);\nfloat k = kernelSize - 1.0;\nfloat offset = -uOffset / length(uVelocity) - 0.5;\n\nvoid main(void)\n{\n    gl_FragColor = texture2D(uSampler, vTextureCoord);\n\n    if (uKernelSize == 0)\n    {\n        return;\n    }\n\n    for(int i = 0; i < ITERATION; i++) {\n        if (i == int(k)) {\n            break;\n        }\n        vec2 bias = velocity * (float(i) / k + offset);\n        gl_FragColor += texture2D(uSampler, vTextureCoord + bias);\n    }\n    gl_FragColor /= kernelSize;\n}\n",MotionBlurFilter=function(e){function t(t,i,n){void 0===t&&(t=[0,0]),void 0===i&&(i=5),void 0===n&&(n=0),e.call(this,vertex,fragment),this._velocity=new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](0,0),this.velocity=t,this.kernelSize=i,this.offset=n}e&&(t.__proto__=e),t.prototype=Object.create(e&&e.prototype),t.prototype.constructor=t;var i={velocity:{configurable:!0},offset:{configurable:!0}};return t.prototype.apply=function(e,t,i,n){var o=this.velocity,r=o.x,l=o.y;this.uniforms.uKernelSize=0!==r||0!==l?this.kernelSize:0,e.applyFilter(this,t,i,n)},i.velocity.set=function(e){Array.isArray(e)?(this._velocity.x=e[0],this._velocity.y=e[1]):e instanceof __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"]&&(this._velocity.x=e.x,this._velocity.y=e.y),this.uniforms.uVelocity[0]=this._velocity.x,this.uniforms.uVelocity[1]=this._velocity.y},i.velocity.get=function(){return this._velocity},i.offset.set=function(e){this.uniforms.uOffset=e},i.offset.get=function(){return this.uniforms.uOffset},Object.defineProperties(t.prototype,i),t}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-motion-blur.es.js.map
-
-
-/***/ }),
-/* 215 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MultiColorReplaceFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-multi-color-replace - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-multi-color-replace is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\n\nuniform float epsilon;\n\nconst int MAX_COLORS = %maxColors%;\n\nuniform vec3 originalColors[MAX_COLORS];\nuniform vec3 targetColors[MAX_COLORS];\n\nvoid main(void)\n{\n    gl_FragColor = texture2D(uSampler, vTextureCoord);\n\n    float alpha = gl_FragColor.a;\n    if (alpha < 0.0001)\n    {\n      return;\n    }\n\n    vec3 color = gl_FragColor.rgb / alpha;\n\n    for(int i = 0; i < MAX_COLORS; i++)\n    {\n      vec3 origColor = originalColors[i];\n      if (origColor.r < 0.0)\n      {\n        break;\n      }\n      vec3 colorDiff = origColor - color;\n      if (length(colorDiff) < epsilon)\n      {\n        vec3 targetColor = targetColors[i];\n        gl_FragColor = vec4((targetColor + colorDiff) * alpha, alpha);\n        return;\n      }\n    }\n}\n",MultiColorReplaceFilter=function(o){function r(r,e,n){void 0===e&&(e=.05),void 0===n&&(n=null),n=n||r.length,o.call(this,vertex,fragment.replace(/%maxColors%/g,n)),this.epsilon=e,this._maxColors=n,this._replacements=null,this.uniforms.originalColors=new Float32Array(3*n),this.uniforms.targetColors=new Float32Array(3*n),this.replacements=r}o&&(r.__proto__=o),r.prototype=Object.create(o&&o.prototype),r.prototype.constructor=r;var e={replacements:{configurable:!0},maxColors:{configurable:!0},epsilon:{configurable:!0}};return e.replacements.set=function(o){var r=this.uniforms.originalColors,e=this.uniforms.targetColors,n=o.length;if(n>this._maxColors)throw"Length of replacements ("+n+") exceeds the maximum colors length ("+this._maxColors+")";r[3*n]=-1;for(var t=0;t<n;t++){var i=o[t],l=i[0];"number"==typeof l?l=__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].hex2rgb(l):i[0]=__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].rgb2hex(l),r[3*t]=l[0],r[3*t+1]=l[1],r[3*t+2]=l[2];var a=i[1];"number"==typeof a?a=__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].hex2rgb(a):i[1]=__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].rgb2hex(a),e[3*t]=a[0],e[3*t+1]=a[1],e[3*t+2]=a[2]}this._replacements=o},e.replacements.get=function(){return this._replacements},r.prototype.refresh=function(){this.replacements=this._replacements},e.maxColors.get=function(){return this._maxColors},e.epsilon.set=function(o){this.uniforms.epsilon=o},e.epsilon.get=function(){return this.uniforms.epsilon},Object.defineProperties(r.prototype,e),r}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-multi-color-replace.es.js.map
-
-
-/***/ }),
-/* 216 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OldFilmFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-old-film - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-old-film is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform vec4 filterArea;\nuniform vec2 dimensions;\n\nuniform float sepia;\nuniform float noise;\nuniform float noiseSize;\nuniform float scratch;\nuniform float scratchDensity;\nuniform float scratchWidth;\nuniform float vignetting;\nuniform float vignettingAlpha;\nuniform float vignettingBlur;\nuniform float seed;\n\nconst float SQRT_2 = 1.414213;\nconst vec3 SEPIA_RGB = vec3(112.0 / 255.0, 66.0 / 255.0, 20.0 / 255.0);\n\nfloat rand(vec2 co) {\n    return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);\n}\n\nvec3 Overlay(vec3 src, vec3 dst)\n{\n    // if (dst <= 0.5) then: 2 * src * dst\n    // if (dst > 0.5) then: 1 - 2 * (1 - dst) * (1 - src)\n    return vec3((dst.x <= 0.5) ? (2.0 * src.x * dst.x) : (1.0 - 2.0 * (1.0 - dst.x) * (1.0 - src.x)),\n                (dst.y <= 0.5) ? (2.0 * src.y * dst.y) : (1.0 - 2.0 * (1.0 - dst.y) * (1.0 - src.y)),\n                (dst.z <= 0.5) ? (2.0 * src.z * dst.z) : (1.0 - 2.0 * (1.0 - dst.z) * (1.0 - src.z)));\n}\n\n\nvoid main()\n{\n    gl_FragColor = texture2D(uSampler, vTextureCoord);\n    vec3 color = gl_FragColor.rgb;\n\n    if (sepia > 0.0)\n    {\n        float gray = (color.x + color.y + color.z) / 3.0;\n        vec3 grayscale = vec3(gray);\n\n        color = Overlay(SEPIA_RGB, grayscale);\n\n        color = grayscale + sepia * (color - grayscale);\n    }\n\n    vec2 coord = vTextureCoord * filterArea.xy / dimensions.xy;\n\n    if (vignetting > 0.0)\n    {\n        float outter = SQRT_2 - vignetting * SQRT_2;\n        vec2 dir = vec2(vec2(0.5, 0.5) - coord);\n        dir.y *= dimensions.y / dimensions.x;\n        float darker = clamp((outter - length(dir) * SQRT_2) / ( 0.00001 + vignettingBlur * SQRT_2), 0.0, 1.0);\n        color.rgb *= darker + (1.0 - darker) * (1.0 - vignettingAlpha);\n    }\n\n    if (scratchDensity > seed && scratch != 0.0)\n    {\n        float phase = seed * 256.0;\n        float s = mod(floor(phase), 2.0);\n        float dist = 1.0 / scratchDensity;\n        float d = distance(coord, vec2(seed * dist, abs(s - seed * dist)));\n        if (d < seed * 0.6 + 0.4)\n        {\n            highp float period = scratchDensity * 10.0;\n\n            float xx = coord.x * period + phase;\n            float aa = abs(mod(xx, 0.5) * 4.0);\n            float bb = mod(floor(xx / 0.5), 2.0);\n            float yy = (1.0 - bb) * aa + bb * (2.0 - aa);\n\n            float kk = 2.0 * period;\n            float dw = scratchWidth / dimensions.x * (0.75 + seed);\n            float dh = dw * kk;\n\n            float tine = (yy - (2.0 - dh));\n\n            if (tine > 0.0) {\n                float _sign = sign(scratch);\n\n                tine = s * tine / period + scratch + 0.1;\n                tine = clamp(tine + 1.0, 0.5 + _sign * 0.5, 1.5 + _sign * 0.5);\n\n                color.rgb *= tine;\n            }\n        }\n    }\n\n    if (noise > 0.0 && noiseSize > 0.0)\n    {\n        vec2 pixelCoord = vTextureCoord.xy * filterArea.xy;\n        pixelCoord.x = floor(pixelCoord.x / noiseSize);\n        pixelCoord.y = floor(pixelCoord.y / noiseSize);\n        // vec2 d = pixelCoord * noiseSize * vec2(1024.0 + seed * 512.0, 1024.0 - seed * 512.0);\n        // float _noise = snoise(d) * 0.5;\n        float _noise = rand(pixelCoord * noiseSize * seed) - 0.5;\n        color += _noise * noise;\n    }\n\n    gl_FragColor.rgb = color;\n}\n",OldFilmFilter=function(n){function t(t,i){void 0===i&&(i=0),n.call(this,vertex,fragment),"number"==typeof t?(this.seed=t,t=null):this.seed=i,Object.assign(this,{sepia:.3,noise:.3,noiseSize:1,scratch:.5,scratchDensity:.3,scratchWidth:1,vignetting:.3,vignettingAlpha:1,vignettingBlur:.3},t)}n&&(t.__proto__=n),t.prototype=Object.create(n&&n.prototype),t.prototype.constructor=t;var i={sepia:{configurable:!0},noise:{configurable:!0},noiseSize:{configurable:!0},scratch:{configurable:!0},scratchDensity:{configurable:!0},scratchWidth:{configurable:!0},vignetting:{configurable:!0},vignettingAlpha:{configurable:!0},vignettingBlur:{configurable:!0}};return t.prototype.apply=function(n,t,i,e){this.uniforms.dimensions[0]=t.sourceFrame.width,this.uniforms.dimensions[1]=t.sourceFrame.height,this.uniforms.seed=this.seed,n.applyFilter(this,t,i,e)},i.sepia.set=function(n){this.uniforms.sepia=n},i.sepia.get=function(){return this.uniforms.sepia},i.noise.set=function(n){this.uniforms.noise=n},i.noise.get=function(){return this.uniforms.noise},i.noiseSize.set=function(n){this.uniforms.noiseSize=n},i.noiseSize.get=function(){return this.uniforms.noiseSize},i.scratch.set=function(n){this.uniforms.scratch=n},i.scratch.get=function(){return this.uniforms.scratch},i.scratchDensity.set=function(n){this.uniforms.scratchDensity=n},i.scratchDensity.get=function(){return this.uniforms.scratchDensity},i.scratchWidth.set=function(n){this.uniforms.scratchWidth=n},i.scratchWidth.get=function(){return this.uniforms.scratchWidth},i.vignetting.set=function(n){this.uniforms.vignetting=n},i.vignetting.get=function(){return this.uniforms.vignetting},i.vignettingAlpha.set=function(n){this.uniforms.vignettingAlpha=n},i.vignettingAlpha.get=function(){return this.uniforms.vignettingAlpha},i.vignettingBlur.set=function(n){this.uniforms.vignettingBlur=n},i.vignettingBlur.get=function(){return this.uniforms.vignettingBlur},Object.defineProperties(t.prototype,i),t}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-old-film.es.js.map
-
-
-/***/ }),
-/* 217 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OutlineFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-outline - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-outline is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\n\nuniform vec2 thickness;\nuniform vec4 outlineColor;\nuniform vec4 filterClamp;\n\nconst float DOUBLE_PI = 3.14159265358979323846264 * 2.;\n\nvoid main(void) {\n    vec4 ownColor = texture2D(uSampler, vTextureCoord);\n    vec4 curColor;\n    float maxAlpha = 0.;\n    vec2 displaced;\n    for (float angle = 0.; angle <= DOUBLE_PI; angle += ${angleStep}) {\n        displaced.x = vTextureCoord.x + thickness.x * cos(angle);\n        displaced.y = vTextureCoord.y + thickness.y * sin(angle);\n        curColor = texture2D(uSampler, clamp(displaced, filterClamp.xy, filterClamp.zw));\n        maxAlpha = max(maxAlpha, curColor.a);\n    }\n    float resultAlpha = max(maxAlpha, ownColor.a);\n    gl_FragColor = vec4((ownColor.rgb + outlineColor.rgb * (1. - ownColor.a)) * resultAlpha, resultAlpha);\n}\n",OutlineFilter=function(e){function t(o,r,n){void 0===o&&(o=1),void 0===r&&(r=0),void 0===n&&(n=.1);var i=Math.max(n*t.MAX_SAMPLES,t.MIN_SAMPLES),l=(2*Math.PI/i).toFixed(7);e.call(this,vertex,fragment.replace(/\$\{angleStep\}/,l)),this.uniforms.thickness=new Float32Array([0,0]),this.thickness=o,this.uniforms.outlineColor=new Float32Array([0,0,0,1]),this.color=r,this.quality=n}e&&(t.__proto__=e),t.prototype=Object.create(e&&e.prototype),t.prototype.constructor=t;var o={color:{configurable:!0}};return t.prototype.apply=function(e,t,o,r){this.uniforms.thickness[0]=this.thickness/t.size.width,this.uniforms.thickness[1]=this.thickness/t.size.height,e.applyFilter(this,t,o,r)},o.color.get=function(){return __WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].rgb2hex(this.uniforms.outlineColor)},o.color.set=function(e){__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].hex2rgb(e,this.uniforms.outlineColor)},Object.defineProperties(t.prototype,o),t}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);OutlineFilter.MIN_SAMPLES=1,OutlineFilter.MAX_SAMPLES=100;
-//# sourceMappingURL=filter-outline.es.js.map
-
-
-/***/ }),
-/* 218 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PixelateFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-pixelate - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-pixelate is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="precision mediump float;\n\nvarying vec2 vTextureCoord;\n\nuniform vec2 size;\nuniform sampler2D uSampler;\n\nuniform vec4 filterArea;\n\nvec2 mapCoord( vec2 coord )\n{\n    coord *= filterArea.xy;\n    coord += filterArea.zw;\n\n    return coord;\n}\n\nvec2 unmapCoord( vec2 coord )\n{\n    coord -= filterArea.zw;\n    coord /= filterArea.xy;\n\n    return coord;\n}\n\nvec2 pixelate(vec2 coord, vec2 size)\n{\n\treturn floor( coord / size ) * size;\n}\n\nvoid main(void)\n{\n    vec2 coord = mapCoord(vTextureCoord);\n\n    coord = pixelate(coord, size);\n\n    coord = unmapCoord(coord);\n\n    gl_FragColor = texture2D(uSampler, coord);\n}\n",PixelateFilter=function(e){function o(o){void 0===o&&(o=10),e.call(this,vertex,fragment),this.size=o}e&&(o.__proto__=e),o.prototype=Object.create(e&&e.prototype),o.prototype.constructor=o;var r={size:{configurable:!0}};return r.size.get=function(){return this.uniforms.size},r.size.set=function(e){"number"==typeof e&&(e=[e,e]),this.uniforms.size=e},Object.defineProperties(o.prototype,r),o}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-pixelate.es.js.map
-
-
-/***/ }),
-/* 219 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RadialBlurFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-radial-blur - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-radial-blur is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform vec4 filterArea;\n\nuniform float uRadian;\nuniform vec2 uCenter;\nuniform float uRadius;\nuniform int uKernelSize;\n\nconst int MAX_KERNEL_SIZE = 2048;\nconst int ITERATION = MAX_KERNEL_SIZE - 1;\n\n// float kernelSize = min(float(uKernelSize), float(MAX_KERNELSIZE));\n\n// In real use-case , uKernelSize < MAX_KERNELSIZE almost always.\n// So use uKernelSize directly.\nfloat kernelSize = float(uKernelSize);\nfloat k = kernelSize - 1.0;\n\n\nvec2 center = uCenter.xy / filterArea.xy;\nfloat aspect = filterArea.y / filterArea.x;\n\nfloat gradient = uRadius / filterArea.x * 0.3;\nfloat radius = uRadius / filterArea.x - gradient * 0.5;\n\nvoid main(void)\n{\n    gl_FragColor = texture2D(uSampler, vTextureCoord);\n\n    if (uKernelSize == 0)\n    {\n        return;\n    }\n\n    vec2 coord = vTextureCoord;\n\n    vec2 dir = vec2(center - coord);\n    float dist = length(vec2(dir.x, dir.y * aspect));\n\n    float radianStep;\n\n    if (radius >= 0.0 && dist > radius) {\n        float delta = dist - radius;\n        float gap = gradient;\n        float scale = 1.0 - abs(delta / gap);\n        if (scale <= 0.0) {\n            return;\n        }\n        radianStep = uRadian * scale / k;\n    } else {\n        radianStep = uRadian / k;\n    }\n\n    float s = sin(radianStep);\n    float c = cos(radianStep);\n    mat2 rotationMatrix = mat2(vec2(c, -s), vec2(s, c));\n\n    for(int i = 0; i < ITERATION; i++) {\n        if (i == int(k)) {\n            break;\n        }\n\n        coord -= center;\n        coord.y *= aspect;\n        coord = rotationMatrix * coord;\n        coord.y /= aspect;\n        coord += center;\n\n        vec4 sample = texture2D(uSampler, coord);\n\n        // switch to pre-multiplied alpha to correctly blur transparent images\n        // sample.rgb *= sample.a;\n\n        gl_FragColor += sample;\n    }\n    gl_FragColor /= kernelSize;\n}\n",RadialBlurFilter=function(e){function n(n,t,r,i){void 0===n&&(n=0),void 0===t&&(t=[0,0]),void 0===r&&(r=5),void 0===i&&(i=-1),e.call(this,vertex,fragment),this._angle=0,this.angle=n,this.center=t,this.kernelSize=r,this.radius=i}e&&(n.__proto__=e),n.prototype=Object.create(e&&e.prototype),n.prototype.constructor=n;var t={angle:{configurable:!0},center:{configurable:!0},radius:{configurable:!0}};return n.prototype.apply=function(e,n,t,r){this.uniforms.uKernelSize=0!==this._angle?this.kernelSize:0,e.applyFilter(this,n,t,r)},t.angle.set=function(e){this._angle=e,this.uniforms.uRadian=e*Math.PI/180},t.angle.get=function(){return this._angle},t.center.get=function(){return this.uniforms.uCenter},t.center.set=function(e){this.uniforms.uCenter=e},t.radius.get=function(){return this.uniforms.uRadius},t.radius.set=function(e){(e<0||e===1/0)&&(e=-1),this.uniforms.uRadius=e},Object.defineProperties(n.prototype,t),n}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-radial-blur.es.js.map
-
-
-/***/ }),
-/* 220 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReflectionFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-reflection - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-reflection is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\n\nuniform vec4 filterArea;\nuniform vec4 filterClamp;\nuniform vec2 dimensions;\n\nuniform bool mirror;\nuniform float boundary;\nuniform vec2 amplitude;\nuniform vec2 waveLength;\nuniform vec2 alpha;\nuniform float time;\n\nfloat rand(vec2 co) {\n    return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);\n}\n\nvoid main(void)\n{\n    vec2 pixelCoord = vTextureCoord.xy * filterArea.xy;\n    vec2 coord = pixelCoord / dimensions;\n\n    if (coord.y < boundary) {\n        gl_FragColor = texture2D(uSampler, vTextureCoord);\n        return;\n    }\n\n    float k = (coord.y - boundary) / (1. - boundary + 0.0001);\n    float areaY = boundary * dimensions.y / filterArea.y;\n    float v = areaY + areaY - vTextureCoord.y;\n    float y = mirror ? v : vTextureCoord.y;\n\n    float _amplitude = ((amplitude.y - amplitude.x) * k + amplitude.x ) / filterArea.x;\n    float _waveLength = ((waveLength.y - waveLength.x) * k + waveLength.x) / filterArea.y;\n    float _alpha = (alpha.y - alpha.x) * k + alpha.x;\n\n    float x = vTextureCoord.x + cos(v * 6.28 / _waveLength - time) * _amplitude;\n    x = clamp(x, filterClamp.x, filterClamp.z);\n\n    vec4 color = texture2D(uSampler, vec2(x, y));\n\n    gl_FragColor = color * _alpha;\n}\n",ReflectionFilter=function(e){function r(r){e.call(this,vertex,fragment),Object.assign(this,{mirror:!0,boundary:.5,amplitude:[0,20],waveLength:[30,100],alpha:[1,1],time:0},r)}e&&(r.__proto__=e),r.prototype=Object.create(e&&e.prototype),r.prototype.constructor=r;var n={mirror:{configurable:!0},boundary:{configurable:!0},amplitude:{configurable:!0},waveLength:{configurable:!0},alpha:{configurable:!0}};return r.prototype.apply=function(e,r,n,t){this.uniforms.dimensions[0]=r.sourceFrame.width,this.uniforms.dimensions[1]=r.sourceFrame.height,this.uniforms.time=this.time,e.applyFilter(this,r,n,t)},n.mirror.set=function(e){this.uniforms.mirror=e},n.mirror.get=function(){return this.uniforms.mirror},n.boundary.set=function(e){this.uniforms.boundary=e},n.boundary.get=function(){return this.uniforms.boundary},n.amplitude.set=function(e){this.uniforms.amplitude[0]=e[0],this.uniforms.amplitude[1]=e[1]},n.amplitude.get=function(){return this.uniforms.amplitude},n.waveLength.set=function(e){this.uniforms.waveLength[0]=e[0],this.uniforms.waveLength[1]=e[1]},n.waveLength.get=function(){return this.uniforms.waveLength},n.alpha.set=function(e){this.uniforms.alpha[0]=e[0],this.uniforms.alpha[1]=e[1]},n.alpha.get=function(){return this.uniforms.alpha},Object.defineProperties(r.prototype,n),r}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-reflection.es.js.map
-
-
-/***/ }),
-/* 221 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RGBSplitFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-rgb-split - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-rgb-split is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="precision mediump float;\n\nvarying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform vec4 filterArea;\nuniform vec2 red;\nuniform vec2 green;\nuniform vec2 blue;\n\nvoid main(void)\n{\n   gl_FragColor.r = texture2D(uSampler, vTextureCoord + red/filterArea.xy).r;\n   gl_FragColor.g = texture2D(uSampler, vTextureCoord + green/filterArea.xy).g;\n   gl_FragColor.b = texture2D(uSampler, vTextureCoord + blue/filterArea.xy).b;\n   gl_FragColor.a = texture2D(uSampler, vTextureCoord).a;\n}\n",RGBSplitFilter=function(e){function r(r,t,n){void 0===r&&(r=[-10,0]),void 0===t&&(t=[0,10]),void 0===n&&(n=[0,0]),e.call(this,vertex,fragment),this.red=r,this.green=t,this.blue=n}e&&(r.__proto__=e),r.prototype=Object.create(e&&e.prototype),r.prototype.constructor=r;var t={red:{configurable:!0},green:{configurable:!0},blue:{configurable:!0}};return t.red.get=function(){return this.uniforms.red},t.red.set=function(e){this.uniforms.red=e},t.green.get=function(){return this.uniforms.green},t.green.set=function(e){this.uniforms.green=e},t.blue.get=function(){return this.uniforms.blue},t.blue.set=function(e){this.uniforms.blue=e},Object.defineProperties(r.prototype,t),r}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-rgb-split.es.js.map
-
-
-/***/ }),
-/* 222 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShockwaveFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-shockwave - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-shockwave is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform vec4 filterArea;\nuniform vec4 filterClamp;\n\nuniform vec2 center;\n\nuniform float amplitude;\nuniform float wavelength;\n// uniform float power;\nuniform float brightness;\nuniform float speed;\nuniform float radius;\n\nuniform float time;\n\nconst float PI = 3.14159;\n\nvoid main()\n{\n    float halfWavelength = wavelength * 0.5 / filterArea.x;\n    float maxRadius = radius / filterArea.x;\n    float currentRadius = time * speed / filterArea.x;\n\n    float fade = 1.0;\n\n    if (maxRadius > 0.0) {\n        if (currentRadius > maxRadius) {\n            gl_FragColor = texture2D(uSampler, vTextureCoord);\n            return;\n        }\n        fade = 1.0 - pow(currentRadius / maxRadius, 2.0);\n    }\n\n    vec2 dir = vec2(vTextureCoord - center / filterArea.xy);\n    dir.y *= filterArea.y / filterArea.x;\n    float dist = length(dir);\n\n    if (dist <= 0.0 || dist < currentRadius - halfWavelength || dist > currentRadius + halfWavelength) {\n        gl_FragColor = texture2D(uSampler, vTextureCoord);\n        return;\n    }\n\n    vec2 diffUV = normalize(dir);\n\n    float diff = (dist - currentRadius) / halfWavelength;\n\n    float p = 1.0 - pow(abs(diff), 2.0);\n\n    // float powDiff = diff * pow(p, 2.0) * ( amplitude * fade );\n    float powDiff = 1.25 * sin(diff * PI) * p * ( amplitude * fade );\n\n    vec2 offset = diffUV * powDiff / filterArea.xy;\n\n    // Do clamp :\n    vec2 coord = vTextureCoord + offset;\n    vec2 clampedCoord = clamp(coord, filterClamp.xy, filterClamp.zw);\n    gl_FragColor = texture2D(uSampler, clampedCoord);\n    if (coord != clampedCoord) {\n        gl_FragColor *= max(0.0, 1.0 - length(coord - clampedCoord));\n    }\n\n    // No clamp :\n    // gl_FragColor = texture2D(uSampler, vTextureCoord + offset);\n\n    gl_FragColor.rgb *= 1.0 + (brightness - 1.0) * p * fade;\n}\n",ShockwaveFilter=function(e){function t(t,n,r){void 0===t&&(t=[0,0]),void 0===n&&(n={}),void 0===r&&(r=0),e.call(this,vertex,fragment),this.center=t,Array.isArray(n)&&(console.warn("Deprecated Warning: ShockwaveFilter params Array has been changed to options Object."),n={}),n=Object.assign({amplitude:30,wavelength:160,brightness:1,speed:500,radius:-1},n),this.amplitude=n.amplitude,this.wavelength=n.wavelength,this.brightness=n.brightness,this.speed=n.speed,this.radius=n.radius,this.time=r}e&&(t.__proto__=e),t.prototype=Object.create(e&&e.prototype),t.prototype.constructor=t;var n={center:{configurable:!0},amplitude:{configurable:!0},wavelength:{configurable:!0},brightness:{configurable:!0},speed:{configurable:!0},radius:{configurable:!0}};return t.prototype.apply=function(e,t,n,r){this.uniforms.time=this.time,e.applyFilter(this,t,n,r)},n.center.get=function(){return this.uniforms.center},n.center.set=function(e){this.uniforms.center=e},n.amplitude.get=function(){return this.uniforms.amplitude},n.amplitude.set=function(e){this.uniforms.amplitude=e},n.wavelength.get=function(){return this.uniforms.wavelength},n.wavelength.set=function(e){this.uniforms.wavelength=e},n.brightness.get=function(){return this.uniforms.brightness},n.brightness.set=function(e){this.uniforms.brightness=e},n.speed.get=function(){return this.uniforms.speed},n.speed.set=function(e){this.uniforms.speed=e},n.radius.get=function(){return this.uniforms.radius},n.radius.set=function(e){this.uniforms.radius=e},Object.defineProperties(t.prototype,n),t}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-shockwave.es.js.map
-
-
-/***/ }),
-/* 223 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SimpleLightmapFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-simple-lightmap - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-simple-lightmap is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform sampler2D uLightmap;\nuniform vec4 filterArea;\nuniform vec2 dimensions;\nuniform vec4 ambientColor;\nvoid main() {\n    vec4 diffuseColor = texture2D(uSampler, vTextureCoord);\n    vec2 lightCoord = (vTextureCoord * filterArea.xy) / dimensions;\n    vec4 light = texture2D(uLightmap, lightCoord);\n    vec3 ambient = ambientColor.rgb * ambientColor.a;\n    vec3 intensity = ambient + light.rgb;\n    vec3 finalColor = diffuseColor.rgb * intensity;\n    gl_FragColor = vec4(finalColor, diffuseColor.a);\n}\n",SimpleLightmapFilter=function(t){function e(e,o,r){void 0===o&&(o=0),void 0===r&&(r=1),t.call(this,vertex,fragment),this.uniforms.ambientColor=new Float32Array([0,0,0,r]),this.texture=e,this.color=o}t&&(e.__proto__=t),e.prototype=Object.create(t&&t.prototype),e.prototype.constructor=e;var o={texture:{configurable:!0},color:{configurable:!0},alpha:{configurable:!0}};return e.prototype.apply=function(t,e,o,r){this.uniforms.dimensions[0]=e.sourceFrame.width,this.uniforms.dimensions[1]=e.sourceFrame.height,t.applyFilter(this,e,o,r)},o.texture.get=function(){return this.uniforms.uLightmap},o.texture.set=function(t){this.uniforms.uLightmap=t},o.color.set=function(t){var e=this.uniforms.ambientColor;"number"==typeof t?(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].hex2rgb(t,e),this._color=t):(e[0]=t[0],e[1]=t[1],e[2]=t[2],e[3]=t[3],this._color=__WEBPACK_IMPORTED_MODULE_0_pixi_js__["utils"].rgb2hex(e))},o.color.get=function(){return this._color},o.alpha.get=function(){return this.uniforms.ambientColor[3]},o.alpha.set=function(t){this.uniforms.ambientColor[3]=t},Object.defineProperties(e.prototype,o),e}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-simple-lightmap.es.js.map
-
-
-/***/ }),
-/* 224 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TiltShiftFilter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return TiltShiftXFilter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return TiltShiftYFilter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TiltShiftAxisFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-tilt-shift - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-tilt-shift is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform float blur;\nuniform float gradientBlur;\nuniform vec2 start;\nuniform vec2 end;\nuniform vec2 delta;\nuniform vec2 texSize;\n\nfloat random(vec3 scale, float seed)\n{\n    return fract(sin(dot(gl_FragCoord.xyz + seed, scale)) * 43758.5453 + seed);\n}\n\nvoid main(void)\n{\n    vec4 color = vec4(0.0);\n    float total = 0.0;\n\n    float offset = random(vec3(12.9898, 78.233, 151.7182), 0.0);\n    vec2 normal = normalize(vec2(start.y - end.y, end.x - start.x));\n    float radius = smoothstep(0.0, 1.0, abs(dot(vTextureCoord * texSize - start, normal)) / gradientBlur) * blur;\n\n    for (float t = -30.0; t <= 30.0; t++)\n    {\n        float percent = (t + offset - 0.5) / 30.0;\n        float weight = 1.0 - abs(percent);\n        vec4 sample = texture2D(uSampler, vTextureCoord + delta / texSize * percent * radius);\n        sample.rgb *= sample.a;\n        color += sample * weight;\n        total += weight;\n    }\n\n    gl_FragColor = color / total;\n    gl_FragColor.rgb /= gl_FragColor.a + 0.00001;\n}\n",TiltShiftAxisFilter=function(t){function i(i,r,e,n){void 0===i&&(i=100),void 0===r&&(r=600),void 0===e&&(e=null),void 0===n&&(n=null),t.call(this,vertex,fragment),this.uniforms.blur=i,this.uniforms.gradientBlur=r,this.uniforms.start=e||new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](0,window.innerHeight/2),this.uniforms.end=n||new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](600,window.innerHeight/2),this.uniforms.delta=new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](30,30),this.uniforms.texSize=new __WEBPACK_IMPORTED_MODULE_0_pixi_js__["Point"](window.innerWidth,window.innerHeight),this.updateDelta()}t&&(i.__proto__=t),i.prototype=Object.create(t&&t.prototype),i.prototype.constructor=i;var r={blur:{configurable:!0},gradientBlur:{configurable:!0},start:{configurable:!0},end:{configurable:!0}};return i.prototype.updateDelta=function(){this.uniforms.delta.x=0,this.uniforms.delta.y=0},r.blur.get=function(){return this.uniforms.blur},r.blur.set=function(t){this.uniforms.blur=t},r.gradientBlur.get=function(){return this.uniforms.gradientBlur},r.gradientBlur.set=function(t){this.uniforms.gradientBlur=t},r.start.get=function(){return this.uniforms.start},r.start.set=function(t){this.uniforms.start=t,this.updateDelta()},r.end.get=function(){return this.uniforms.end},r.end.set=function(t){this.uniforms.end=t,this.updateDelta()},Object.defineProperties(i.prototype,r),i}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]),TiltShiftXFilter=function(t){function i(){t.apply(this,arguments)}return t&&(i.__proto__=t),i.prototype=Object.create(t&&t.prototype),i.prototype.constructor=i,i.prototype.updateDelta=function(){var t=this.uniforms.end.x-this.uniforms.start.x,i=this.uniforms.end.y-this.uniforms.start.y,r=Math.sqrt(t*t+i*i);this.uniforms.delta.x=t/r,this.uniforms.delta.y=i/r},i}(TiltShiftAxisFilter),TiltShiftYFilter=function(t){function i(){t.apply(this,arguments)}return t&&(i.__proto__=t),i.prototype=Object.create(t&&t.prototype),i.prototype.constructor=i,i.prototype.updateDelta=function(){var t=this.uniforms.end.x-this.uniforms.start.x,i=this.uniforms.end.y-this.uniforms.start.y,r=Math.sqrt(t*t+i*i);this.uniforms.delta.x=-i/r,this.uniforms.delta.y=t/r},i}(TiltShiftAxisFilter),TiltShiftFilter=function(t){function i(i,r,e,n){void 0===i&&(i=100),void 0===r&&(r=600),void 0===e&&(e=null),void 0===n&&(n=null),t.call(this),this.tiltShiftXFilter=new TiltShiftXFilter(i,r,e,n),this.tiltShiftYFilter=new TiltShiftYFilter(i,r,e,n)}t&&(i.__proto__=t),i.prototype=Object.create(t&&t.prototype),i.prototype.constructor=i;var r={blur:{configurable:!0},gradientBlur:{configurable:!0},start:{configurable:!0},end:{configurable:!0}};return i.prototype.apply=function(t,i,r){var e=t.getRenderTarget(!0);this.tiltShiftXFilter.apply(t,i,e),this.tiltShiftYFilter.apply(t,e,r),t.returnRenderTarget(e)},r.blur.get=function(){return this.tiltShiftXFilter.blur},r.blur.set=function(t){this.tiltShiftXFilter.blur=this.tiltShiftYFilter.blur=t},r.gradientBlur.get=function(){return this.tiltShiftXFilter.gradientBlur},r.gradientBlur.set=function(t){this.tiltShiftXFilter.gradientBlur=this.tiltShiftYFilter.gradientBlur=t},r.start.get=function(){return this.tiltShiftXFilter.start},r.start.set=function(t){this.tiltShiftXFilter.start=this.tiltShiftYFilter.start=t},r.end.get=function(){return this.tiltShiftXFilter.end},r.end.set=function(t){this.tiltShiftXFilter.end=this.tiltShiftYFilter.end=t},Object.defineProperties(i.prototype,r),i}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-tilt-shift.es.js.map
-
-
-/***/ }),
-/* 225 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TwistFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-twist - v2.5.0
- * Compiled Wed, 10 Jan 2018 17:38:59 UTC
- *
- * @pixi/filter-twist is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform float radius;\nuniform float angle;\nuniform vec2 offset;\nuniform vec4 filterArea;\n\nvec2 mapCoord( vec2 coord )\n{\n    coord *= filterArea.xy;\n    coord += filterArea.zw;\n\n    return coord;\n}\n\nvec2 unmapCoord( vec2 coord )\n{\n    coord -= filterArea.zw;\n    coord /= filterArea.xy;\n\n    return coord;\n}\n\nvec2 twist(vec2 coord)\n{\n    coord -= offset;\n\n    float dist = length(coord);\n\n    if (dist < radius)\n    {\n        float ratioDist = (radius - dist) / radius;\n        float angleMod = ratioDist * ratioDist * angle;\n        float s = sin(angleMod);\n        float c = cos(angleMod);\n        coord = vec2(coord.x * c - coord.y * s, coord.x * s + coord.y * c);\n    }\n\n    coord += offset;\n\n    return coord;\n}\n\nvoid main(void)\n{\n\n    vec2 coord = mapCoord(vTextureCoord);\n\n    coord = twist(coord);\n\n    coord = unmapCoord(coord);\n\n    gl_FragColor = texture2D(uSampler, coord );\n\n}\n",TwistFilter=function(o){function n(n,r,t){void 0===n&&(n=200),void 0===r&&(r=4),void 0===t&&(t=20),o.call(this,vertex,fragment),this.radius=n,this.angle=r,this.padding=t}o&&(n.__proto__=o),n.prototype=Object.create(o&&o.prototype),n.prototype.constructor=n;var r={offset:{configurable:!0},radius:{configurable:!0},angle:{configurable:!0}};return r.offset.get=function(){return this.uniforms.offset},r.offset.set=function(o){this.uniforms.offset=o},r.radius.get=function(){return this.uniforms.radius},r.radius.set=function(o){this.uniforms.radius=o},r.angle.get=function(){return this.uniforms.angle},r.angle.set=function(o){this.uniforms.angle=o},Object.defineProperties(n.prototype,r),n}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-twist.es.js.map
-
-
-/***/ }),
-/* 226 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ZoomBlurFilter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_pixi_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_pixi_js__);
-/*!
- * @pixi/filter-zoom-blur - v2.5.1
- * Compiled Wed, 17 Jan 2018 02:35:33 UTC
- *
- * @pixi/filter-zoom-blur is licensed under the MIT License.
- * http://www.opensource.org/licenses/mit-license
- */
-var vertex="attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",fragment="varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform vec4 filterArea;\n\nuniform vec2 uCenter;\nuniform float uStrength;\nuniform float uInnerRadius;\nuniform float uRadius;\n\nconst float MAX_KERNEL_SIZE = 32.0;\n\nfloat random(vec3 scale, float seed) {\n    // use the fragment position for a different seed per-pixel\n    return fract(sin(dot(gl_FragCoord.xyz + seed, scale)) * 43758.5453 + seed);\n}\n\nvoid main() {\n\n    float minGradient = uInnerRadius * 0.3;\n    float innerRadius = (uInnerRadius + minGradient * 0.5) / filterArea.x;\n\n    float gradient = uRadius * 0.3;\n    float radius = (uRadius - gradient * 0.5) / filterArea.x;\n\n    float countLimit = MAX_KERNEL_SIZE;\n\n    vec2 dir = vec2(uCenter.xy / filterArea.xy - vTextureCoord);\n    float dist = length(vec2(dir.x, dir.y * filterArea.y / filterArea.x));\n\n    float strength = uStrength;\n\n    float delta = 0.0;\n    float gap;\n    if (dist < innerRadius) {\n        delta = innerRadius - dist;\n        gap = minGradient;\n    } else if (radius >= 0.0 && dist > radius) { // radius < 0 means it's infinity\n        delta = dist - radius;\n        gap = gradient;\n    }\n\n    if (delta > 0.0) {\n        float normalCount = gap / filterArea.x;\n        delta = (normalCount - delta) / normalCount;\n        countLimit *= delta;\n        strength *= delta;\n        if (countLimit < 1.0)\n        {\n            gl_FragColor = texture2D(uSampler, vTextureCoord);\n            return;\n        }\n    }\n\n    // randomize the lookup values to hide the fixed number of samples\n    float offset = random(vec3(12.9898, 78.233, 151.7182), 0.0);\n\n    float total = 0.0;\n    vec4 color = vec4(0.0);\n\n    dir *= strength;\n\n    for (float t = 0.0; t < MAX_KERNEL_SIZE; t++) {\n        float percent = (t + offset) / MAX_KERNEL_SIZE;\n        float weight = 4.0 * (percent - percent * percent);\n        vec2 p = vTextureCoord + dir * percent;\n        vec4 sample = texture2D(uSampler, p);\n\n        // switch to pre-multiplied alpha to correctly blur transparent images\n        // sample.rgb *= sample.a;\n\n        color += sample * weight;\n        total += weight;\n\n        if (t > countLimit){\n            break;\n        }\n    }\n\n    gl_FragColor = color / total;\n\n    // switch back from pre-multiplied alpha\n    gl_FragColor.rgb /= gl_FragColor.a + 0.00001;\n\n}\n",ZoomBlurFilter=function(n){function t(t,e,r,i){void 0===t&&(t=.1),void 0===e&&(e=[0,0]),void 0===r&&(r=0),void 0===i&&(i=-1),n.call(this,vertex,fragment),this.center=e,this.strength=t,this.innerRadius=r,this.radius=i}n&&(t.__proto__=n),t.prototype=Object.create(n&&n.prototype),t.prototype.constructor=t;var e={center:{configurable:!0},strength:{configurable:!0},innerRadius:{configurable:!0},radius:{configurable:!0}};return e.center.get=function(){return this.uniforms.uCenter},e.center.set=function(n){this.uniforms.uCenter=n},e.strength.get=function(){return this.uniforms.uStrength},e.strength.set=function(n){this.uniforms.uStrength=n},e.innerRadius.get=function(){return this.uniforms.uInnerRadius},e.innerRadius.set=function(n){this.uniforms.uInnerRadius=n},e.radius.get=function(){return this.uniforms.uRadius},e.radius.set=function(n){(n<0||n===1/0)&&(n=-1),this.uniforms.uRadius=n},Object.defineProperties(t.prototype,e),t}(__WEBPACK_IMPORTED_MODULE_0_pixi_js__["Filter"]);
-//# sourceMappingURL=filter-zoom-blur.es.js.map
-
-
-/***/ }),
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
 /* 227 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function Ball(radius, color) {
-	this.radius = radius || 20;
-
-	this.color = color || '#EDC951';
-	this.originalX = 0;
-	this.originalY = 0;
-	this.x = 0;
-	this.y = 0;
-	this.vx = 0;
-	this.vy = 0;
-	this.rotation = 0;
-	this.scaleX = 1;
-	this.scaleY = 1;
-	this.alpha = 0.5;
-	this.lineWidth = 0;
-	this.friction = 0.9;
-	this.spring = 0.03;
-}
-
-Ball.prototype.move = function (m) {
-	var centerBall = { x: m.pos.x, y: m.pos.y, radius: 150 };
-
-	// let ball = this;
-	var dx = this.x - centerBall.x;
-	var dy = this.y - centerBall.y;
-	var minDist = this.radius + 150;
-	var dist = Math.sqrt(dx * dx + dy * dy);
-	// console.log(this.x,this.y, dist,minDist,centerBall);
-	if (dist < minDist) {
-		var angle = Math.atan2(dy, dx),
-		    tx = centerBall.x + Math.cos(angle) * minDist,
-		    ty = centerBall.y + Math.sin(angle) * minDist;
-
-		this.vx += tx - this.x;
-		this.vy += ty - this.y;
-	}
-	console.log(tx, ty, this.x, this.vx, '1');
-
-	this.vx *= this.friction;
-	this.vy *= this.friction;
-	console.log(tx, ty, this.x, this.vx, '2');
-	// begin
-	var dx1 = this.originalX - this.x;
-	var dy1 = this.originalY - this.y;
-
-	dx1 *= this.spring;
-	dy1 *= this.spring;
-
-	this.vx += dx1;
-	this.vy += dy1;
-	console.log(tx, ty, this.x, this.vx, '3');
-	// end
-	this.x += this.vx;
-	this.y += this.vy;
-};
-
-Ball.prototype.draw = function (context) {
-	context.save();
-	context.translate(this.x, this.y);
-	context.rotate(this.rotation);
-	context.scale(this.scaleX, this.scaleY);
-	context.lineWidth = this.lineWidth;
-	context.globalAlpha = this.alpha;
-	context.fillStyle = this.color;
-	context.beginPath();
-	//x, y, radius, start_angle, end_angle, anti-clockwise
-	context.arc(0, 0, this.radius, 0, Math.PI * 2, true);
-	context.closePath();
-	context.fill();
-	if (this.lineWidth > 0) {
-		context.stroke();
-	}
-	context.restore();
-};
-
-Ball.prototype.getBounds = function (context) {
-	return {
-		x: this.x - this.radius,
-		y: this.y - this.radius,
-		width: this.radius * 2,
-		height: this.radius * 2
-	};
-};
-module.exports = Ball;
-
-/***/ }),
-/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43229,25 +42189,16 @@ var Dot = function () {
 		this.originalX = x;
 		this.originalY = y;
 
-		this.startY = y;
-		this.startX = x;
-		this.step = 0;
-
 		this.x = x;
 		this.y = y;
 		this.vx = 0;
 		this.vy = 0;
 		this.friction = 0.3;
 		this.radius = 4;
-		this.rotation = 0;
-		this.scaleX = 1;
-		this.scaleY = 1;
 		this.float = 0;
 		this.speedIsland = 0;
 		this.spring = 0.09;
-		this.alpha = 1;
-		this.color = 'transparent'; //rgba(255,0,0,1)
-		this.lineWidth = 0;
+		this.color = 'transparent';
 		this.neighbors = [];
 		this.neihgbourhood = neihgbourhood;
 	}
@@ -43257,11 +42208,7 @@ var Dot = function () {
 		value: function move(m) {
 			var centerBall = { x: m.pos.x, y: m.pos.y, radius: this.neihgbourhood };
 
-			// let radius = m.down?150:100;
 			var radius = this.neihgbourhood;
-			// var minDist = 180;
-			// this.x += 1;
-			// console.log(m.pos);
 
 			var dx = -m.pos.x + this.x;
 			var dy = -m.pos.y + this.y;
@@ -43282,77 +42229,11 @@ var Dot = function () {
 			this.vx *= this.friction;
 			this.vy *= this.friction;
 
-			if (this.motion) {
-
-				if (this.route == 'vertical') {
-					this.originalY = this.startY + this.backlash * Math.sin(this.step);
-				} else if (this.route == 'horizontal') {
-					this.originalX = this.startX + this.backlash * Math.cos(this.step);
-				} else {
-					this.originalX = this.startX + this.backlash * Math.cos(this.step);
-					this.originalY = this.startY + this.backlash * Math.sin(this.step);
-				}
-				this.step += this.speedIsland;
-			}
-
-			// begin spir
+			// begin spring
 			this.springBack();
-
-			if (this.float > 0) {
-				this.x = this.originalX + this.lastFloat * Math.sin(Math.PI * this.float / this.lastFloat);
-				this.y = this.originalY + this.lastFloat * Math.sin(2 * Math.PI * this.float / this.lastFloat);
-				// this.vx = 0;
-				this.float = this.float - 1 / 30;
-			}
 
 			this.x += this.vx;
 			this.y += this.vy;
-			// console.log(this.float);
-		}
-	}, {
-		key: 'floatMe',
-		value: function floatMe(amount) {
-			// console.log('fl');
-			if (this.float < 0.1) {
-				this.float = amount;
-				this.lastFloat = amount;
-			}
-		}
-	}, {
-		key: 'floatMotion',
-		value: function floatMotion(amount, speed, backlash, route) {
-
-			if (amount) {
-				this.motion = amount;
-				this.speedIsland = speed;
-				this.backlash = backlash;
-				this.route = route;
-			}
-		}
-	}, {
-		key: 'addNeighbor',
-		value: function addNeighbor(n, c, s) {
-			var dist = Math.sqrt((n.x - this.x) * (n.x - this.x) + (n.y - this.y) * (n.y - this.y));
-			this.neighbors.push({
-				point: n,
-				x: n.x,
-				y: n.y,
-				vx: n.vx,
-				vy: n.vy,
-				dist: dist,
-				compress: c,
-				strength: s
-			});
-		}
-	}, {
-		key: 'addAcrossNeighbor',
-		value: function addAcrossNeighbor(n) {
-			this.addNeighbor(n, 1, 1);
-		}
-	}, {
-		key: 'setNeighbors',
-		value: function setNeighbors(p, n) {
-			this.addNeighbor(p, 30, 0.5);
 		}
 	}, {
 		key: 'springBack',
@@ -43369,9 +42250,9 @@ var Dot = function () {
 	}, {
 		key: 'think',
 		value: function think() {
-
-			for (var i = 0, len = this.neighbors.length; i < len; i++) {
-				// console.log(this.neighbors);
+			var i = 0;
+			var len = this.neighbors.length;
+			for (; i < len; i++) {
 				var n = this.neighbors[i];
 				var dx = this.x - n.x;
 				var dy = this.y - n.y;
@@ -43392,56 +42273,9 @@ var Dot = function () {
 			}
 		}
 	}, {
-		key: 'draw',
-		value: function draw(context) {
-			context.save();
-			context.translate(this.x, this.y);
-			context.rotate(this.rotation);
-			context.scale(this.scaleX, this.scaleY);
-			context.lineWidth = this.lineWidth;
-			context.globalAlpha = this.alpha;
-			context.fillStyle = this.color;
-			context.beginPath();
-			//x, y, radius, start_angle, end_angle, anti-clockwise
-			context.arc(0, 0, this.radius, 0, Math.PI * 2, true);
-			context.closePath();
-			context.stroke();
-			context.restore();
-		}
-	}, {
-		key: 'drawAnchor',
-		value: function drawAnchor(context) {
-			context.save();
-			context.translate(this.originalX, this.originalY);
-			context.rotate(this.rotation);
-			context.scale(this.scaleX, this.scaleY);
-			context.lineWidth = this.lineWidth;
-			context.globalAlpha = this.alpha;
-			context.beginPath();
-			//x, y, radius, start_angle, end_angle, anti-clockwise
-			context.arc(0, 0, this.radius, 0, Math.PI * 2, true);
-			context.closePath();
-			context.restore();
-		}
-	}, {
 		key: 'drawPixi',
 		value: function drawPixi(context) {
-			//context.save();
-			//context.moveTo(this.x, this.y);
-			//context.rotation = this.rotation;
-			//context.scaleX = this.scaleX;
-			//context.scaleY = this.scaleY;
-			//context.lineWidth = this.lineWidth;
-			//context.globalAlpha = this.alpha;
-			//context.fillStyle = this.color;
-			context.lineStyle(0);
 			context.drawCircle(this.x, this.y, this.radius);
-			//context.restore();
-		}
-	}, {
-		key: 'movePixi',
-		value: function movePixi(context) {
-			console.log(context);
 		}
 	}]);
 
@@ -43451,13 +42285,13 @@ var Dot = function () {
 exports.default = Dot;
 
 /***/ }),
-/* 229 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _Vec = __webpack_require__(230);
+var _Vec = __webpack_require__(229);
 
 var _Vec2 = _interopRequireDefault(_Vec);
 
@@ -43466,28 +42300,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Mouse(canvas) {
 	this.pos = new _Vec2.default(0, 0);
 	this.down = false;
-	var self = this;
+	var _this = this;
 	canvas.parentNode.onmousemove = function (e) {
 		var r = canvas.getBoundingClientRect();
-		self.pos.set(e.clientX - r.left, e.clientY - r.top);
-		// return e.preventDefault();
+		_this.pos.set(e.clientX - r.left, e.clientY - r.top);
 	};
-	canvas.parentNode.onmouseup = function (e) {
-		self.down = false;
-		// return e.preventDefault();
+	canvas.parentNode.onmouseup = function () {
+		_this.down = false;
 	};
 	canvas.parentNode.onmousedown = function (e) {
-		self.down = true;
+		_this.down = true;
 		var r = canvas.getBoundingClientRect();
-		self.pos.set(e.clientX - r.left, e.clientY - r.top);
-		// return e.preventDefault();
+		_this.pos.set(e.clientX - r.left, e.clientY - r.top);
 	};
 }
 
 module.exports = Mouse;
 
 /***/ }),
-/* 230 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43520,7 +42351,7 @@ Vec2.prototype.distance = function (o) {
 module.exports = Vec2;
 
 /***/ }),
-/* 231 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43538,13 +42369,12 @@ function SvgParse(SvgSelector, NumberOfPoints, leftOffset, topOffset, scale, str
 	// Смещение картинки относительно левого верхнего угла в пикселях
 	leftOffset = leftOffset || 0;
 	topOffset = topOffset || 0;
-	var XOFF = 100 + leftOffset;
-	var YOFF = 100 + topOffset;
+	var XOFF = leftOffset;
+	var YOFF = topOffset;
 	var RANDOM_OFFSET = false;
 	// Итоговый размер картинки в ширину который мы хотим
 
 	scale = scale || 150;
-	strokeFlag = strokeFlag;
 	speedIsland = 0;
 	motion = motion;
 	backlash = backlash;
@@ -43618,6 +42448,211 @@ function SvgParse(SvgSelector, NumberOfPoints, leftOffset, topOffset, scale, str
 	});
 	return POINTS;
 }
+
+/***/ }),
+/* 231 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var _arguments = arguments;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/**
+ * Commonly used constants and functions.
+ *
+ * @module Helpers
+ */
+
+/**
+ * Detect current page.
+ *
+ * @constant
+ * @type {String}
+ */
+var currentPage = exports.currentPage = document.querySelector('main').dataset.page;
+
+/**
+ * Match media device indicator.
+ */
+
+var Resp = exports.Resp = function () {
+	function Resp() {
+		_classCallCheck(this, Resp);
+	}
+
+	_createClass(Resp, null, [{
+		key: 'currWidth',
+
+		/**
+   * Get window's current width.
+   *
+   * @get
+   * @static
+   * @return {Number}
+   */
+		get: function get() {
+			return window.innerWidth;
+		}
+
+		/**
+   * Detect touch events.
+   *
+   * @get
+   * @static
+   * @return {Boolean}
+   */
+
+	}, {
+		key: 'isTouch',
+		get: function get() {
+			return 'ontouchstart' in window;
+		}
+
+		/**
+   * Detect desktop device.
+   *
+   * @get
+   * @static
+   * @return {Boolean}
+   */
+
+	}, {
+		key: 'isDesk',
+		get: function get() {
+			return window.matchMedia('(min-width: 1280px)').matches;
+		}
+
+		/**
+   * Detect tablet device.
+   *
+   * @get
+   * @static
+   * @return {Boolean}
+   */
+
+	}, {
+		key: 'isTablet',
+		get: function get() {
+			return window.matchMedia('(min-width: 768px) and (max-width: 1279px)').matches;
+		}
+
+		/**
+   * Detect mobile device.
+   *
+   * @get
+   * @static
+   * @return {Boolean}
+   */
+
+	}, {
+		key: 'isMobile',
+		get: function get() {
+			return window.matchMedia('(max-width: 767px)').matches;
+		}
+	}]);
+
+	return Resp;
+}();
+
+/**
+ * Css class names.
+ *
+ * @constant
+ * @type {Object}
+ */
+
+
+var css = exports.css = {
+	active: 'active'
+};
+
+/**
+ * Generate string of random letters.
+ *
+ * @param {Number} length
+ */
+var randomString = exports.randomString = function randomString() {
+	var length = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 10;
+	return Math.random().toString(36).substr(2, length > 10 ? length : 10);
+};
+
+/**
+ * Returns a function, that, as long as it continues to be invoked, will not be triggered.
+ *
+ * @param {Function} func
+ * @param {Object} context
+ * @param {Number} wait
+ * @param {Boolean} [immediate]
+ * @returns {Function}
+ */
+var debounce = exports.debounce = function debounce(func, context, wait, immediate) {
+	var timeout = void 0;
+
+	return function () {
+		var args = _arguments;
+
+		var later = function later() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+/**
+ * Throttle function.
+ *
+ * @param {Function} fn
+ * @param {Number} [threshold]
+ * @param {Object} [scope]
+ * @returns {Function}
+ */
+var throttle = exports.throttle = function throttle(fn) {
+	var threshold = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 250;
+	var scope = arguments[2];
+
+	var last = void 0,
+	    deferTimer = void 0;
+
+	return function () {
+		var context = scope || this;
+		var now = +new Date();
+		var args = arguments;
+
+		if (last && now < last + threshold) {
+			clearTimeout(deferTimer);
+			deferTimer = setTimeout(function () {
+				last = now;
+				fn.apply(context, args);
+			}, threshold);
+		} else {
+			last = now;
+			fn.apply(context, args);
+		}
+	};
+};
+
+/**
+ * Converts a hex color number to 16 number
+ *
+ * @param hex {String}
+ * @return {Number}
+ */
+var hex2number = exports.hex2number = function hex2number(hex) {
+	return parseInt(hex.substring(1), 16);
+};
 
 /***/ })
 /******/ ]);

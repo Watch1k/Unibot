@@ -1,0 +1,79 @@
+/* ===================================
+	 MEDIA
+	 =================================== */
+=mac
+	+r($mac)
+		@content
+
+=desk
+	+rmin($minDesk)
+		@content
+
+=tab
+	+rmin($minTab)
+		@content
+
+=md
+	+r($tab)
+		@content
+
+=only-tab
+	@media only screen and (max-width: $tab + 'px') and (min-width: $minTab + 'px')
+		@content
+
+=tab-fix
+	@media only screen and (max-width: $tab + 'px') and (min-width: $minTab + 'px') and (orientation: landscape)
+		@content
+
+=tab-land
+	@media only screen and (max-width: $tab + 'px') and (orientation: landscape)
+		@content
+
+=sm
+	+r($mob)
+		@content
+	
+=sm-5
+	@media only screen and (max-width: 374px)
+		@content
+
+=mob-fix
+	@media only screen and (max-width: $mob + 'px') and (orientation: landscape)
+		@content
+
+=mob-portrait
+	@media only screen and (max-width: $mob + 'px') and (orientation: portrait)
+		@content
+
+/* ===================================
+	 TRANSITION
+	 =================================== */
+=trs
+	transition: all 0.3s ease
+
+=trs-slow
+	transition: all 0.6s ease
+
+.transition-off
+	transition: none!important
+
+/* ===================================
+	 FONT
+	 =================================== */
+
+
+/* ===================================
+	 LINK
+	 =================================== */
+	
+	
+/* ===================================
+	 LINK TEXT
+	 =================================== */
+
+
+/* ===================================
+	 HELPERS
+	 =================================== */
+.is-hidden
+	display: none
