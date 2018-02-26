@@ -1,6 +1,6 @@
 include ../bemto/index
 include ../partials/_variables
-include ../partials/_mixins
+include ../mixins/*.pug
 
 - var suffix = production ? '.min' : '';
 
@@ -33,14 +33,14 @@ html(lang='ru')
 					document.createElement('picture');
 
 			// Header
-			block header
+			include ../components/header
 
 			// Main content
 			block main
 				main
 
 			// Footer
-			block footer
+			include ../components/footer
 
 			// Scripts
 			block scripts

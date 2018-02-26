@@ -4,10 +4,8 @@
 	left: 0
 	right: 0
 	z-index: 99
-	+muller
-	font-size: 16px
+	+f('MullerRegular',16,32,0)
 	color: $color6
-	line-height: 32px
 	
 	&__container
 		padding-top: 24px
@@ -16,14 +14,20 @@
 		align-items: center
 	
 	&__logo
+		display: block
 		width: 136px
 		height: 32px
 		&-img
 			width: 100%
 			height: 100%
 			
+	&__right
+		position: relative
+		top: 4px
+		display: flex
+		align-items: center
+			
 	&__nav
-		padding-top: 4px
 		ul
 			display: flex
 			li
@@ -52,7 +56,7 @@
 			a
 				position: relative
 				display: block
-				padding: 0 15px
+				padding: 0 14px
 				+trs
 				.no-touch &:hover
 					color: $color8
@@ -72,3 +76,96 @@
 					&:before
 						opacity: 1
 					
+						
+	&__chat
+		position: relative
+		display: block
+		margin-left: 50px
+		font-size: 26px
+		&:before,
+		&:after
+			pointer-events: none
+			content: ''
+			position: absolute
+			top: calc(100% + 5px)
+			left: calc(50% - 2px)
+			width: 4px
+			height: 4px
+			border-radius: 50%
+			background-color: $color8
+			opacity: 0
+			+trs
+		.no-touch &:hover
+			&:before
+				opacity: 1
+				left: calc(50% - 12px)
+			&:after
+				opacity: 1
+				left: calc(50% + 8px)
+		&-icon
+			display: block
+			&:before
+				pointer-events: none
+				content: ''
+				position: absolute
+				top: calc(100% + 5px)
+				left: calc(50% - 2px)
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background-color: $color8
+				opacity: 0
+				+trs
+			.no-touch &:hover
+				&:before
+					opacity: 1
+		.icon
+			display: block
+			
+	&__lang
+		margin-left: 15px
+		margin-right: -15px
+		text-transform: uppercase
+		cursor: pointer
+		> ul
+			position: relative
+			ul
+				position: absolute
+				top: 100%
+				padding-top: 10px
+				left: 0
+				opacity: 0
+				pointer-events: none
+				+trs
+				a
+					transform: translateY(-10px)
+			a
+				display: block
+				position: relative
+				padding: 0 15px
+				+trs
+				.no-touch &:hover
+					color: $color8
+			> li > a
+				&:before
+					pointer-events: none
+					content: ''
+					position: absolute
+					top: calc(100% - 3px)
+					left: calc(50% - 2px)
+					width: 4px
+					height: 4px
+					border-radius: 50%
+					background-color: $color8
+					opacity: 0
+					+trs
+			.no-touch &:hover
+				> li > a
+					&:before
+						top: calc(100% + 2px)
+						opacity: 1
+				ul
+					opacity: 1
+					pointer-events: auto
+					a
+						transform: translateY(0)

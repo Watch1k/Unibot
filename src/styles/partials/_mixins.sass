@@ -28,18 +28,8 @@ $browser-context: 16
 	transform: translate3d(0, 0, 0)
 
 =f($name, $font-size: null, $line-height: null, $letter-spacing: null)
-	$font-family: null
-	@if $name == 'heavy'
-		$font-family: 'Gilroy-Heavy'
-	@if $name == 'bold'
-		$font-family: 'Gilroy-Bold'
-	@if $name == 'ebold'
-		$font-family: 'Gilroy-Extrabold'
-	@if $name == 'medium'
-		$font-family: 'Gilroy-Medium'
-	font-family: $font-family, Arial, sans-serif
-	@if $font-family != null
-		font-weight: normal
+	font-family: $name, Arial, sans-serif
+	font-weight: normal
 	@if $font-size != null
 		font-size: $font-size * 1px
 	@if $line-height != null

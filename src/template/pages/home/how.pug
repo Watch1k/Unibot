@@ -1,0 +1,49 @@
++b.SECTION.how
+	+e.container.container
+		+e.title Как это работает
+		+e.text Любая продажа строится на коммуникациях с клиентом, будь то знакомство с продуктом, представление новых функций или поддержка. Мы выводим процесс коммуникаций с клиентом инновационный уровень, разрабатвая боты под популярные/следующие платформы:
+
+		+e.soc
+			-socList = ['facebook', 'telegram', 'viber', 'skype', 'slack', 'insta']
+			each el in socList
+				+e.soc-icon-wrap
+					-socIconClass = '_default __soc-icon'
+					-socIcon = el
+					include ../../components/soc-icon
+
+		+e.history
+			+e.history-start
+			+e.history-line
+				.
+					<svg viewBox="0 0 604 1923">
+						<path d="M305,2c0,0,0.2,56.3-1,76c-1.7,28.8-12,67.7-52,91c-55.7,32.4-128,35-128,35S-47.5,311.9,96,355s269.1-55.9,412,65c142.9,120.9-44.5,309.3-298,299c-251.8-10.2-258.9,186.4-69,240c119.5,33.8,145.3-32.7,273-24s176.5,114.7,185,174s-104.5,220.1-319,244s-264.5,157-127,209s294.9-56.2,349,87c41.8,110.7-8,273-8,273"/>
+					</svg>
+
+			+e.history-el_1
+				+e.history-canvas
+					img(src='static/img/test/test1.png' alt='image')
+				+e.history-number
+					+i('01')
+				+e.history-content
+					+e.history-title Идея бота
+					+e.history-text Определение направлений и функций, где бот будет полезен для ваших клиентов.
+
+			+e.history-el_2
+				+e.history-canvas
+					img(src='static/img/test/test2.png' alt='image')
+				+e.history-number
+					+i('02')
+				+e.history-content
+					+e.history-title Сценарий разработки
+					+e.history-text Определение направлений и функций, где бот будет полезен для ваших клиентов.
+
+			+e.history-el_3
+				+e.history-canvas
+					img(src='static/img/test/test3.png' alt='image')
+				+e.history-number
+					+i('03')
+				+e.history-content
+					+e.history-title Подключение модулей
+					+e.history-text Определение направлений и функций, где бот будет полезен для ваших клиентов.
+
+

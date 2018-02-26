@@ -1,9 +1,8 @@
 import './noTouch';
 
 export class Common {
-  constructor() {
-  }
-
+	constructor() {
+	}
 }
 
 export default new Common();

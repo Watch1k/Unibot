@@ -13,8 +13,9 @@ export default class Jelateria {
 		this.islands = [];
 		this.radius = opts.radius || 50;
 		this.jellyArray = [];
+		this.ratioState = opts.ratioState || false;
 		this.ratio = 1;
-		this.fixRatio();
+		if (this.ratioState) this.fixRatio();
 		this.parsePaths();
 		this.offsetX = opts.paths[0].offsetX;
 		this.offsetY = opts.paths[0].offsetY;
@@ -26,6 +27,7 @@ export default class Jelateria {
 	fixRatio() {
 		this.ratio = this.canvasWidth / 1280;
 		this.paths.forEach(path => {
+			path.radius *= this.ratio;
 			path.offsetX *= this.ratio;
 			path.offsetY *= this.ratio;
 			path.scale *= this.ratio;
@@ -35,6 +37,7 @@ export default class Jelateria {
 	initPixi() {
 		PIXI.utils.skipHello();
 		this.app = new PIXI.Application(this.canvasWidth, this.canvasHeight, { antialias: true, transparent: true });
+		this.app.stop();
 		this.canvasContainer.appendChild(this.app.view);
 		this.canvas = this.app.view;
 		this.canvas.setAttribute('width', `${this.canvasWidth}px`);
@@ -205,9 +208,11 @@ export default class Jelateria {
 		graphics.endFill();
 	}
 	
-	pause() {
+	stop() {
+		this.app.stop();
 	}
 	
-	play() {
+	start() {
+		this.app.start();
 	}
 }

@@ -1,10 +1,22 @@
 +b.HEADER.header
 	+e.container.container
-		+e.logo
+		+e.logo(href='#!')
 			+e.logo-img(src='static/img/logo.svg' alt='image')
 		+e.right
 			-navList = ['Преимущества', 'Как это работает', 'Сферы деятельности', 'Как создаем', 'Кейсы', 'Блог', 'Контакты']
+
 			+e.NAV.nav
 				ul
 					each el in navList
 						li: a(href='#!')= el
+
+			+e.chat(href='#!')
+				+e.chat-icon
+					+i('facebook')
+
+			+e.lang
+				ul
+					li
+						a(href='#!') RU
+						ul
+							li: a(href='#!') EN

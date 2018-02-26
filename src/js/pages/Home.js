@@ -1,4 +1,5 @@
 import Jelateria from '../components/jella/jelaModule';
+import ScrollAnim from '../modules/dev/animation/scrollAnim';
 
 export default class Home {
 	constructor() {
@@ -6,8 +7,15 @@ export default class Home {
 	}
 	
 	init() {
+		this.initScreen();
+		this.initHow();
+	}
+	
+	initScreen() {
+		const container = document.querySelector('.screen');
 		const paymentPartsFirst = new Jelateria({
 			container: document.querySelector('.screen__canvas'),
+			ratioState: true,
 			paths: [{
 				radius: 70,
 				path: '#path-screen-1',
@@ -61,7 +69,7 @@ export default class Home {
 				path: '#path-screen-5',
 				bottom: true,
 				offsetX: -320,
-				offsetY: -350,
+				offsetY: -380,
 				points: 20,
 				scale: 32,
 				right: true,
@@ -87,6 +95,20 @@ export default class Home {
 			}]
 		});
 		
-		paymentPartsFirst.play();
+		new ScrollAnim({
+			el: container,
+			inView: true,
+			reverse: true,
+			onEnter() {
+				paymentPartsFirst.start();
+			},
+			onLeave() {
+				paymentPartsFirst.stop();
+			}
+		});
+	}
+	
+	initHow() {
+		const container = document.querySelector('.how');
 	}
 }

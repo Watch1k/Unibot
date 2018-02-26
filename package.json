@@ -27,6 +27,7 @@
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "fs": "0.0.2",
     "global": "^4.3.1",
+    "gsap": "^1.20.4",
     "gulp": "^3.9.1",
     "gulp-cheerio": "^0.6.2",
     "gulp-connect": "^5.0.0",
@@ -53,10 +54,14 @@
     "require-dir": "^0.3.1",
     "run-sequence": "^1.2.2",
     "script-loader": "^0.7.0",
+    "scrollmagic": "^2.0.5",
     "standard": "^7.0.0",
     "through2": "^2.0.1",
     "webpack": "^3.10.0",
     "webpack-md5-hash": "0.0.5",
     "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "pixi-svg": "^1.0.1"
   }
 }

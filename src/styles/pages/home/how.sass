@@ -1,0 +1,162 @@
+.how
+	padding: 100px 0
+	color: $color6
+	background-image: linear-gradient(-18deg, #1e14a8 0%, #50218e 56%, #50218e 100%)
+	min-height: 10000px
+	
+	&__title
+		margin: 0 auto
+		max-width: 790px
+		+h2
+		text-align: center
+		
+	&__text
+		margin: 43px auto 0
+		max-width: 790px
+		text-align: center
+		
+	&__soc
+		position: relative
+		margin-top: 22px
+		display: flex
+		justify-content: center
+		align-items: center
+		&-icon-wrap
+			position: relative
+			margin: 0 14px
+			&:before,
+			&:after
+				pointer-events: none
+				content: ''
+				position: absolute
+				top: calc(100% + 5px)
+				left: calc(50% - 2px)
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background-color: $color8
+				opacity: 0
+				+trs
+			.no-touch &:hover
+				&:before
+					opacity: 1
+					left: calc(50% - 12px)
+				&:after
+					opacity: 1
+					left: calc(50% + 8px)
+		&-icon
+			position: relative
+			display: block
+			font-size: 26px
+			&:before
+				pointer-events: none
+				content: ''
+				position: absolute
+				top: calc(100% + 5px)
+				left: calc(50% - 2px)
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background-color: $color8
+				opacity: 0
+				+trs
+			.no-touch &:hover
+				&:before
+					opacity: 1
+		
+	&__history
+		position: relative
+		margin-top: 70px
+		padding: 0 70px
+		
+		&-start
+			position: absolute
+			top: 0
+			left: calc(50% - 5px)
+			width: 15px
+			height: 15px
+			border-radius: 50%
+			background-color: $color4
+		&-line
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			display: flex
+			justify-content: center
+			svg
+				width: 604px
+				height: 1923px
+				stroke: $color4
+				stroke-width: 4px
+				fill: none
+		
+		&-number
+			position: absolute
+			z-index: 1
+			font-size: 184px
+			color: $color5
+			.icon
+				display: block
+		&-title
+			+h3
+		&-text
+			margin-top: 14px
+		
+		&-el
+			position: relative
+			box-shadow: 0 0 0 1px red
+		
+		&-canvas
+			position: absolute
+			z-index: 2
+			box-shadow: 0 0 0 1px green
+			padding-top: 50px
+			padding-left: 50px
+			
+		&-content
+			position: absolute
+			z-index: 3
+			max-width: 260px
+			
+		&-el_1
+			height: 400px
+		&-el_1 &-content
+			top: 237px
+			left: 124px
+		&-el_1 &-number
+			top: 20px
+			left: 0
+		&-el_1 &-canvas
+			top: 70px
+			left: -30px
+			width: calc(454px + 100px)
+			height: calc(339px + 100px)
+			
+		&-el_2
+			height: 300px
+		&-el_2 &-content
+			top: 76px
+			left: calc(50% + 157px)
+		&-el_2 &-number
+			top: -154px
+			right: 0
+		&-el_2 &-canvas
+			top: -85px
+			right: -5px
+			width: calc(398px + 100px)
+			height: calc(376px + 100px)
+			
+		&-el_3
+			height: 280px
+		&-el_3 &-content
+			top: 68px
+			left: 149px
+		&-el_3 &-number
+			top: -140px
+			left: 0
+		&-el_3 &-canvas
+			top: -82px
+			left: -3px
+			width: calc(454px + 100px)
+			height: calc(339px + 100px)
