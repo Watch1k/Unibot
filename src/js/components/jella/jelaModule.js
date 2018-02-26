@@ -1,4 +1,5 @@
 import 'pixi.js';
+import { hex2number } from '../../modules/dev/helpers';
 import Dot from './jellydot';
 import Mouse from './Mouse';
 import SvgParse from './SvgParse';
@@ -99,20 +100,22 @@ export default class Jelateria {
 		
 		gradient.texture.baseTexture.on('loaded', () => {
 			gradient.scale.set(this.ratio);
+			const gradientOffsetX = this.gradients[curIndex].offsetX ? this.gradients[curIndex].offsetX : 0;
+			const gradientOffsetY = this.gradients[curIndex].offsetY ? this.gradients[curIndex].offsetY : 0;
 			gradient.x = do {
 				if (this.paths[curIndex].right) {
-					this.canvasWidth + this.paths[curIndex].offsetX - 50 * this.ratio;
+					this.canvasWidth + this.paths[curIndex].offsetX - 50 * this.ratio + gradientOffsetX;
 				} else if (this.paths[curIndex].left) {
-					this.paths[curIndex].offsetX - 50 * this.ratio;
+					this.paths[curIndex].offsetX - 50 * this.ratio + gradientOffsetX;
 				} else {
-					this.canvasWidth / 2 + this.paths[curIndex].offsetX - 50 * this.ratio;
+					this.canvasWidth / 2 + this.paths[curIndex].offsetX - 50 * this.ratio + gradientOffsetX;
 				}
 			};
 			gradient.y = do {
 				if (this.paths[curIndex].bottom) {
-					this.canvasHeight + this.paths[curIndex].offsetY - 50 * this.ratio;
+					this.canvasHeight + this.paths[curIndex].offsetY - 50 * this.ratio + gradientOffsetY;
 				} else {
-					this.paths[curIndex].offsetY - 50 * this.ratio;
+					this.paths[curIndex].offsetY - 50 * this.ratio + gradientOffsetY;
 				}
 			};
 		});
@@ -122,6 +125,7 @@ export default class Jelateria {
 		this.app.stage.addChild(graphics);
 		setTimeout(() => {
 			console.log(curIndex + ' ' + graphics.width);
+			console.log(curIndex + ' ' + graphics.height);
 		}, 1000);
 		container.mask = graphics;
 		

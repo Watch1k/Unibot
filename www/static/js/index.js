@@ -21116,7 +21116,7 @@ var Home = function () {
 					offsetX: -75,
 					offsetY: -165,
 					points: 15,
-					scale: 29.6,
+					scale: 32,
 					motion: true,
 					backlash: 10,
 					speedMotion: 0.015
@@ -21126,7 +21126,7 @@ var Home = function () {
 					offsetX: -290,
 					offsetY: -45,
 					points: 25,
-					scale: 31.3,
+					scale: 32,
 					right: true,
 					motion: true,
 					backlash: 10,
@@ -21137,8 +21137,8 @@ var Home = function () {
 					bottom: true,
 					offsetX: -20,
 					offsetY: -175,
-					points: 15,
-					scale: 30.9,
+					points: 150,
+					scale: 32,
 					blur: 4,
 					left: true,
 					motion: true,
@@ -21151,7 +21151,7 @@ var Home = function () {
 					offsetX: 160,
 					offsetY: -310,
 					points: 15,
-					scale: 30,
+					scale: 32,
 					blur: 7,
 					motion: true,
 					backlash: 20,
@@ -21164,7 +21164,7 @@ var Home = function () {
 					offsetX: -320,
 					offsetY: -350,
 					points: 20,
-					scale: 28.37,
+					scale: 32,
 					right: true,
 					motion: true,
 					backlash: 10,
@@ -21180,7 +21180,9 @@ var Home = function () {
 				}, {
 					name: 'screen-gradient-4'
 				}, {
-					name: 'screen-gradient-5'
+					name: 'screen-gradient-5',
+					offsetX: 11,
+					offsetY: 19
 				}]
 			});
 
@@ -21207,6 +21209,8 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 __webpack_require__(96);
+
+var _helpers = __webpack_require__(36);
 
 var _jellydot = __webpack_require__(198);
 
@@ -21333,8 +21337,10 @@ var Jelateria = function () {
 
 			gradient.texture.baseTexture.on('loaded', function () {
 				gradient.scale.set(_this3.ratio);
-				gradient.x = _this3.paths[curIndex].right ? _this3.canvasWidth + _this3.paths[curIndex].offsetX - 50 * _this3.ratio : _this3.paths[curIndex].left ? _this3.paths[curIndex].offsetX - 50 * _this3.ratio : _this3.canvasWidth / 2 + _this3.paths[curIndex].offsetX - 50 * _this3.ratio;
-				gradient.y = _this3.paths[curIndex].bottom ? _this3.canvasHeight + _this3.paths[curIndex].offsetY - 50 * _this3.ratio : _this3.paths[curIndex].offsetY - 50 * _this3.ratio;
+				var gradientOffsetX = _this3.gradients[curIndex].offsetX ? _this3.gradients[curIndex].offsetX : 0;
+				var gradientOffsetY = _this3.gradients[curIndex].offsetY ? _this3.gradients[curIndex].offsetY : 0;
+				gradient.x = _this3.paths[curIndex].right ? _this3.canvasWidth + _this3.paths[curIndex].offsetX - 50 * _this3.ratio + gradientOffsetX : _this3.paths[curIndex].left ? _this3.paths[curIndex].offsetX - 50 * _this3.ratio + gradientOffsetX : _this3.canvasWidth / 2 + _this3.paths[curIndex].offsetX - 50 * _this3.ratio + gradientOffsetX;
+				gradient.y = _this3.paths[curIndex].bottom ? _this3.canvasHeight + _this3.paths[curIndex].offsetY - 50 * _this3.ratio + gradientOffsetY : _this3.paths[curIndex].offsetY - 50 * _this3.ratio + gradientOffsetY;
 			});
 
 			container.addChild(gradient);
@@ -21342,6 +21348,7 @@ var Jelateria = function () {
 			this.app.stage.addChild(graphics);
 			setTimeout(function () {
 				console.log(curIndex + ' ' + graphics.width);
+				console.log(curIndex + ' ' + graphics.height);
 			}, 1000);
 			container.mask = graphics;
 
