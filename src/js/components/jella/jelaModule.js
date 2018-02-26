@@ -12,12 +12,22 @@ export default class Jelateria {
 		this.islands = [];
 		this.radius = opts.radius || 50;
 		this.jellyArray = [];
+		this.fixRatio();
 		this.parsePaths();
 		this.offsetX = opts.paths[0].offsetX;
 		this.offsetY = opts.paths[0].offsetY;
 		this.gradients = opts.gradients;
 		
 		this.initPixi();
+	}
+	
+	fixRatio() {
+		this.ratio = this.canvasWidth / 1280;
+		this.paths.forEach(path => {
+			path.offsetX *= this.ratio;
+			path.offsetY *= this.ratio;
+			path.scale *= this.ratio;
+		});
 	}
 	
 	initPixi() {
@@ -31,7 +41,6 @@ export default class Jelateria {
 		const style = window.getComputedStyle(this.canvas);
 		this.height = parseInt(style.height);
 		this.width = parseInt(style.width);
-		
 		this.mPixi = new Mouse(this.app.view);
 		
 		this.paths.forEach((el, index) => {
@@ -50,10 +59,35 @@ export default class Jelateria {
 					dot.drawPixi(jelly.graphics);
 				});
 				this.ConnectDotsPixi(this.islands[index], jelly.graphics);
+				this.motion(jelly, index);
 			});
 		});
 	}
 	
+	motion(jelly, curIndex) {
+		if (this.paths[curIndex].motion) {
+			let pivotX = this.paths[curIndex].backlash *
+				(this.paths[curIndex].reverseMotion ? Math.sin(jelly.step) : Math.cos(jelly.step));
+			let pivotY = this.paths[curIndex].backlash *
+				(this.paths[curIndex].reverseMotion ? Math.cos(jelly.step) : Math.sin(jelly.step));
+			
+			jelly.graphics.pivot.x = pivotX;
+			jelly.graphics.pivot.y = pivotY;
+			jelly.container.pivot.x = pivotX;
+			jelly.container.pivot.y = pivotY;
+			
+			jelly.step += this.paths[curIndex].speedMotion;
+		}
+	}
+	
+	/**
+	 * @param {Number} curIndex
+	 * @return {
+	 * {graphics: PIXI.Graphics,
+	 * container: PIXI.Container,
+	 * gradient: PIXI.Sprite.fromImage,
+	 * step: number}}
+	 */
 	initJelly(curIndex) {
 		const graphics = new PIXI.Graphics();
 		const container = new PIXI.Container();
@@ -63,23 +97,31 @@ export default class Jelateria {
 		container.y = 0;
 		
 		gradient.texture.baseTexture.on('loaded', () => {
-			const curWidth = gradient.width;
-			const curHeight = gradient.height;
-			//gradient.anchor.set(0.5, 0.5);
-			//gradient.scale.set(1.4);
+			gradient.scale.set(this.ratio);
 			gradient.x = do {
 				if (this.paths[curIndex].right) {
-					this.canvasWidth + this.paths[curIndex].offsetX - 10;
+					this.canvasWidth + this.paths[curIndex].offsetX - 20 * this.ratio;
+				} else if (this.paths[curIndex].left) {
+					this.paths[curIndex].offsetX - 20 * this.ratio;
 				} else {
-					this.canvasWidth / 2 + this.paths[curIndex].offsetX - 10;
+					this.canvasWidth / 2 + this.paths[curIndex].offsetX - 20 * this.ratio;
 				}
 			};
-			gradient.y = this.paths[curIndex].offsetY - 10;
+			gradient.y = do {
+				if (this.paths[curIndex].bottom) {
+					this.canvasHeight + this.paths[curIndex].offsetY - 20 * this.ratio;
+				} else {
+					this.paths[curIndex].offsetY - 20 * this.ratio;
+				}
+			};
 		});
 		
 		container.addChild(gradient);
 		this.app.stage.addChild(container);
 		this.app.stage.addChild(graphics);
+		setTimeout(() => {
+			console.log(curIndex + ' ' + graphics.width);
+		}, 1000);
 		container.mask = graphics;
 		
 		if (this.paths[curIndex].blur) {
@@ -90,7 +132,8 @@ export default class Jelateria {
 		return {
 			graphics: graphics,
 			container: container,
-			gradient: gradient
+			gradient: gradient,
+			step: 0
 		};
 	}
 	
@@ -98,12 +141,28 @@ export default class Jelateria {
 		this.paths.forEach((path, index) => {
 			let island = {};
 			island.dots = [];
-			const offsetX = this.paths[index].right ? this.canvasWidth + path.offsetX : this.canvasWidth / 2 + path.offsetX;
+			const offsetX = do {
+				if (this.paths[index].right) {
+					this.canvasWidth + path.offsetX;
+				} else if (this.paths[index].left) {
+					path.offsetX;
+				} else {
+					this.canvasWidth / 2 + path.offsetX;
+				}
+			};
+			const offsetY = do {
+				if (this.paths[index].bottom) {
+					this.canvasHeight + path.offsetY;
+				} else {
+					path.offsetY;
+				}
+			};
+			
 			SvgParse(
 				path.path,
 				path.points,
 				offsetX,
-				path.offsetY,
+				offsetY,
 				path.scale,
 				path.speedIsland,
 				path.motion,

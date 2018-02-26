@@ -20857,10 +20857,14 @@ var Home = function () {
 				paths: [{
 					radius: 70,
 					path: '#path-screen-1',
+					bottom: true,
 					offsetX: -75,
-					offsetY: 575,
+					offsetY: -165,
 					points: 15,
-					scale: 32
+					scale: 32,
+					motion: true,
+					backlash: 10,
+					speedMotion: 0.015
 				}, {
 					radius: 100,
 					path: '#path-screen-2',
@@ -20868,30 +20872,49 @@ var Home = function () {
 					offsetY: -45,
 					points: 25,
 					scale: 37,
-					right: true
+					right: true,
+					motion: true,
+					backlash: 10,
+					speedMotion: 0.01
 				}, {
 					radius: 70,
 					path: '#path-screen-3',
-					offsetX: -660,
-					offsetY: 570,
+					bottom: true,
+					offsetX: -20,
+					offsetY: -175,
 					points: 15,
 					scale: 32,
-					blur: 4
+					blur: 4,
+					left: true,
+					motion: true,
+					backlash: 10,
+					speedMotion: 0.0075
 				}, {
 					radius: 70,
 					path: '#path-screen-4',
+					bottom: true,
 					offsetX: 160,
-					offsetY: 425,
+					offsetY: -310,
 					points: 15,
 					scale: 32,
-					blur: 7
+					blur: 7,
+					motion: true,
+					backlash: 20,
+					speedMotion: 0.005,
+					reverseMotion: true
 				}, {
 					radius: 100,
 					path: '#path-screen-5',
-					offsetX: 290,
-					offsetY: 450,
-					points: 25,
-					scale: 32
+					bottom: true,
+					offsetX: -350,
+					offsetY: -380,
+					points: 20,
+					scale: 33.09,
+					right: true,
+					motion: true,
+					backlash: 10,
+					reverseMotion: true,
+					speedMotion: 0.0075
 				}],
 				gradients: [{
 					name: 'screen-gradient-1-1'
@@ -20957,6 +20980,7 @@ var Jelateria = function () {
 		this.islands = [];
 		this.radius = opts.radius || 50;
 		this.jellyArray = [];
+		this.fixRatio();
 		this.parsePaths();
 		this.offsetX = opts.paths[0].offsetX;
 		this.offsetY = opts.paths[0].offsetY;
@@ -20966,9 +20990,21 @@ var Jelateria = function () {
 	}
 
 	_createClass(Jelateria, [{
+		key: 'fixRatio',
+		value: function fixRatio() {
+			var _this = this;
+
+			this.ratio = this.canvasWidth / 1280;
+			this.paths.forEach(function (path) {
+				path.offsetX *= _this.ratio;
+				path.offsetY *= _this.ratio;
+				path.scale *= _this.ratio;
+			});
+		}
+	}, {
 		key: 'initPixi',
 		value: function initPixi() {
-			var _this = this;
+			var _this2 = this;
 
 			PIXI.utils.skipHello();
 			this.app = new PIXI.Application(this.canvasWidth, this.canvasHeight, { antialias: true, transparent: true });
@@ -20980,32 +21016,57 @@ var Jelateria = function () {
 			var style = window.getComputedStyle(this.canvas);
 			this.height = parseInt(style.height);
 			this.width = parseInt(style.width);
-
 			this.mPixi = new _Mouse2.default(this.app.view);
 
 			this.paths.forEach(function (el, index) {
-				_this.jellyArray.push(_this.initJelly(index));
+				_this2.jellyArray.push(_this2.initJelly(index));
 			});
 
 			this.app.ticker.add(function () {
-				_this.jellyArray.forEach(function (jelly, index) {
+				_this2.jellyArray.forEach(function (jelly, index) {
 					jelly.graphics.clear();
 
-					_this.islands[index].dots.forEach(function (dot) {
+					_this2.islands[index].dots.forEach(function (dot) {
 						dot.think();
 					});
-					_this.islands[index].dots.forEach(function (dot) {
-						dot.move(_this.mPixi);
+					_this2.islands[index].dots.forEach(function (dot) {
+						dot.move(_this2.mPixi);
 						dot.drawPixi(jelly.graphics);
 					});
-					_this.ConnectDotsPixi(_this.islands[index], jelly.graphics);
+					_this2.ConnectDotsPixi(_this2.islands[index], jelly.graphics);
+					_this2.motion(jelly, index);
 				});
 			});
 		}
 	}, {
+		key: 'motion',
+		value: function motion(jelly, curIndex) {
+			if (this.paths[curIndex].motion) {
+				var pivotX = this.paths[curIndex].backlash * (this.paths[curIndex].reverseMotion ? Math.sin(jelly.step) : Math.cos(jelly.step));
+				var pivotY = this.paths[curIndex].backlash * (this.paths[curIndex].reverseMotion ? Math.cos(jelly.step) : Math.sin(jelly.step));
+
+				jelly.graphics.pivot.x = pivotX;
+				jelly.graphics.pivot.y = pivotY;
+				jelly.container.pivot.x = pivotX;
+				jelly.container.pivot.y = pivotY;
+
+				jelly.step += this.paths[curIndex].speedMotion;
+			}
+		}
+
+		/**
+   * @param {Number} curIndex
+   * @return {
+   * {graphics: PIXI.Graphics,
+   * container: PIXI.Container,
+   * gradient: PIXI.Sprite.fromImage,
+   * step: number}}
+   */
+
+	}, {
 		key: 'initJelly',
 		value: function initJelly(curIndex) {
-			var _this2 = this;
+			var _this3 = this;
 
 			var graphics = new PIXI.Graphics();
 			var container = new PIXI.Container();
@@ -21015,17 +21076,17 @@ var Jelateria = function () {
 			container.y = 0;
 
 			gradient.texture.baseTexture.on('loaded', function () {
-				var curWidth = gradient.width;
-				var curHeight = gradient.height;
-				//gradient.anchor.set(0.5, 0.5);
-				//gradient.scale.set(1.4);
-				gradient.x = _this2.paths[curIndex].right ? _this2.canvasWidth + _this2.paths[curIndex].offsetX - 10 : _this2.canvasWidth / 2 + _this2.paths[curIndex].offsetX - 10;
-				gradient.y = _this2.paths[curIndex].offsetY - 10;
+				gradient.scale.set(_this3.ratio);
+				gradient.x = _this3.paths[curIndex].right ? _this3.canvasWidth + _this3.paths[curIndex].offsetX - 20 * _this3.ratio : _this3.paths[curIndex].left ? _this3.paths[curIndex].offsetX - 20 * _this3.ratio : _this3.canvasWidth / 2 + _this3.paths[curIndex].offsetX - 20 * _this3.ratio;
+				gradient.y = _this3.paths[curIndex].bottom ? _this3.canvasHeight + _this3.paths[curIndex].offsetY - 20 * _this3.ratio : _this3.paths[curIndex].offsetY - 20 * _this3.ratio;
 			});
 
 			container.addChild(gradient);
 			this.app.stage.addChild(container);
 			this.app.stage.addChild(graphics);
+			setTimeout(function () {
+				console.log(curIndex + ' ' + graphics.width);
+			}, 1000);
 			container.mask = graphics;
 
 			if (this.paths[curIndex].blur) {
@@ -21036,20 +21097,23 @@ var Jelateria = function () {
 			return {
 				graphics: graphics,
 				container: container,
-				gradient: gradient
+				gradient: gradient,
+				step: 0
 			};
 		}
 	}, {
 		key: 'parsePaths',
 		value: function parsePaths() {
-			var _this3 = this;
+			var _this4 = this;
 
 			this.paths.forEach(function (path, index) {
 				var island = {};
 				island.dots = [];
-				var offsetX = _this3.paths[index].right ? _this3.canvasWidth + path.offsetX : _this3.canvasWidth / 2 + path.offsetX;
-				(0, _SvgParse2.default)(path.path, path.points, offsetX, path.offsetY, path.scale, path.speedIsland, path.motion, path.backlash, path.route).forEach(function (dot) {
-					island.dots.push(new _jellydot2.default(dot[0], dot[1], _this3.paths[index].radius));
+				var offsetX = _this4.paths[index].right ? _this4.canvasWidth + path.offsetX : _this4.paths[index].left ? path.offsetX : _this4.canvasWidth / 2 + path.offsetX;
+				var offsetY = _this4.paths[index].bottom ? _this4.canvasHeight + path.offsetY : path.offsetY;
+
+				(0, _SvgParse2.default)(path.path, path.points, offsetX, offsetY, path.scale, path.speedIsland, path.motion, path.backlash, path.route).forEach(function (dot) {
+					island.dots.push(new _jellydot2.default(dot[0], dot[1], _this4.paths[index].radius));
 				});
 				island.color = path.color;
 				island.float = path.float;
@@ -21057,7 +21121,7 @@ var Jelateria = function () {
 				island.motion = path.motion || false;
 				island.backlash = path.backlash || 0;
 				island.route = path.route || null;
-				_this3.islands.push(island);
+				_this4.islands.push(island);
 			});
 		}
 	}, {
