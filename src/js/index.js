@@ -13,7 +13,7 @@ import './components/PublicAPI';
 /** Import page controllers */
 import Home from './pages/Home';
 
-import { currentPage } from './modules/dev/_helpers';
+import { currentPage } from './modules/dev/helpers';
 
 /**
  * Run appropriate scripts for each page.

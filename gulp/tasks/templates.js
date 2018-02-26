@@ -11,14 +11,14 @@ const config         = require('../config');
  * Default HTML task.
  * Compile '.pug' files to '.html'.
  */
-gulp.task('template-compile', () => compileHtml('src/template/pages/*.pug', './www/'));
+gulp.task('pug-compile', () => compileHtml('src/template/pages/*.pug', './www/'));
 
 /**
  * Watcher HTML task.
  * Watch for changes in '.pug' files and compile them.
  */
-gulp.task('template-watch', () => {
-  gulp.watch('src/template/**/*.pug', ['template-compile']);
+gulp.task('pug-watch', () => {
+  gulp.watch('src/template/**/*.pug', ['pug-compile']);
 });
 
 /**

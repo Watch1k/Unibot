@@ -69,9 +69,9 @@ const bundle = {
  */
 const tasks = {
   js   : 'webpack',
-  html : bundle.production ? 'template-compile' : 'template-watch',
+  html : bundle.production ? 'pug-compile' : 'pug-watch',
   css  : bundle.production ? 'css-compile' : 'css-watch',
-  svg  : bundle.production ? 'svg-compile' : 'svg-watch',
+  svg  : bundle.production ? 'svg-compile' : 'svg-watch'
 };
 
 /**

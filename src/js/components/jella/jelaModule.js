@@ -12,6 +12,7 @@ export default class Jelateria {
 		this.islands = [];
 		this.radius = opts.radius || 50;
 		this.jellyArray = [];
+		this.ratio = 1;
 		this.fixRatio();
 		this.parsePaths();
 		this.offsetX = opts.paths[0].offsetX;
@@ -100,18 +101,18 @@ export default class Jelateria {
 			gradient.scale.set(this.ratio);
 			gradient.x = do {
 				if (this.paths[curIndex].right) {
-					this.canvasWidth + this.paths[curIndex].offsetX - 20 * this.ratio;
+					this.canvasWidth + this.paths[curIndex].offsetX - 50 * this.ratio;
 				} else if (this.paths[curIndex].left) {
-					this.paths[curIndex].offsetX - 20 * this.ratio;
+					this.paths[curIndex].offsetX - 50 * this.ratio;
 				} else {
-					this.canvasWidth / 2 + this.paths[curIndex].offsetX - 20 * this.ratio;
+					this.canvasWidth / 2 + this.paths[curIndex].offsetX - 50 * this.ratio;
 				}
 			};
 			gradient.y = do {
 				if (this.paths[curIndex].bottom) {
-					this.canvasHeight + this.paths[curIndex].offsetY - 20 * this.ratio;
+					this.canvasHeight + this.paths[curIndex].offsetY - 50 * this.ratio;
 				} else {
-					this.paths[curIndex].offsetY - 20 * this.ratio;
+					this.paths[curIndex].offsetY - 50 * this.ratio;
 				}
 			};
 		});

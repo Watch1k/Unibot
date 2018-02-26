@@ -1,3 +1,5 @@
+import './noTouch';
+
 export class Common {
   constructor() {
   }

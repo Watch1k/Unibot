@@ -1,2 +1,26 @@
 body
-  background-color: #4A2889
+	//+paragraph-text
+	color: #1f1f1f
+	-webkit-font-smoothing: antialiased
+	background-color: #4A2889
+	line-height: 1.33333
+	&.is-overflow
+		overflow: hidden
+	&.is-fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+
+main
+	overflow: hidden
+
+.container
+	position: relative
+	margin: 0 auto
+	max-width: 1170px
+	
+.row
+	position: relative
+	padding: 0 30px

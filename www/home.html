@@ -1,52 +1,84 @@
+<header class="header">
+  <div class="header__container container">
+    <div class="header__logo">
+      <img class="header__logo-img" src="static/img/logo.svg" alt="image" title="" />
+    </div>
+    <div class="header__right">
+      <nav class="header__nav">
+        <ul>
+          <li>
+            <a href="#!">Преимущества</a>
+          </li>
+          <li>
+            <a href="#!">Как это работает</a>
+          </li>
+          <li>
+            <a href="#!">Сферы деятельности</a>
+          </li>
+          <li>
+            <a href="#!">Как создаем</a>
+          </li>
+          <li>
+            <a href="#!">Кейсы</a>
+          </li>
+          <li>
+            <a href="#!">Блог</a>
+          </li>
+          <li>
+            <a href="#!">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta name="format-detection" content="telephone=no">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
-    <link href="static/css/index.css" rel="stylesheet">
-    <link rel="icon" href="static/favicon.ico">
-  </head>
-  <body>
-    <!-- SVG-->
-    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
-      <svg xmlns="http://www.w3.org/2000/svg">
-        <symbol id="icon-vintage-logo" viewBox="0 0 84.1 115.5">
-          <style>
-            .st0 {
-              fill: #000
-            }
-          </style>
-          <path d="M21.7 0H0l5.1 19.8h21.5z" />
-          <path d="M63.2 0L33.7 115.5h21L84.1 0z" />
-        </symbol>
-      </svg>
-    </div>
-    <!-- picture element HTML5 shiv-->
-    <script>
-      document.createElement('picture');
-    </script>
-    <!-- Header-->
-    <header></header>
-    <!-- Main content-->
-    <main class="content" data-page="home">
-      <section class="screen">
-        <div class="screen__canvas">
-          <svg class="screen__svg is-hidden">
-            <path id="path-screen-1" d="M7.9,21.4c7-8.1,11.4-9.1,25-15S89.2-9.6,96.5,21.2c7.4,31,11.1,76.3-17.6,81.3c-28.7,5-65-11.6-74-32S0.9,29.6,7.9,21.4z"></path>
-            <path id="path-screen-2" d="M15.2,0c0,0-22.2,105-13,163s36.1,117,60,116s43.6-34.9,65-66s76.1-98.4,146-116s0-97,0-97H15.2z"></path>
-            <path id="path-screen-3" d="M109.2,8.2c18,10,47.7,39.2,49.4,68.4c1,16.8-18.4,56.6-72,68s-91.7-13.1-86-43c5.6-29.5,3.2-73.8,23-83C53.2,4.8,77.4-9.4,109.2,8.2z"></path>
-            <path id="path-screen-4" d="M9.9,48.7c8.5-11.1,16.2-19.8,27-33s29.6-21.3,49-11s54,54.1,25,88s-39.3,27.5-48,26s-59.3-25.3-62-39S1.4,59.8,9.9,48.7z"></path>
-            <path id="path-screen-5" d="M390.7,11.9c0,0-20.8-31.6-92,8c-46.7,25.9-81.1,126.1-160,123C46.3,139.3-5,191.6,0.4,244.2c7.1,69.2,75.2,80.9,98.4,81.7c23.2,0.9,43.5-8.1,66-20s46.9-45.3,94-46s64.4,45.7,87,63s107.3-30.5,82-130S455.1,49.5,390.7,11.9z"></path>
-          </svg>
-        </div>
-      </section>
-    </main>
-    <!-- Footer-->
-    <footer></footer>
-    <!-- Scripts-->
-    <script src="static/js/index.js"></script>
-  </body>
+<head>
+  <meta name="format-detection" content="telephone=no">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+  <link href="static/css/index.css" rel="stylesheet">
+  <link rel="icon" href="static/favicon.ico">
+</head>
+<body>
+  <!-- SVG-->
+  <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <symbol id="icon-vintage-logo" viewBox="0 0 84.1 115.5">
+        <style>
+          .st0 {
+            fill: #000
+          }
+        </style>
+        <path d="M21.7 0H0l5.1 19.8h21.5z" />
+        <path d="M63.2 0L33.7 115.5h21L84.1 0z" />
+      </symbol>
+    </svg>
+  </div>
+  <!-- picture element HTML5 shiv-->
+  <script>
+    document.createElement('picture');
+  </script>
+  <!-- Header-->
+  <!-- Main content-->
+  <main class="content" data-page="home">
+    <section class="screen">
+      <div class="screen__canvas">
+        <svg class="screen__svg is-hidden">
+          <path id="path-screen-1" d="M7.9,21.4c7-8.1,11.4-9.1,25-15S89.2-9.6,96.5,21.2c7.4,31,11.1,76.3-17.6,81.3c-28.7,5-65-11.6-74-32S0.9,29.6,7.9,21.4z"></path>
+          <path id="path-screen-2" d="M15.2,0c0,0-22.2,105-13,163s36.1,117,60,116s43.6-34.9,65-66s76.1-98.4,146-116s0-97,0-97H15.2z"></path>
+          <path id="path-screen-3" d="M109.2,8.2c18,10,47.7,39.2,49.4,68.4c1,16.8-18.4,56.6-72,68s-91.7-13.1-86-43c5.6-29.5,3.2-73.8,23-83C53.2,4.8,77.4-9.4,109.2,8.2z"></path>
+          <path id="path-screen-4" d="M9.9,48.7c8.5-11.1,16.2-19.8,27-33s29.6-21.3,49-11s54,54.1,25,88s-39.3,27.5-48,26s-59.3-25.3-62-39S1.4,59.8,9.9,48.7z"></path>
+          <path id="path-screen-5" d="M422.000,35.000 C401.288,17.180 363.156,5.151 309.438,45.911 C266.942,78.155 228.426,171.862 149.588,168.745 C57.253,165.096 5.979,217.322 11.362,269.880 C18.438,338.973 86.443,350.634 109.626,351.501 C132.769,352.366 153.070,343.415 175.564,331.527 C198.059,319.640 222.387,286.262 269.476,285.589 C316.564,284.915 333.312,331.871 356.394,348.505 C412.115,388.658 476.521,323.555 452.000,224.000 C426.739,121.443 470.266,76.525 422.000,35.000 Z"></path>
+        </svg>
+      </div>
+    </section>
+  </main>
+  <!-- Footer-->
+  <!-- Scripts-->
+  <script src="static/js/index.js"></script>
+</body>
 </html>

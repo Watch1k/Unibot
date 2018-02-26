@@ -79,7 +79,8 @@ export class Resp {
  * @type {Object}
  */
 export const css = {
-	active: 'active'
+	active: 'is-active',
+	noTouch: 'no-touch'
 };
 
 /**

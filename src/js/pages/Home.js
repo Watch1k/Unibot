@@ -15,7 +15,7 @@ export default class Home {
 				offsetX: -75,
 				offsetY: -165,
 				points: 15,
-				scale: 32,
+				scale: 29.6,
 				motion: true,
 				backlash: 10,
 				speedMotion: 0.015
@@ -37,7 +37,7 @@ export default class Home {
 				offsetX: -20,
 				offsetY: -175,
 				points: 15,
-				scale: 32,
+				scale: 30.9,
 				blur: 4,
 				left: true,
 				motion: true,
@@ -50,7 +50,7 @@ export default class Home {
 				offsetX: 160,
 				offsetY: -310,
 				points: 15,
-				scale: 32,
+				scale: 30,
 				blur: 7,
 				motion: true,
 				backlash: 20,
@@ -60,10 +60,10 @@ export default class Home {
 				radius: 100,
 				path: '#path-screen-5',
 				bottom: true,
-				offsetX: -350,
-				offsetY: -380,
+				offsetX: -320,
+				offsetY: -350,
 				points: 20,
-				scale: 33.09,
+				scale: 28.37,
 				right: true,
 				motion: true,
 				backlash: 10,
@@ -71,15 +71,15 @@ export default class Home {
 				speedMotion: 0.0075
 			}],
 			gradients: [{
-				name: 'screen-gradient-1-1'
+				name: 'screen-gradient-1'
 			}, {
 				name: 'screen-gradient-2-1'
 			}, {
-				name: 'screen-gradient-3-1'
+				name: 'screen-gradient-3'
 			}, {
-				name: 'screen-gradient-4-1'
+				name: 'screen-gradient-4'
 			}, {
-				name: 'screen-gradient-5-1'
+				name: 'screen-gradient-5'
 			}]
 		});
 		
