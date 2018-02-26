@@ -21137,7 +21137,7 @@ var Home = function () {
 					bottom: true,
 					offsetX: -20,
 					offsetY: -175,
-					points: 150,
+					points: 15,
 					scale: 32,
 					blur: 4,
 					left: true,
@@ -21174,7 +21174,9 @@ var Home = function () {
 				gradients: [{
 					name: 'screen-gradient-1'
 				}, {
-					name: 'screen-gradient-2'
+					name: 'screen-gradient-2',
+					offsetX: 11,
+					offsetY: 7
 				}, {
 					name: 'screen-gradient-3'
 				}, {
