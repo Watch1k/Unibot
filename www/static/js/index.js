@@ -21123,10 +21123,10 @@ var Home = function () {
 				}, {
 					radius: 100,
 					path: '#path-screen-2',
-					offsetX: -300,
+					offsetX: -290,
 					offsetY: -45,
 					points: 25,
-					scale: 37,
+					scale: 31.3,
 					right: true,
 					motion: true,
 					backlash: 10,
@@ -21174,7 +21174,7 @@ var Home = function () {
 				gradients: [{
 					name: 'screen-gradient-1'
 				}, {
-					name: 'screen-gradient-2-1'
+					name: 'screen-gradient-2'
 				}, {
 					name: 'screen-gradient-3'
 				}, {
