@@ -127,8 +127,8 @@ export default class Jelateria {
 		this.app.stage.addChild(container);
 		this.app.stage.addChild(graphics);
 		setTimeout(() => {
-			console.log(curIndex + ' ' + graphics.width);
-			console.log(curIndex + ' ' + graphics.height);
+			//console.log(curIndex + ' ' + graphics.width);
+			//console.log(curIndex + ' ' + graphics.height);
 		}, 1000);
 		container.mask = graphics;
 		

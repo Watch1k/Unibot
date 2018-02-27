@@ -1,8 +1,45 @@
 .how
+	position: relative
 	padding: 100px 0
 	color: $color6
-	background-image: linear-gradient(-18deg, #1e14a8 0%, #50218e 56%, #50218e 100%)
-	min-height: 10000px
+	
+	&__gradient
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 0
+		&-el
+			position: relative
+			height: 33.333%
+			&:nth-child(1)
+				z-index: 3
+				background-image: linear-gradient(-18deg, #1e14a8 0%, #50218e 56%, #50218e 100%)
+			&:nth-child(2)
+				z-index: 2
+				margin-top: -100px
+				height: calc(33.333% + 100px)
+				background-image: linear-gradient(-165deg, #1e14a8 0%, #50218e 56%, #50218e 100%)
+			&:nth-child(3)
+				z-index: 4
+				margin-top: -100px
+				height: calc(33.333% + 100px)
+				background-image: linear-gradient(-30deg, #1e14a8 0%, #50218e 56%, #50218e 100%)
+	
+	&__round-bottom
+		position: absolute
+		z-index: 1
+		bottom: -1px
+		left: 0
+		right: 0
+		svg
+			display: block
+			width: 100% !important
+			fill: $color6
+	
+	&__container
+		z-index: 2
 	
 	&__title
 		margin: 0 auto
@@ -77,6 +114,7 @@
 			height: 15px
 			border-radius: 50%
 			background-color: $color4
+			transform: scale(0)
 		&-line
 			position: absolute
 			top: 0
@@ -105,12 +143,10 @@
 		
 		&-el
 			position: relative
-			box-shadow: 0 0 0 1px red
 		
 		&-canvas
 			position: absolute
 			z-index: 2
-			box-shadow: 0 0 0 1px green
 			padding-top: 50px
 			padding-left: 50px
 			
@@ -158,5 +194,47 @@
 		&-el_3 &-canvas
 			top: -82px
 			left: -3px
-			width: calc(454px + 100px)
-			height: calc(339px + 100px)
+			width: calc(432px + 100px)
+			height: calc(368px + 100px)
+			
+		&-el_4
+			height: 320px
+		&-el_4 &-content
+			top: 80px
+			left: calc(50% + 172px)
+		&-el_4 &-number
+			top: -155px
+			right: 0
+		&-el_4 &-canvas
+			top: -81px
+			right: -15px
+			width: calc(403px + 100px)
+			height: calc(328px + 100px)
+			
+		&-el_5
+			height: 350px
+		&-el_5 &-content
+			top: 118px
+			left: 172px
+		&-el_5 &-number
+			top: -130px
+			left: 0
+		&-el_5 &-canvas
+			top: -52px
+			left: 33px
+			width: calc(418px + 100px)
+			height: calc(387px + 100px)
+			
+		&-el_6
+			height: 390px
+		&-el_6 &-content
+			top: 154px
+			left: calc(50% + 107px)
+		&-el_6 &-number
+			top: -95px
+			right: 0
+		&-el_6 &-canvas
+			top: -19px
+			right: 72px
+			width: calc(440px + 100px)
+			height: calc(359px + 100px)
