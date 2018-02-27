@@ -89,3 +89,55 @@
 	 =================================== */
 .is-hidden
 	display: none
+	
+/* Tiny Slider
+	----------------------------------- */
+.tns-controls
+	[data-controls='prev'],
+	[data-controls='next']
+		position: relative
+		padding: 0
+		width: 64px
+		background-color: transparent
+		border: none
+		border-radius: 0
+		height: 28px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		div
+			width: 4px
+			height: 4px
+			border-radius: 50%
+			background-color: $color5
+			+trs
+		span
+			position: absolute
+			z-index: 2
+			top: 0
+			width: 28px
+			height: 28px
+			border-radius: 50%
+			border: 2px solid $color5
+			+trs
+	[data-controls='prev']
+		span
+			left: 0
+	[data-controls='next']
+		span
+			right: 0
+	[data-controls='prev']
+		.no-touch &:hover
+			div
+				background-color: $color8
+			span
+				transform: translateX(18px)
+				border-color: $color8
+	[data-controls='next']
+		.no-touch &:hover
+			div
+				background-color: $color8
+			span
+				transform: translateX(-18px)
+				border-color: $color8
+	

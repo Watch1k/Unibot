@@ -1,6 +1,6 @@
 body
 	+paragraph-text
-	color: #1f1f1f
+	color: $color7
 	-webkit-font-smoothing: antialiased
 	background-color: $color6
 	&.is-overflow
@@ -11,6 +11,9 @@ body
 		left: 0
 		right: 0
 		bottom: 0
+	+selection
+		color: $color6
+		background-color: $color4
 
 main
 	overflow: hidden
@@ -23,3 +26,26 @@ main
 .row
 	position: relative
 	padding: 0 30px
+	
+[data-line]
+	pointer-events: none
+	position: absolute
+	z-index: 0
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0.1
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		left: 50%
+		top: 0
+		height: 100%
+		width: 1px
+		background-color: $color5
+	&:before
+		margin-left: -515px
+	&:after
+		margin-left: 516px
