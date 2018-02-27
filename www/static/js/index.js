@@ -23925,8 +23925,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 __webpack_require__(97);
 
-var _helpers = __webpack_require__(20);
-
 var _jellydot = __webpack_require__(199);
 
 var _jellydot2 = _interopRequireDefault(_jellydot);
@@ -45369,31 +45367,52 @@ exports.default = Dot;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _Vec = __webpack_require__(201);
 
 var _Vec2 = _interopRequireDefault(_Vec);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Mouse(canvas) {
-	this.pos = new _Vec2.default(0, 0);
-	this.down = false;
-	var _this = this;
-	window.onmousemove = function (e) {
-		var r = canvas.getBoundingClientRect();
-		_this.pos.set(e.clientX - r.left, e.clientY - r.top);
-	};
-	window.onmouseup = function () {
-		_this.down = false;
-	};
-	window.onmousedown = function (e) {
-		_this.down = true;
-		var r = canvas.getBoundingClientRect();
-		_this.pos.set(e.clientX - r.left, e.clientY - r.top);
-	};
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-module.exports = Mouse;
+var Mouse = function () {
+	function Mouse(canvas) {
+		_classCallCheck(this, Mouse);
+
+		this.init(canvas);
+	}
+
+	_createClass(Mouse, [{
+		key: 'init',
+		value: function init(canvas) {
+			this.pos = new _Vec2.default(0, 0);
+			this.down = false;
+			var _this = this;
+			window.addEventListener('mousemove', function (e) {
+				var r = canvas.getBoundingClientRect();
+				_this.pos.set(e.clientX - r.left, e.clientY - r.top);
+			});
+			window.addEventListener('mouseup', function () {
+				_this.down = false;
+			});
+			window.addEventListener('mousedown', function (e) {
+				_this.down = true;
+				var r = canvas.getBoundingClientRect();
+				_this.pos.set(e.clientX - r.left, e.clientY - r.top);
+			});
+		}
+	}]);
+
+	return Mouse;
+}();
+
+exports.default = Mouse;
 
 /***/ }),
 /* 201 */
@@ -45803,6 +45822,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _gsap = __webpack_require__(207);
 
+var _jelaModule = __webpack_require__(96);
+
+var _jelaModule2 = _interopRequireDefault(_jelaModule);
+
 __webpack_require__(209);
 
 var _scrollAnim = __webpack_require__(203);
@@ -45832,6 +45855,7 @@ var HomeHow = function () {
 		value: function init() {
 			var _this = this;
 			this.lineAnim();
+			this.initJelly();
 
 			this.elements.forEach(function (element, index) {
 				new _scrollAnim2.default({
@@ -45865,6 +45889,41 @@ var HomeHow = function () {
 				tl.to(_this2.historyLinePath, 1, { drawSVG: pathSize + '%' }).set(_this2.historyLinePath, { drawSVG: pathStep + '%' });
 
 				_this2.animArray.push(tl);
+			});
+		}
+	}, {
+		key: 'initJelly',
+		value: function initJelly() {
+			var containers = [].concat(_toConsumableArray(document.querySelectorAll('.how__history-canvas')));
+
+			containers.forEach(function (container, index) {
+				var jelly = new _jelaModule2.default({
+					container: container,
+					paths: [{
+						radius: 110,
+						path: '#path-how-' + (index + 1),
+						offsetX: 50,
+						offsetY: 50,
+						points: 15,
+						scale: 32,
+						left: true
+					}],
+					gradients: [{
+						name: 'how-gradient-' + (index + 1)
+					}]
+				});
+
+				new _scrollAnim2.default({
+					el: container,
+					inView: true,
+					reverse: true,
+					onEnter: function onEnter() {
+						jelly.start();
+					},
+					onLeave: function onLeave() {
+						jelly.stop();
+					}
+				});
 			});
 		}
 	}]);

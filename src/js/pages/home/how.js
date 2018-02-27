@@ -1,4 +1,5 @@
 import { TimelineMax, TweenMax } from 'gsap';
+import Jelateria from '../../components/jella/jelaModule';
 import '../../modules/dep/DrawSVGPlugin';
 import ScrollAnim from '../../modules/dev/animation/scrollAnim';
 
@@ -15,6 +16,7 @@ export default class HomeHow {
 	init() {
 		const _this = this;
 		this.lineAnim();
+		this.initJelly();
 		
 		this.elements.forEach((element, index) => {
 			new ScrollAnim({
@@ -51,7 +53,7 @@ export default class HomeHow {
 			};
 			
 			if (index === 0) {
-				tl.to(this.historyStart, 0.5, {scaleX: 1, scaleY: 1 }, 0);
+				tl.to(this.historyStart, 0.5, { scaleX: 1, scaleY: 1 }, 0);
 			}
 			
 			tl
@@ -59,6 +61,40 @@ export default class HomeHow {
 				.set(this.historyLinePath, { drawSVG: `${pathStep}%` });
 			
 			this.animArray.push(tl);
+		});
+	}
+	
+	initJelly() {
+		const containers = [...document.querySelectorAll('.how__history-canvas')];
+		
+		containers.forEach((container, index) => {
+			const jelly = new Jelateria({
+				container: container,
+				paths: [{
+					radius: 110,
+					path: `#path-how-${index + 1}`,
+					offsetX: 50,
+					offsetY: 50,
+					points: 15,
+					scale: 32,
+					left: true
+				}],
+				gradients: [{
+					name: `how-gradient-${index + 1}`
+				}]
+			});
+			
+			new ScrollAnim({
+				el: container,
+				inView: true,
+				reverse: true,
+				onEnter() {
+					jelly.start();
+				},
+				onLeave() {
+					jelly.stop();
+				}
+			});
 		});
 	}
 }

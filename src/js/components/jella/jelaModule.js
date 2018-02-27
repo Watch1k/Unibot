@@ -1,5 +1,4 @@
 import 'pixi.js';
-import { hex2number } from '../../modules/dev/helpers';
 import Dot from './jellydot';
 import Mouse from './Mouse';
 import SvgParse from './SvgParse';
