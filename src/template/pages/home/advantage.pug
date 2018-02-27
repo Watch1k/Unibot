@@ -1,7 +1,7 @@
 +b.SECTION.advantage
 	div(data-line)
 	+e.container.container
-		+e.title
+		+e.title Наши приемущества
 		-
 			advList = [[
 			'Целевой контент в коммуникациях',
@@ -27,6 +27,7 @@
 				+e.list-item
 					+e.list-item-row
 						+e.list-item-left
+							+i(`advantage-${index + 1}`)
 						+e.list-item-right
 							+e.list-item-title= el[0]
 					+e.list-item-text= el[1]

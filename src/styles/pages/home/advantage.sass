@@ -1,1 +1,46 @@
 .advantage
+	padding-bottom: 100px
+	
+	&__container
+		padding: 0 70px
+		
+	&__title
+		margin: 0 auto
+		max-width: 720px
+		+h2
+		text-align: center
+		
+	&__list
+		margin-top: 66px
+		display: flex
+		flex-wrap: wrap
+		&-item
+			flex: 1 0 auto
+			&:nth-child(3n + 1)
+				flex-basis: 373px
+				padding-right: 60px
+			&:nth-child(3n + 2)
+				flex-basis: 327px
+			&:nth-child(3n + 3)
+				flex-basis: calc(100% - 700px)
+				padding-left: 47px
+			&:nth-child(3) ~ &
+				padding-top: 34px
+			&-row
+				display: flex
+			&-left
+				padding-top: 4px
+				font-size: 67px
+				flex: 1 0 95px
+				.icon
+					display: block
+					&-advantage
+						&-5
+							margin-left: 11px
+						&-6
+							margin-left: 5px
+			&-right
+			&-title
+				+h3
+			&-text
+				margin-top: 15px
