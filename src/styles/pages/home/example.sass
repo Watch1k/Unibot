@@ -1,6 +1,6 @@
-.loc
+.example
 	position: relative
-	padding-top: 120px
+	padding-top: 10px
 	padding-bottom: 118px
 	
 	&__container
@@ -40,7 +40,7 @@
 		&-counter
 			position: absolute
 			top: 9px
-			left: 0
+			left: calc(393px + 57px)
 			display: flex
 			+f('Gilroy-ExtraBold',14,20,100)
 			color: #000000
@@ -62,18 +62,29 @@
 			z-index: 10
 			margin-top: 54px
 			top: 0
-			left: 0
+			left: calc(393px + 57px)
 		&-item
 			top: 0
 		&-row
 			display: flex
 			align-items: flex-start
-		&-left
-			padding: 54px 35px 0 0
-			flex: 0 1 auto
 		&-right
-			flex: 1 0 498px
+			padding: 54px 0 0 57px
+			flex: 0 1 auto
+		&-left
+			position: relative
+			flex: 1 0 393px
 			background-color: $color6
+			&:before
+				pointer-events: none
+				content: ''
+				position: absolute
+				z-index: 10
+				top: 0
+				right: 0
+				bottom: 0
+				width: 1px
+				background-color: $color6
 		&-title
 			+h3
 		&-text
@@ -85,8 +96,8 @@
 					margin-top: 25px
 		&-image
 			position: relative
-			width: 498px
-			height: 435px
+			width: 393px
+			height: 374px
 			+cover-img
 			&:before
 				pointer-events: none

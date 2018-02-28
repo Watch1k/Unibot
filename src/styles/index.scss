@@ -1,6 +1,7 @@
 /* LIBS */
 @import 'libs/vintage-reset-normalize';
 @import 'libs/reset-helper';
+@import '../../node_modules/tiny-slider/src/tiny-slider';
 
 /* PARTIALS */
 @import 'partials/mixins';
@@ -15,7 +16,7 @@
 @import 'components/jelly';
 @import 'components/header';
 @import 'components/btn';
-@import '../../node_modules/tiny-slider/src/tiny-slider';
+@import 'components/card';
 
 /* PAGES */
 @import 'pages/home/home';

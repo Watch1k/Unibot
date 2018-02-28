@@ -1,14 +1,14 @@
 import { TweenMax } from 'gsap';
 import { tns } from '../../../../node_modules/tiny-slider/src/tiny-slider.module';
 
-export default class HomeLoc {
+export default class HomeExample {
 	constructor() {
-		this.container = document.querySelector('.loc');
-		this.sliderSelector = '.loc__slider';
+		this.container = document.querySelector('.example');
+		this.sliderSelector = '.example__slider';
 		this.slider = this.container.querySelector(this.sliderSelector);
-		this.btn = this.container.querySelector('.loc__slider-btn');
-		this.sliderCounterCurrent = this.container.querySelector('.loc__slider-counter-current');
-		this.sliderCounterTotal = this.container.querySelector('.loc__slider-counter-total');
+		this.btn = this.container.querySelector('.example__slider-btn');
+		this.sliderCounterCurrent = this.container.querySelector('.example__slider-counter-current');
+		this.sliderCounterTotal = this.container.querySelector('.example__slider-counter-total');
 		
 		this.init();
 		this.fixButtonPosition(true);
@@ -16,7 +16,7 @@ export default class HomeLoc {
 	
 	init() {
 		this.slider = tns({
-			container: '.loc__slider',
+			container: '.example__slider',
 			mode: 'gallery',
 			controlsText: ['', ''],
 			speed: 400
@@ -50,8 +50,8 @@ export default class HomeLoc {
 	
 	fixButtonPosition(state = false) {
 		const info = this.slider.getInfo();
-		const left = info.slideItems[info.index].querySelector('.loc__slider-left');
-		const height = left.clientHeight;
+		const right = info.slideItems[info.index].querySelector('.example__slider-right');
+		const height = right.clientHeight;
 		
 		if (state) TweenMax.set(this.btn, { y: height });
 		TweenMax.to(this.btn, 0.4, { y: height });
