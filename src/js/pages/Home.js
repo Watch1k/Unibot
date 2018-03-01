@@ -3,6 +3,7 @@ import HomeExample from './home/example';
 import HomeHow from './home/how';
 import HomeLoc from './home/loc';
 import HomeScreen from './home/screen';
+import HomeTop from './home/top';
 
 export default class Home {
 	constructor() {
@@ -15,5 +16,6 @@ export default class Home {
 		new HomeLoc();
 		new HomeAdvantage();
 		new HomeExample();
+		new HomeTop();
 	}
 }

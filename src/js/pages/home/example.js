@@ -1,5 +1,6 @@
 import { TweenMax } from 'gsap';
 import { tns } from '../../../../node_modules/tiny-slider/src/tiny-slider.module';
+import { css } from '../../modules/dev/helpers';
 
 export default class HomeExample {
 	constructor() {
@@ -9,9 +10,12 @@ export default class HomeExample {
 		this.btn = this.container.querySelector('.example__slider-btn');
 		this.sliderCounterCurrent = this.container.querySelector('.example__slider-counter-current');
 		this.sliderCounterTotal = this.container.querySelector('.example__slider-counter-total');
+		this.chatText = this.container.querySelector('.example__slider-chat-text');
+		this.chatIcon = [...this.container.querySelectorAll('.example__slider-chat-icon')];
 		
 		this.init();
 		this.fixButtonPosition(true);
+		this.chat();
 	}
 	
 	init() {
@@ -67,5 +71,18 @@ export default class HomeExample {
 				info.navCurrentIndex + 1;
 			}
 		};
+	}
+	
+	chat() {
+		this.chatIcon.forEach(icon => {
+			icon.addEventListener('mouseenter', () => {
+				this.chatText.classList.add(css.active);
+			});
+		});
+		this.chatIcon.forEach(icon => {
+			icon.addEventListener('mouseleave', () => {
+				this.chatText.classList.remove(css.active);
+			});
+		});
 	}
 }

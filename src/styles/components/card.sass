@@ -1,3 +1,79 @@
 .card
+	position: relative
+	padding-bottom: 44px
+	display: block
+	
 	&__image
-		padding-right: 12px
+		position: relative
+		+cover-img
+		width: 298px
+		height: 217px
+		&:before
+			pointer-events: none
+			position: absolute
+			z-index: 5
+			content: ''
+			top: 0
+			right: 0
+			bottom: 0
+			width: 1px
+			background-color: $color6
+		&:after
+			pointer-events: none
+			content: ''
+			+ratio-in
+			z-index: 3
+			background-image: linear-gradient(-52deg, $color1 0%, #1312b9 35%, $color3 69%, #ca2b5b 100%)
+			opacity: 0.5
+		&-img
+				position: relative
+				z-index: 2
+		&-svg
+			+ratio-in
+			z-index: 4
+			fill: $color6
+			
+	&__title
+		margin-top: 38px
+		padding-bottom: 17px
+		+h3
+		+trs
+		
+	&__more
+		position: absolute
+		bottom: 0
+		right: -2px
+		width: 64px
+		background-color: transparent
+		border: none
+		border-radius: 0
+		height: 28px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		&-dot
+			width: 4px
+			height: 4px
+			border-radius: 50%
+			background-color: $color5
+			+trs
+		&-circle
+			position: absolute
+			z-index: 2
+			top: 0
+			right: 0
+			width: 28px
+			height: 28px
+			border-radius: 50%
+			border: 2px solid $color5
+			+trs
+			
+	.no-touch &:hover &__title
+		color: $color4
+	.no-touch &:hover &__more-dot
+		background-color: $color8
+	.no-touch &:hover &__more-circle
+			transform: translateX(-18px)
+			border-color: $color8
+	
+		

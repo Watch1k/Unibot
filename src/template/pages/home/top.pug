@@ -14,22 +14,27 @@
 			'Согласно Wikipedia, бот – это специальная программа, где выполняющая автоматичеcкие пироги с вишней, приводит пользователя к конечному про выполняющая автоматичеcкие пироги с вишнейвыполняющая автоматичеcкие пироги с вишней'
 			]]
 		+e.list
-			each el in topList
-				+b.card.__list-item
-					+e.image
-						+e.IMG.image-img
-							img
-						+e.SVG.image-svg(viewBox="0 0 297.3 217.1" preserveAspectRatio='none')
-							path(d='M127.6,217.1h-0.5C127.3,217.1,127.4,217.1,127.6,217.1z')
-							path(d='M297.3,0H0v217.1h127.1c-33.1-0.2-64.9-9.1-88.4-31.9C-24.1,124.6-1.7,78.1,43.9,49C89.6,19.9,177.8-30,240,24.1s76.2,105,29.8,144.6c-28.9,24.7-87.2,48.6-142.3,48.4h169.7V0z')
+			each el, index in topList
+				+e.list-item
+					+b.card(href='#!')
+						+e.DIV.image
+							+e.IMG.image-img(src=`static/img/content/loc-slider-${index + 1}.jpg` alt='image')
+							+e.SVG.image-svg(viewBox="0 0 297.3 217.1" preserveAspectRatio='none')
+								path(d='M127.6,217.1h-0.5C127.3,217.1,127.4,217.1,127.6,217.1z')
+								path(d='M297.3,0H0v217.1h127.1c-33.1-0.2-64.9-9.1-88.4-31.9C-24.1,124.6-1.7,78.1,43.9,49C89.6,19.9,177.8-30,240,24.1s76.2,105,29.8,144.6c-28.9,24.7-87.2,48.6-142.3,48.4h169.7V0z')
+						+e.DIV.title= el[0]
+						+e.DIV.text= el[1]
+						+e.DIV.more
+							+e.DIV.more-dot
+							+e.DIV.more-dot
+							+e.DIV.more-dot
+							+e.DIV.more-dot
+							+e.DIV.more-dot
+							+e.DIV.more-dot
+							+e.DIV.more-dot
+							+e.DIV.more-circle
 
-					+e.title= el[0]
-					+e.text= el[1]
-					+b.link.__link(href='#!')
-						+e.DIV.dot
-						+e.DIV.dot
-						+e.DIV.dot
-						+e.DIV.dot
-						+e.DIV.dot
-						+e.DIV.dot
-						+e.DIV.circle
+		+e.btn-wrap
+			-btnClass = '_white'
+			-btnText = 'Все статьи'
+			include ../../components/btn

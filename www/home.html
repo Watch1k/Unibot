@@ -78,8 +78,22 @@
         </symbol>
         <symbol id="icon-facebook" viewBox="0 0 512 512">
           <title>facebook</title>
-          <path class="cls-1" d="M256 0C114.6 0 0 106.1 0 237c0 74.6 37.2 141.1 95.4 184.6V512l87.2-47.8a276.72 276.72 0 0 0 73.4 9.9c141.4 0 256-106.1 256-237S397.4 0 256 0z" />
+          <path d="M256 0C114.6 0 0 106.1 0 237c0 74.6 37.2 141.1 95.4 184.6V512l87.2-47.8a276.72 276.72 0 0 0 73.4 9.9c141.4 0 256-106.1 256-237S397.4 0 256 0z" />
           <path class="cls-2" d="M281.4 319.2l-65.1-69.5-127.2 69.5L229 170.7l66.7 69.5 125.7-69.5-140 148.5z" />
+        </symbol>
+        <symbol id="icon-fb" viewBox="0 0 512 512">
+          <style>
+            .st0 {
+              fill: #db285e
+            }
+
+            .st1 {
+              fill: #fff
+            }
+          </style>
+          <circle cx="256.5" cy="256.5" r="256" id="Layer_1" />
+          <path class="st1" d="M354.4 122.5H158.6c-19.9 0-36.1 16.2-36.1 36.1v195.8c0 19.9 16.2 36.1 36.1 36.1h96.6l.2-95.8h-24.9c-3.2 0-5.9-2.6-5.9-5.8l-.1-30.9c0-3.2 2.6-5.9 5.9-5.9h24.8v-29.8c0-34.6 21.1-53.5 52-53.5h25.3c3.2 0 5.9 2.6 5.9 5.9v26c0 3.2-2.6 5.9-5.9 5.9h-15.6c-16.8 0-20 8-20 19.7v25.8h36.9c3.5 0 6.2 3.1 5.8 6.6l-3.7 30.9c-.3 3-2.9 5.2-5.8 5.2H297l-.2 95.8h57.5c19.9 0 36.1-16.2 36.1-36.1V158.6c.1-19.9-16.1-36.1-36-36.1z"
+            id="Layer_2" />
         </symbol>
         <symbol id="icon-insta" viewBox="0 0 512 512">
           <style>
@@ -148,7 +162,7 @@
               fill: #d8d7da
             }
           </style>
-          <circle class="st0" cx="256" cy="256" r="256" />
+          <circle cx="256" cy="256" r="256" />
           <path class="st1" d="M164.7 311.1l-82.6-41.3c-2.3-1.1-2.3-4.4 0-5.5l313.7-162.2c2.3-1.2 5 .8 4.5 3.4l-54 270c-.4 1.9-2.4 3-4.3 2.2l-73.4-31.5c-.9-.4-1.9-.3-2.7.1L171 399.1c-2.1 1.1-4.6-.3-4.6-2.7v-82.5c0-1.2-.7-2.2-1.7-2.8z" />
           <path class="st2" d="M200.3 339l-.5-82.4c0-.5.3-1 .7-1.3l133.9-81.8c1.5-.9 3.1 1.1 1.9 2.3L234.4 278.4c-.1.1-.2.2-.3.4l-17.4 34.9-13.5 26c-.8 1.3-2.9.8-2.9-.7z" />
         </symbol>
@@ -574,6 +588,19 @@
             <div class="example__slider-btn">
               <a class="btn btn_default" href="#!">Заказать себе бот</a>
             </div>
+            <div class="example__slider-chat">
+              <a class="example__slider-chat-text" href="#!">Поговорить с ботом</a>
+              <a class="example__slider-chat-icon" href="#!">
+                <svg class="icon icon-telegram">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-telegram"></use>
+                </svg>
+              </a>
+              <a class="example__slider-chat-icon" href="#!">
+                <svg class="icon icon-facebook">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
+                </svg>
+              </a>
+            </div>
             <div class="example__slider">
               <div class="example__slider-item">
                 <div class="example__slider-row">
@@ -640,75 +667,152 @@
         <div class="top__container container">
           <div class="top__title">Интересные статьи о ботах</div>
           <div class="top__list">
-            <div class="card top__list-item">
-              <div class="card__image">
-                <img class="card__image-img" alt="" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                <svg class="card__image-svg" viewBox="0 0 297.3 217.1" preserveAspectRatio="none">
-                  <path d="M127.6,217.1h-0.5C127.3,217.1,127.4,217.1,127.6,217.1z"></path>
-                  <path d="M297.3,0H0v217.1h127.1c-33.1-0.2-64.9-9.1-88.4-31.9C-24.1,124.6-1.7,78.1,43.9,49C89.6,19.9,177.8-30,240,24.1s76.2,105,29.8,144.6c-28.9,24.7-87.2,48.6-142.3,48.4h169.7V0z"></path>
-                </svg>
-              </div>
-              <div class="card__title">10 причин, по которым чат-боты – это будущее мобильных приложений для смартфонов</div>
-              <div class="card__text">Согласно Wikipedia, бот – это специальная программа, где выполняющая автоматичеcкие пироги с вишней, приводит пользователя к конечному про выполняющая автоматичеcкие пироги с вишнейвыполняющая автоматичеcкие пироги с вишней</div>
-              <a class="link card__link"
-                href="#!">
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__circle"></div>
+            <div class="top__list-item">
+              <a class="card" href="#!">
+                <div class="card__image">
+                  <img class="card__image-img" src="static/img/content/loc-slider-1.jpg" alt="image" title="" />
+                  <svg class="card__image-svg" viewBox="0 0 297.3 217.1" preserveAspectRatio="none">
+                    <path d="M127.6,217.1h-0.5C127.3,217.1,127.4,217.1,127.6,217.1z"></path>
+                    <path d="M297.3,0H0v217.1h127.1c-33.1-0.2-64.9-9.1-88.4-31.9C-24.1,124.6-1.7,78.1,43.9,49C89.6,19.9,177.8-30,240,24.1s76.2,105,29.8,144.6c-28.9,24.7-87.2,48.6-142.3,48.4h169.7V0z"></path>
+                  </svg>
+                </div>
+                <div class="card__title">10 причин, по которым чат-боты – это будущее мобильных приложений для смартфонов</div>
+                <div class="card__text">Согласно Wikipedia, бот – это специальная программа, где выполняющая автоматичеcкие пироги с вишней, приводит пользователя к конечному про выполняющая автоматичеcкие пироги с вишнейвыполняющая автоматичеcкие пироги с вишней</div>
+                <div class="card__more">
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-circle"></div>
+                </div>
               </a>
             </div>
-            <div class="card top__list-item">
-              <div class="card__image">
-                <img class="card__image-img" alt="" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                <svg class="card__image-svg" viewBox="0 0 297.3 217.1" preserveAspectRatio="none">
-                  <path d="M127.6,217.1h-0.5C127.3,217.1,127.4,217.1,127.6,217.1z"></path>
-                  <path d="M297.3,0H0v217.1h127.1c-33.1-0.2-64.9-9.1-88.4-31.9C-24.1,124.6-1.7,78.1,43.9,49C89.6,19.9,177.8-30,240,24.1s76.2,105,29.8,144.6c-28.9,24.7-87.2,48.6-142.3,48.4h169.7V0z"></path>
-                </svg>
-              </div>
-              <div class="card__title">Как создать чат-бота, который ухудшит ваш бизнес</div>
-              <div class="card__text">Согласно Wikipedia, бот – это специальная программа, где выполняющая автоматичеcкие пироги с вишней, приводит пользователя к конечному про выполняющая автоматичеcкие пироги с вишнейвыполняющая автоматичеcкие пироги с вишней</div>
-              <a class="link card__link"
-                href="#!">
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__circle"></div>
+            <div class="top__list-item">
+              <a class="card" href="#!">
+                <div class="card__image">
+                  <img class="card__image-img" src="static/img/content/loc-slider-2.jpg" alt="image" title="" />
+                  <svg class="card__image-svg" viewBox="0 0 297.3 217.1" preserveAspectRatio="none">
+                    <path d="M127.6,217.1h-0.5C127.3,217.1,127.4,217.1,127.6,217.1z"></path>
+                    <path d="M297.3,0H0v217.1h127.1c-33.1-0.2-64.9-9.1-88.4-31.9C-24.1,124.6-1.7,78.1,43.9,49C89.6,19.9,177.8-30,240,24.1s76.2,105,29.8,144.6c-28.9,24.7-87.2,48.6-142.3,48.4h169.7V0z"></path>
+                  </svg>
+                </div>
+                <div class="card__title">Как создать чат-бота, который ухудшит ваш бизнес</div>
+                <div class="card__text">Согласно Wikipedia, бот – это специальная программа, где выполняющая автоматичеcкие пироги с вишней, приводит пользователя к конечному про выполняющая автоматичеcкие пироги с вишнейвыполняющая автоматичеcкие пироги с вишней</div>
+                <div class="card__more">
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-circle"></div>
+                </div>
               </a>
             </div>
-            <div class="card top__list-item">
-              <div class="card__image">
-                <img class="card__image-img" alt="" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                <svg class="card__image-svg" viewBox="0 0 297.3 217.1" preserveAspectRatio="none">
-                  <path d="M127.6,217.1h-0.5C127.3,217.1,127.4,217.1,127.6,217.1z"></path>
-                  <path d="M297.3,0H0v217.1h127.1c-33.1-0.2-64.9-9.1-88.4-31.9C-24.1,124.6-1.7,78.1,43.9,49C89.6,19.9,177.8-30,240,24.1s76.2,105,29.8,144.6c-28.9,24.7-87.2,48.6-142.3,48.4h169.7V0z"></path>
-                </svg>
-              </div>
-              <div class="card__title">Зачем бизнесу нужен чат-бот?</div>
-              <div class="card__text">Согласно Wikipedia, бот – это специальная программа, где выполняющая автоматичеcкие пироги с вишней, приводит пользователя к конечному про выполняющая автоматичеcкие пироги с вишнейвыполняющая автоматичеcкие пироги с вишней</div>
-              <a class="link card__link"
-                href="#!">
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__dot"></div>
-                <div class="link__circle"></div>
+            <div class="top__list-item">
+              <a class="card" href="#!">
+                <div class="card__image">
+                  <img class="card__image-img" src="static/img/content/loc-slider-3.jpg" alt="image" title="" />
+                  <svg class="card__image-svg" viewBox="0 0 297.3 217.1" preserveAspectRatio="none">
+                    <path d="M127.6,217.1h-0.5C127.3,217.1,127.4,217.1,127.6,217.1z"></path>
+                    <path d="M297.3,0H0v217.1h127.1c-33.1-0.2-64.9-9.1-88.4-31.9C-24.1,124.6-1.7,78.1,43.9,49C89.6,19.9,177.8-30,240,24.1s76.2,105,29.8,144.6c-28.9,24.7-87.2,48.6-142.3,48.4h169.7V0z"></path>
+                  </svg>
+                </div>
+                <div class="card__title">Зачем бизнесу нужен чат-бот?</div>
+                <div class="card__text">Согласно Wikipedia, бот – это специальная программа, где выполняющая автоматичеcкие пироги с вишней, приводит пользователя к конечному про выполняющая автоматичеcкие пироги с вишнейвыполняющая автоматичеcкие пироги с вишней</div>
+                <div class="card__more">
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-dot"></div>
+                  <div class="card__more-circle"></div>
+                </div>
               </a>
             </div>
+          </div>
+          <div class="top__btn-wrap">
+            <a class="btn btn_white" href="#!">Все статьи</a>
           </div>
         </div>
       </section>
     </main>
     <!-- Footer-->
-    <!--mixin footer()footer-->
+    <footer class="footer">
+      <div data-line></div>
+      <div class="footer__round-top">
+        <svg viewBox="0 0 1282 81">
+          <path d="M0,80.5h641.4C320.9,80.5,0,0.5,0,0.5V80.5z" />
+          <path d="M1281,0.5c0,0-319.6,80-639.6,80H1282v-80H1281z" /> </svg>
+      </div>
+      <div class="footer__container container">
+        <div class="footer__title">Контакты</div>
+        <div class="footer__list">
+          <div class="footer__list-col">
+            <div class="footer__list-address footer__list-text">
+              <p>05624, Украина, Киев</p>
+              <p>ул. Ярославская, 56</p>
+            </div>
+            <div class="footer__list-time footer__list-text">
+              <p>Пн-Пт: 9:00-18:00</p>
+              <p>Сб: 9:00-14:00</p>
+              <p>Вс: выходной</p>
+            </div>
+          </div>
+          <div class="footer__list-col">
+            <div class="footer__list-phone footer__list-text">
+              <p>Телефон:</p>
+              <a href="tel: +380999318500">+38 (099)-931-85-00</a>
+            </div>
+            <div class="footer__list-mail footer__list-text">
+              <p>Почта:</p>
+              <a href="mailto: info@unibot.a">info@unibot.a</a>
+            </div>
+          </div>
+          <div class="footer__list-col">
+            <div class="footer__list-soc-text footer__list-text">
+              <p>Мы в</p>
+              <p>социальных сетях:</p>
+            </div>
+            <div class="footer__list-soc footer__list-text">
+              <div class="footer__list-soc-icon-wrap">
+                <a class="soc-icon soc-icon_default footer__list-soc-icon" href="#!">
+                  <svg class="icon icon-telegram">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-telegram"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="footer__list-soc-icon-wrap">
+                <a class="soc-icon soc-icon_default footer__list-soc-icon" href="#!">
+                  <svg class="icon icon-fb">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="footer__list-soc-icon-wrap">
+                <a class="soc-icon soc-icon_default footer__list-soc-icon" href="#!">
+                  <svg class="icon icon-insta">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-insta"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bot">
+          <a class="footer__bot-logo" href="#!">
+            <img class="footer__bot-logo-img" src="static/img/logo.svg" alt="image" title="" />
+          </a>
+          <div class="footer__bot-right"></div>
+        </div>
+      </div>
+    </footer>
     <!-- Scripts-->
     <script src="static/js/index.js"></script>
   </body>
