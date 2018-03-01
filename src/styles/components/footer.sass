@@ -1,8 +1,12 @@
 .footer
 	position: relative
 	color: $color6
-	background: $color6 url('../img/footer-gradient.png') center top no-repeat
 	background-size: 100% auto
+	background-image: linear-gradient(-197deg, #1e14a8 0%, $color4 100%)
+	padding-bottom: 130px
+	
+	[data-line]
+		z-index: 4
 	
 	&__round-top
 		position: absolute
@@ -29,6 +33,10 @@
 		margin-top: 74px
 		padding: 0 100px
 		display: flex
+		a
+			+trs
+			.no-touch &:hover
+				color: $color4
 		&-col
 			padding-right: 38px
 			max-width: 33.333%
@@ -81,3 +89,81 @@
 				.no-touch &:hover
 					&:before
 						opacity: 1
+						
+	&__bot
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-top: 44px
+		padding: 0 70px
+		+f('MullerRegular',16,32,0)
+	
+	&__bot-logo
+		display: block
+		width: 136px
+		height: 32px
+		&-img
+			width: 100%
+			height: 100%
+	
+	&__bot-right
+		position: relative
+		top: 4px
+		display: flex
+		align-items: center
+	
+	&__bot-nav
+		margin-right: -10px
+		ul
+			display: flex
+			li
+				position: relative
+				&:before,
+				&:after
+					pointer-events: none
+					content: ''
+					position: absolute
+					top: calc(100% + 2px)
+					left: calc(50% - 2px)
+					width: 4px
+					height: 4px
+					border-radius: 50%
+					background-color: $color8
+					opacity: 0
+					+trs
+				.no-touch &:hover
+					&:before
+						opacity: 1
+						left: calc(50% - 12px)
+					&:after
+						opacity: 1
+						left: calc(50% + 8px)
+			
+			a
+				position: relative
+				display: block
+				padding: 0 14px
+				+trs
+				.no-touch &:hover
+					color: $color8
+				&:before
+					pointer-events: none
+					content: ''
+					position: absolute
+					top: calc(100% + 2px)
+					left: calc(50% - 2px)
+					width: 4px
+					height: 4px
+					border-radius: 50%
+					background-color: $color8
+					opacity: 0
+					+trs
+				.no-touch &:hover
+					&:before
+						opacity: 1
+						
+	&__copy
+		margin-top: 30px
+		+f('MullerRegular',16,32,0)
+		text-align: center
+		opacity: 0.5

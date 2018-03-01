@@ -1,0 +1,42 @@
+.preloader
+	$parent: &
+	overflow: hidden
+	position: fixed
+	z-index: 9999
+	top: 0
+	left: 0
+	right: 0
+	height: 100vh
+	background-color: $color6
+	&.is-end
+		background-color: transparent
+	
+	&__inner
+		display: flex
+		align-items: center
+		justify-content: center
+		+ratio-in
+		z-index: 1
+		background-image: linear-gradient(-45deg, $color4 0%, #1e14a8 100%)
+		clip-path: ellipse(85% 100% at 25% -100%)
+		&:before
+			content: ''
+			+ratio-in
+			z-index: 1
+	&.is-start &__inner
+		clip-path: ellipse(85% 100% at 30% 50%)
+		transition: all 1s ease-out
+	&.is-end &__inner
+		clip-path: ellipse(85% 100% at 30% 200%)
+		transition: all 1s ease-in
+	&.is-hidden
+		visibility: hidden
+		
+	&__logo
+		position: relative
+		z-index: 2
+		width: 231px
+		height: 53px
+		&-img
+			width: 100%
+			height: 100%

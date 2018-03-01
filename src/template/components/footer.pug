@@ -44,3 +44,9 @@
 				+e.bot-logo-img(src='static/img/logo.svg' alt='image')
 			+e.bot-right
 				-navList = ['Преимущества', 'Как это работает', 'Сферы деятельности', 'Как создаем', 'Кейсы', 'Блог', 'Контакты']
+				+e.NAV.bot-nav
+					ul
+						each el in navList
+							li: a(href='#!')= el
+
+		+e.P.copy Copyright  2018 Unibot. All rights reserved.
