@@ -3,11 +3,15 @@
 		+e.logo(href='#!')
 			+e.logo-img(src='static/img/logo.svg' alt='image')
 		+e.right
-			-navList = ['Преимущества', 'Как это работает', 'Сферы деятельности', 'Как создаем', 'Кейсы', 'Блог', 'Контакты']
 			+e.NAV.nav
 				ul
-					each el in navList
-						li: a(href='#!')= el
+					li: a(href='#advantage') Преимущества
+					li: a(href='#how') Как это работает
+					li: a(href='#loc') Сферы деятельности
+					li: a(href='#how') Как создаем
+					li: a(href='#example') Кейсы
+					li: a(href='home.html') Блог
+					li: a(href='home.html') Контакты
 
 			+e.chat(href='#!')
 				+e.chat-icon
