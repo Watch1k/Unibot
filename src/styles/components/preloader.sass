@@ -10,6 +10,8 @@
 	background-color: $color6
 	&.is-end
 		background-color: transparent
+	&.is-hidden
+		visibility: hidden
 	
 	&__inner
 		display: flex
@@ -29,8 +31,6 @@
 	&.is-end &__inner
 		clip-path: ellipse(85% 100% at 30% 200%)
 		transition: all 1s ease-in
-	&.is-hidden
-		visibility: hidden
 		
 	&__logo
 		position: relative

@@ -26,7 +26,10 @@ class Preloader {
 					.add(() => {
 						this.container.classList.add(css.end);
 						resolve;
-					}, 1);
+					}, 1)
+					.add(() => {
+						this.container.classList.add(css.hidden);
+					}, 2);
 			});
 		});
 	}

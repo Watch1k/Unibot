@@ -5452,7 +5452,6 @@ var Resp = exports.Resp = function () {
 var css = exports.css = {
 	active: 'is-active',
 	noTouch: 'no-touch',
-	hide: 'is-hide',
 	start: 'is-start',
 	end: 'is-end',
 	hidden: 'is-hidden'
@@ -36905,7 +36904,9 @@ var Preloader = function () {
 					}, 0).add(function () {
 						_this.container.classList.add(_helpers.css.end);
 						resolve;
-					}, 1);
+					}, 1).add(function () {
+						_this.container.classList.add(_helpers.css.hidden);
+					}, 2);
 				});
 			});
 		}

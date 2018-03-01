@@ -81,7 +81,6 @@ export class Resp {
 export const css = {
 	active: 'is-active',
 	noTouch: 'no-touch',
-	hide: 'is-hide',
 	start: 'is-start',
 	end: 'is-end',
 	hidden: 'is-hidden',
