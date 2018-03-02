@@ -1,7 +1,7 @@
 import { TweenMax } from 'gsap';
 import 'gsap/ScrollToPlugin';
-import ScrollAnim from '../modules/dev/animation/scrollAnim';
-import { css } from '../modules/dev/helpers';
+import ScrollAnim from '../../modules/dev/animation/scrollAnim';
+import { css } from '../../modules/dev/helpers';
 
 class Section {
 	constructor() {

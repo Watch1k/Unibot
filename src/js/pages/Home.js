@@ -4,6 +4,8 @@ import HomeHow from './home/how';
 import HomeLoc from './home/loc';
 import HomeScreen from './home/screen';
 import HomeTop from './home/top';
+import './home/section';
+import './home/chat';
 
 export default class Home {
 	constructor() {
