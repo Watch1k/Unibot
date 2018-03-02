@@ -84,6 +84,7 @@ export const css = {
 	start: 'is-start',
 	end: 'is-end',
 	hidden: 'is-hidden',
+	dark: 'is-dark'
 };
 
 /**

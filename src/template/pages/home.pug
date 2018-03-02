@@ -5,6 +5,22 @@ block variables
 
 block main
 	main.content(data-page='home')
+		// Navigation
+		+b.navigation
+			+e.current
+			+e.total
+
+		// Navigation-btn
+		+b.navigation-btn
+			+e.dot
+			+e.dot
+			+e.dot
+			+e.dot
+			+e.dot
+			+e.dot
+			+e.dot
+			+e.circle
+
 		include home/screen
 		include home/how
 		include home/loc

@@ -260,7 +260,23 @@
     </header>
     <!-- Main content-->
     <main class="content" data-page="home">
-      <section class="screen" id="screen">
+      <!-- Navigation-->
+      <div class="navigation">
+        <div class="navigation__current"></div>
+        <div class="navigation__total"></div>
+      </div>
+      <!-- Navigation-btn-->
+      <div class="navigation-btn">
+        <div class="navigation-btn__dot"></div>
+        <div class="navigation-btn__dot"></div>
+        <div class="navigation-btn__dot"></div>
+        <div class="navigation-btn__dot"></div>
+        <div class="navigation-btn__dot"></div>
+        <div class="navigation-btn__dot"></div>
+        <div class="navigation-btn__dot"></div>
+        <div class="navigation-btn__circle"></div>
+      </div>
+      <section class="screen" id="screen" data-scroll-section="data-scroll-section">
         <div data-line></div>
         <div class="screen__content">
           <div class="screen__container container">
@@ -283,18 +299,19 @@
           </svg>
         </div>
       </section>
-      <section class="how" id="how">
+      <section class="how" id="how" data-scroll-section="data-scroll-section">
         <div data-line></div>
         <div class="how__gradient">
           <div class="how__gradient-el"></div>
           <div class="how__gradient-el"></div>
           <div class="how__gradient-el"></div>
         </div>
-        <div class="how__round-bottom">
-          <svg viewBox="0 0 1282 81">
-            <path d="M0,80.5h641.4C320.9,80.5,0,0.5,0,0.5V80.5z" />
-            <path d="M1281,0.5c0,0-319.6,80-639.6,80H1282v-80H1281z" /> </svg>
-        </div>
+        <!--+e.round-bottom.
+	<svg viewBox="0 0 1282 81">
+		<path d="M0,80.5h641.4C320.9,80.5,0,0.5,0,0.5V80.5z"/>
+		<path d="M1281,0.5c0,0-319.6,80-639.6,80H1282v-80H1281z"/>
+	</svg>
+-->
         <svg class="is-hidden">
           <path id="path-how-1" d="M69.005,75.918 C139.703,30.693 249.171,-46.600 345.529,37.443 C441.887,121.484 490.431,200.368 418.726,261.891 C347.022,323.412 158.055,381.676 60.871,287.542 C-36.312,193.401 -1.694,121.143 69.005,75.918 Z"></path>
           <path id="path-how-2" d="M0.588,207.597 C-9.308,66.038 112.951,9.894 230.659,1.316 C348.367,-7.258 381.256,127.830 395.583,213.821 C409.910,299.812 326.068,315.336 209.426,364.212 C85.675,416.067 5.806,282.272 0.588,207.597 Z"></path>
@@ -433,7 +450,7 @@
         </div>
         </div>
       </section>
-      <section class="loc" id="loc">
+      <section class="loc" id="loc" data-scroll-section="data-scroll-section">
         <div data-line></div>
         <div class="loc__container container">
           <div class="loc__title">Где это работает</div>
@@ -498,7 +515,7 @@
           </div>
         </div>
       </section>
-      <section class="advantage" id="advantage">
+      <section class="advantage" id="advantage" data-scroll-section="data-scroll-section">
         <div data-line></div>
         <div class="advantage__container container">
           <div class="advantage__title">Наши приемущества</div>
@@ -584,7 +601,7 @@
           </div>
         </div>
       </section>
-      <section class="example" id="example">
+      <section class="example" id="example" data-scroll-section="data-scroll-section">
         <div data-line></div>
         <div class="example__container container">
           <div class="example__title">Примеры работ</div>
@@ -670,7 +687,7 @@
           </div>
         </div>
       </section>
-      <section class="top" id="top">
+      <section class="top" id="top" data-scroll-section="data-scroll-section">
         <div data-line></div>
         <div class="top__container container">
           <div class="top__title">Интересные статьи о ботах</div>
@@ -752,7 +769,7 @@
       </section>
     </main>
     <!-- Footer-->
-    <footer class="footer">
+    <footer class="footer" id="footer" data-scroll-section="data-scroll-section">
       <div data-line></div>
       <div class="footer__round-top">
         <svg viewBox="0 0 1282 81">

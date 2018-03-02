@@ -15,7 +15,6 @@ class Header {
 	
 	initScroll() {
 		[...this.nav.querySelectorAll('a')].forEach(item => {
-			console.log(item);
 			item.addEventListener('click', (e) => {
 				if (item.href.indexOf('#') !== -1) {
 					e.preventDefault();

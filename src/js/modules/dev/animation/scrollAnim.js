@@ -18,17 +18,17 @@ export default class ScrollAnim {
 		this.indicators = opts.indicators || false;
 		
 		if (!this.triggerElement) return;
-		this.options();
+		this.options(opts.inViewSection);
 		this.createScene();
 	}
 	
-	options() {
+	options(inViewSection) {
 		this.secondEnterVal = 0;
 		
 		if (this.inView) {
 			this.reverse = true;
-			this.duration = window.innerHeight + this.triggerElement.clientHeight;
-			this.triggerHook = 1;
+			this.triggerHook = inViewSection ? 0.5 : 1;
+			this.duration = inViewSection ? this.triggerElement.clientHeight : window.innerHeight + this.triggerElement.clientHeight;
 		}
 	}
 	
