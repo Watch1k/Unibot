@@ -77,7 +77,7 @@ class Section {
 	buttonEvents() {
 		this.navigationBtn.addEventListener('click', () => {
 			if (this.navigationBtn.classList.contains(css.active)) {
-				TweenMax.to(window, 1.5, { scrollTo: '#' + this.section[this.sectionLength - 2].id });
+				TweenMax.to(window, 1.5, { scrollTo: 0 });
 			} else {
 				const targetSection = this.section.filter(item => item.classList.contains(css.active));
 				const targetIndex = this.section.indexOf(targetSection[0]);

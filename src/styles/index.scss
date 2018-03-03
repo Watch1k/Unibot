@@ -2,6 +2,7 @@
 @import 'libs/vintage-reset-normalize';
 @import 'libs/reset-helper';
 @import '../../node_modules/tiny-slider/src/tiny-slider';
+@import 'libs/perfect-scrollbar';
 
 /* PARTIALS */
 @import 'partials/mixins';
@@ -20,6 +21,7 @@
 @import 'components/footer';
 @import 'components/btn';
 @import 'components/card';
+@import 'components/scrollbar';
 
 /* PAGES */
 @import 'pages/home/home';

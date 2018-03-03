@@ -3,6 +3,60 @@
 
 	+b.chat.__chat#chat
 		+e.container.container
+			+e.icon-bot
+				+i('bot')
+			+e.close-btn
+				+e.close-icon
+					+i('close')
+			+e.content
+				+e.content-chat
+				+e.content-controls
+
+		// settings
+		+e.data-bot-msg.is-hidden
+			+e.content-chat-bot
+				+e.content-chat-bot-inner
+					+e.content-chat-bot-dot
+					+e.content-chat-bot-dot
+					+e.content-chat-bot-dot
+			+e.content-chat-human
+				+e.content-chat-human-inner
+			+e.content-controls-btn-wrap
+				-btnClass = '_default __content-controls-btn'
+				-btnText = ''
+				include ../../components/btn
+			+e.FORM.content-controls-form(action='#')
+				.form-group
+					+e.INPUT.content-controls-form-input(type='email' placeholder='Введите ваш e-mail')
+					+e.BUTTON.content-controls-form-submit(type='submit')
+						+i('submit')
+
+		+e.data.is-hidden
+			+e.data-bot
+				div(data-bot='0')
+					p Привет, Человек!
+					p Меня зовут Unibot и я тот, кто больше расскажет тебе о крутых возможностях чатботов!
+					p Ну, что ж, начнем с простого. Как дела?
+				div(data-bot='1')
+					p Текст бота №1
+				div(data-bot='2')
+					p Текст бота №2
+					p Текст бота №2 еще разок
+				div(data-bot='last')
+					p Ну что ты начинаешь, оставь свой e-mail. Я еду с вином.
+			+e.data-btn
+				div(data-btn='0')
+					p(data-btn-event-target='1') Лучше не бывает!
+					p(data-btn-event-target='2') Бывало и лучше ...
+					p(data-btn-event-target='last') Mail
+				div(data-btn='1')
+					p(data-btn-event-target='1') Кнопка №1 с немалым количеством текста
+					p(data-btn-event-target='2') Кнопка №2 средняя
+					p(data-btn-event-target='last') Почту
+				div(data-btn='2')
+					p(data-btn-event-target='0') Начало
+					p(data-btn-event-target='2') Конец
+					p(data-btn-event-target='last') Почту
 
 	+e.gradient
 		+e.gradient-el
@@ -34,6 +88,7 @@
 				+e.soc-icon-wrap
 					-socIconClass = '_default __soc-icon'
 					-socIcon = el
+					-socHref = 'none'
 					include ../../components/soc-icon
 
 		+e.history

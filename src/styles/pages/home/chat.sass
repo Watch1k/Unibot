@@ -1,0 +1,207 @@
+.chat
+	height: 0
+	
+	&__container
+		max-width: 466px
+		
+	&__content
+		position: relative
+		opacity: 0
+		visibility: hidden
+		
+	&__icon-bot
+		position: absolute
+		right: calc(100% + 20px)
+		top: 0
+		z-index: 5
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 23px
+		width: 40px
+		height: 40px
+		background-color: $color6
+		border-radius: 50%
+		opacity: 0
+	
+	&__close
+		&-btn
+			position: absolute
+			left: calc(100% + 15px)
+			top: 0
+			opacity: 0
+		&-icon
+			display: flex
+			align-items: center
+			justify-content: center
+			cursor: pointer
+			font-size: 24px
+			color: $color6
+			width: 40px
+			height: 40px
+			+trs
+			.no-touch &:hover
+				color: $color4
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				border: 2px solid $color4
+				border-radius: 50%
+				opacity: 0
+				+trs
+			.no-touch &:hover
+				color: $color4
+				&:before
+					opacity: 1
+				
+	&__content
+		position: relative
+		&:before
+			pointer-events: none
+			content: ''
+			position: absolute
+			z-index: 2
+			top: 0
+			left: 0
+			right: 10px
+			height: 30px
+			opacity: 0
+			background-image: linear-gradient(to bottom, #50218E, rgba(#50218E, 0.0001))
+			+gpu
+			+trs-slow
+		&.is-active
+			&:before
+				opacity: 1
+		
+		&-controls
+			position: absolute
+			z-index: 2
+			top: 100%
+			left: 0
+			width: calc(100% + 10px)
+			margin-left: -5px
+			margin-right: -5px
+			display: flex
+			flex-wrap: wrap
+			&-btn-wrap
+				opacity: 0
+			&-btn
+				margin: 15px 5px 0
+				padding: 15px 30px 14px
+				height: auto
+				+f('MullerMedium',18,24,0)
+			&-form
+				margin-top: 15px
+				margin-bottom: 15px
+				width: 100%
+				padding-right: 20px
+				color: $color6
+				+f('MullerMedium',18,24,0)
+				opacity: 0
+				.form-group
+					position: relative
+				&-input
+					width: 100%
+					border: none
+					padding: 15px 70px 14px 30px
+					+f('MullerMedium',18,24,0)
+					color: $color6
+					background-color: $color4
+					border-radius: 27px
+					+placeholder(rgba($color6, .2))
+						+trs
+					.no-touch &:hover,
+					.no-touch &:focus
+						+placeholder(rgba($color6, .5))
+				&-submit
+					position: absolute
+					top: 0
+					right: 0
+					font-size: 29px
+					border: none
+					color: $color6
+					opacity: 0.2
+					height: 100%
+					padding-left: 15px
+					padding-right: 35px
+					display: flex
+					align-items: center
+					justify-content: center
+					border-radius: 0 27px 27px 0
+					+trs
+					.no-touch &:hover
+						opacity: 1
+			
+		&-chat
+			position: absolute
+			top: 0
+			left: 0
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			width: 100%
+			height: 410px
+			&-bot
+				padding: 15px 30px
+				position: relative
+				max-width: 333px
+				color: #272727
+				background-color: $color6
+				border-radius: 27px 27px 27px 0
+				opacity: 0
+				& + &
+					margin-top: 30px
+				&-inner
+					display: flex
+				&:before
+					pointer-events: none
+					content: ''
+					position: absolute
+					top: 100%
+					left: 0
+					width: 22px
+					height: 4px
+					background: transparent url('../img/tooltip-helper-left.svg') left top no-repeat
+				&-dot
+					opacity: 0
+					width: 6px
+					height: 6px
+					background-color: $color4
+					border-radius: 50%
+					&:not(:first-child)
+						margin-left: 5px
+						
+			&-human
+				padding: 15px 30px
+				position: relative
+				margin-right: 10px
+				max-width: 333px
+				color: $color6
+				background-color: $color4
+				border-radius: 27px 27px 0 27px
+				opacity: 0
+				align-self: flex-end
+				text-align: right
+				& + &
+					margin-top: 30px
+				&-inner
+					display: flex
+				&:before
+					pointer-events: none
+					content: ''
+					position: absolute
+					top: 100%
+					right: 0
+					width: 22px
+					height: 4px
+					background: transparent url('../img/tooltip-helper-right.svg') right top no-repeat
+			
+			&-bot + &-human,
+			&-human + &-bot
+				margin-top: 30px
+				
+	

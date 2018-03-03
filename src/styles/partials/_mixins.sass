@@ -75,13 +75,15 @@ $browser-context: 16
 	background-position: 50% 50%
 
 // placeholder
-=placeholder-color($color)
+=placeholder($color)
 	&:-moz-placeholder,
 	&::-moz-placeholder
 		color: $color
 		opacity: 1
+		@content
 	&::-webkit-input-placeholder
 		color: $color
+		@content
 
 // selection
 =selection

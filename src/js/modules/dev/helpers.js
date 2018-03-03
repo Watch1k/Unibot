@@ -81,10 +81,11 @@ export class Resp {
 export const css = {
 	active: 'is-active',
 	noTouch: 'no-touch',
+	hidden: 'is-hidden',
 	start: 'is-start',
 	end: 'is-end',
-	hidden: 'is-hidden',
-	dark: 'is-dark'
+	dark: 'is-dark',
+	transitionOff: 'transition-off'
 };
 
 /**
