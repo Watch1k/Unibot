@@ -221,11 +221,13 @@ class Chat {
 					const siblingsBtn = [...btn.parentElement.children].filter(el => el !== btn);
 					
 					btnTl
-						.to(btn, 0.35, {
-							alpha: 0,
-							y: -40,
+						.to(btn, 0.3, {
+							y: -60,
 							x: btn.parentElement.clientWidth - btn.offsetLeft - btn.clientWidth
 						}, 0)
+						.to(btn, 0.20, {
+							alpha: 0
+						}, '-=0.20')
 						.add(() => {
 							this.eventTarget = btn.getAttribute('data-btn-event-target');
 							this.animHuman(btn.querySelector('.btn__text').innerHTML);

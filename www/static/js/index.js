@@ -69757,11 +69757,12 @@ var Chat = function () {
 							return el !== btn;
 						});
 
-						btnTl.to(btn, 0.35, {
-							alpha: 0,
-							y: -40,
+						btnTl.to(btn, 0.3, {
+							y: -60,
 							x: btn.parentElement.clientWidth - btn.offsetLeft - btn.clientWidth
-						}, 0).add(function () {
+						}, 0).to(btn, 0.20, {
+							alpha: 0
+						}, '-=0.20').add(function () {
 							_this4.eventTarget = btn.getAttribute('data-btn-event-target');
 							_this4.animHuman(btn.querySelector('.btn__text').innerHTML);
 						}, 0).to(siblingsBtn, 0.1, { alpha: 0, y: 10 }, 0).add(function () {
