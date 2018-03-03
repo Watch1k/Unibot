@@ -46045,10 +46045,9 @@ var Preloader = function () {
 								return this.wait();
 
 							case 3:
-								console.log('wtf');
 								this.contentAnim();
 
-							case 5:
+							case 4:
 							case 'end':
 								return _context.stop();
 						}
@@ -69745,7 +69744,7 @@ var Chat = function () {
 
 				var _loop = function _loop(i, len) {
 					var btn = _this4.btnContainer.appendChild(_this4.divBtn.cloneNode(true));
-					btn.children[0].innerHTML = btnArray[i].innerHTML;
+					btn.querySelector('.btn__text').innerHTML = btnArray[i].innerHTML;
 					btn.setAttribute('data-btn-event-target', btnArray[i].getAttribute('data-btn-event-target'));
 
 					tl.set(btn, { y: 20 }, '-=0.15').to(btn, 0.5, { alpha: 1, y: 0 }, '-=0.15');
@@ -69764,8 +69763,8 @@ var Chat = function () {
 							x: btn.parentElement.clientWidth - btn.offsetLeft - btn.clientWidth
 						}, 0).add(function () {
 							_this4.eventTarget = btn.getAttribute('data-btn-event-target');
-							_this4.animHuman(btn.children[0].innerHTML);
-						}, 0).to(siblingsBtn, 0.25, { alpha: 0, y: 30 }, 0).add(function () {
+							_this4.animHuman(btn.querySelector('.btn__text').innerHTML);
+						}, 0).to(siblingsBtn, 0.1, { alpha: 0, y: 10 }, 0).add(function () {
 							[].concat(_toConsumableArray(btn.parentElement.children)).forEach(function (el) {
 								return el.remove();
 							});
@@ -69810,12 +69809,12 @@ var Chat = function () {
 
 			_gsap.TweenMax.to(window, 1, { scrollTo: this.container.getBoundingClientRect().top + window.pageYOffset - 50 });
 
-			var tl = new _gsap.TimelineMax().to(this.container, 0.5, { height: this.chatHeight }).addLabel('afterHeight', '').to(this.closeBtn, 0.5, { alpha: 1 }, 'afterHeight+=0.25').to(this.iconBot, 0.5, { alpha: 1 }, 'afterHeight+=0.5').fromTo(this.iconBot, 0.5, { x: -20 }, { x: 0 }, 'afterHeight+=0.5').to(this.content, 0.5, { autoAlpha: 1 }, '-=0.25');
+			var tl = new _gsap.TimelineMax().to(this.container, 0.5, { height: this.chatHeight }).addLabel('afterHeight', '').to(this.closeBtn, 0.5, { alpha: 1 }, 'afterHeight+=0.25').to(this.iconBot, 0.5, { alpha: 1 }, 'afterHeight+=0.75').fromTo(this.iconBot, 0.5, { x: -30 }, { x: 0 }, 'afterHeight+=1').to(this.content, 0.5, { autoAlpha: 1 }, '-=0.75');
 
 			if (this.firstInitInd) {
 				tl.add(function () {
 					return _this5.initChat();
-				});
+				}, '-=0.5');
 				this.firstInitInd = false;
 			}
 		}

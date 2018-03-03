@@ -207,7 +207,7 @@ class Chat {
 			
 			for (let i = 0, len = btnArray.length; i < len; i++) {
 				const btn = this.btnContainer.appendChild(this.divBtn.cloneNode(true));
-				btn.children[0].innerHTML = btnArray[i].innerHTML;
+				btn.querySelector('.btn__text').innerHTML = btnArray[i].innerHTML;
 				btn.setAttribute('data-btn-event-target', btnArray[i].getAttribute('data-btn-event-target'));
 				
 				tl
@@ -228,9 +228,9 @@ class Chat {
 						}, 0)
 						.add(() => {
 							this.eventTarget = btn.getAttribute('data-btn-event-target');
-							this.animHuman(btn.children[0].innerHTML);
+							this.animHuman(btn.querySelector('.btn__text').innerHTML);
 						}, 0)
-						.to(siblingsBtn, 0.25, { alpha: 0, y: 30 }, 0)
+						.to(siblingsBtn, 0.1, { alpha: 0, y: 10 }, 0)
 						.add(() => {
 							[...btn.parentElement.children].forEach(el => el.remove());
 						});
@@ -273,12 +273,12 @@ class Chat {
 			.to(this.container, 0.5, { height: this.chatHeight })
 			.addLabel('afterHeight', '')
 			.to(this.closeBtn, 0.5, { alpha: 1 }, 'afterHeight+=0.25')
-			.to(this.iconBot, 0.5, { alpha: 1 }, 'afterHeight+=0.5')
-			.fromTo(this.iconBot, 0.5, { x: -20 }, { x: 0 }, 'afterHeight+=0.5')
-			.to(this.content, 0.5, { autoAlpha: 1 }, '-=0.25');
+			.to(this.iconBot, 0.5, { alpha: 1 }, 'afterHeight+=0.75')
+			.fromTo(this.iconBot, 0.5, { x: -30 }, { x: 0 }, 'afterHeight+=1')
+			.to(this.content, 0.5, { autoAlpha: 1 }, '-=0.75');
 		
 		if (this.firstInitInd) {
-			tl.add(() => this.initChat());
+			tl.add(() => this.initChat(), '-=0.5');
 			this.firstInitInd = false;
 		}
 	}

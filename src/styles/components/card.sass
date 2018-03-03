@@ -5,20 +5,15 @@
 	
 	&__image
 		position: relative
+		width: 300px
+		height: 219px
+		overflow: hidden
 		+cover-img
-		width: 298px
-		height: 217px
-		&:before
-			pointer-events: none
-			position: absolute
-			z-index: 5
-			content: ''
-			top: 0
-			right: 0
-			bottom: 0
-			width: 1px
-			background-color: $color6
+		img
+			position: relative
+			left: -0.4px
 		&:after
+			display: none
 			pointer-events: none
 			content: ''
 			+ratio-in
@@ -26,10 +21,12 @@
 			background-image: linear-gradient(-52deg, $color1 0%, #1312b9 35%, $color3 69%, #ca2b5b 100%)
 			opacity: 0.5
 		&-img
-				position: relative
-				z-index: 2
+			position: relative
+			z-index: 2
 		&-svg
 			+ratio-in
+			overflow: hidden
+			+gpu
 			z-index: 4
 			fill: $color6
 			

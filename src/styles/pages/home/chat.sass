@@ -88,12 +88,16 @@
 			display: flex
 			flex-wrap: wrap
 			&-btn-wrap
+				margin: 15px 5px 0
 				opacity: 0
 			&-btn
-				margin: 15px 5px 0
 				padding: 15px 30px 14px
 				height: auto
+				max-width: 320px
 				+f('MullerMedium',18,24,0)
+				svg
+					&:nth-child(2)
+						top: -4px
 			&-form
 				margin-top: 15px
 				margin-bottom: 15px
@@ -116,7 +120,7 @@
 						+trs
 					.no-touch &:hover,
 					.no-touch &:focus
-						+placeholder(rgba($color6, .5))
+						+placeholder(rgba($color6, .6))
 				&-submit
 					position: absolute
 					top: 0

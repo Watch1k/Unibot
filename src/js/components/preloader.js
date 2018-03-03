@@ -10,7 +10,6 @@ class Preloader {
 	async init() {
 		this.animPreloader();
 		await this.wait();
-		console.log('wtf');
 		this.contentAnim();
 	}
 	
