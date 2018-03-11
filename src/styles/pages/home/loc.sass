@@ -2,6 +2,8 @@
 	position: relative
 	padding-top: 120px
 	padding-bottom: 58px
+	+md
+		padding-bottom: calc(58px + 28px + 25px)
 	
 	&__container
 		z-index: 2
@@ -16,6 +18,8 @@
 		position: relative
 		margin: 70px auto 0
 		width: 830px
+		+md
+			width: 100%
 		.tns-nav
 			display: none
 		.tns-controls
@@ -32,10 +36,16 @@
 				position: absolute
 				z-index: 1
 				top: 180px
+				+md
+					top: calc(100% + 25px)
 			[data-controls='prev']
 				left: -99px
+				+md
+					left: -10px
 			[data-controls='next']
 				right: -101px
+				+md
+					right: -10px
 	&__slider
 		&-counter
 			position: absolute
@@ -44,6 +54,10 @@
 			display: flex
 			+f('Gilroy-ExtraBold',14,20,100)
 			color: #000000
+			+md
+				top: calc(100% + 30px)
+				left: 50%
+				transform: translateX(-50%)
 			&:before
 				content: ''
 				position: absolute
@@ -69,11 +83,15 @@
 			display: flex
 			align-items: flex-start
 		&-left
-			padding: 54px 35px 0 0
+			padding: 54px 35px 126px 0
 			flex: 0 1 auto
+			+md
+				padding-top: 0
 		&-right
 			flex: 1 0 498px
 			background-color: $color6
+			+md
+				flex-basis: 360px
 		&-title
 			+h3
 		&-text
@@ -88,6 +106,9 @@
 			width: 498px
 			height: 435px
 			+cover-img
+			+md
+				width: 360px
+				height: 315px
 			&:before
 				pointer-events: none
 				content: ''

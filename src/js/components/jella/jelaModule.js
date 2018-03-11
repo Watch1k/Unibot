@@ -1,4 +1,5 @@
 import 'pixi.js';
+import { Resp } from '../../modules/dev/helpers';
 import Dot from './jellydot';
 import Mouse from './Mouse';
 import SvgParse from './SvgParse';
@@ -36,7 +37,7 @@ export default class Jelateria {
 	initPixi() {
 		PIXI.utils.skipHello();
 		this.app = new PIXI.Application(this.canvasWidth, this.canvasHeight, { antialias: true, transparent: true });
-		this.app.stop();
+		if (Resp.isDesk) this.app.stop();
 		this.canvasContainer.appendChild(this.app.view);
 		this.canvas = this.app.view;
 		this.canvas.setAttribute('width', `${this.canvasWidth}px`);

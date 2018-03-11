@@ -5,6 +5,8 @@
 	background-size: 100% auto
 	background-image: linear-gradient(-197deg, #1e14a8 0%, $color4 100%)
 	padding-bottom: 130px
+	+md
+		padding-bottom: 60px
 	&:before
 		pointer-events: none
 		content: ''
@@ -46,6 +48,8 @@
 		margin-top: 74px
 		padding: 0 100px
 		display: flex
+		+md
+			padding: 0
 		a
 			+trs
 			.no-touch &:hover
@@ -110,6 +114,8 @@
 		margin-top: 44px
 		padding: 0 70px
 		+f('MullerRegular',16,32,0)
+		+md
+			padding: 0
 	
 	&__bot-logo
 		display: block
@@ -127,6 +133,8 @@
 	
 	&__bot-nav
 		margin-right: -10px
+		+md
+			display: none
 		ul
 			display: flex
 			li

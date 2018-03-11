@@ -63,6 +63,9 @@
 =h1
 	+f('Gilroy-ExtraBold',44,56,20)
 	text-transform: uppercase
+	+md
+		font-size: 33px
+		line-height: 42px
 	
 =h2
 	+f('Gilroy-Bold',35,36,0)
@@ -75,7 +78,11 @@
 
 =paragraph-text
 	+f('MullerRegular',18,24,0)
+	+sm
+		font-size: 14px
+		line-height: 20px
 	strong
+		+f('MullerMedium',18,24,0)
 	
 
 /* ===================================
@@ -115,6 +122,8 @@
 			border-radius: 50%
 			background-color: $color5
 			+trs
+			+md
+				background-color: $color4
 		span
 			position: absolute
 			z-index: 2
@@ -124,12 +133,34 @@
 			border-radius: 50%
 			border: 2px solid $color5
 			+trs
+			+md
+				top: 9px
 	[data-controls='prev']
+		+md
+			padding-left: 20px
+			padding-right: 10px
 		span
 			left: 0
+			+md
+				left: 9px
+				+arr(5,10,$color4,l)
+				border-radius: 0
+		div:nth-child(4) ~ div
+			+md
+				display: none
 	[data-controls='next']
+		+md
+			padding-left: 10px
+			padding-right: 20px
 		span
 			right: 0
+			+md
+				right: 9px
+				+arr(5,10,$color4,r)
+				border-radius: 0
+		div:nth-child(4) ~ div
+			+md
+				display: none
 	[data-controls='prev']
 		.no-touch &:hover
 			div

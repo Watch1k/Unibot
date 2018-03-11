@@ -1,6 +1,6 @@
 .top
 	position: relative
-	padding-top: 103px
+	padding-top: 60px
 	padding-bottom: 60px
 	
 	&__container
@@ -19,6 +19,9 @@
 			display: flex
 			flex: 1 1 auto
 			padding: 0 25px
+			&:nth-child(2) ~ &
+				+md
+					display: none
 			
 	&__btn-wrap
 		margin-top: 60px

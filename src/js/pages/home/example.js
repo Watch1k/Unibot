@@ -55,7 +55,7 @@ export default class HomeExample {
 	fixButtonPosition(state = false) {
 		const info = this.slider.getInfo();
 		const right = info.slideItems[info.index].querySelector('.example__slider-right');
-		const height = right.clientHeight;
+		const height = right.clientHeight - +window.getComputedStyle(right, null).getPropertyValue('padding-bottom').slice(0, -2);
 		
 		if (state) TweenMax.set(this.btn, { y: height });
 		TweenMax.to(this.btn, 0.4, { y: height });

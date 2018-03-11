@@ -16,18 +16,29 @@
 		margin-top: 66px
 		display: flex
 		flex-wrap: wrap
+		+md
+			margin-left: -20px
+			margin-right: -20px
+			margin-bottom: -34px
 		&-item
 			flex: 1 0 auto
+			+md
+				flex-basis: 50%
+				padding: 0 20px 34px
 			&:nth-child(3n + 1)
-				flex-basis: 373px
-				padding-right: 60px
+				+desk
+					flex-basis: 373px
+					padding-right: 60px
 			&:nth-child(3n + 2)
-				flex-basis: 327px
+				+desk
+					flex-basis: 327px
 			&:nth-child(3n + 3)
-				flex-basis: calc(100% - 700px)
-				padding-left: 47px
+				+desk
+					flex-basis: calc(100% - 700px)
+					padding-left: 47px
 			&:nth-child(3) ~ &
-				padding-top: 34px
+				+desk
+					padding-top: 34px
 			&-row
 				display: flex
 			&-left

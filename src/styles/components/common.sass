@@ -17,11 +17,15 @@ body
 
 main
 	overflow: hidden
-
+	
 .container
 	position: relative
 	margin: 0 auto
 	max-width: 1170px
+	+md
+		max-width: 768px
+		padding-left: 20px
+		padding-right: 20px
 	
 .row
 	position: relative

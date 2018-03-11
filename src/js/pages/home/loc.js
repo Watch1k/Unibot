@@ -51,7 +51,7 @@ export default class HomeLoc {
 	fixButtonPosition(state = false) {
 		const info = this.slider.getInfo();
 		const left = info.slideItems[info.index].querySelector('.loc__slider-left');
-		const height = left.clientHeight;
+		const height = left.clientHeight - +window.getComputedStyle(left, null).getPropertyValue('padding-bottom').slice(0, -2);
 		
 		if (state) TweenMax.set(this.btn, { y: height });
 		TweenMax.to(this.btn, 0.4, { y: height });

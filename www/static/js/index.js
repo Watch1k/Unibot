@@ -12350,7 +12350,7 @@ var Resp = exports.Resp = function () {
 	}, {
 		key: 'isDesk',
 		get: function get() {
-			return window.matchMedia('(min-width: 1280px)').matches;
+			return window.matchMedia('(min-width: 1200px)').matches;
 		}
 
 		/**
@@ -12364,7 +12364,7 @@ var Resp = exports.Resp = function () {
 	}, {
 		key: 'isTablet',
 		get: function get() {
-			return window.matchMedia('(min-width: 768px) and (max-width: 1279px)').matches;
+			return window.matchMedia('(min-width: 768px) and (max-width: 1199px)').matches;
 		}
 
 		/**
@@ -28094,6 +28094,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 __webpack_require__(472);
 
+var _helpers = __webpack_require__(57);
+
 var _jellydot = __webpack_require__(574);
 
 var _jellydot2 = _interopRequireDefault(_jellydot);
@@ -28152,7 +28154,7 @@ var Jelateria = function () {
 
 			PIXI.utils.skipHello();
 			this.app = new PIXI.Application(this.canvasWidth, this.canvasHeight, { antialias: true, transparent: true });
-			this.app.stop();
+			if (_helpers.Resp.isDesk) this.app.stop();
 			this.canvasContainer.appendChild(this.app.view);
 			this.canvas = this.app.view;
 			this.canvas.setAttribute('width', this.canvasWidth + 'px');
@@ -46132,6 +46134,8 @@ var _gsap = __webpack_require__(51);
 
 __webpack_require__(115);
 
+var _helpers = __webpack_require__(57);
+
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46141,7 +46145,8 @@ var Header = function () {
 		_classCallCheck(this, Header);
 
 		this.container = document.querySelector('.header');
-		this.nav = document.querySelector('.header__nav');
+		this.nav = this.container.querySelector('.header__nav');
+		this.menuBtn = this.container.querySelector('.header__menu-btn');
 
 		this.init();
 	}
@@ -46150,6 +46155,7 @@ var Header = function () {
 		key: 'init',
 		value: function init() {
 			this.initScroll();
+			this.initNav();
 		}
 	}, {
 		key: 'initScroll',
@@ -46165,6 +46171,40 @@ var Header = function () {
 					}
 				});
 			});
+		}
+	}, {
+		key: 'initNav',
+		value: function initNav() {
+			var _this = this;
+
+			var navTl = new _gsap.TimelineMax({ paused: true });
+
+			this.menuBtn.addEventListener('click', function () {
+				_this.menuBtn.classList.toggle(_helpers.css.active);
+				if (_this.menuBtn.classList.contains(_helpers.css.active)) {
+					navTl.timeScale(1).play();
+				} else {
+					navTl.timeScale(2).reverse();
+				}
+			});
+
+			if (!_helpers.Resp.isDesk) {
+				this.nav.querySelectorAll('a').forEach(function (item) {
+					item.addEventListener('click', function () {
+						_this.menuBtn.click();
+					});
+				});
+			}
+
+			navTl.to(this.nav, 0.3, {
+				autoAlpha: 1
+			}).staggerFromTo(this.nav.querySelectorAll('li'), 0.3, {
+				alpha: 0,
+				y: 20
+			}, {
+				alpha: 1,
+				y: 0
+			}, 0.04);
 		}
 	}]);
 
@@ -46492,7 +46532,7 @@ var HomeExample = function () {
 
 			var info = this.slider.getInfo();
 			var right = info.slideItems[info.index].querySelector('.example__slider-right');
-			var height = right.clientHeight;
+			var height = right.clientHeight - +window.getComputedStyle(right, null).getPropertyValue('padding-bottom').slice(0, -2);
 
 			if (state) _gsap.TweenMax.set(this.btn, { y: height });
 			_gsap.TweenMax.to(this.btn, 0.4, { y: height });
@@ -47082,6 +47122,8 @@ var _scrollAnim = __webpack_require__(136);
 
 var _scrollAnim2 = _interopRequireDefault(_scrollAnim);
 
+var _helpers = __webpack_require__(57);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -47105,41 +47147,45 @@ var HomeHow = function () {
 		value: function init() {
 			var _this = this;
 			this.lineAnim();
-			this.initJelly();
+			if (_helpers.Resp.isDesk) {
+				this.initJelly();
 
-			this.elements.forEach(function (element, index) {
-				new _scrollAnim2.default({
-					el: element,
-					onStart: function onStart() {
-						if (index === 0) {
-							_this.lineTl.play();
+				this.elements.forEach(function (element, index) {
+					new _scrollAnim2.default({
+						el: element,
+						onStart: function onStart() {
+							if (index === 0) {
+								_this.lineTl.play();
+							}
+							_this.lineTl.add(_this.animArray[index].play());
 						}
-						_this.lineTl.add(_this.animArray[index].play());
-					}
+					});
 				});
-			});
+			}
 		}
 	}, {
 		key: 'lineAnim',
 		value: function lineAnim() {
 			var _this2 = this;
 
-			_gsap.TweenMax.set(this.historyLinePath, { drawSVG: 0 });
-			this.lineTl = new _gsap.TimelineMax({ paused: true });
+			if (_helpers.Resp.isDesk) {
+				_gsap.TweenMax.set(this.historyLinePath, { drawSVG: 0 });
+				this.lineTl = new _gsap.TimelineMax({ paused: true });
 
-			this.elements.forEach(function (element, index) {
-				var tl = new _gsap.TimelineMax({ paused: true });
-				var pathSize = index === 0 ? 8.5 : index === 1 ? 25 : index === 2 ? 40 : index === 3 ? 60 : index === 4 ? 76.5 : 95;
-				var pathStep = index === 0 ? 15.5 : index === 1 ? 31 : index === 2 ? 49 : index === 3 ? 66.5 : index === 4 ? 84 : 100;
+				this.elements.forEach(function (element, index) {
+					var tl = new _gsap.TimelineMax({ paused: true });
+					var pathSize = index === 0 ? 8.5 : index === 1 ? 25 : index === 2 ? 40 : index === 3 ? 60 : index === 4 ? 76.5 : 95;
+					var pathStep = index === 0 ? 15.5 : index === 1 ? 31 : index === 2 ? 49 : index === 3 ? 66.5 : index === 4 ? 84 : 100;
 
-				if (index === 0) {
-					tl.to(_this2.historyStart, 0.5, { scaleX: 1, scaleY: 1 }, 0);
-				}
+					if (index === 0) {
+						tl.to(_this2.historyStart, 0.5, { scaleX: 1, scaleY: 1 }, 0);
+					}
 
-				tl.to(_this2.historyLinePath, 1, { drawSVG: pathSize + '%' }).set(_this2.historyLinePath, { drawSVG: pathStep + '%' });
+					tl.to(_this2.historyLinePath, 1, { drawSVG: pathSize + '%' }).set(_this2.historyLinePath, { drawSVG: pathStep + '%' });
 
-				_this2.animArray.push(tl);
-			});
+					_this2.animArray.push(tl);
+				});
+			}
 		}
 	}, {
 		key: 'initJelly',
@@ -68902,7 +68948,7 @@ var HomeLoc = function () {
 
 			var info = this.slider.getInfo();
 			var left = info.slideItems[info.index].querySelector('.loc__slider-left');
-			var height = left.clientHeight;
+			var height = left.clientHeight - +window.getComputedStyle(left, null).getPropertyValue('padding-bottom').slice(0, -2);
 
 			if (state) _gsap.TweenMax.set(this.btn, { y: height });
 			_gsap.TweenMax.to(this.btn, 0.4, { y: height });
@@ -68941,6 +68987,8 @@ var _jelaModule2 = _interopRequireDefault(_jelaModule);
 var _scrollAnim = __webpack_require__(136);
 
 var _scrollAnim2 = _interopRequireDefault(_scrollAnim);
+
+var _helpers = __webpack_require__(57);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -69039,17 +69087,19 @@ var HomeScreen = function () {
 				}]
 			});
 
-			new _scrollAnim2.default({
-				el: container,
-				inView: true,
-				reverse: true,
-				onEnter: function onEnter() {
-					paymentPartsFirst.start();
-				},
-				onLeave: function onLeave() {
-					paymentPartsFirst.stop();
-				}
-			});
+			if (!_helpers.Resp.isMobile) {
+				new _scrollAnim2.default({
+					el: container,
+					inView: true,
+					reverse: true,
+					onEnter: function onEnter() {
+						paymentPartsFirst.start();
+					},
+					onLeave: function onLeave() {
+						paymentPartsFirst.stop();
+					}
+				});
+			}
 		}
 	}]);
 

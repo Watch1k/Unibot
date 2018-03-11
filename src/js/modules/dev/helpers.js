@@ -46,7 +46,7 @@ export class Resp {
 	 * @return {Boolean}
 	 */
 	static get isDesk() {
-		return window.matchMedia(`(min-width: 1280px)`).matches;
+		return window.matchMedia(`(min-width: 1200px)`).matches;
 	}
 	
 	/**
@@ -57,7 +57,7 @@ export class Resp {
 	 * @return {Boolean}
 	 */
 	static get isTablet() {
-		return window.matchMedia(`(min-width: 768px) and (max-width: 1279px)`).matches;
+		return window.matchMedia(`(min-width: 768px) and (max-width: 1199px)`).matches;
 	}
 	
 	/**
