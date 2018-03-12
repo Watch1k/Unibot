@@ -1,10 +1,16 @@
 .chat
 	height: 0
+	+sm
+		position: relative
+		top: 60px
 	
 	&__container
 		max-width: 466px
 		+md
 			max-width: 466px
+		+sm
+			max-width: 420px
+			padding-left: 50px
 		
 	&__content
 		position: relative
@@ -25,6 +31,12 @@
 		background-color: $color6
 		border-radius: 50%
 		opacity: 0
+		+sm
+			width: 22px
+			height: 22px
+			font-size: 12px
+			right: auto
+			left: 20px
 	
 	&__close
 		&-btn
@@ -32,6 +44,10 @@
 			left: calc(100% + 15px)
 			top: 0
 			opacity: 0
+			+sm
+				top: -55px
+				left: auto
+				right: 8px
 		&-icon
 			display: flex
 			align-items: center
@@ -42,8 +58,18 @@
 			width: 40px
 			height: 40px
 			+trs
+			+sm
+				font-size: 22px
 			.no-touch &:hover
 				color: $color4
+			.icon
+				&:nth-child(1)
+					+sm
+						display: none
+				&:nth-child(2)
+					display: none
+					+sm
+						display: block
 			&:before
 				content: ''
 				position: absolute
@@ -75,6 +101,9 @@
 			background-image: linear-gradient(to bottom, #50218E, rgba(#50218E, 0.0001))
 			+gpu
 			+trs-slow
+			+sm
+				content: none
+				display: none
 		&.is-active
 			&:before
 				opacity: 1
@@ -92,18 +121,36 @@
 			&-btn-wrap
 				margin: 15px 5px 0
 				opacity: 0
+				+sm
+					margin: 10px 5px 0
 			&-btn
 				padding: 15px 30px 14px
 				height: auto
 				max-width: 320px
 				+f('MullerMedium',18,24,0)
+				+sm
+					padding: 7px 15px
+					font-size: 10px
+					line-height: 14px
+					+sm
+						min-width: 110px
+						max-width: 170px
 				svg
 					&:nth-child(2)
 						top: -4px
+				.btn__bg
+					+md
+						background-color: $color4
+						border-radius: 9999px
+					&-1,
+					&-2
+						+md
+							display: none
 			&-form
 				margin-top: 15px
 				margin-bottom: 15px
 				width: 100%
+				padding-left: 5px
 				padding-right: 20px
 				color: $color6
 				+f('MullerMedium',18,24,0)
@@ -118,6 +165,10 @@
 					color: $color6
 					background-color: $color4
 					border-radius: 27px
+					+sm
+						font-size: 16px
+						line-height: 1
+						padding: 6px 50px 6px 15px
 					+placeholder(rgba($color6, .2))
 						+trs
 					.no-touch &:hover,
@@ -139,6 +190,10 @@
 					justify-content: center
 					border-radius: 0 27px 27px 0
 					+trs
+					+sm
+						padding-right: 15px
+						font-size: 16px
+						border-radius: 0 14px 14px 0
 					.no-touch &:hover
 						opacity: 1
 			
@@ -151,6 +206,8 @@
 			align-items: flex-start
 			width: 100%
 			height: 410px
+			+sm
+				height: 320px
 			&-bot
 				padding: 15px 30px
 				position: relative
@@ -159,8 +216,15 @@
 				background-color: $color6
 				border-radius: 27px 27px 27px 0
 				opacity: 0
+				+sm
+					padding: 10px 13px
+					max-width: 209px
+					font-size: 10px
+					line-height: 14px
 				& + &
 					margin-top: 30px
+					+sm
+						margin-top: 20px
 				&-inner
 					display: flex
 				&:before
@@ -192,8 +256,16 @@
 				opacity: 0
 				align-self: flex-end
 				text-align: right
+				+sm
+					margin-right: 25px
+					padding: 10px 13px
+					font-size: 10px
+					line-height: 14px
+					max-width: 209px
 				& + &
 					margin-top: 30px
+					+sm
+						margin-top: 20px
 				&-inner
 					display: flex
 				&:before
@@ -209,5 +281,7 @@
 			&-bot + &-human,
 			&-human + &-bot
 				margin-top: 30px
+				+sm
+					margin-top: 20px
 				
 	

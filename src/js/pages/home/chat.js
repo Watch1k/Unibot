@@ -25,8 +25,8 @@ class Chat {
 		
 		this.firstInitInd = true;
 		
-		this.paddingBottom = 120;
-		this.controlsMinHeight = 83;
+		this.paddingBottom = Resp.isMobile ? 180 : 120;
+		this.controlsMinHeight = Resp.isMobile ? 38 : 83;
 		this.chatHeight = this.contentChat.clientHeight + this.paddingBottom + this.controlsMinHeight;
 		this.eventTarget = 0;
 		this.ps = new PerfectScrollbar(this.contentChat, {
@@ -285,7 +285,16 @@ class Chat {
 	
 	openChat() {
 		const offsetTop = Resp.isDesk ? 50 : 150;
-		TweenMax.to(window, 1, { scrollTo: { y: this.container.getBoundingClientRect().top + window.pageYOffset - offsetTop, autoKill: false } });
+		if (Resp.isMobile) {
+			TweenMax.to(window, 1, {
+				scrollTo: {
+					y: window.innerHeight,
+					autoKill: false
+				}
+			});
+		} else {
+			TweenMax.to(window, 1, { scrollTo: { y: this.container.getBoundingClientRect().top + window.pageYOffset - offsetTop, autoKill: false } });
+		}
 		
 		const tl = new TimelineMax()
 			.to(this.container, 0.5, { height: this.chatHeight })

@@ -96,7 +96,12 @@ class Header {
 			}, {
 				alpha: 1,
 				y: 0
-			}, 0.04, '-=0.15');
+			}, 0.04, '-=0.15')
+			.set(this.nav.children[0], {
+				css: {
+					overflow: 'auto'
+				}
+			});
 	}
 	
 	prepareMobile() {

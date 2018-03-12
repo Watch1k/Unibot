@@ -1,6 +1,6 @@
 import { TweenMax } from 'gsap';
 import { tns } from '../../../../node_modules/tiny-slider/src/tiny-slider.module';
-import { css, Resp } from '../../modules/dev/helpers';
+import { css, debounce, Resp } from '../../modules/dev/helpers';
 
 export default class HomeExample {
 	constructor() {
@@ -51,6 +51,8 @@ export default class HomeExample {
 			this.fixButtonPosition();
 			this.refreshCounter();
 		});
+		
+		window.addEventListener('resize', debounce(this.fixButtonPosition, this, 200));
 	}
 	
 	fixButtonPosition(state = false) {

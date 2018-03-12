@@ -6,6 +6,7 @@
 	z-index: 99
 	+f('MullerRegular',16,32,0)
 	color: $color6
+	$parent: &
 	+md
 		position: absolute
 	&.is-fixed
@@ -73,8 +74,6 @@
 				display: block
 				margin-left: 20px
 				padding: 20px
-				+md
-					overflow: auto
 			li
 				position: relative
 				+md
