@@ -44,12 +44,13 @@ class Header {
 			item.addEventListener('click', (e) => {
 				if (item.href.indexOf('#') !== -1) {
 					e.preventDefault();
+					console.log('fine');
 					const href = item.href;
 					const hashName = href.slice(href.indexOf('#') + 1, href.length);
 					
 					TweenMax.to(window, 1.5, {
 						scrollTo: {
-							y: document.getElementById(hashName).getBoundingClientRect().top + window.scrollY - offsetTop,
+							y: document.getElementById(hashName).getBoundingClientRect().top + window.pageYOffset - offsetTop,
 							autoKill: false
 						}
 					});

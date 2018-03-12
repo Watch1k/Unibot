@@ -89,14 +89,17 @@
 			&:nth-child(3n + 1)
 				+desk
 					flex-basis: 373px
-					padding-right: 60px
+					max-width: 373px
+					border-right: 60px solid transparent
 			&:nth-child(3n + 2)
 				+desk
 					flex-basis: 327px
+					max-width: 327px
 			&:nth-child(3n + 3)
 				+desk
 					flex-basis: calc(100% - 700px)
-					padding-left: 47px
+					max-width: calc(100% - 700px)
+					border-left: 47px solid transparent
 			&:nth-child(3) ~ &
 				+desk
 					padding-top: 34px

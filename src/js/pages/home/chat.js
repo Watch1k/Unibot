@@ -6,7 +6,7 @@ import { css, Resp } from '../../modules/dev/helpers';
 class Chat {
 	constructor() {
 		this.container = document.querySelector('.chat');
-		this.initBtn = document.querySelectorAll('.js-chat-init');
+		this.initBtn = [...document.querySelectorAll('.js-chat-init')];
 		this.iconBot = this.container.querySelector('.chat__icon-bot');
 		this.closeBtn = this.container.querySelector('.chat__close-btn');
 		this.content = this.container.querySelector('.chat__content');
@@ -32,7 +32,6 @@ class Chat {
 		this.ps = new PerfectScrollbar(this.contentChat, {
 			wheelSpeed: 0.5,
 			wheelPropagation: true,
-			swipePropagation: true,
 			swipeEasing: false
 		});
 		
@@ -66,7 +65,7 @@ class Chat {
 				this.content.classList.add(css.active);
 			});
 		};
-		this.contentChat.addEventListener('ps-scroll-y', shadow);
+		if (!Resp.isMobile) this.contentChat.addEventListener('ps-scroll-y', shadow);
 	}
 	
 	moveBtns(state = true) {
@@ -104,7 +103,6 @@ class Chat {
 			scrollTo: { y: _this.contentChat.scrollHeight - _this.contentChat.clientHeight, autoKill: false },
 			onComplete() {
 				_this.moveBtns(false);
-				_this.ps.update();
 			}
 		});
 		
@@ -141,9 +139,6 @@ class Chat {
 						scrollTo: { y: _this.contentChat.scrollHeight - _this.contentChat.clientHeight, autoKill: false },
 						onStart() {
 							_this.moveBtns();
-						},
-						onComplete() {
-							_this.ps.update();
 						}
 					});
 				})
@@ -169,9 +164,6 @@ class Chat {
 						scrollTo: { y: _this.contentChat.scrollHeight - _this.contentChat.clientHeight, autoKill: false },
 						onStart() {
 							_this.moveBtns();
-						},
-						onComplete() {
-							_this.ps.update();
 						}
 					});
 				})
@@ -285,10 +277,11 @@ class Chat {
 	
 	openChat() {
 		const offsetTop = Resp.isDesk ? 50 : 150;
+		
 		if (Resp.isMobile) {
-			TweenMax.to(window, 1, {
+			TweenMax.to(window, 0.75, {
 				scrollTo: {
-					y: window.innerHeight,
+					y: this.container.parentNode,
 					autoKill: false
 				}
 			});
@@ -300,9 +293,8 @@ class Chat {
 			.to(this.container, 0.5, { height: this.chatHeight })
 			.addLabel('afterHeight', '')
 			.to(this.closeBtn, 0.5, { alpha: 1 }, 'afterHeight+=0.25')
-			.to(this.iconBot, 0.5, { alpha: 1 }, 'afterHeight+=0.75')
-			.fromTo(this.iconBot, 0.5, { x: -30 }, { x: 0 }, 'afterHeight+=1')
-			.to(this.content, 0.5, { autoAlpha: 1 }, '-=0.75');
+			.fromTo(this.iconBot, 0.5, { alpha: 0, x: -20 }, { alpha: 1, x: 0 }, 'afterHeight+=0.75')
+			.to(this.content, 0.5, { autoAlpha: 1 }, Resp.isMobile ? '-=0.75' : '-=0.25');
 		
 		if (this.firstInitInd) {
 			tl.add(() => this.initChat(), '-=0.5');

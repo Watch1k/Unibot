@@ -10,12 +10,10 @@ export default class ChangeText {
 	init() {
 		if (Resp.isDesk) return;
 		
-		this.el.innerHTML = do {
-			if (Resp.isMobile) {
-				this.el.getAttribute('data-text-mobile');
-			} else {
-				this.el.getAttribute('data-text-tablet');
-			}
-		};
+		if (Resp.isMobile && this.el.hasAttribute('data-text-mobile')) {
+			this.el.innerHTML = this.el.getAttribute('data-text-mobile');
+		} else if (this.el.hasAttribute('data-text-tablet')) {
+			this.el.innerHTML = this.el.getAttribute('data-text-tablet');
+		}
 	}
 }

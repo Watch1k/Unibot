@@ -29,16 +29,19 @@
 		z-index: 4
 	
 	&__round-top
-		position: absolute
 		z-index: 1
-		top: -1px
+		top: 0
 		left: 0
 		right: 0
-		transform: rotate(180deg)
+		transform: rotate(180deg) translateZ(0)
+		+ratio(1282,81)
+		position: absolute
 		svg
+			+ratio-in
 			display: block
 			width: 100% !important
 			fill: $color6
+			transform: scaleX(1.01)
 			
 	&__container
 		padding-top: 71px

@@ -29,7 +29,7 @@ class Section {
 		dot.classList.add('navigation__dot');
 		
 		for (let i = 0, len = this.sectionLength; i < len; i++) {
-			this.navigation.append(dot.cloneNode());
+			this.navigation.appendChild(dot.cloneNode());
 		}
 		
 		this.navigationTotal.innerHTML = do {

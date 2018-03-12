@@ -5,6 +5,20 @@ import { Resp } from '../../modules/dev/helpers';
 export default class HomeScreen {
 	constructor() {
 		if (Resp.isDesk) this.init();
+		
+		if (!Resp.isDesk) {
+			function calcVH() {
+				const vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+				document.querySelector('.screen').setAttribute('style', 'height:' + vH + 'px;');
+			}
+			
+			calcVH();
+			window.addEventListener('orientationchange', () => {
+				setTimeout(() => {
+					calcVH();
+				}, 500)
+			}, true);
+		}
 	}
 	
 	init() {
@@ -91,16 +105,16 @@ export default class HomeScreen {
 			}]
 		});
 		
-			new ScrollAnim({
-				el: container,
-				inView: true,
-				reverse: true,
-				onEnter() {
-					paymentPartsFirst.start();
-				},
-				onLeave() {
-					paymentPartsFirst.stop();
-				}
-			});
+		new ScrollAnim({
+			el: container,
+			inView: true,
+			reverse: true,
+			onEnter() {
+				paymentPartsFirst.start();
+			},
+			onLeave() {
+				paymentPartsFirst.stop();
+			}
+		});
 	}
 }

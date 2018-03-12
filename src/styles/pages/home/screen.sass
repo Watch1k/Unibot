@@ -3,6 +3,8 @@
 	height: 100vh
 	color: $color6
 	background-image: linear-gradient(-187deg, #1e14a8 0%, #50218e 56%, #50218e 100%)
+	min-height: 320px
+	+gpu
 	+sm
 		background-image: linear-gradient(-144deg, $color2 0%, $color3 100%)
 	+only-tab
@@ -21,7 +23,7 @@
 			content: ''
 			+ratio-in
 			z-index: 0
-			bottom: -200px
+			bottom: 0
 			background: url('../img/bg-screen-mobile-1.png') calc(100vw - 113px) -70px no-repeat, url('../img/bg-screen-mobile-2.png') -45px 130px no-repeat, url('../img/bg-screen-mobile-3.png') calc(100vw - 55px) 310px no-repeat
 	
 	&__canvas

@@ -46028,7 +46028,11 @@ var ChangeText = function () {
 		value: function init() {
 			if (_helpers.Resp.isDesk) return;
 
-			this.el.innerHTML = _helpers.Resp.isMobile ? this.el.getAttribute('data-text-mobile') : this.el.getAttribute('data-text-tablet');
+			if (_helpers.Resp.isMobile && this.el.hasAttribute('data-text-mobile')) {
+				this.el.innerHTML = this.el.getAttribute('data-text-mobile');
+			} else if (this.el.hasAttribute('data-text-tablet')) {
+				this.el.innerHTML = this.el.getAttribute('data-text-tablet');
+			}
 		}
 	}]);
 
@@ -46111,12 +46115,13 @@ var Header = function () {
 				item.addEventListener('click', function (e) {
 					if (item.href.indexOf('#') !== -1) {
 						e.preventDefault();
+						console.log('fine');
 						var href = item.href;
 						var hashName = href.slice(href.indexOf('#') + 1, href.length);
 
 						_gsap.TweenMax.to(window, 1.5, {
 							scrollTo: {
-								y: document.getElementById(hashName).getBoundingClientRect().top + window.scrollY - offsetTop,
+								y: document.getElementById(hashName).getBoundingClientRect().top + window.pageYOffset - offsetTop,
 								autoKill: false
 							}
 						});
@@ -69267,6 +69272,20 @@ var HomeScreen = function () {
 		_classCallCheck(this, HomeScreen);
 
 		if (_helpers.Resp.isDesk) this.init();
+
+		if (!_helpers.Resp.isDesk) {
+			var calcVH = function calcVH() {
+				var vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+				document.querySelector('.screen').setAttribute('style', 'height:' + vH + 'px;');
+			};
+
+			calcVH();
+			window.addEventListener('orientationchange', function () {
+				setTimeout(function () {
+					calcVH();
+				}, 500);
+			}, true);
+		}
 	}
 
 	_createClass(HomeScreen, [{
@@ -69806,7 +69825,7 @@ var Section = function () {
 			dot.classList.add('navigation__dot');
 
 			for (var i = 0, len = this.sectionLength; i < len; i++) {
-				this.navigation.append(dot.cloneNode());
+				this.navigation.appendChild(dot.cloneNode());
 			}
 
 			this.navigationTotal.innerHTML = this.sectionLength < 10 ? '0' + this.sectionLength : this.sectionLength;
@@ -69903,7 +69922,7 @@ var Chat = function () {
 		_classCallCheck(this, Chat);
 
 		this.container = document.querySelector('.chat');
-		this.initBtn = document.querySelectorAll('.js-chat-init');
+		this.initBtn = [].concat(_toConsumableArray(document.querySelectorAll('.js-chat-init')));
 		this.iconBot = this.container.querySelector('.chat__icon-bot');
 		this.closeBtn = this.container.querySelector('.chat__close-btn');
 		this.content = this.container.querySelector('.chat__content');
@@ -69929,7 +69948,6 @@ var Chat = function () {
 		this.ps = new _perfectScrollbar2.default(this.contentChat, {
 			wheelSpeed: 0.5,
 			wheelPropagation: true,
-			swipePropagation: true,
 			swipeEasing: false
 		});
 
@@ -69968,7 +69986,7 @@ var Chat = function () {
 					_this2.content.classList.add(_helpers.css.active);
 				});
 			};
-			this.contentChat.addEventListener('ps-scroll-y', shadow);
+			if (!_helpers.Resp.isMobile) this.contentChat.addEventListener('ps-scroll-y', shadow);
 		}
 	}, {
 		key: 'moveBtns',
@@ -70010,7 +70028,6 @@ var Chat = function () {
 				scrollTo: { y: _this.contentChat.scrollHeight - _this.contentChat.clientHeight, autoKill: false },
 				onComplete: function onComplete() {
 					_this.moveBtns(false);
-					_this.ps.update();
 				}
 			});
 
@@ -70051,9 +70068,6 @@ var Chat = function () {
 						scrollTo: { y: _this.contentChat.scrollHeight - _this.contentChat.clientHeight, autoKill: false },
 						onStart: function onStart() {
 							_this.moveBtns();
-						},
-						onComplete: function onComplete() {
-							_this.ps.update();
 						}
 					});
 				}).fromTo(phrase, 0.25, { alpha: 0, y: 10 }, { alpha: 1, y: 0, delay: 0.35, immediateRender: false }).add(this.waitBot(phraseInner));
@@ -70074,9 +70088,6 @@ var Chat = function () {
 						scrollTo: { y: _this.contentChat.scrollHeight - _this.contentChat.clientHeight, autoKill: false },
 						onStart: function onStart() {
 							_this.moveBtns();
-						},
-						onComplete: function onComplete() {
-							_this.ps.update();
 						}
 					});
 				}).from(phraseInner, 0.35, {
@@ -70194,10 +70205,11 @@ var Chat = function () {
 			var _this6 = this;
 
 			var offsetTop = _helpers.Resp.isDesk ? 50 : 150;
+
 			if (_helpers.Resp.isMobile) {
-				_gsap.TweenMax.to(window, 1, {
+				_gsap.TweenMax.to(window, 0.75, {
 					scrollTo: {
-						y: window.innerHeight,
+						y: this.container.parentNode,
 						autoKill: false
 					}
 				});
@@ -70205,7 +70217,7 @@ var Chat = function () {
 				_gsap.TweenMax.to(window, 1, { scrollTo: { y: this.container.getBoundingClientRect().top + window.pageYOffset - offsetTop, autoKill: false } });
 			}
 
-			var tl = new _gsap.TimelineMax().to(this.container, 0.5, { height: this.chatHeight }).addLabel('afterHeight', '').to(this.closeBtn, 0.5, { alpha: 1 }, 'afterHeight+=0.25').to(this.iconBot, 0.5, { alpha: 1 }, 'afterHeight+=0.75').fromTo(this.iconBot, 0.5, { x: -30 }, { x: 0 }, 'afterHeight+=1').to(this.content, 0.5, { autoAlpha: 1 }, '-=0.75');
+			var tl = new _gsap.TimelineMax().to(this.container, 0.5, { height: this.chatHeight }).addLabel('afterHeight', '').to(this.closeBtn, 0.5, { alpha: 1 }, 'afterHeight+=0.25').fromTo(this.iconBot, 0.5, { alpha: 0, x: -20 }, { alpha: 1, x: 0 }, 'afterHeight+=0.75').to(this.content, 0.5, { autoAlpha: 1 }, _helpers.Resp.isMobile ? '-=0.75' : '-=0.25');
 
 			if (this.firstInitInd) {
 				tl.add(function () {
