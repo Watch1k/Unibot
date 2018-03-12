@@ -1,6 +1,6 @@
 import { TweenMax } from 'gsap';
 import { tns } from '../../../../node_modules/tiny-slider/src/tiny-slider.module';
-import { css } from '../../modules/dev/helpers';
+import { css, Resp } from '../../modules/dev/helpers';
 
 export default class HomeExample {
 	constructor() {
@@ -10,12 +10,13 @@ export default class HomeExample {
 		this.btn = this.container.querySelector('.example__slider-btn');
 		this.sliderCounterCurrent = this.container.querySelector('.example__slider-counter-current');
 		this.sliderCounterTotal = this.container.querySelector('.example__slider-counter-total');
+		this.chat = this.container.querySelector('.example__slider-chat');
 		this.chatText = this.container.querySelector('.example__slider-chat-text');
 		this.chatIcon = [...this.container.querySelectorAll('.example__slider-chat-icon')];
 		
 		this.init();
 		this.fixButtonPosition(true);
-		this.chat();
+		this.initChat();
 	}
 	
 	init() {
@@ -56,9 +57,16 @@ export default class HomeExample {
 		const info = this.slider.getInfo();
 		const right = info.slideItems[info.index].querySelector('.example__slider-right');
 		const height = right.clientHeight - +window.getComputedStyle(right, null).getPropertyValue('padding-bottom').slice(0, -2);
+		const left = info.slideItems[info.index].querySelector('.example__slider-left');
+		const heightLeft = left.clientHeight - +window.getComputedStyle(left, null).getPropertyValue('padding-bottom').slice(0, -2);
 		
-		if (state) TweenMax.set(this.btn, { y: height });
-		TweenMax.to(this.btn, 0.4, { y: height });
+		if (state) TweenMax.set(this.btn, { y: Resp.isMobile ? height + heightLeft : height });
+		TweenMax.to(this.btn, 0.4, { y: Resp.isMobile ? height + heightLeft : height });
+		if (Resp.isMobile) {
+			TweenMax.to(this.sliderCounterCurrent.parentNode, 0.4, { y: height + heightLeft });
+			TweenMax.to(this.container.querySelectorAll('button[data-controls]'), 0.4, { y: height + heightLeft });
+			TweenMax.to(this.chat, 0.4, { y: height + heightLeft });
+		}
 	}
 	
 	refreshCounter() {
@@ -73,7 +81,7 @@ export default class HomeExample {
 		};
 	}
 	
-	chat() {
+	initChat() {
 		this.chatIcon.forEach(icon => {
 			icon.addEventListener('mouseenter', () => {
 				this.chatText.classList.add(css.active);

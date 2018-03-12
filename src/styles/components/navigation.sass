@@ -41,7 +41,13 @@
 	padding-left: 12px
 	+trs
 	+md
-		display: none
+		position: absolute
+		left: auto
+		right: 30px
+	+sm
+		right: 8px
+		opacity: 1
+		bottom: 10px
 	.no-touch &:hover
 		opacity: 1
 	
@@ -51,8 +57,13 @@
 		border-radius: 50%
 		background-color: #a0a0a0
 		+trs
+		+sm
+			background: $color6
 		&:not(:first-child)
 			margin-top: 6px
+		&:nth-child(5) ~ &
+			+sm
+				display: none
 	&__circle
 		position: absolute
 		z-index: 2
@@ -63,6 +74,8 @@
 		border-radius: 50%
 		border: 2px solid #a0a0a0
 		+trs
+		+sm
+			display: none
 	&.is-active &__circle
 		bottom: calc(64px - 40px)
 	

@@ -4,6 +4,9 @@
 	padding-bottom: 58px
 	+md
 		padding-bottom: calc(58px + 28px + 25px)
+	+sm
+		padding-top: 42px
+		padding-bottom: 22px
 	
 	&__container
 		z-index: 2
@@ -13,6 +16,8 @@
 		max-width: 720px
 		+h2
 		text-align: center
+		+sm
+			text-align: left
 	
 	&__slider-wrap
 		position: relative
@@ -20,6 +25,8 @@
 		width: 830px
 		+md
 			width: 100%
+		+sm
+			margin-top: 21px
 		.tns-nav
 			display: none
 		.tns-controls
@@ -38,6 +45,9 @@
 				top: 180px
 				+md
 					top: calc(100% + 25px)
+				+sm
+					top: 0
+					margin-top: 57px
 			[data-controls='prev']
 				left: -99px
 				+md
@@ -58,6 +68,10 @@
 				top: calc(100% + 30px)
 				left: 50%
 				transform: translateX(-50%)
+			+sm
+				top: 0
+				margin-top: 60px
+				font-size: 10px
 			&:before
 				content: ''
 				position: absolute
@@ -67,8 +81,12 @@
 				height: 4px
 				background-color: $color4
 				border-radius: 50%
+				+sm
+					top: 9px
 			&-current
 				width: 60px
+				+sm
+					width: 35px
 			&-total
 				opacity: 0.2
 		&-chat
@@ -81,6 +99,10 @@
 			+md
 				top: 325px
 				left: 30px
+			+sm
+				top: 0
+				left: 0
+				margin-top: 19px
 			&-text
 				+h4
 				color: $color2
@@ -89,10 +111,13 @@
 				.no-touch &:hover
 					color: $color4
 			&-icon
+				position: relative
 				font-size: 20px
 				color: $color2
 				margin-left: 19px
 				+trs
+				+sm
+					top: -2px
 				.no-touch &:hover
 					color: $color4
 			.no-touch &-text:hover + &-icon
@@ -105,16 +130,25 @@
 			left: calc(393px + 57px)
 			+md
 				left: calc(320px + 57px)
+			+sm
+				margin-top: 104px
+				left: 50%
+				transform: translateX(-50%)
+				white-space: nowrap
 		&-item
 			top: 0
 		&-row
 			display: flex
 			align-items: flex-start
+			+sm
+				display: block
 		&-right
 			padding: 54px 0 126px 57px
 			flex: 0 1 auto
 			+md
 				padding-top: 0
+			+sm
+				padding-left: 0
 		&-left
 			position: relative
 			flex: 1 0 393px
@@ -122,25 +156,26 @@
 			padding-bottom: 60px
 			+md
 				flex-basis: 320px
-			&:before
-				pointer-events: none
-				content: ''
-				position: absolute
-				z-index: 10
-				top: 0
-				right: 0
-				bottom: 0
-				width: 1px
-				background-color: $color6
+			+sm
+				padding-bottom: 13px
 		&-title
 			+h3
 		&-text
 			&:not(:first-child)
 				padding-top: 17px
 				line-height: 25px
+				strong
+					line-height: 25px
+					+sm
+						line-height: 20px
+				+sm
+					padding-top: 9px
+					line-height: 20px
 			p
 				&:not(:first-child)
 					margin-top: 25px
+					+sm
+						margin-top: 0
 		&-image
 			position: relative
 			width: 393px
@@ -149,6 +184,9 @@
 			+md
 				width: 320px
 				height: 305px
+			+sm
+				width: 280px
+				height: 202px
 			&:before
 				pointer-events: none
 				content: ''

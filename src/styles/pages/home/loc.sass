@@ -4,6 +4,9 @@
 	padding-bottom: 58px
 	+md
 		padding-bottom: calc(58px + 28px + 25px)
+	+sm
+		padding-top: 29px
+		padding-bottom: 0
 	
 	&__container
 		z-index: 2
@@ -13,6 +16,8 @@
 		max-width: 720px
 		+h2
 		text-align: center
+		+sm
+			text-align: left
 	
 	&__slider-wrap
 		position: relative
@@ -20,6 +25,8 @@
 		width: 830px
 		+md
 			width: 100%
+		+sm
+			margin-top: 24px
 		.tns-nav
 			display: none
 		.tns-controls
@@ -38,14 +45,17 @@
 				top: 180px
 				+md
 					top: calc(100% + 25px)
+				+sm
+					top: 0
+					margin-top: 11px
 			[data-controls='prev']
 				left: -99px
 				+md
-					left: -10px
+					left: -9px
 			[data-controls='next']
 				right: -101px
 				+md
-					right: -10px
+					right: -9px
 	&__slider
 		&-counter
 			position: absolute
@@ -58,6 +68,10 @@
 				top: calc(100% + 30px)
 				left: 50%
 				transform: translateX(-50%)
+			+sm
+				top: 0
+				margin-top: 14px
+				font-size: 10px
 			&:before
 				content: ''
 				position: absolute
@@ -67,8 +81,12 @@
 				height: 4px
 				background-color: $color4
 				border-radius: 50%
+				+sm
+					top: 9px
 			&-current
 				width: 60px
+				+sm
+					width: 35px
 			&-total
 				opacity: 0.2
 		&-btn
@@ -77,6 +95,11 @@
 			margin-top: 54px
 			top: 0
 			left: 0
+			+sm
+				margin-top: 58px
+				left: 50%
+				transform: translateX(-50%)
+				white-space: nowrap
 		&-item
 			top: 0
 		&-row
@@ -87,17 +110,25 @@
 			flex: 0 1 auto
 			+md
 				padding-top: 0
+			+sm
+				padding-right: 0
+				padding-bottom: 115px
 		&-right
 			flex: 1 0 498px
 			background-color: $color6
 			+md
 				flex-basis: 360px
+			+sm
+				display: none
 		&-title
 			+h3
 		&-text
 			&:not(:first-child)
 				padding-top: 17px
 				line-height: 25px
+				+sm
+					padding-top: 9px
+					line-height: 20px
 			p
 				&:not(:first-child)
 					margin-top: 25px

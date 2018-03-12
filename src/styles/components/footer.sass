@@ -7,6 +7,9 @@
 	padding-bottom: 130px
 	+md
 		padding-bottom: 60px
+	+sm
+		padding-bottom: 46px
+		background-image: linear-gradient(to bottom, $color2 0%, $color4 100%)
 	&:before
 		pointer-events: none
 		content: ''
@@ -18,6 +21,9 @@
 		height: 590px
 		background: transparent url('../img/footer-map.png') center center no-repeat
 		background-size: cover
+		+sm
+			content: none
+			display: none
 	
 	[data-line]
 		z-index: 4
@@ -37,19 +43,42 @@
 	&__container
 		padding-top: 71px
 		z-index: 2
+		+sm
+			padding-top: 49px
+	
+	&__mobile-top
+		display: none
+		position: absolute
+		z-index: 5
+		left: 8px
+		top: 210px
+		font-size: 34px
+		padding: 5px 10px
+		+sm
+			display: block
 	
 	&__title
 		margin: 0 auto
 		max-width: 720px
 		+h2
 		text-align: center
+		+sm
+			text-align: left
 		
 	&__list
+		position: relative
 		margin-top: 74px
 		padding: 0 100px
 		display: flex
 		+md
 			padding: 0
+		+sm
+			margin-top: 19px
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+			margin-left: -10px
+			margin-right: -10px
 		a
 			+trs
 			.no-touch &:hover
@@ -57,15 +86,43 @@
 		&-col
 			padding-right: 38px
 			max-width: 33.333%
+			+sm
+				max-width: none
+				margin-left: 149px
+				padding-right: 0
+				order: 1
+			&:nth-child(1)
+				+sm
+					margin-top: 10px
+			&:nth-child(2)
+				+sm
+					order: -1
+			&:nth-child(3)
 		&-text
 			&:not(:first-child)
 				margin-top: 20px
+				+sm
+					margin-top: 10px
+		&-mail
+			+sm
+				position: absolute
+				top: 40px
+				left: 10px
 		&-soc
 			position: relative
 			top: -5px
 			font-size: 20px
 			color: $color4
 			display: flex
+			+sm
+				position: absolute
+				top: 5px
+				left: 10px
+			.icon
+				display: block
+			&-text
+				+sm
+					display: none
 			&-icon-wrap
 				position: relative
 				&:not(:first-child)
@@ -116,6 +173,8 @@
 		+f('MullerRegular',16,32,0)
 		+md
 			padding: 0
+		+sm
+			display: none
 	
 	&__bot-logo
 		display: block
@@ -188,3 +247,7 @@
 		+f('MullerRegular',16,32,0)
 		text-align: center
 		opacity: 0.5
+		+sm
+			margin-top: 18px
+			font-size: 12px
+			line-height: 24px

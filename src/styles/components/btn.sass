@@ -8,6 +8,10 @@
 	+f('Gilroy-ExtraBold',20,32,0)
 	text-align: center
 	color: $color6
+	+sm
+		padding: 12px 30px 13px
+		font-size: 16px
+		height: auto
 	
 	&__text
 		position: relative
@@ -86,6 +90,8 @@
 			height: 78px
 			fill: $color6
 			transition: all 0.25s ease
+			+sm
+				height: 63px
 	.no-touch &_white:hover &__bg
 		&:after
 			transform: scaleX(0.95) scaleY(0.7)

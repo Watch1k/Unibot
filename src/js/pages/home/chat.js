@@ -1,7 +1,7 @@
 import { TimelineMax, TweenMax } from 'gsap';
 import 'gsap/ScrollToPlugin';
 import PerfectScrollbar from 'perfect-scrollbar';
-import { css } from '../../modules/dev/helpers';
+import { css, Resp } from '../../modules/dev/helpers';
 
 class Chat {
 	constructor() {
@@ -101,7 +101,7 @@ class Chat {
 		textContainer.innerHTML = text;
 		
 		TweenMax.to(_this.contentChat, 0.35, {
-			scrollTo: _this.contentChat.scrollHeight - _this.contentChat.clientHeight,
+			scrollTo: { y: _this.contentChat.scrollHeight - _this.contentChat.clientHeight, autoKill: false },
 			onComplete() {
 				_this.moveBtns(false);
 				_this.ps.update();
@@ -122,7 +122,7 @@ class Chat {
 		});
 	}
 	
-	animBot(targetIndex) {
+	animBot(targetIndex, data = false) {
 		const _this = this;
 		const tl = new TimelineMax();
 		const phraseArray = this.dataBotContainer.querySelector(`[data-bot='${targetIndex}']`).children;
@@ -138,7 +138,7 @@ class Chat {
 			tl
 				.add(() => {
 					TweenMax.to(_this.contentChat, 0.25, {
-						scrollTo: _this.contentChat.scrollHeight - _this.contentChat.clientHeight,
+						scrollTo: { y: _this.contentChat.scrollHeight - _this.contentChat.clientHeight, autoKill: false },
 						onStart() {
 							_this.moveBtns();
 						},
@@ -157,12 +157,16 @@ class Chat {
 				.add(() => {
 					phraseInner.appendChild(currentTextContainer);
 					TweenMax.set(currentTextContainer, { alpha: 0 });
-					currentTextContainer.innerHTML = phraseArray[i].innerHTML;
+					if (data) {
+						currentTextContainer.innerHTML = phraseArray[i].innerHTML + ` ${data}`;
+					} else {
+						currentTextContainer.innerHTML = phraseArray[i].innerHTML;
+					}
 				})
 				.set(phraseInner, { width: 'auto', height: 'auto' })
 				.add(() => {
 					TweenMax.to(_this.contentChat, 0.35, {
-						scrollTo: _this.contentChat.scrollHeight - _this.contentChat.clientHeight,
+						scrollTo: { y: _this.contentChat.scrollHeight - _this.contentChat.clientHeight, autoKill: false },
 						onStart() {
 							_this.moveBtns();
 						},
@@ -190,10 +194,21 @@ class Chat {
 	}
 	
 	mail() {
+		const tl = new TimelineMax();
 		const form = this.divMail;
 		this.btnContainer.appendChild(form);
 		
-		TweenMax.fromTo(form, 0.5, { y: 20 }, { alpha: 1, y: 0 });
+		tl.fromTo(form, 0.5, { y: 20 }, { alpha: 1, y: 0 });
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const data = form.querySelector('[type="email"]').value;
+			
+			tl
+				.to(this.btnContainer, 0.5, { alpha: 0 })
+				.add(() => {
+					this.animBot('submit', data);
+				});
+		});
 	}
 	
 	showButtons(targetIndex) {
@@ -269,7 +284,8 @@ class Chat {
 	}
 	
 	openChat() {
-		TweenMax.to(window, 1, { scrollTo: this.container.getBoundingClientRect().top + window.pageYOffset - 50 });
+		const offsetTop = Resp.isDesk ? 50 : 150;
+		TweenMax.to(window, 1, { scrollTo: { y: this.container.getBoundingClientRect().top + window.pageYOffset - offsetTop, autoKill: false } });
 		
 		const tl = new TimelineMax()
 			.to(this.container, 0.5, { height: this.chatHeight })

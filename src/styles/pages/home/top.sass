@@ -2,6 +2,9 @@
 	position: relative
 	padding-top: 60px
 	padding-bottom: 60px
+	+sm
+		padding-top: 49px
+		padding-bottom: 30px
 	
 	&__container
 		padding: 0 71px
@@ -11,18 +14,73 @@
 		max-width: 720px
 		+h2
 		text-align: center
+		+sm
+			text-align: left
 	
 	&__list
 		display: flex
 		margin: 70px -25px 0
+		+sm
+			display: block
+			margin: 21px 0 0
 		&-item
 			display: flex
 			flex: 1 1 auto
 			padding: 0 25px
+			+sm
+				padding: 0
 			&:nth-child(2) ~ &
-				+md
+				+only-tab
 					display: none
 			
 	&__btn-wrap
 		margin-top: 60px
 		text-align: center
+		+sm
+			margin-top: 56px
+
+	.tns-nav
+		display: none
+	.tns-controls
+		position: absolute
+		z-index: 2
+		top: 0
+		left: 20px
+		right: 20px
+		bottom: 81px
+		pointer-events: none
+		[data-controls='prev'],
+		[data-controls='next']
+			pointer-events: auto
+			position: absolute
+			z-index: 1
+			bottom: -5px
+		[data-controls='prev']
+			left: -9px
+		[data-controls='next']
+			right: -9px
+		
+	&__list-counter
+		position: absolute
+		margin-top: 14px
+		display: none
+		bottom: 81px
+		left: 50%
+		transform: translateX(-50%)
+		+f('Gilroy-ExtraBold',10,20,100)
+		color: #000000
+		+sm
+			display: flex
+		&:before
+			content: ''
+			position: absolute
+			left: calc(50% - 3px)
+			top: 9px
+			width: 4px
+			height: 4px
+			background-color: $color4
+			border-radius: 50%
+		&-current
+			width: 35px
+		&-total
+			opacity: 0.2

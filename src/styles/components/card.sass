@@ -2,6 +2,8 @@
 	position: relative
 	padding-bottom: 44px
 	display: block
+	+sm
+		padding-bottom: 0
 	
 	&__image
 		position: relative
@@ -9,11 +11,13 @@
 		height: 219px
 		overflow: hidden
 		+cover-img
+		+sm
+			width: 280px
+			height: 203px
 		img
 			position: relative
 			left: -0.4px
 		&:after
-			display: none
 			pointer-events: none
 			content: ''
 			+ratio-in
@@ -35,6 +39,14 @@
 		padding-bottom: 17px
 		+h3
 		+trs
+		+sm
+			margin-top: 16px
+			padding-bottom: 0
+			color: $color2
+		
+	&__text
+		+sm
+			display: none
 		
 	&__more
 		position: absolute
@@ -48,6 +60,8 @@
 		display: flex
 		align-items: center
 		justify-content: space-between
+		+sm
+			display: none
 		&-dot
 			width: 4px
 			height: 4px

@@ -1,5 +1,5 @@
 import { TimelineMax, TweenMax } from 'gsap';
-import { css, detectIE } from '../modules/dev/helpers';
+import { css, detectIE, Resp } from '../modules/dev/helpers';
 
 class Preloader {
 	constructor() {
@@ -21,20 +21,31 @@ class Preloader {
 		this.resolve = new Promise(resolve => {
 			window.addEventListener('load', () => {
 				const tl = new TimelineMax();
-				tl
-					.add(() => {
-						this.container.classList.add(css.start);
-					}, 0)
-					.add(() => {
-						this.container.classList.add(css.end);
-						if (detectIE()) {
-							this.container.classList.add('hide-ie');
-						}
-						resolve();
-					}, 1)
-					.add(() => {
-						this.container.classList.add(css.hidden);
-					}, 2);
+				
+				if (Resp.isDesk) {
+					tl
+						.add(() => {
+							this.container.classList.add(css.start);
+						}, 0)
+						.add(() => {
+							this.container.classList.add(css.end);
+							if (detectIE()) {
+								this.container.classList.add('hide-ie');
+							}
+							resolve();
+						}, 1)
+						.add(() => {
+							this.container.classList.add(css.hidden);
+						}, 2);
+				} else {
+					tl
+						.add(() => {
+							resolve();
+						})
+						.to(this.container, 0.5, {
+							autoAlpha: 0
+						}, '+=0.1');
+				}
 			});
 		});
 	}
@@ -48,13 +59,13 @@ class Preloader {
 			.add(() => {
 				if (header) {
 					TweenMax.set(header, { alpha: 0 });
-					TweenMax.to(header, 1, { alpha: 1, delay: 0.6 });
+					TweenMax.to(header, 1, { alpha: 1, delay: Resp.isDesk ? 0.6 : 0.15 });
 				}
 			})
 			.add(() => {
 				if (screen) {
 					TweenMax.set(screen, { alpha: 0 });
-					TweenMax.to(screen, 1, { alpha: 1, delay: 0.7 });
+					TweenMax.to(screen, 1, { alpha: 1, delay: Resp.isDesk ? 0.7 : 0.25 });
 				}
 			});
 	}

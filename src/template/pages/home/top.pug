@@ -1,7 +1,7 @@
 +b.SECTION.top#top(data-scroll-section)
 	div(data-line)
 	+e.container.container
-		+e.title Интересные статьи о ботах
+		+e.title(data-text-mobile='Статьи о ботах') Интересные статьи о ботах
 		-
 			topList = [[
 			'10 причин, по которым чат-боты – это будущее мобильных приложений для смартфонов',
@@ -13,6 +13,9 @@
 			'Зачем бизнесу нужен чат-бот?',
 			'Согласно Wikipedia, бот – это специальная программа, где выполняющая автоматичеcкие пироги с вишней, приводит пользователя к конечному про выполняющая автоматичеcкие пироги с вишнейвыполняющая автоматичеcкие пироги с вишней'
 			]]
+		+e.list-counter
+			+e.list-counter-current
+			+e.list-counter-total
 		+e.list
 			each el, index in topList
 				+e.list-item

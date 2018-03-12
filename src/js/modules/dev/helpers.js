@@ -79,6 +79,7 @@ export class Resp {
  * @type {Object}
  */
 export const css = {
+	fixed: 'is-fixed',
 	active: 'is-active',
 	noTouch: 'no-touch',
 	hidden: 'is-hidden',

@@ -1,7 +1,7 @@
 import { TweenMax } from 'gsap';
 import 'gsap/ScrollToPlugin';
 import ScrollAnim from '../../modules/dev/animation/scrollAnim';
-import { css } from '../../modules/dev/helpers';
+import { css, Resp } from '../../modules/dev/helpers';
 
 class Section {
 	constructor() {
@@ -17,7 +17,7 @@ class Section {
 	init() {
 		this.prepare();
 		window.addEventListener('load', () => {
-			this.events();
+			if (Resp.isDesk) this.events();
 			this.buttonEvents();
 		});
 	}
@@ -76,12 +76,16 @@ class Section {
 	
 	buttonEvents() {
 		this.navigationBtn.addEventListener('click', () => {
-			if (this.navigationBtn.classList.contains(css.active)) {
-				TweenMax.to(window, 1.5, { scrollTo: 0 });
+			if (Resp.isDesk) {
+				if (this.navigationBtn.classList.contains(css.active)) {
+					TweenMax.to(window, 1.5, { scrollTo: { y: 0, autoKill: false } });
+				} else {
+					const targetSection = this.section.filter(item => item.classList.contains(css.active));
+					const targetIndex = this.section.indexOf(targetSection[0]);
+					TweenMax.to(window, 1.5, { scrollTo: { y: '#' + this.section[targetIndex + 1].id, autoKill: false } });
+				}
 			} else {
-				const targetSection = this.section.filter(item => item.classList.contains(css.active));
-				const targetIndex = this.section.indexOf(targetSection[0]);
-				TweenMax.to(window, 1.5, { scrollTo: '#' + this.section[targetIndex + 1].id });
+				TweenMax.to(window, 1.5, { scrollTo: { y: window.innerHeight, autoKill: false } });
 			}
 		});
 	}

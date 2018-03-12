@@ -4,7 +4,7 @@ import { Resp } from '../../modules/dev/helpers';
 
 export default class HomeScreen {
 	constructor() {
-		this.init();
+		if (Resp.isDesk) this.init();
 	}
 	
 	init() {
@@ -91,7 +91,6 @@ export default class HomeScreen {
 			}]
 		});
 		
-		if (!Resp.isMobile) {
 			new ScrollAnim({
 				el: container,
 				inView: true,
@@ -103,6 +102,5 @@ export default class HomeScreen {
 					paymentPartsFirst.stop();
 				}
 			});
-		}
 	}
 }

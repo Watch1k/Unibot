@@ -1,5 +1,6 @@
 import { TweenMax } from 'gsap';
 import { tns } from '../../../../node_modules/tiny-slider/src/tiny-slider.module';
+import { Resp } from '../../modules/dev/helpers';
 
 export default class HomeLoc {
 	constructor() {
@@ -53,8 +54,12 @@ export default class HomeLoc {
 		const left = info.slideItems[info.index].querySelector('.loc__slider-left');
 		const height = left.clientHeight - +window.getComputedStyle(left, null).getPropertyValue('padding-bottom').slice(0, -2);
 		
-		if (state) TweenMax.set(this.btn, { y: height });
+		if (state)  TweenMax.set(this.btn, { y: height });
 		TweenMax.to(this.btn, 0.4, { y: height });
+		if (Resp.isMobile) {
+			TweenMax.to(this.sliderCounterCurrent.parentNode, 0.4, { y: height });
+			TweenMax.to(this.container.querySelectorAll('button[data-controls]'), 0.4, { y: height });
+		}
 	}
 	
 	refreshCounter() {

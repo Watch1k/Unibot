@@ -3,6 +3,26 @@
 	height: 100vh
 	color: $color6
 	background-image: linear-gradient(-187deg, #1e14a8 0%, #50218e 56%, #50218e 100%)
+	+sm
+		background-image: linear-gradient(-144deg, $color2 0%, $color3 100%)
+	+only-tab
+		z-index: 2
+		&:after
+			pointer-events: none
+			content: ''
+			+ratio-in
+			z-index: 0
+			bottom: -200px
+			background: url('../img/bg-screen-tablet-1.png') 30px 69px no-repeat, url('../img/bg-screen-tablet-2.png') calc(100vw - 260px) -155px no-repeat, url('../img/bg-screen-tablet-3.png') calc(100vw - 210px) 50vh no-repeat, url('../img/bg-screen-tablet-4.png') -170px calc(50vh + 240px)  no-repeat, url('../img/bg-screen-tablet-5.png') calc(100vw - 390px) calc(100vh - 155px)  no-repeat
+	+sm
+		z-index: 2
+		&:after
+			pointer-events: none
+			content: ''
+			+ratio-in
+			z-index: 0
+			bottom: -200px
+			background: url('../img/bg-screen-mobile-1.png') calc(100vw - 113px) -70px no-repeat, url('../img/bg-screen-mobile-2.png') -45px 130px no-repeat, url('../img/bg-screen-mobile-3.png') calc(100vw - 55px) 310px no-repeat
 	
 	&__canvas
 		+ratio-in
@@ -16,8 +36,25 @@
 		position: relative
 		z-index: 2
 		padding-top: 197px
+		+md
+			padding-top: 253px
+		+tab-fix
+			padding-top: 167px!important
+		+sm
+			padding-top: 128px
+		+mob-fix
+			padding-top: 70px
 		&-in
 			padding: 0 100px
+			+md
+				max-width: 530px
+				margin-left: auto
+				margin-right: auto
+				padding: 0
+			+sm
+				max-width: 420px
+				margin-left: 0
+				margin-right: 0
 			
 	&__title
 		+h1
@@ -26,9 +63,13 @@
 	&__text
 		margin-top: 19px
 		max-width: 660px
+		+sm
+			margin-top: 15px
 		
 	&__btn
 		cursor: pointer
 		&-wrap
 			display: table
 			margin-top: 53px
+			+sm
+				margin-top: 24px

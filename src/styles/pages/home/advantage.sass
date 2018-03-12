@@ -2,15 +2,68 @@
 	position: relative
 	padding-top: 60px
 	padding-bottom: 50px
+	+sm
+		padding-top: 43px
+		padding-bottom: 0
 	
 	&__container
 		padding: 0 70px
+		+sm
+			padding-bottom: 34px
 		
 	&__title
 		margin: 0 auto
 		max-width: 720px
 		+h2
 		text-align: center
+		+sm
+			text-align: left
+		
+	.tns-nav
+		display: none
+	.tns-controls
+		position: absolute
+		z-index: 2
+		top: 0
+		left: 20px
+		right: 20px
+		bottom: 0
+		pointer-events: none
+		[data-controls='prev'],
+		[data-controls='next']
+			pointer-events: auto
+			position: absolute
+			z-index: 1
+			bottom: -5px
+		[data-controls='prev']
+			left: -9px
+		[data-controls='next']
+			right: -9px
+	
+	&__list-counter
+		position: absolute
+		margin-top: 14px
+		display: none
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		+f('Gilroy-ExtraBold',10,20,100)
+		color: #000000
+		+sm
+			display: flex
+		&:before
+			content: ''
+			position: absolute
+			left: calc(50% - 3px)
+			top: 9px
+			width: 4px
+			height: 4px
+			background-color: $color4
+			border-radius: 50%
+		&-current
+			width: 35px
+		&-total
+			opacity: 0.2
 		
 	&__list
 		margin-top: 66px
@@ -20,11 +73,19 @@
 			margin-left: -20px
 			margin-right: -20px
 			margin-bottom: -34px
+		+sm
+			margin-top: 25px
+			margin-bottom: 0
 		&-item
 			flex: 1 0 auto
 			+md
 				flex-basis: 50%
 				padding: 0 20px 34px
+			+sm
+				padding-bottom: 0
+			&:not(:first-child)
+				+sm
+					margin-top: 17px
 			&:nth-child(3n + 1)
 				+desk
 					flex-basis: 373px
@@ -45,6 +106,9 @@
 				padding-top: 4px
 				font-size: 67px
 				flex: 1 0 95px
+				+sm
+					font-size: 47px
+					flex-basis: 66px
 				.icon
 					display: block
 					&-advantage
@@ -53,7 +117,11 @@
 						&-6
 							margin-left: 5px
 			&-right
+				+sm
+					flex: 1 0 calc(100% - 65px)
 			&-title
 				+h3
 			&-text
 				margin-top: 15px
+				+sm
+					margin-top: 3px
