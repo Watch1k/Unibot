@@ -10,7 +10,7 @@ class Preloader {
 	async init() {
 		this.animPreloader();
 		await this.wait();
-		this.contentAnim();
+		if (Resp.isDesk) this.contentAnim();
 	}
 	
 	wait() {

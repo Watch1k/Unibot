@@ -46315,7 +46315,7 @@ var Preloader = function () {
 								return this.wait();
 
 							case 3:
-								this.contentAnim();
+								if (_helpers.Resp.isDesk) this.contentAnim();
 
 							case 4:
 							case 'end':
