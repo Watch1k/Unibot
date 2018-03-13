@@ -1,9 +1,10 @@
-import MODALit from '../../../node_modules/modalit/dist/MODALit';
-import { Resp } from '../modules/dev/helpers';
+import MODALit from '../modules/dep/MODALit.min';
+import { css, Resp } from '../modules/dev/helpers';
 
 class Modal {
 	constructor() {
 		this.btn = [...document.querySelectorAll('.js-modal')];
+		this.scrollTop = 0;
 		
 		this.init();
 	}
@@ -20,7 +21,22 @@ class Modal {
 			
 			new MODALit({
 				el: btn,
-				transition: Resp.isMobile ? 'slideUp' : 'slideDown'
+				transition: Resp.isMobile ? 'zoom' : 'slideDown',
+				fixed: Resp.isDesk,
+				events: {
+					show() {
+						if (Resp.isDesk) return;
+						this.scrollTop = window.pageYOffset;
+						setTimeout(() => {
+							document.querySelector('body').classList.add(css.fixed);
+						}, 500);
+					},
+					hide() {
+						if (Resp.isDesk) return;
+						document.querySelector('body').classList.remove(css.fixed);
+						window.scrollTo(0, this.scrollTop);
+					}
+				}
 			});
 		});
 	}

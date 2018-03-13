@@ -48,7 +48,6 @@
     "gulp-util": "^3.0.7",
     "imports-loader": "^0.7.1",
     "jscs": "^3.0.7",
-    "modalit": "^0.1.6",
     "object-fit-images": "^3.2.3",
     "perfect-scrollbar": "^1.3.0",
     "pixi-filters": "^2.5.1",
