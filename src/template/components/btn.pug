@@ -1,4 +1,4 @@
-+b.btn(class= btnClass ? btnClass : '' href='#!')
++b({tag: btnTag ? btnTag : false}).btn(class= btnClass ? btnClass : '' href= btnRemoveHref ? false : '#!')&attributes(attributes)
 	+e.text= btnText
 	+e.DIV.bg
 		if (btnClass !== '_white')

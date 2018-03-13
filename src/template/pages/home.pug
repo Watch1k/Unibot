@@ -27,3 +27,38 @@ block main
 		include home/advantage
 		include home/example
 		include home/top
+
+block modals
+	+b.modal.modalit#orderBot(aria-hidden='true')
+		.dialog
+			+e.close(data-modal-btn='dismiss')
+				+i('close')
+				+i('menu-close')
+			.content
+				+e.P.title Бесплатный анализ вашего бизнеса
+				+b.FORM.form.__form(action='#')
+					+e.row_half
+						+e.row
+							+e.row_item.has-error
+								+e.INPUT.input_text(type='text' placeholder='Имя')
+								.help-block Ошибочка однако
+							+e.row_item
+								+e.INPUT.input_text(type='tel' placeholder='Телефон')
+								.help-block Ошибочка однако
+							+e.row_item
+								+e.INPUT.input_text(type='email' placeholder='E-mail')
+								.help-block Ошибочка однако
+						+e.row
+							+e.row_item._full-height
+								+e.TEXTAREA.textarea(placeholder='Комментарий')
+								.help-block Ошибочка однако
+					+e.row_simple._center
+						-btnClass = '_default __submit'
+						-btnText = 'Отправить'
+						-btnRemoveHref = true
+						-btnTag = 'button'
+						-
+							attributes = {
+							type: 'submit'
+							}
+						include ../components/btn

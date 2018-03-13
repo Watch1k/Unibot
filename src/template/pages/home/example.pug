@@ -8,8 +8,12 @@
 				+e.slider-counter-current
 				+e.slider-counter-total
 			+e.slider-btn
-				-btnClass = '_default'
+				-btnClass = '_default js-modal'
 				-btnText = 'Заказать себе бот'
+				-
+					attributes = {
+						'data-target': '#orderBot'
+					}
 				include ../../components/btn
 			+e.slider-chat
 				+e.slider-chat-text(href='#!' data-text-mobile='Поговорить с этим ботом') Поговорить с ботом

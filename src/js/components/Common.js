@@ -1,8 +1,9 @@
 import { TweenMax } from 'gsap';
 import objectFitImages from 'object-fit-images';
-import { Resp } from '../modules/dev/helpers';
+import { css, Resp } from '../modules/dev/helpers';
 import ChangeText from './changeText';
 import './header';
+import './modal';
 import './noTouch';
 import './preloader';
 
@@ -10,6 +11,7 @@ export class Common {
 	constructor() {
 		this.init();
 		this.changeText();
+		this.formValidation();
 	}
 	
 	init() {
@@ -39,6 +41,14 @@ export class Common {
 				});
 			});
 		});
+	}
+	
+	formValidation() {
+		[...document.querySelectorAll('input')].forEach(item => {
+			item.addEventListener('click', () => {
+				item.parentElement.classList.remove(css.error);
+			})
+		})
 	}
 }
 

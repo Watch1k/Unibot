@@ -1,0 +1,96 @@
+.form
+	&__row
+		position: relative
+		&_simple
+			&:not(:first-child)
+				margin-top: 28px
+		&_item
+			&:not(:first-child)
+				margin-top: 28px
+			&:before
+				content: ''
+				position: absolute
+				right: 0
+				bottom: 0
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background-color: $color6
+				+trs
+			&:after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 24px
+				height: 1px
+				background-color: $color6
+				+trs
+			&.has-error
+				&:before,
+				&:after
+					background-color: $color4
+		&_full-height
+			height: 100%
+		&_half
+			display: flex
+			margin-left: -15px
+			margin-right: -15px
+			+sm
+				display: block
+				margin-left: 0
+				margin-right: 0
+		&_half > &
+			flex: 1 0 50%
+			max-width: calc(50% - 30px)
+			margin-left: 15px
+			margin-right: 15px
+			+sm
+				max-width: none
+				margin-left: 0
+				margin-right: 0
+				margin-top: 28px
+		&_center
+			display: flex
+			justify-content: center
+			
+	&__input
+		padding: 4px 24px 4px 0
+		border: none
+		background-color: transparent
+		width: 100%
+		+paragraph-text
+		font-size: 18px
+		line-height: 24px
+		color: $color6
+		+placeholder(rgba($color6,.2))
+		+sm
+			font-size: 16px
+		
+	&__textarea
+		padding: 4px 24px 4px 0
+		width: 100%
+		height: 100%
+		border: none
+		background-color: transparent
+		resize: none
+		+paragraph-text
+		font-size: 18px
+		line-height: 24px
+		color: $color6
+		+placeholder(rgba($color6,.2))
+		+sm
+			font-size: 16px
+		
+	.help-block
+		position: absolute
+		top: 100%
+		left: 0
+		font-size: 12px
+		line-height: 16px
+		color: $color4
+		opacity: 0
+		pointer-events: none
+		+trs
+	&__row.has-error .help-block
+		opacity: 1

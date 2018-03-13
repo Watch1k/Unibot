@@ -1,0 +1,85 @@
+.modal
+	&.backdrop
+		background-color: rgba($color6, .7)
+	.dialog
+		padding: 70px 80px 0
+		width: calc(670px + 160px)
+		color: $color6
+		background: transparent url('../img/bg-modal.png') center center no-repeat
+		background-size: 100% 100%
+		box-shadow: none
+		+sm
+			padding: 80px 20px 0
+			background-image: linear-gradient(-191deg, #1e14a8 0%, $color3 100%)
+	
+	.content
+		padding: 0 0 45px 0
+		overflow: auto
+		+sm
+			max-width: 335px
+			margin-left: auto
+			margin-right: auto
+	
+	&__close
+		position: absolute
+		z-index: 10
+		top: 20px
+		right: 200px
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		font-size: 24px
+		color: $color4
+		width: 40px
+		height: 40px
+		+trs
+		+md
+			right: 150px
+		+sm
+			font-size: 22px
+			right: 20px
+		.no-touch &:hover
+			color: $color4
+		.icon
+			&:nth-child(1)
+				+sm
+					display: none
+			&:nth-child(2)
+				display: none
+				+sm
+					display: block
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border: 2px solid $color4
+			border-radius: 50%
+			opacity: 0
+			+trs
+		.no-touch &:hover
+			color: $color4
+			&:before
+				opacity: 1
+		.icon
+			&:nth-child(1)
+			&:nth-child(2)
+				display: none
+				
+	&__title
+		margin-left: 85px
+		+h3
+		max-width: 270px
+		+md
+			margin-left: 40px
+		+sm
+			max-width: 200px
+			margin-left: auto
+			margin-right: auto
+		
+	&__form
+		&:not(:first-child)
+			margin-top: 36px

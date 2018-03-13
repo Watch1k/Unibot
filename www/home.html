@@ -1048,7 +1048,7 @@
               <div class="loc__slider-counter-total"></div>
             </div>
             <div class="loc__slider-btn">
-              <a class="btn btn_default" href="#!">
+              <a class="btn btn_default js-modal" href="#!" data-target="#orderBot">
                 <span class="btn__text">Заказать себе бот</span>
                 <div class="btn__bg">
                   <svg class="btn__bg-1" viewbox="0 0 254 72" preserveAspectRatio="none">
@@ -1213,7 +1213,7 @@
               <div class="example__slider-counter-total"></div>
             </div>
             <div class="example__slider-btn">
-              <a class="btn btn_default" href="#!">
+              <a class="btn btn_default js-modal" href="#!" data-target="#orderBot">
                 <span class="btn__text">Заказать себе бот</span>
                 <div class="btn__bg">
                   <svg class="btn__bg-1" viewbox="0 0 254 72" preserveAspectRatio="none">
@@ -1376,7 +1376,7 @@
             </div>
           </div>
           <div class="top__btn-wrap">
-            <a class="btn btn_white" href="#!">
+            <a class="btn btn_white" href="#!" data-target="#orderBot">
               <span class="btn__text">Все статьи</span>
               <div class="btn__bg">
                 <svg class="btn__bg-2" viewbox="0 0 254 82" preserveAspectRatio="none">
@@ -1493,6 +1493,58 @@
         <p class="footer__copy">Copyright 2018 Unibot. All rights reserved.</p>
       </div>
     </footer>
+    <div class="modal modalit" id="orderBot" aria-hidden="true">
+      <div class="dialog">
+        <div class="modal__close" data-modal-btn="dismiss">
+          <svg class="icon icon-close">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+          </svg>
+          <svg class="icon icon-menu-close">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-close"></use>
+          </svg>
+        </div>
+        <div class="content">
+          <p class="modal__title">Бесплатный анализ вашего бизнеса</p>
+          <form class="form modal__form" action="#">
+            <div class="form__row form__row_half">
+              <div class="form__row">
+                <div class="form__row form__row_item has-error">
+                  <input class="form__input form__input_text" type="text" placeholder="Имя" />
+                  <div class="help-block">Ошибочка однако</div>
+                </div>
+                <div class="form__row form__row_item">
+                  <input class="form__input form__input_text" type="tel" placeholder="Телефон" />
+                  <div class="help-block">Ошибочка однако</div>
+                </div>
+                <div class="form__row form__row_item">
+                  <input class="form__input form__input_text" type="email" placeholder="E-mail" />
+                  <div class="help-block">Ошибочка однако</div>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__row form__row_item form__row_full-height">
+                  <textarea class="form__textarea" placeholder="Комментарий"></textarea>
+                  <div class="help-block">Ошибочка однако</div>
+                </div>
+              </div>
+            </div>
+            <div class="form__row form__row_simple form__row_center">
+              <button class="btn btn_default form__submit" type="submit">
+                <div class="btn__text">Отправить</div>
+                <div class="btn__bg">
+                  <svg class="btn__bg-1" viewbox="0 0 254 72" preserveAspectRatio="none">
+                    <path d="M36.000,0.000 L218.000,0.000 C237.882,0.000 254.000,16.118 254.000,36.000 L254.000,36.000 C254.000,55.882 237.882,72.000 218.000,72.000 L36.000,72.000 C16.118,72.000 0.000,55.882 0.000,36.000 L0.000,36.000 C0.000,16.118 16.118,0.000 36.000,0.000 Z"></path>
+                  </svg>
+                  <svg class="btn__bg-2" viewbox="0 0 254 82" preserveAspectRatio="none">
+                    <path d="M35.955,4.960 C51.683,1.770 81.250,-0.117 126.828,0.000 C172.385,0.117 203.634,1.246 218.000,5.000 C237.451,10.083 254.000,21.118 254.000,41.000 L254.000,41.000 C254.000,60.882 234.461,73.068 218.000,77.000 C204.753,80.164 172.621,82.000 127.181,82.000 C81.621,82.000 48.763,80.008 36.000,77.000 C22.578,73.837 0.000,60.882 0.000,41.000 L0.000,41.000 C0.000,21.118 19.644,8.269 35.955,4.960 Z"></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- Scripts-->
     <script src="static/js/index.min.js"></script>
   </body>

@@ -44,7 +44,6 @@ class Header {
 			item.addEventListener('click', (e) => {
 				if (item.href.indexOf('#') !== -1) {
 					e.preventDefault();
-					console.log('fine');
 					const href = item.href;
 					const hashName = href.slice(href.indexOf('#') + 1, href.length);
 					

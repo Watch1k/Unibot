@@ -2,6 +2,7 @@
 @import 'libs/vintage-reset-normalize';
 @import 'libs/reset-helper';
 @import '../../node_modules/tiny-slider/src/tiny-slider';
+@import 'libs/MODALit';
 @import 'libs/perfect-scrollbar';
 
 /* PARTIALS */
@@ -22,6 +23,8 @@
 @import 'components/btn';
 @import 'components/card';
 @import 'components/scrollbar';
+@import 'components/modal';
+@import 'components/form';
 
 /* PAGES */
 @import 'pages/home/home';
