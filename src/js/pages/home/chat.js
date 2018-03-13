@@ -6,6 +6,7 @@ import { css, Resp } from '../../modules/dev/helpers';
 class Chat {
 	constructor() {
 		this.container = document.querySelector('.chat');
+		if (!this.container) return;
 		this.initBtn = [...document.querySelectorAll('.js-chat-init')];
 		this.iconBot = this.container.querySelector('.chat__icon-bot');
 		this.closeBtn = this.container.querySelector('.chat__close-btn');
@@ -35,7 +36,7 @@ class Chat {
 			swipeEasing: false
 		});
 		
-		if (this.container) this.init();
+		this.init();
 	}
 	
 	init() {

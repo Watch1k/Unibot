@@ -6,12 +6,13 @@ import { css, Resp } from '../../modules/dev/helpers';
 class Section {
 	constructor() {
 		this.section = [...document.querySelectorAll('[data-scroll-section]')];
+		if (this.section.length < 2) return;
 		this.navigation = document.querySelector('.navigation');
 		this.navigationCurrent = this.navigation.querySelector('.navigation__current');
 		this.navigationTotal = this.navigation.querySelector('.navigation__total');
 		this.navigationBtn = document.querySelector('.navigation-btn');
 		
-		if (this.section) this.init();
+		this.init();
 	}
 	
 	init() {

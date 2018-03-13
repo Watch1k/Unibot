@@ -1,0 +1,17 @@
+extends ../extend/default
+
+block variables
+	- var title = '404 page';
+	-footerOff = true
+
+block main
+	main.content(data-page='404')
+		+b.b-404
+			+e.bg
+				img(src='static/img/content/bg-404.jpg' alt='image')
+			+e.content
+				+e.P.content-text Не ошибается только тот, кто спит.
+				+e.content-btn
+					-btnClass = '_default'
+					-btnText = 'Вернуться на главную'
+					include ../components/btn

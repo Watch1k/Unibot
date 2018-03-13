@@ -1,6 +1,6 @@
 import { TimelineMax, TweenMax } from 'gsap';
 import 'gsap/ScrollToPlugin';
-import { css, Resp, throttle } from '../modules/dev/helpers';
+import { css, currentPage, Resp, throttle } from '../modules/dev/helpers';
 
 class Header {
 	constructor() {
@@ -105,6 +105,7 @@ class Header {
 	}
 	
 	prepareMobile() {
+		if (currentPage !== 'home') return;
 		const li = document.createElement('li');
 		
 		[...this.nav.children][0].prepend(li);

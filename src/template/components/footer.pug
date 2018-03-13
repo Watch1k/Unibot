@@ -1,56 +1,58 @@
-+b.FOOTER.footer#footer(data-scroll-section)
-	div(data-line)
+if !footerOff
 
-	+e.mobile-top.js-to-top
-		+i('mobile-top')
+	+b.FOOTER.footer#footer(data-scroll-section)
+		div(data-line)
 
-	+e.round-top
-		.
-			<svg viewBox="0 0 1282 81">
-			<path d="M0,81h641.4C320.9,81,0,0,0,0V81z"/>
-			<path d="M1282,0c0,0-319.6,81-639.6,81H1282v-81H1282z"/>
-			</svg>
+		+e.mobile-top.js-to-top
+			+i('mobile-top')
 
-	+e.container.container
-		+e.title Контакты
+		+e.round-top
+			.
+				<svg viewBox="0 0 1282 81">
+				<path d="M0,81h641.4C320.9,81,0,0,0,0V81z"/>
+				<path d="M1282,0c0,0-319.6,81-639.6,81H1282v-81H1282z"/>
+				</svg>
 
-		+e.list
-			+e.list-col
-				+e.list-address.__list-text
-					p 05624, Украина, Киев
-					p ул. Ярославская, 56
-				+e.list-time.__list-text
-					p Пн-Пт: 9:00-18:00
-					p Сб: 9:00-14:00
-					p Вс: выходной
-			+e.list-col
-				+e.list-phone.__list-text
-					p Телефон:
-					a(href='tel: +380999318500') +38 (099)-931-85-00
-				+e.list-mail.__list-text
-					p Почта:
-					a(href='mailto: info@unibot.a') info@unibot.a
-			+e.list-col
-				+e.list-soc-text.__list-text
-					p Мы в
-					p социальных сетях:
-				+e.list-soc.__list-text
-					-socList = ['telegram', 'fb', 'insta']
-					each el in socList
-						+e.list-soc-icon-wrap
-							-socIconClass = '_default __list-soc-icon'
-							-socIcon = el
-							-socHref = true
-							include soc-icon
+		+e.container.container
+			+e.title Контакты
 
-		+e.bot
-			+e.bot-logo(href='#!')
-				+e.bot-logo-img(src='static/img/logo.svg' alt='image')
-			+e.bot-right
-				-navList = ['Преимущества', 'Как это работает', 'Сферы деятельности', 'Как создаем', 'Кейсы', 'Блог', 'Контакты']
-				+e.NAV.bot-nav
-					ul
-						each el in navList
-							li: a(href='#!')= el
+			+e.list
+				+e.list-col
+					+e.list-address.__list-text
+						p 05624, Украина, Киев
+						p ул. Ярославская, 56
+					+e.list-time.__list-text
+						p Пн-Пт: 9:00-18:00
+						p Сб: 9:00-14:00
+						p Вс: выходной
+				+e.list-col
+					+e.list-phone.__list-text
+						p Телефон:
+						a(href='tel: +380999318500') +38 (099)-931-85-00
+					+e.list-mail.__list-text
+						p Почта:
+						a(href='mailto: info@unibot.a') info@unibot.a
+				+e.list-col
+					+e.list-soc-text.__list-text
+						p Мы в
+						p социальных сетях:
+					+e.list-soc.__list-text
+						-socList = ['telegram', 'fb', 'insta']
+						each el in socList
+							+e.list-soc-icon-wrap
+								-socIconClass = '_default __list-soc-icon'
+								-socIcon = el
+								-socHref = true
+								include soc-icon
 
-		+e.P.copy Copyright  2018 Unibot. All rights reserved.
+			+e.bot
+				+e.bot-logo(href='#!')
+					+e.bot-logo-img(src='static/img/logo.svg' alt='image')
+				+e.bot-right
+					-navList = ['Преимущества', 'Как это работает', 'Сферы деятельности', 'Как создаем', 'Кейсы', 'Блог', 'Контакты']
+					+e.NAV.bot-nav
+						ul
+							each el in navList
+								li: a(href='#!')= el
+
+			+e.P.copy Copyright  2018 Unibot. All rights reserved.

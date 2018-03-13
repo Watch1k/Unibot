@@ -19,9 +19,11 @@ import Home from './pages/Home';
  * Run appropriate scripts for each page.
  **/
 switch (currentPage) {
-	/** Home page */
 	case 'home':
 		new Home;
+		break;
+	
+	case '404':
 		break;
 	
 	/** No page found */

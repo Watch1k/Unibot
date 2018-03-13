@@ -36,8 +36,13 @@
 	&__container
 		+sm
 			height: 100%
+			display: flex
+			align-items: center
+			padding-top: 30px
 		+mob-fix
 			height: auto
+			display: block
+			padding-top: 0
 	
 	&__content
 		position: relative
@@ -60,20 +65,6 @@
 				margin-left: auto
 				margin-right: auto
 				padding: 0
-			+sm
-				position: absolute
-				bottom: 30px
-				left: 20px
-				right: 20px
-				max-width: 420px
-				margin-left: 0
-				margin-right: 0
-			+mob-fix
-				position: relative
-				top: auto
-				left: auto
-				right: auto
-				bottom: auto
 	
 	&__title
 		+h1
