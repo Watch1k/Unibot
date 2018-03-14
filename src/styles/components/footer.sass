@@ -1,10 +1,11 @@
 .footer
+	$parent: &
 	position: relative
 	overflow: hidden
 	color: $color6
 	background-size: 100% auto
 	background-image: linear-gradient(-197deg, #1e14a8 0%, $color4 100%)
-	padding-bottom: 130px
+	padding-bottom: 75px
 	+md
 		padding-bottom: 60px
 	+sm
@@ -24,9 +25,11 @@
 		+sm
 			content: none
 			display: none
-	
-	[data-line]
-		z-index: 4
+	&_contacts
+		background-image: linear-gradient(to top, #1e14a8 0%, $color4 100%)
+		&:before
+			display: none
+			content: none
 	
 	&__round-top
 		z-index: 1
@@ -113,8 +116,8 @@
 				left: 10px
 		&-soc
 			position: relative
-			top: -5px
-			font-size: 20px
+			top: -9px
+			font-size: 26px
 			color: $color4
 			display: flex
 			+sm
@@ -129,7 +132,7 @@
 			&-icon-wrap
 				position: relative
 				&:not(:first-child)
-					margin-left: 20px
+					margin-left: 15px
 				&:before,
 				&:after
 					pointer-events: none
@@ -254,3 +257,13 @@
 			margin-top: 18px
 			font-size: 12px
 			line-height: 24px
+			
+	// callback
+	&__callback
+		&-title
+			+h2
+			
+		&-form
+			max-width: 720px
+			&:not(:first-child)
+				margin-top: 69px

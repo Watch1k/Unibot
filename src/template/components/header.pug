@@ -2,6 +2,7 @@
 	+e.container.container
 		+e.logo(href='home.html')
 			+e.logo-img(src='static/img/logo.svg' alt='image')
+			+e.logo-img(src='static/img/logo-dark.svg' alt='image')
 		+e.right
 			+e.NAV.nav
 				ul
@@ -10,7 +11,7 @@
 					li: a(href='#loc') Сферы деятельности
 					li: a(href='#how') Как создаем
 					li: a(href='#example') Кейсы
-					li: a(href='home.html') Блог
+					//li: a(href='home.html') Блог
 					li: a(href='home.html') Контакты
 
 			+e.chat(href='#!')
@@ -29,4 +30,4 @@
 				+i('menu-close')
 
 			+e.mobile-chat-btn
-				a(href='#!') ЧАТ С БОТОМ
+				a(href='#!' target='_blank') ЧАТ С БОТОМ

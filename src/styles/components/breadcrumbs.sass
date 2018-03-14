@@ -1,0 +1,25 @@
+.breadcrumbs
+	margin-top: 34px
+	&:not(:last-child)
+		margin-bottom: 21px
+	ul
+		display: flex
+		li
+			position: relative
+			&:not(:first-child)
+				margin-left: 40px
+				&:before
+					content: ''
+					position: absolute
+					bottom: 7px
+					left: -22px
+					width: 4px
+					height: 4px
+					border-radius: 50%
+					background-color: $color4
+			a
+				display: block
+				color: $color4
+				+trs
+				.no-touch &:hover
+					color: $color3

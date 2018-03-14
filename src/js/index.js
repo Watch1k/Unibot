@@ -10,9 +10,9 @@
 import 'babel-polyfill';
 import './components/Common';
 import './components/PublicAPI';
-
-import { currentPage } from './modules/dev/helpers';
 /** Import page controllers */
+import { currentPage } from './modules/dev/helpers';
+import Contacts from './pages/contacts';
 import Home from './pages/Home';
 
 /**
@@ -24,6 +24,10 @@ switch (currentPage) {
 		break;
 	
 	case '404':
+		break;
+	
+	case 'contacts':
+		new Contacts;
 		break;
 	
 	/** No page found */

@@ -1,0 +1,48 @@
+extends ../extend/default
+
+block variables
+	- var title = 'Contacts page';
+	-footerContacts = true
+
+block main
+	main.content(data-page='contacts')
+		+b.breadcrumbs
+			+e.container.container_md
+				ul
+					li: a(href='#!') Главная
+					li: a(href='#!') Контакты
+		+b.SECTION.contacts
+			+e.container.container_md
+				+e.H1.title Контакты
+				+e.row
+					+e.col_left
+						+e.list
+							+e.list-col
+								+e.list-address.__list-text
+									p 05624, Украина, Киев
+									p ул. Ярославская, 56
+								+e.list-time.__list-text
+									p Пн-Пт: 9:00-18:00
+									p Сб: 9:00-14:00
+									p Вс: выходной
+							+e.list-col
+								+e.list-phone.__list-text
+									p Телефон:
+									a(href='tel: +380999318500') +38 (099)-931-85-00
+								+e.list-mail.__list-text
+									p Почта:
+									a(href='mailto: info@unibot.a') info@unibot.a
+							+e.list-col
+								+e.list-soc-text.__list-text
+									p Мы в
+									p социальных сетях:
+								+e.list-soc.__list-text
+									-socList = ['telegram', 'fb', 'insta']
+									each el in socList
+										+e.list-soc-icon-wrap
+											-socIconClass = '_default __list-soc-icon'
+											-socIcon = el
+											-socHref = true
+											include ../components/soc-icon
+
+					+e.col_right

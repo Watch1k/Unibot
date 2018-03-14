@@ -17,6 +17,9 @@ body
 
 main
 	overflow: hidden
+	.is-sub &
+		padding-top: 120px
+	
 	
 .container
 	position: relative
@@ -26,6 +29,9 @@ main
 		max-width: 768px
 		padding-left: 20px
 		padding-right: 20px
+	&_md
+		padding-left: 70px
+		padding-right: 70px
 	
 .row
 	position: relative
@@ -34,27 +40,3 @@ main
 button
 	border: none
 	
-[data-line]
-	pointer-events: none
-	position: absolute
-	z-index: 0
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0
-	opacity: 0.1
-	+md
-		display: none !important
-	&:before,
-	&:after
-		content: ''
-		position: absolute
-		left: 50%
-		top: 0
-		height: 100%
-		width: 1px
-		background-color: $color5
-	&:before
-		margin-left: -515px
-	&:after
-		margin-left: 516px

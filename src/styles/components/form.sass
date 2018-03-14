@@ -1,4 +1,10 @@
 .form
+	$parent: &
+	
+	&_contacts
+		+sm
+			max-width: 335px
+	
 	&__row
 		position: relative
 		&_simple
@@ -26,6 +32,8 @@
 				height: 1px
 				background-color: $color6
 				+trs
+				#{$parent}_contacts &
+					right: 41px
 			&.has-error
 				&:before,
 				&:after
@@ -36,6 +44,12 @@
 			display: flex
 			margin-left: -15px
 			margin-right: -15px
+			#{$parent}_contacts &
+				margin-left: -25px
+				margin-right: -25px
+				+sm
+					margin-left: 0
+					margin-right: 0
 			+sm
 				display: block
 				margin-left: 0
@@ -45,6 +59,14 @@
 			max-width: calc(50% - 30px)
 			margin-left: 15px
 			margin-right: 15px
+			#{$parent}_contacts &
+				margin-left: 25px
+				margin-right: 25px
+				max-width: calc(50% - 50px)
+				+sm
+					margin-left: 0
+					margin-right: 0
+					max-width: none
 			+sm
 				max-width: none
 				margin-left: 0
@@ -66,6 +88,8 @@
 		+placeholder(rgba($color6,.2))
 		+sm
 			font-size: 16px
+		#{$parent}_contacts &
+			padding-right: 41px
 		
 	&__textarea
 		padding: 4px 24px 4px 0
@@ -95,3 +119,12 @@
 		+trs
 	&__row.has-error .help-block
 		opacity: 1
+		
+	&__submit
+		margin-left: -30px
+		+sm
+			margin-left: 0
+		#{$parent}_contacts &
+			margin-left: 384px
+			+sm
+				margin-left: 0

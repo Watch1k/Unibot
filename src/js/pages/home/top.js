@@ -5,6 +5,7 @@ import { Resp } from '../../modules/dev/helpers';
 export default class HomeTop {
 	constructor() {
 		this.container = document.querySelector('.top');
+		if (!this.container) return;
 		this.cards = [...this.container.querySelectorAll('.card')];
 		this.cardTitleName = '.card__title';
 		this.cardTextName = '.card__text';

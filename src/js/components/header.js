@@ -14,7 +14,7 @@ class Header {
 	}
 	
 	init() {
-		this.initScroll();
+		if (currentPage === 'home') this.initScroll();
 		this.initLang();
 		if (!Resp.isDesk) {
 			this.prepareMobile();

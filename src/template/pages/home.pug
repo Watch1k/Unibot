@@ -2,6 +2,7 @@ extends ../extend/default
 
 block variables
 	- var title = 'Home page';
+	-homePage = true
 
 block main
 	main.content(data-page='home')
@@ -26,7 +27,7 @@ block main
 		include home/loc
 		include home/advantage
 		include home/example
-		include home/top
+		//include home/top
 
 block modals
 	+b.modal.modalit#orderBot(aria-hidden='true')

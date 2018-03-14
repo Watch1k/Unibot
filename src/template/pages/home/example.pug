@@ -1,5 +1,4 @@
 +b.SECTION.example#example(data-scroll-section)
-	div(data-line)
 	+e.container.container
 		+e.H2.title Примеры работ
 
@@ -16,10 +15,10 @@
 					}
 				include ../../components/btn
 			+e.slider-chat
-				+e.P.slider-chat-text(href='#!' data-text-mobile='Поговорить с этим ботом') Поговорить с ботом
-				+e.slider-chat-icon(href='#!')
+				+e.slider-chat-text(href='#!' target='_blank' data-text-mobile='Поговорить с этим ботом') Поговорить с ботом
+				+e.slider-chat-icon(href='#!' target='_blank')
 					+i('telegram')
-				+e.slider-chat-icon(href='#!')
+				+e.slider-chat-icon(href='#!' target='_blank')
 					+i('facebook')
 			+e.slider
 				+e.slider-item

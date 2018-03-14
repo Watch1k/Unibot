@@ -1,0 +1,112 @@
+.contacts
+	padding-bottom: 200px
+	&__title
+		+h2
+		
+	&__list
+		position: relative
+		margin-top: 66px
+		display: flex
+		flex-wrap: wrap
+		+md
+			padding: 0
+		+sm
+			margin-top: 19px
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+			margin-left: -10px
+			margin-right: -10px
+		a
+			+trs
+			.no-touch &:hover
+				color: $color4
+		&-col
+			padding-right: 38px
+			max-width: 33.333%
+			+sm
+				max-width: none
+				margin-left: 149px
+				padding-right: 0
+				order: 1
+			&:nth-child(1)
+				+sm
+					margin-top: 10px
+			&:nth-child(2)
+				+sm
+					order: -1
+			&:nth-child(3)
+				margin-top: 20px
+				width: 100%
+				max-width: none
+				+sm
+					margin-top: 0
+		&-text
+			&:not(:first-child)
+				margin-top: 20px
+				+sm
+					margin-top: 10px
+		&-mail
+			+sm
+				position: absolute
+				top: 40px
+				left: 10px
+			a
+				color: $color4
+				.no-touch &:hover
+					color: $color2
+		&-soc
+			position: relative
+			top: -9px
+			font-size: 26px
+			color: $color4
+			display: flex
+			+sm
+				position: absolute
+				top: 5px
+				left: 10px
+			.icon
+				display: block
+			&-text
+				+sm
+					display: none
+			&-icon-wrap
+				position: relative
+				&:not(:first-child)
+					margin-left: 15px
+				&:before,
+				&:after
+					pointer-events: none
+					content: ''
+					position: absolute
+					top: calc(100% + 5px)
+					left: calc(50% - 2px)
+					width: 4px
+					height: 4px
+					border-radius: 50%
+					background-color: $color8
+					opacity: 0
+					+trs
+				.no-touch &:hover
+					&:before
+						opacity: 1
+						left: calc(50% - 12px)
+					&:after
+						opacity: 1
+						left: calc(50% + 8px)
+			&-icon
+				&:before
+					pointer-events: none
+					content: ''
+					position: absolute
+					top: calc(100% + 5px)
+					left: calc(50% - 2px)
+					width: 4px
+					height: 4px
+					border-radius: 50%
+					background-color: $color8
+					opacity: 0
+					+trs
+				.no-touch &:hover
+					&:before
+						opacity: 1

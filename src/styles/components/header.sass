@@ -7,6 +7,9 @@
 	+f('MullerRegular',16,32,0)
 	color: $color6
 	$parent: &
+	.is-sub &
+		+desk
+			color: $color7
 	+md
 		position: absolute
 	&.is-fixed
@@ -37,6 +40,15 @@
 		&-img
 			width: 100%
 			height: 100%
+			+desk
+				&:nth-child(1)
+					.is-sub &
+						display: none
+			&:nth-child(2)
+				display: none
+				+desk
+					.is-sub &
+						display: block
 			
 	&__right
 		position: relative
