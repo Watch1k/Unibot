@@ -46570,20 +46570,36 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _helpers = __webpack_require__(14);
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Contacts = function () {
 	function Contacts() {
 		_classCallCheck(this, Contacts);
 
-		this.init();
+		this.container = document.querySelector('.contacts');
+		this.mapContainer = this.container.querySelector('.contacts__map');
+		this.mapCenter = this.mapContainer.getAttribute('data-map-center').split(',').map(parseFloat);
+		this.mapSettings = {
+			center: new google.maps.LatLng(this.mapCenter[0], this.mapCenter[1]),
+			zoom: 17
+		};
+		this.markerSettings = {
+			position: this.mapSettings.center,
+			icon: {
+				url: this.mapContainer.getAttribute('data-marker-path'),
+				scaledSize: new google.maps.Size(32, 42)
+			}
+		};
+
+		if (this.container) this.init();
 	}
 
 	_createClass(Contacts, [{
 		key: 'init',
-		value: function init() {}
+		value: function init() {
+			this.markerSettings.map = new google.maps.Map(this.mapContainer, this.mapSettings);
+			new google.maps.Marker(this.markerSettings);
+		}
 	}]);
 
 	return Contacts;
@@ -70001,7 +70017,7 @@ var Chat = function () {
 		this.paddingBottom = _helpers.Resp.isMobile ? 180 : 120;
 		this.controlsMinHeight = _helpers.Resp.isMobile ? 38 : 83;
 		this.chatHeight = this.contentChat.clientHeight + this.paddingBottom + this.controlsMinHeight;
-		this.eventTarget = 0;
+		this.eventTarget = this.dataBotContainer.children[0].getAttribute('data-bot');
 		this.ps = new _perfectScrollbar2.default(this.contentChat, {
 			wheelSpeed: 0.5,
 			wheelPropagation: true,

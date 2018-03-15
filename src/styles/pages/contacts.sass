@@ -3,6 +3,11 @@
 	&__title
 		+h2
 		
+	&__row
+		display: flex
+		
+	&__col
+	
 	&__list
 		position: relative
 		margin-top: 66px
@@ -23,7 +28,7 @@
 				color: $color4
 		&-col
 			padding-right: 38px
-			max-width: 33.333%
+			max-width: 50%
 			+sm
 				max-width: none
 				margin-left: 149px
@@ -33,6 +38,7 @@
 				+sm
 					margin-top: 10px
 			&:nth-child(2)
+				padding-right: 0
 				+sm
 					order: -1
 			&:nth-child(3)
@@ -110,3 +116,8 @@
 				.no-touch &:hover
 					&:before
 						opacity: 1
+						
+	&__map
+		width: 597px
+		height: 437px
+		background-color: #cccccc

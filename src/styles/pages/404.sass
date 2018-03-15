@@ -14,6 +14,15 @@
 			+ratio-in
 			z-index: 0
 			+cover-img
+			img
+				&:nth-child(1)
+					display: block
+					+portrait
+						display: none
+				&:nth-child(2)
+					display: none
+					+portrait
+						display: block
 		&__content
 			padding-top: 180px
 			position: relative
@@ -22,8 +31,10 @@
 			flex-direction: column
 			align-items: center
 			justify-content: center
+			+md
+				padding-top: 5px
 			+tab-fix
-				padding-top: 100px
+				padding-top: 90px!important
 			+sm
 				padding-top: 80px
 			&-text

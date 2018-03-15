@@ -29,7 +29,7 @@ class Chat {
 		this.paddingBottom = Resp.isMobile ? 180 : 120;
 		this.controlsMinHeight = Resp.isMobile ? 38 : 83;
 		this.chatHeight = this.contentChat.clientHeight + this.paddingBottom + this.controlsMinHeight;
-		this.eventTarget = 0;
+		this.eventTarget = this.dataBotContainer.children[0].getAttribute('data-bot');
 		this.ps = new PerfectScrollbar(this.contentChat, {
 			wheelSpeed: 0.5,
 			wheelPropagation: true,

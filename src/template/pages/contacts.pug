@@ -3,6 +3,7 @@ extends ../extend/default
 block variables
 	- var title = 'Contacts page';
 	-footerContacts = true
+	-map = true
 
 block main
 	main.content(data-page='contacts')
@@ -46,3 +47,5 @@ block main
 											include ../components/soc-icon
 
 					+e.col_right
+						+e.map-wrap
+							+e.map(data-map-center='50.471035, 30.517021' data-marker-path='static/img/map-marker.svg')

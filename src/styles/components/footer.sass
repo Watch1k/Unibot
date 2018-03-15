@@ -11,17 +11,15 @@
 	+sm
 		padding-bottom: 46px
 		background-image: linear-gradient(to bottom, $color2 0%, $color4 100%)
-	&:before
+	&__map-image
 		pointer-events: none
-		content: ''
 		position: absolute
 		z-index: 0
 		top: 0
 		left: calc(50% - 245px)
 		width: 885px
 		height: 590px
-		background: transparent url('../img/footer-map.png') center center no-repeat
-		background-size: cover
+		+cover-img
 		+sm
 			content: none
 			display: none
