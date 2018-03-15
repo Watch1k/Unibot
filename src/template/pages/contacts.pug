@@ -48,4 +48,10 @@ block main
 
 					+e.col_right
 						+e.map-wrap
+							+e.map-mask
+								+e.map-mask-jelly
+									img(src='static/img/map-jelly.svg' alt='image')
+								+e.map-mask-mouse
+									svg(xmlns='http://www.w3.org/2000/svg', x='0px', y='0px', viewbox='0 0 598.8 438.1')
+										path(fill='transparent' d='M0,0v438.1h598.8V0H0z M518.3,327.8c-83.7,71.6-304.1,139.4-417.4,29.8s-73-193.6,9.5-246.2c82.5-52.6,241.7-142.7,354.1-45S602,256.2,518.3,327.8z')
 							+e.map(data-map-center='50.471035, 30.517021' data-marker-path='static/img/map-marker.svg')

@@ -10,6 +10,7 @@ class Header {
 		this.menuBtn = this.container.querySelector('.header__menu-btn');
 		this.mobileChatBtn = this.container.querySelector('.header__mobile-chat-btn');
 		this.lang = this.container.querySelector('.header__lang');
+		this.logo = this.container.querySelector('.header__logo');
 		
 		this.init();
 	}
@@ -88,6 +89,8 @@ class Header {
 		
 		this.menuBtn.addEventListener('click', () => {
 			this.menuBtn.classList.toggle(css.active);
+			this.logo.classList.toggle(css.menu);
+			this.lang.classList.toggle(css.menu);
 			if (this.menuBtn.classList.contains(css.active)) {
 				this.container.classList.add(css.fixed);
 				navTl.timeScale(1).play();

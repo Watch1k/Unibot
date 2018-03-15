@@ -40,15 +40,22 @@
 		&-img
 			width: 100%
 			height: 100%
-			+desk
-				&:nth-child(1)
-					.is-sub &
-						display: none
+			+trs
+			&:nth-child(1)
+				.is-sub &
+					opacity: 0
 			&:nth-child(2)
-				display: none
-				+desk
-					.is-sub &
-						display: block
+				position: absolute
+				top: 0
+				left: 0
+				opacity: 0
+				.is-sub &
+					opacity: 1
+		.is-sub &.is-menu &-img
+			&:nth-child(1)
+				opacity: 1
+			&:nth-child(2)
+				opacity: 0
 			
 	&__right
 		position: relative
@@ -204,6 +211,11 @@
 		margin-right: -15px
 		text-transform: uppercase
 		cursor: pointer
+		+trs
+		.is-sub &
+			color: $color7
+			&.is-menu
+				color: $color6
 		+sm
 			+f('MullerMedium',14,32,0)
 			margin-top: -18px
@@ -268,6 +280,9 @@
 		margin-left: 15px
 		top: 7px
 		z-index: 2
+		color: $color6
+		.is-sub &
+			color: $color7
 		+md
 			display: block
 		+sm

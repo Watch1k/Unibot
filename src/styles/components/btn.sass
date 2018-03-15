@@ -1,4 +1,5 @@
 .btn
+	$parent: &
 	position: relative
 	display: inline-block
 	padding: 18px 40px 22px
@@ -17,97 +18,91 @@
 		position: relative
 		display: block
 		z-index: 2
-	.no-touch &:hover &__text
-		animation: 0.35s btnTextAnim cubic-bezier(0.18, 0.89, 0.32, 1.28) alternate
 	
 	&__bg
 		+ratio-in
 		z-index: 1
-		&-1
-			position: relative
-			z-index: 2
-			fill: $color4
-			width: 100%
-			height: 100%
-			transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.14)
-		&-2
-			+ratio-in
-			top: -5px
-			z-index: 1
-			fill: $color4
-			width: 100%
-			height: calc(100% + 10px)
-			transform: scaleX(0.95) scaleY(0.7)
-			transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.14)
-		&-3
-			+ratio-in
-			top: -5px
-			z-index: 1
-			fill: $color4
-			width: 100%
-			height: calc(100% + 10px)
-			transform: scaleX(0.95) scaleY(0.7)
-			transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.14)
-	.no-touch &:hover &__bg-1
-		transform: scaleY(0.7)
-		transition: all 0.3s cubic-bezier(0, 0, 0, 1)
-	.no-touch &:hover &__bg-2
-		transform: translateZ(0)
-		transition: all 0.3s cubic-bezier(0, 0, 0, 1)
-	.no-touch &:hover &__bg-3
-		transform: none
-		transition: all 0.3s cubic-bezier(0, 0, 0, 1)
+		background-color: $color4
+		border-radius: 5000px
+		&-left
+			position: absolute
+			top: calc(50% - 2px)
+			left: 0
+			display: flex
+			&-dot
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background-color: $color6
+				margin-left: 6px
+				opacity: 0
+				+trs
+				&:nth-child(1)
+					transform: translateX(30px)
+					transition-delay: 0.3s
+					.no-touch #{$parent}:hover &
+						transform: translateX(0)
+						transition-delay: 0s
+				&:nth-child(2)
+					transform: translateX(20px)
+					transition-delay: 0.15s
+					.no-touch #{$parent}:hover &
+						transform: translateX(0)
+						transition-delay: 0.15s
+				&:nth-child(3)
+					transform: translateX(10px)
+					transition-delay: 0s
+					.no-touch #{$parent}:hover &
+						transform: translateX(0)
+						transition-delay: 0.3s
+				.no-touch #{$parent}:hover &
+					opacity: 1
+					transform: translateX(0)
+		&-right
+			position: absolute
+			top: calc(50% - 2px)
+			right: 0
+			display: flex
+			&-dot
+				width: 4px
+				height: 4px
+				border-radius: 50%
+				background-color: $color6
+				margin-right: 6px
+				opacity: 0
+				+trs
+				.no-touch &:hover
+					opacity: 1
+					transform: translateX(0)
+				&:nth-child(3)
+					transform: translateX(-30px)
+					transition-delay: 0.3s
+					.no-touch #{$parent}:hover &
+						transform: translateX(0)
+						transition-delay: 0s
+				&:nth-child(2)
+					transform: translateX(-20px)
+					transition-delay: 0.15s
+					.no-touch #{$parent}:hover &
+						transform: translateX(0)
+						transition-delay: 0.15s
+				&:nth-child(1)
+					transform: translateX(-10px)
+					transition-delay: 0s
+					.no-touch #{$parent}:hover &
+						transform: translateX(0)
+						transition-delay: 0.3s
+				.no-touch #{$parent}:hover &
+					opacity: 1
+					transform: translateX(0)
 
 	// white
 	&_white
 		padding: 18px 40px 24px
 		color: $color4
 	&_white &__bg
-		&:after
-			content: ''
-			position: absolute
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			border: 2px solid $color4
-			border-radius: 36px
-			background-color: $color6
-			transition: all 0.25s ease
-		&-2
-			z-index: -1
-			top: -5px
-			left: -2px
-			right: -2px
-			width: calc(100% + 4px)
-			transition: all 0.25s ease
-		&-3
-			z-index: 2
-			top: -3px
-			left: 0
-			right: 0
-			width: 100%
-			height: 78px
-			fill: $color6
-			transition: all 0.25s ease
-			+sm
-				height: 63px
-	.no-touch &_white:hover &__bg
-		&:after
-			transform: scaleX(0.95) scaleY(0.7)
-			transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.4)
-	.no-touch &_white:hover &__bg-2
-		transform: none
-		transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.4)
-	.no-touch &_white:hover &__bg-3
-		transform: none
-		transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.4)
-			
-	
-@keyframes btnTextAnim
-	0%
-		transform: translateZ(0)
-	50%
-		transform: scaleX(1.0125) scaleY(1.025) translateZ(0) perspective(1px)
-	100%
-		transform: translateZ(0)
+		background-color: transparent
+		border: 2px solid $color4
+		&-left-dot,
+		&-right-dot
+			background-color: $color4

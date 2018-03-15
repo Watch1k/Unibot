@@ -49,7 +49,6 @@
 		top: 0
 		left: 0
 		right: 0
-		+gpu
 		+ratio(1280,77)
 		position: absolute
 		svg
@@ -274,7 +273,9 @@
 			
 	// callback
 	&__callback
-		padding-top: 102px
+		padding-top: 202px
+		+mac
+			padding-top: 102px
 		&-logo
 			position: absolute
 			right: 0

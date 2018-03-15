@@ -79,6 +79,7 @@ export class Resp {
  * @type {Object}
  */
 export const css = {
+	menu: 'is-menu',
 	error: 'has-error',
 	fixed: 'is-fixed',
 	active: 'is-active',

@@ -21,18 +21,18 @@ class Modal {
 			
 			new MODALit({
 				el: btn,
-				transition: Resp.isMobile ? 'zoom' : 'slideDown',
-				fixed: Resp.isDesk,
+				transition: 'zoom',
+				fixed: true,
 				events: {
 					show() {
-						if (Resp.isDesk) return;
+						if (!Resp.isMobile) return;
 						this.scrollTop = window.pageYOffset;
 						setTimeout(() => {
 							document.querySelector('body').classList.add(css.fixed);
 						}, 500);
 					},
 					hide() {
-						if (Resp.isDesk) return;
+						if (!Resp.isMobile) return;
 						document.querySelector('body').classList.remove(css.fixed);
 						window.scrollTo(0, this.scrollTop);
 					}
