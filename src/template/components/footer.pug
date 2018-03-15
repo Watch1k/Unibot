@@ -4,14 +4,17 @@ if !footerOff
 			+e.mobile-top.js-to-top
 				+i('mobile-top')
 
-			//+e.round-top
+			+e.round-contacts-top
 				.
-					<svg viewBox="0 0 1282 81">
-					<path d="M0,81h641.4C320.9,81,0,0,0,0V81z"/>
-					<path d="M1282,0c0,0-319.6,81-639.6,81H1282v-81H1282z"/>
+					<svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 1280 76.6">
+					<path d="M0,0c0,0,391.7,76.6,789.7,76.6c248,0,490.3-66.6,490.3-66.6V0H0z"/>
 					</svg>
 
+
 			+e.callback
+				+e.callback-logo
+					img(src='static/img/logo-footer.png' alt='image')
+
 				+e.callback-container.container_md
 					+e.H3.callback-title Обратная связь
 
@@ -105,11 +108,14 @@ if !footerOff
 					+e.bot-logo(href='#!')
 						+e.bot-logo-img(src='static/img/logo.svg' alt='image')
 					+e.bot-right
-						//-navList = ['Преимущества', 'Как это работает', 'Сферы деятельности', 'Как создаем', 'Кейсы', 'Блог', 'Контакты']
-						-navList = ['Преимущества', 'Как это работает', 'Сферы деятельности', 'Как создаем', 'Кейсы', 'Контакты']
 						+e.NAV.bot-nav
 							ul
-								each el in navList
-									li: a(href='#!')= el
+								li: a(href='#advantage') Преимущества
+								li: a(href='#how') Как это работает
+								li: a(href='#loc') Сферы деятельности
+								li: a(href='#how') Как создаем
+								li: a(href='#example') Кейсы
+								//li: a(href='home.html') Блог
+								li: a(href='home.html') Контакты
 
 				+e.P.copy Copyright  2018 Unibot. All rights reserved.

@@ -46,11 +46,27 @@
 			fill: $color6
 			transform: scaleX(1.01)
 			
+	&__round-contacts-top
+		z-index: 1
+		top: 0
+		left: 0
+		right: 0
+		+gpu
+		+ratio(1280,77)
+		position: absolute
+		svg
+			+ratio-in
+			display: block
+			width: 100% !important
+			fill: $color6
+			
 	&__container
 		padding-top: 71px
 		z-index: 2
 		+sm
 			padding-top: 49px
+	&_contacts &__container
+		padding-top: 16px
 	
 	&__mobile-top
 		display: none
@@ -260,6 +276,15 @@
 			
 	// callback
 	&__callback
+		padding-top: 102px
+		&-logo
+			position: absolute
+			right: 0
+			top: 0
+			width: 414px
+			height: 446px
+			+cover-img
+			
 		&-title
 			+h2
 			

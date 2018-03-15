@@ -6,6 +6,7 @@ class Header {
 	constructor() {
 		this.container = document.querySelector('.header');
 		this.nav = this.container.querySelector('.header__nav');
+		this.navFooter = document.querySelector('.footer__bot-nav');
 		this.menuBtn = this.container.querySelector('.header__menu-btn');
 		this.mobileChatBtn = this.container.querySelector('.header__mobile-chat-btn');
 		this.lang = this.container.querySelector('.header__lang');
@@ -41,6 +42,23 @@ class Header {
 		const offsetTop = Resp.isMobile ? 50 : Resp.isTablet ? 25 : 0;
 		
 		[...this.nav.querySelectorAll('a')].forEach(item => {
+			item.addEventListener('click', (e) => {
+				if (item.href.indexOf('#') !== -1) {
+					e.preventDefault();
+					const href = item.href;
+					const hashName = href.slice(href.indexOf('#') + 1, href.length);
+					
+					TweenMax.to(window, 1.5, {
+						scrollTo: {
+							y: document.getElementById(hashName).getBoundingClientRect().top + window.pageYOffset - offsetTop,
+							autoKill: false
+						}
+					});
+				}
+			});
+		});
+		
+		[...this.navFooter.querySelectorAll('a')].forEach(item => {
 			item.addEventListener('click', (e) => {
 				if (item.href.indexOf('#') !== -1) {
 					e.preventDefault();
