@@ -18,6 +18,8 @@
 			max-width: 430px
 		&_right
 			position: relative
+			+md
+				margin-top: 40px
 	
 	&__list
 		position: relative
@@ -138,11 +140,25 @@
 			top: 1px
 			left: 1px
 			width: calc(597px - 2px)
+		+sm
+			width: calc(100% - 2px)
+			max-width: calc(420px - 2px)
 	&__map
 		width: calc(597px - 2px)
 		height: calc(437px - 2px)
+		+sm
+			width: calc(100% - 2px)
+			height: auto
+			+ratio(595,435)
 		.gm-bundled-control
 			transform: translate(-40px, 15px)
+			+sm
+				transform: translate(-20px, 5px)
+		.gm-bundled-control-on-bottom
+			display: none
+		.gm-bundled-control ~ .gmnoprint
+			&:last-child
+				display: none
 		&-mask
 			pointer-events: none
 			background: transparent url('../img/map-mask.png') center center no-repeat

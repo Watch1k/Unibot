@@ -117,10 +117,16 @@
 				color: $color2
 				margin-left: 19px
 				+trs
+				svg
+					height: 20px
+					fill: $color2
+					+trs
 				+sm
 					top: -2px
 				.no-touch &:hover
 					color: $color4
+					svg
+						fill: $color4
 			.no-touch &-text:hover + &-icon
 				color: $color4
 		&-btn

@@ -12,7 +12,7 @@ import './components/Common';
 import './components/PublicAPI';
 /** Import page controllers */
 import { currentPage } from './modules/dev/helpers';
-import Contacts from './pages/contacts';
+import { ContactsAPI } from './pages/contacts';
 import Home from './pages/Home';
 
 /**
@@ -27,7 +27,7 @@ switch (currentPage) {
 		break;
 	
 	case 'contacts':
-		new Contacts;
+		ContactsAPI.init();
 		break;
 	
 	/** No page found */

@@ -15,35 +15,39 @@ if !footerOff
 				+e.callback-logo
 					img(src='static/img/logo-footer.png' alt='image')
 
-				+e.callback-container.container_md
-					+e.H3.callback-title Обратная связь
+				+e.callback-content
+					+e.callback-container.container_md
+						+e.H3.callback-title Обратная связь
 
-					+b.FORM.form_contacts.__callback-form(action='#')
-						+e.row_half
-							+e.row
-								+e.row_item.has-error
-									+e.INPUT.input_text(type='text' placeholder='Имя')
-									.help-block Ошибочка однако
-								+e.row_item
-									+e.INPUT.input_text(type='tel' placeholder='Телефон')
-									.help-block Ошибочка однако
-								+e.row_item
-									+e.INPUT.input_text(type='email' placeholder='E-mail')
-									.help-block Ошибочка однако
-							+e.row
-								+e.row_item._full-height
-									+e.TEXTAREA.textarea(placeholder='Комментарий')
-									.help-block Ошибочка однако
-						+e.row_simple
-							-btnClass = '_default __submit'
-							-btnText = 'Отправить'
-							-btnRemoveHref = true
-							-btnTag = 'button'
-							-
-								attributes = {
-									type: 'submit'
-								}
-							include ../components/btn
+						+b.FORM.form_contacts.__callback-form(action='#')
+							+e.row_half
+								+e.row
+									+e.row_item.has-error
+										+e.INPUT.input_text(type='text' placeholder='Имя')
+										.help-block Ошибочка однако
+									+e.row_item
+										+e.INPUT.input_text(type='tel' placeholder='Телефон')
+										.help-block Ошибочка однако
+									+e.row_item
+										+e.INPUT.input_text(type='email' placeholder='E-mail')
+										.help-block Ошибочка однако
+								+e.row
+									+e.row_item._full-height
+										+e.TEXTAREA.textarea(placeholder='Комментарий')
+										.help-block Ошибочка однако
+							+e.row_simple
+								-btnClass = '_default __submit'
+								-btnText = 'Отправить'
+								-btnRemoveHref = true
+								-btnTag = 'button'
+								-
+									attributes = {
+										type: 'submit'
+									}
+								include ../components/btn
+				+e.callback-content-show
+					+e.container.container_md
+						p Спасибо!
 
 			+e.container.container
 				+e.bot

@@ -1,3 +1,4 @@
+import { ContactsAPI } from '../pages/contacts';
 import { ModalAPI } from './modal';
 
 export class PublicAPI {
@@ -5,6 +6,10 @@ export class PublicAPI {
 		return {
 			success: (id) => ModalAPI.initTy(id)
 		};
+	}
+	
+	static ContactsSuccess() {
+		ContactsAPI.initTy();
 	}
 }
 
