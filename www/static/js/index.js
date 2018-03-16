@@ -46286,8 +46286,11 @@ var HeaderAPI = exports.HeaderAPI = new Header();
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+exports.ModalAPI = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _gsap = __webpack_require__(40);
 
 var _MODALit = __webpack_require__(439);
 
@@ -46346,12 +46349,18 @@ var Modal = function () {
 				});
 			});
 		}
+	}, {
+		key: 'initTy',
+		value: function initTy(id) {
+			var modalContainer = document.getElementById(id);
+			new _gsap.TimelineMax().to(modalContainer.querySelector('.content'), 0.5, { autoAlpha: 0 }).to(modalContainer.querySelector('.js-modal-ty'), 0.5, { autoAlpha: 1 });
+		}
 	}]);
 
 	return Modal;
 }();
 
-exports.default = new Modal();
+var ModalAPI = exports.ModalAPI = new Modal();
 
 /***/ }),
 /* 439 */
@@ -46547,14 +46556,34 @@ var preloader = exports.preloader = new Preloader();
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
+exports.PublicAPI = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _modal = __webpack_require__(438);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var PublicAPI = exports.PublicAPI = function PublicAPI() {
-  _classCallCheck(this, PublicAPI);
-};
+var PublicAPI = exports.PublicAPI = function () {
+	function PublicAPI() {
+		_classCallCheck(this, PublicAPI);
+	}
+
+	_createClass(PublicAPI, null, [{
+		key: 'Modal',
+		get: function get() {
+			return {
+				success: function success(id) {
+					return _modal.ModalAPI.initTy(id);
+				}
+			};
+		}
+	}]);
+
+	return PublicAPI;
+}();
 
 /** Expose Public API */
 
@@ -47349,7 +47378,7 @@ var HomeExample = function () {
 		this.sliderCounterCurrent = this.container.querySelector('.example__slider-counter-current');
 		this.sliderCounterTotal = this.container.querySelector('.example__slider-counter-total');
 		this.chat = this.container.querySelector('.example__slider-chat');
-		this.chatText = this.container.querySelector('.example__slider-chat-text');
+		this.chatText = [].concat(_toConsumableArray(this.container.querySelectorAll('.example__slider-chat-text')));
 		this.chatIcon = [].concat(_toConsumableArray(this.container.querySelectorAll('.example__slider-chat-icon')));
 
 		this.init();
@@ -47419,16 +47448,14 @@ var HomeExample = function () {
 	}, {
 		key: 'initChat',
 		value: function initChat() {
-			var _this2 = this;
-
 			this.chatIcon.forEach(function (icon) {
 				icon.addEventListener('mouseenter', function () {
-					_this2.chatText.classList.add(_helpers.css.active);
+					icon.parentElement.children[0].classList.add(_helpers.css.active);
 				});
 			});
 			this.chatIcon.forEach(function (icon) {
 				icon.addEventListener('mouseleave', function () {
-					_this2.chatText.classList.remove(_helpers.css.active);
+					icon.parentElement.children[0].classList.remove(_helpers.css.active);
 				});
 			});
 		}

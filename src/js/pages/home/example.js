@@ -11,7 +11,7 @@ export default class HomeExample {
 		this.sliderCounterCurrent = this.container.querySelector('.example__slider-counter-current');
 		this.sliderCounterTotal = this.container.querySelector('.example__slider-counter-total');
 		this.chat = this.container.querySelector('.example__slider-chat');
-		this.chatText = this.container.querySelector('.example__slider-chat-text');
+		this.chatText = [...this.container.querySelectorAll('.example__slider-chat-text')];
 		this.chatIcon = [...this.container.querySelectorAll('.example__slider-chat-icon')];
 		
 		this.init();
@@ -86,12 +86,12 @@ export default class HomeExample {
 	initChat() {
 		this.chatIcon.forEach(icon => {
 			icon.addEventListener('mouseenter', () => {
-				this.chatText.classList.add(css.active);
+				icon.parentElement.children[0].classList.add(css.active);
 			});
 		});
 		this.chatIcon.forEach(icon => {
 			icon.addEventListener('mouseleave', () => {
-				this.chatText.classList.remove(css.active);
+				icon.parentElement.children[0].classList.remove(css.active);
 			});
 		});
 	}

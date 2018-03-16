@@ -16,7 +16,8 @@
 			padding: 80px 20px 0
 			background-image: linear-gradient(-191deg, #1e14a8 0%, $color3 100%)
 	
-	.content
+	.content,
+	.content-show
 		padding: 0 0 45px 0
 		overflow: auto
 		+sm
@@ -24,6 +25,18 @@
 			margin-left: auto
 			margin-right: auto
 			padding-bottom: 120px
+	.content-show
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: 0
+		visibility: hidden
+		display: flex
+		align-items: center
+		justify-content: center
+		+h2
 	
 	&__close
 		position: absolute

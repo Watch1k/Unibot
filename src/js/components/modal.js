@@ -1,3 +1,4 @@
+import { TimelineMax } from 'gsap';
 import MODALit from '../modules/dep/MODALit.min';
 import { css, Resp } from '../modules/dev/helpers';
 
@@ -40,6 +41,13 @@ class Modal {
 			});
 		});
 	}
+	
+	initTy(id) {
+		const modalContainer = document.getElementById(id);
+		new TimelineMax()
+			.to(modalContainer.querySelector('.content'), 0.5, { autoAlpha: 0 })
+			.to(modalContainer.querySelector('.js-modal-ty'), 0.5, { autoAlpha: 1 });
+	}
 }
 
-export default new Modal();
+export const ModalAPI = new Modal();
