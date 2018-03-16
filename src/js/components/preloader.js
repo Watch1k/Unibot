@@ -1,5 +1,5 @@
 import { TimelineMax, TweenMax } from 'gsap';
-import { css, detectIE, Resp } from '../modules/dev/helpers';
+import { css, currentPage, detectIE, Resp } from '../modules/dev/helpers';
 
 class Preloader {
 	constructor() {
@@ -19,34 +19,42 @@ class Preloader {
 	
 	animPreloader() {
 		this.resolve = new Promise(resolve => {
-			window.addEventListener('load', () => {
-				const tl = new TimelineMax();
-				
-				if (Resp.isDesk) {
-					tl
-						.add(() => {
-							this.container.classList.add(css.start);
-						}, 0)
-						.add(() => {
-							this.container.classList.add(css.end);
-							if (detectIE()) {
-								this.container.classList.add('hide-ie');
-							}
-							resolve();
-						}, 1)
-						.add(() => {
-							this.container.classList.add(css.hidden);
-						}, 2);
-				} else {
-					tl
-						.add(() => {
-							resolve();
-						})
-						.to(this.container, 0.5, {
-							autoAlpha: 0
-						}, '+=0.1');
-				}
-			});
+			if (currentPage === 'home') {
+				window.addEventListener('load', () => {
+					const tl = new TimelineMax();
+					
+					if (Resp.isDesk) {
+						tl
+							.add(() => {
+								this.container.classList.add(css.start);
+							}, 0)
+							.add(() => {
+								this.container.classList.add(css.end);
+								if (detectIE()) {
+									this.container.classList.add('hide-ie');
+								}
+								resolve();
+							}, 1)
+							.add(() => {
+								this.container.classList.add(css.hidden);
+							}, 2);
+					} else {
+						tl
+							.add(() => {
+								resolve();
+							})
+							.to(this.container, 0.5, {
+								autoAlpha: 0
+							}, '+=0.1');
+					}
+				});
+			} else {
+				resolve();
+				TweenMax.to(this.container, 0.5, {
+					autoAlpha: 0,
+					delay: 0.1
+				});
+			}
 		});
 	}
 	

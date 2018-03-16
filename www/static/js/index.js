@@ -46578,29 +46578,37 @@ var Preloader = function () {
 			var _this = this;
 
 			this.resolve = new Promise(function (resolve) {
-				window.addEventListener('load', function () {
-					var tl = new _gsap.TimelineMax();
+				if (_helpers.currentPage === 'home') {
+					window.addEventListener('load', function () {
+						var tl = new _gsap.TimelineMax();
 
-					if (_helpers.Resp.isDesk) {
-						tl.add(function () {
-							_this.container.classList.add(_helpers.css.start);
-						}, 0).add(function () {
-							_this.container.classList.add(_helpers.css.end);
-							if ((0, _helpers.detectIE)()) {
-								_this.container.classList.add('hide-ie');
-							}
-							resolve();
-						}, 1).add(function () {
-							_this.container.classList.add(_helpers.css.hidden);
-						}, 2);
-					} else {
-						tl.add(function () {
-							resolve();
-						}).to(_this.container, 0.5, {
-							autoAlpha: 0
-						}, '+=0.1');
-					}
-				});
+						if (_helpers.Resp.isDesk) {
+							tl.add(function () {
+								_this.container.classList.add(_helpers.css.start);
+							}, 0).add(function () {
+								_this.container.classList.add(_helpers.css.end);
+								if ((0, _helpers.detectIE)()) {
+									_this.container.classList.add('hide-ie');
+								}
+								resolve();
+							}, 1).add(function () {
+								_this.container.classList.add(_helpers.css.hidden);
+							}, 2);
+						} else {
+							tl.add(function () {
+								resolve();
+							}).to(_this.container, 0.5, {
+								autoAlpha: 0
+							}, '+=0.1');
+						}
+					});
+				} else {
+					resolve();
+					_gsap.TweenMax.to(_this.container, 0.5, {
+						autoAlpha: 0,
+						delay: 0.1
+					});
+				}
 			});
 		}
 	}, {
