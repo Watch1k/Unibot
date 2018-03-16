@@ -1,4 +1,4 @@
-import { TimelineMax } from 'gsap';
+import { TweenMax, TimelineMax } from 'gsap';
 import MODALit from '../modules/dep/MODALit.min';
 import { css, Resp } from '../modules/dev/helpers';
 
@@ -44,9 +44,24 @@ class Modal {
 	
 	initTy(id) {
 		const modalContainer = document.getElementById(id);
-		new TimelineMax()
-			.to(modalContainer.querySelector('.content'), 0.5, { autoAlpha: 0 })
-			.to(modalContainer.querySelector('.js-modal-ty'), 0.5, { autoAlpha: 1 });
+		const content = modalContainer.querySelector('.content');
+		const contentShow = modalContainer.querySelector('.content-show');
+		const close = modalContainer.querySelector('.modal__close');
+		new TimelineMax({
+			onComplete() {
+				new TimelineMax()
+					.add(() => {
+						close.click();
+					}, 2)
+					.set(contentShow, { autoAlpha: 0 }, 2.5)
+					.set(content, { autoAlpha: 1 }, 2.5)
+					.add(() => {
+						content.querySelector('.form').reset();
+					}, 2.5);
+			}
+		})
+			.to(content, 0.5, { autoAlpha: 0 })
+			.to(contentShow, 0.5, { autoAlpha: 1 });
 	}
 }
 
