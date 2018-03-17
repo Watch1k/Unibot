@@ -14,6 +14,7 @@ import './components/PublicAPI';
 import { currentPage } from './modules/dev/helpers';
 import { ContactsAPI } from './pages/contacts';
 import Home from './pages/Home';
+import Blog from './pages/blog';
 
 /**
  * Run appropriate scripts for each page.
@@ -28,6 +29,10 @@ switch (currentPage) {
 	
 	case 'contacts':
 		ContactsAPI.init();
+		break;
+	
+	case 'blog':
+		new Blog;
 		break;
 	
 	/** No page found */

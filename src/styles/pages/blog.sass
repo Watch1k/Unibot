@@ -1,0 +1,26 @@
+.blog
+	.card__title
+		line-height: 28px
+	
+	&__title
+		+h2
+		
+	&__list
+		display: flex
+		margin: 55px -25px 0
+		flex-wrap: wrap
+		+sm
+			display: block
+			margin: 21px 0 0
+		&-item
+			display: flex
+			flex: 1 1 0
+			padding: 0 25px
+			+sm
+				padding: 0
+			&:first-child
+				flex-basis: 100%
+				width: 100%
+			//&:nth-child(2) ~ &
+				+only-tab
+					display: none

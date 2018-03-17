@@ -44,7 +44,8 @@ class Preloader {
 								resolve();
 							})
 							.to(this.container, 0.5, {
-								autoAlpha: 0
+								autoAlpha: 0,
+								delay: 0.35
 							}, '+=0.1');
 					}
 				});

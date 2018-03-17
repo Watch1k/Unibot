@@ -1,9 +1,12 @@
 .card
+	$parent: &
 	position: relative
 	padding-bottom: 44px
 	display: block
 	+sm
 		padding-bottom: 0
+	&_large
+		+clr
 	
 	&__image
 		position: relative
@@ -12,6 +15,11 @@
 		overflow: hidden
 		+cover-img
 		+gpu
+		#{$parent}_large &
+			float: left
+			margin-right: 30px
+			width: 399.5px
+			height: 293px
 		img
 			position: relative
 		+sm
@@ -47,6 +55,8 @@
 			margin-top: 16px
 			padding-bottom: 0
 			color: $color2
+		#{$parent}_large &
+			margin-top: 0
 		
 	&__text
 		+sm
