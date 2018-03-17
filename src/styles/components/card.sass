@@ -5,10 +5,18 @@
 	display: block
 	+sm
 		padding-bottom: 0
+		height: auto
+	&_hash
+		padding-bottom: 0
 	&_large
+		height: auto
+		padding-bottom: 29px
 		+clr
+		+sm
+			padding-bottom: 0
 	
 	&__image
+		display: block
 		position: relative
 		width: 299.5px
 		height: 219px
@@ -20,6 +28,14 @@
 			margin-right: 30px
 			width: 399.5px
 			height: 293px
+			+md
+				width: 299.5px
+				height: 219px
+			+sm
+				float: none
+				margin-right: 0
+				width: 280px
+				height: 203px
 		img
 			position: relative
 		+sm
@@ -47,21 +63,69 @@
 			+gpu
 			
 	&__title
+		pointer-events: none
 		margin-top: 38px
-		padding-bottom: 17px
+		padding-bottom: 12px
 		+h3
+		line-height: 28px
 		+trs
 		+sm
 			margin-top: 16px
 			padding-bottom: 0
 			color: $color2
+		.no-touch &:hover
+			color: $color4
+		a
+			pointer-events: auto
+			display: block
 		#{$parent}_large &
 			margin-top: 0
+			padding-bottom: 23px
+			+sm
+				margin-top: 16px
+				padding-bottom: 0
 		
 	&__text
+		position: relative
 		+sm
 			display: none
+		#{$parent}_large &
+			margin-left: 430px
+			+md
+				margin-left: 330px
+			+sm
+				margin-left: 0
+		p
+			position: absolute
+			bottom: 0
+			#{$parent}_large &
+				position: relative
+				bottom: auto
 		
+	&__hash
+		margin-top: 31px
+		padding-right: 70px
+		+clr
+		+sm
+			margin-top: 11px
+			padding-right: 0
+		#{$parent}_large &
+			margin-left: 430px
+			+md
+				margin-left: 330px
+			+sm
+				margin-left: 0
+		a
+			float: left
+			margin-right: 10px
+			+f('MullerBold',12,20,0)
+			color: $color4
+			opacity: 0.3
+			text-transform: uppercase
+			+trs
+			.no-touch &:hover
+				opacity: 1
+	
 	&__more
 		position: absolute
 		bottom: 0
@@ -76,6 +140,11 @@
 		justify-content: space-between
 		+sm
 			display: none
+		#{$parent}_hash &
+			margin-top: 17px
+			bottom: auto
+		#{$parent}_large &
+			bottom: auto
 		&-dot
 			width: 4px
 			height: 4px
@@ -93,12 +162,13 @@
 			border: 2px solid $color5
 			+trs
 			
-	.no-touch &:hover &__title
+	.no-touch &__image:hover ~ &__title
 		color: $color4
 	.no-touch &:hover &__more-dot
 		background-color: $color8
-	.no-touch &:hover &__more-circle
+	.no-touch &__more:hover &__more-circle,
+	.no-touch &__image:hover ~ &__more &__more-circle,
+	.no-touch &__title:hover ~ &__more &__more-circle
 			transform: translateX(-18px)
 			border-color: $color8
-	
 		
