@@ -46614,7 +46614,7 @@ var Preloader = function () {
 					});
 				} else {
 					resolve();
-					_gsap.TweenMax.to(_this.container, 0.5, {
+					_gsap.TweenMax.to(_this.container, 0.25, {
 						autoAlpha: 0,
 						delay: 0.1
 					});
@@ -46631,7 +46631,11 @@ var Preloader = function () {
 			tl.add(function () {
 				if (header) {
 					_gsap.TweenMax.set(header, { alpha: 0 });
-					_gsap.TweenMax.to(header, 1, { alpha: 1, delay: _helpers.Resp.isDesk ? 0.6 : 0.15 });
+					if (_helpers.currentPage === 'home') {
+						_gsap.TweenMax.to(header, 1, { alpha: 1, delay: _helpers.Resp.isDesk ? 0.6 : 0.15 });
+					} else {
+						_gsap.TweenMax.to(header, 0.5, { alpha: 1 });
+					}
 				}
 			}).add(function () {
 				if (screen) {

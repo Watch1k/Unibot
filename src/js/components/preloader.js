@@ -51,7 +51,7 @@ class Preloader {
 				});
 			} else {
 				resolve();
-				TweenMax.to(this.container, 0.5, {
+				TweenMax.to(this.container, 0.25, {
 					autoAlpha: 0,
 					delay: 0.1
 				});
@@ -68,7 +68,11 @@ class Preloader {
 			.add(() => {
 				if (header) {
 					TweenMax.set(header, { alpha: 0 });
-					TweenMax.to(header, 1, { alpha: 1, delay: Resp.isDesk ? 0.6 : 0.15 });
+					if (currentPage === 'home') {
+						TweenMax.to(header, 1, { alpha: 1, delay: Resp.isDesk ? 0.6 : 0.15 });
+					} else {
+						TweenMax.to(header, 0.5, { alpha: 1 });
+					}
 				}
 			})
 			.add(() => {
