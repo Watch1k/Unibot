@@ -12,9 +12,10 @@ import './components/Common';
 import './components/PublicAPI';
 /** Import page controllers */
 import { currentPage } from './modules/dev/helpers';
+import Article from './pages/article';
+import Blog from './pages/blog';
 import { ContactsAPI } from './pages/contacts';
 import Home from './pages/Home';
-import Blog from './pages/blog';
 
 /**
  * Run appropriate scripts for each page.
@@ -33,6 +34,10 @@ switch (currentPage) {
 	
 	case 'blog':
 		new Blog;
+		break;
+	
+	case 'article':
+		new Article;
 		break;
 	
 	/** No page found */

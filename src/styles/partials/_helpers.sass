@@ -72,23 +72,31 @@
 		font-size: 22px
 		line-height: 28px
 		letter-spacing: 0.04em
+h1
+	+h1
 	
 =h2
 	+f('Gilroy-Bold',35,36,0)
 	+sm
 		font-size: 26px
 		line-height: 27px
+h2
+	+h2
 	
 =h3
 	+f('Gilroy-Bold',26,30,0)
 	+sm
 		font-size: 20px
 		line-height: 24px
+h3
+	+h3
 	
 =h4
 	+f('Gilroy-Bold',20,30,0)
 	+sm
 		font-size: 16px
+h4
+	+h4
 
 =paragraph-text
 	+f('MullerRegular',18,24,0)
@@ -193,4 +201,119 @@
 			span
 				transform: translateX(-18px)
 				border-color: $color8
+				
+/* ===================================
+	 article
+	 =================================== */
+.article
+	> * + *
+		margin-top: 32px
+		+md
+			margin-top: 27px
+		+sm
+			margin-top: 20px
+	> ol + *,
+	> ul + *,
+	> * + ul,
+	> * + ol
+		margin-top: 16px
+		+sm
+			margin-top: 12px
+	> h2 + *,
+	> h3 + *
+		margin-top: 27px
+		+sm
+			margin-top: 17px
+	> * + img
+		margin-top: 35px
+		+sm
+			margin-top: 25px
+	> img + *
+		margin-top: 30px
+		+sm
+			margin-top: 20px
+	> * + h2,
+	> * + h3
+		margin-top: 65px!important
+		+md
+			margin-top: 55px!important
+	blockquote
+		position: relative
+		margin-top: 47px
+		margin-bottom: 0
+		padding-left: 100px
+		max-width: 960px
+		font-family: 'MullerRegularItalic', Arial, sans-serif
+		+sm
+			padding-left: 40px
+		&:before
+			content: ''
+			position: absolute
+			top: 6px
+			left: 40px
+			bottom: 0
+			width: 4px
+			background: transparent url('../img/list-decor.svg') center top repeat-y
+			+sm
+				left: 0
+		+md
+			margin-top: 37px
+		+sm
+			margin-top: 27px
+	blockquote + *
+		margin-top: 47px
+		+md
+			margin-top: 37px
+		+sm
+			margin-top: 27px
+	
+	p
+		+ p
+			margin-top: 32px
+			+md
+				margin-top: 27px
+			+sm
+				margin-top: 20px
+	
+	b
+		font-family: 'MullerBold', Arial, sans-serif
+		color: $color4
+		
+	a
+		font-family: 'MullerBold', Arial, sans-serif
+		color: $color4
+		text-decoration: underline
+		+trs
+		.no-touch &:hover
+			color: $color2
+			
+	+ul-list
+	+ol-list
+	
+	&__image
+		position: relative
+		display: table
+		width: 626px
+		+sm
+			width: 100%
+			max-width: 280px
+		img
+			width: 100%
+			max-width: 100%
+		&-mask
+			+ratio-in
+			fill: $color6
+			&:before
+				content: ''
+				+ratio-in
+				z-index: 1
+				pointer-events: none
+				background-image: linear-gradient(-27deg, #1312b9 0%, #1312b9 35%, $color3 69%, $color4 100%)
+				opacity: 0.5
+			svg
+				position: relative
+				z-index: 2
+				pointer-events: none
+				width: 100%
+				height: 100%
 	

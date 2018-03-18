@@ -1,0 +1,81 @@
+/* ===================================
+	 article-header
+	 =================================== */
+.article-header
+	padding-top: 48px
+	padding-bottom: 62px
+	position: relative
+	font-size: 24px
+	color: $color6
+	line-height: 32px
+	+md
+		font-size: 20px
+		line-height: 28px
+	+sm
+		padding-top: 18px
+		padding-bottom: 42px
+		font-size: 16px
+		line-height: 22px
+	&__bg
+		pointer-events: none
+		+ratio-in
+		z-index: 0
+		+cover-img
+		&:before
+			content: ''
+			pointer-events: none
+			+ratio-in
+			opacity: 0.5
+			background-image: linear-gradient(-45deg, $color4 0%, #1e14a8 100%)
+		&-mask
+			z-index: 1
+			bottom: -1px
+			left: -5px
+			right: -5px
+			+ratio(1280,537)
+			position: absolute
+			svg
+				+ratio-in
+				display: block
+				width: 100% !important
+				fill: $color6
+		
+	&__container
+		z-index: 1
+		
+	&__title
+		+f('Gilroy-Bold',50,55,0)
+		text-transform: none
+		max-width: 640px
+		+md
+			font-size: 40px
+			line-height: 45px
+		+sm
+			font-size: 25px
+			line-height: 30px
+		&:not(:last-child)
+			margin-bottom: 21px
+			+sm
+				margin-bottom: 11px
+		
+	p
+		max-width: 810px
+		
+/* ===================================
+	 article-content
+	 =================================== */
+.article-content
+	padding-top: 62px
+	padding-bottom: 38px
+	font-size: 24px
+	line-height: 32px
+	+md
+		font-size: 20px
+		line-height: 28px
+	+sm
+		padding-top: 42px
+		font-size: 16px
+		line-height: 22px
+	+md
+		font-size: 20px
+		line-height: 28px

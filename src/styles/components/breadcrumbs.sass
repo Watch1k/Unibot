@@ -1,25 +1,35 @@
 .breadcrumbs
+	position: relative
+	z-index: 2
 	margin-top: 34px
+	+f('MullerMedium',18,24,0)
 	&:not(:last-child)
 		margin-bottom: 21px
 	ul
 		display: flex
+		flex-wrap: wrap
 		li
 			position: relative
-			&:not(:first-child)
-				margin-left: 40px
+			&:not(:last-child)
+				margin-right: 40px
 				&:before
 					content: ''
 					position: absolute
 					bottom: 7px
-					left: -22px
+					right: -22px
 					width: 4px
 					height: 4px
 					border-radius: 50%
 					background-color: $color4
+					.is-article &
+						background-color: $color6
 			a
 				display: block
 				color: $color4
+				.is-article &
+					color: $color6
 				+trs
 				.no-touch &:hover
 					color: $color3
+				.no-touch.is-article &:hover
+					color: $color4

@@ -1,6 +1,29 @@
 if !footerOff
-	if footerContacts
-		+b.FOOTER.footer_contacts#footer(data-scroll-section)
+	if footerSub
+		+b.FOOTER.footer_sub#footer
+			+e.mobile-top.js-to-top
+				+i('mobile-top')
+
+			+e.round-sub-top
+				.
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 280">
+					<path d="M1280,0H0c0,0,319.8,66.7,639.7,66.7C959.8,66.7,1280,0,1280,0z"/>
+					</svg>
+
+			+e.container.container
+				+e.bot
+					+e.bot-logo(href='#!')
+						+e.bot-logo-img(src='static/img/logo.svg' alt='image')
+					+e.bot-right
+						-navList = ['Преимущества', 'Как это работает', 'Сферы деятельности', 'Как создаем', 'Кейсы', 'Блог', 'Контакты']
+						+e.NAV.bot-nav
+							ul
+								each el in navList
+									li: a(href='#!')= el
+
+				+e.P.copy Copyright  2018 Unibot. All rights reserved.
+	else if footerContacts
+		+b.FOOTER.footer_contacts#footer
 			+e.mobile-top.js-to-top
 				+i('mobile-top')
 

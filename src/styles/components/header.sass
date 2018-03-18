@@ -7,7 +7,7 @@
 	+f('MullerRegular',16,32,0)
 	color: $color6
 	$parent: &
-	.is-sub &
+	.is-sub:not(.is-article) &
 		+desk
 			color: $color7
 	+md
@@ -42,16 +42,16 @@
 			height: 100%
 			+trs
 			&:nth-child(1)
-				.is-sub &
+				.is-sub:not(.is-article) &
 					opacity: 0
 			&:nth-child(2)
 				position: absolute
 				top: 0
 				left: 0
 				opacity: 0
-				.is-sub &
+				.is-sub:not(.is-article) &
 					opacity: 1
-		.is-sub &.is-menu &-img,
+		.is-sub:not(.is-article) &.is-menu &-img,
 		#{$parent}.is-fixed &-img
 			&:nth-child(1)
 				opacity: 1
@@ -213,7 +213,7 @@
 		text-transform: uppercase
 		cursor: pointer
 		+trs
-		.is-sub &
+		.is-sub:not(.is-article) &
 			color: $color7
 			&.is-menu
 				color: $color6
@@ -284,7 +284,7 @@
 		top: 7px
 		z-index: 2
 		color: $color6
-		.is-sub &
+		.is-sub:not(.is-article) &
 			color: $color7
 		#{$parent}.is-fixed &
 			color: $color6

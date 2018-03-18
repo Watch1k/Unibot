@@ -1,0 +1,8 @@
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ viewBox='0 0 4 10'
+ width="4px" height="10px">
+<path fill-rule="evenodd"  fill="rgb(219, 40, 94)"
+ d="M2.000,0.000 C3.105,0.000 4.000,0.895 4.000,2.000 C4.000,3.105 3.105,4.000 2.000,4.000 C0.895,4.000 0.000,3.105 0.000,2.000 C0.000,0.895 0.895,0.000 2.000,0.000 Z"/>
+</svg>

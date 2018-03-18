@@ -11,6 +11,7 @@
 	+sm
 		padding-bottom: 46px
 		background-image: linear-gradient(to bottom, $color2 0%, $color4 100%)
+	
 	&__map-image
 		pointer-events: none
 		position: absolute
@@ -57,6 +58,19 @@
 			width: 100% !important
 			fill: $color6
 			
+	&__round-sub-top
+		z-index: 1
+		top: -1px
+		left: -5px
+		right: -5px
+		+ratio(1282,81)
+		position: absolute
+		svg
+			+ratio-in
+			display: block
+			width: 100% !important
+			fill: $color6
+			
 	&__container
 		padding-top: 71px
 		z-index: 2
@@ -64,6 +78,10 @@
 			padding-top: 49px
 	&_contacts &__container
 		padding-top: 16px
+	&_sub &__container
+		padding-top: 90px
+		+mac
+			padding-top: 52px
 	
 	&__mobile-top
 		display: none
@@ -289,9 +307,8 @@
 			height: 446px
 			+cover-img
 			+sm
-				top: auto
-				bottom: 0
-				transform: scale(0.5)
+				+sm
+					display: none
 		&-content
 			&-show
 				position: absolute

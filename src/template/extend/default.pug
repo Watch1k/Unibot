@@ -21,7 +21,7 @@ html(lang='ru')
 			link(rel='icon', href='static/favicon.ico')
 
 	block body
-		body(class= homePage ? '' : 'is-sub')
+		body(class= homePage ? '' : 'is-sub' class= articlePage ? 'is-article' : '')
 			// SVG
 			block svg
 				div.svg-container(style="position: absolute; width: 0; height: 0; overflow: hidden;")
