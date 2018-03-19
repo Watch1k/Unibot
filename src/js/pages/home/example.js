@@ -10,7 +10,7 @@ export default class HomeExample {
 		this.btn = this.container.querySelector('.example__slider-btn');
 		this.sliderCounterCurrent = this.container.querySelector('.example__slider-counter-current');
 		this.sliderCounterTotal = this.container.querySelector('.example__slider-counter-total');
-		this.chat = this.container.querySelector('.example__slider-chat');
+		this.chatName = '.example__slider-chat';
 		this.chatText = [...this.container.querySelectorAll('.example__slider-chat-text')];
 		this.chatIcon = [...this.container.querySelectorAll('.example__slider-chat-icon')];
 		
@@ -64,10 +64,15 @@ export default class HomeExample {
 		
 		if (state) TweenMax.set(this.btn, { y: Resp.isMobile ? height + heightLeft : height });
 		TweenMax.to(this.btn, 0.4, { y: Resp.isMobile ? height + heightLeft : height });
+		if (state && Resp.isMobile) {
+			this.container.querySelectorAll(this.chatName).forEach(item => {
+				TweenMax.set(item, { y: height + heightLeft });
+			});
+		}
 		if (Resp.isMobile) {
 			TweenMax.to(this.sliderCounterCurrent.parentNode, 0.4, { y: height + heightLeft });
 			TweenMax.to(this.container.querySelectorAll('button[data-controls]'), 0.4, { y: height + heightLeft });
-			TweenMax.to(this.chat, 0.4, { y: height + heightLeft });
+			TweenMax.set(this.container.querySelectorAll(this.chatName)[info.index], { y: height + heightLeft });
 		}
 	}
 	

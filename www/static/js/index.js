@@ -47557,7 +47557,7 @@ var HomeExample = function () {
 		this.btn = this.container.querySelector('.example__slider-btn');
 		this.sliderCounterCurrent = this.container.querySelector('.example__slider-counter-current');
 		this.sliderCounterTotal = this.container.querySelector('.example__slider-counter-total');
-		this.chat = this.container.querySelector('.example__slider-chat');
+		this.chatName = '.example__slider-chat';
 		this.chatText = [].concat(_toConsumableArray(this.container.querySelectorAll('.example__slider-chat-text')));
 		this.chatIcon = [].concat(_toConsumableArray(this.container.querySelectorAll('.example__slider-chat-icon')));
 
@@ -47612,10 +47612,15 @@ var HomeExample = function () {
 
 			if (state) _gsap.TweenMax.set(this.btn, { y: _helpers.Resp.isMobile ? height + heightLeft : height });
 			_gsap.TweenMax.to(this.btn, 0.4, { y: _helpers.Resp.isMobile ? height + heightLeft : height });
+			if (state && _helpers.Resp.isMobile) {
+				this.container.querySelectorAll(this.chatName).forEach(function (item) {
+					_gsap.TweenMax.set(item, { y: height + heightLeft });
+				});
+			}
 			if (_helpers.Resp.isMobile) {
 				_gsap.TweenMax.to(this.sliderCounterCurrent.parentNode, 0.4, { y: height + heightLeft });
 				_gsap.TweenMax.to(this.container.querySelectorAll('button[data-controls]'), 0.4, { y: height + heightLeft });
-				_gsap.TweenMax.to(this.chat, 0.4, { y: height + heightLeft });
+				_gsap.TweenMax.set(this.container.querySelectorAll(this.chatName)[info.index], { y: height + heightLeft });
 			}
 		}
 	}, {
