@@ -227,55 +227,81 @@
 			ul
 				position: absolute
 				top: 100%
-				padding-top: 10px
 				left: 0
 				opacity: 0
 				pointer-events: none
 				+trs
+				+md
+					right: 100%
+					left: auto
+					top: 0
+					display: flex
+					flex-direction: row-reverse
+				li
+					padding-top: 10px
+					+md
+						padding-top: 0
 				a
+					position: relative
+					display: block
 					transform: translateY(-10px)
 					+md
 						color: #a0a0a0
+						transform: translateX(10px)
+					&:before
+						pointer-events: none
+						content: ''
+						position: absolute
+						bottom: calc(100% + 8px)
+						left: calc(50% - 2px)
+						width: 4px
+						height: 4px
+						border-radius: 50%
+						background-color: $color8
+						opacity: 0
+						+trs
+						+md
+							bottom: auto
+							top: 16px
+							left: calc(100% + 2px)
 			a
 				display: block
 				position: relative
 				padding: 0 15px
+				+sm
+					padding: 0 7px
 				+trs
 				.no-touch &:hover
 					color: $color8
-			> li > a
-				&:before
-					pointer-events: none
-					content: ''
-					position: absolute
-					top: calc(100% - 3px)
-					left: calc(50% - 2px)
-					width: 4px
-					height: 4px
-					border-radius: 50%
-					background-color: $color8
-					opacity: 0
-					+trs
 			.no-touch &:hover
-				> li > a
+				ul > li > a
 					&:before
-						top: calc(100% + 2px)
+						bottom: calc(100% + 3px)
 						opacity: 1
+						+md
+							bottom: auto
+							left: calc(100% - 3px)
+						+sm
+							left: calc(100% - 2px)
 				ul
 					opacity: 1
 					pointer-events: auto
 					a
-						transform: translateY(0)
-		&.is-active > ul > li > a
-			&:before
-				top: calc(100% + 2px)
-				opacity: 1
+						transform: translateY(0) translateX(0)
+		&.is-active ul > li > a:before
+			bottom: calc(100% + 3px)
+			opacity: 1
+			+md
+				bottom: auto
+				left: calc(100% - 3px)
+			+sm
+				left: calc(100% - 2px)
 		&.is-active > ul
 			ul
 				opacity: 1
 				pointer-events: auto
 				a
-					transform: translateY(0)
+					transform: translateY(0) translateX(0)
 						
 	&__menu-btn
 		display: none
