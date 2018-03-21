@@ -43,10 +43,6 @@ block main
 					+e.image
 						img(src='static/img/content/loc-slider-1.jpg' alt='image')
 						+e.image-mask
-							.
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 626 508" preserveAspectRatio='none'>
-								<path d="M0,0v508h626V0H0z M625.8,218.6c-4.6,109.2-1,285.6-221,289.2c-220,3.6-384.4-31.1-402.8-157.5C-16.3,223.9,87.8-5.7,323.4,0.1C559.1,5.9,630.4,109.3,625.8,218.6z"/>
-								</svg>
 
 					p Боты ищут по запросу информацию, автоматизируют и упрощают определенные действия, уведомляют о публикациях в соцсетях, предоставляют услуги различных компаний и в конце концов просто развлекают.
 					p Возможности у ботов – индивидуальные.
@@ -56,3 +52,15 @@ block main
 						li <b>@weatherman_bot</b> показывает погоду в вашем городе
 						li <b>@Instasave_bot</b> сохраняет фото с Instagram и видео c <b>YouTube</b>, а <b>@tap2bot</b> и вовсе многофункциональный бот, умеющий и фильм на вечер подобрать и билеты на самолет найти.
 					blockquote Согласно Wikipedia, бот – это специальная программа, выполняющая автоматически и/или по заданному расписанию какие-либо действия через тот же интерфейс, что и обычный пользователь.
+
+				+e.share
+					+e.share-in
+						+e.P.share-text Поделитья статьей
+						+e.share-soc
+							-socList = ['fb', 'twitter', 'telegram']
+							each el in socList
+								+e.share-soc-icon-wrap
+									-socIconClass = '_default __share-soc-icon'
+									-socIcon = el
+									-socHref = true
+									include ../components/soc-icon

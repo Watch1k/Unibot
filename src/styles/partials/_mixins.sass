@@ -201,15 +201,13 @@ $browser-context: 16
 				content: ''
 				position: absolute
 				left: -22px
-				top: 18px
+				top: 13px
 				width: 4px
 				height: 4px
 				border-radius: 50%
 				background-color: $color4
-				+md
-					top: 15px
 				+sm
-					top: 11px
+					top: 9px
 				
 =ol-list
 	ol
@@ -221,20 +219,25 @@ $browser-context: 16
 			position: relative
 			&:before
 				position: absolute
-				top: 1px
+				top: -1px
 				left: -38px
 				counter-increment: list
 				content: counter(list)
-				+f('Gilroy-ExtraBold',20,32,0)
+				+f('Gilroy-ExtraBold',18,24,0)
 				color: $color4
+				+sm
+					font-size: 13px
+					line-height: 20px
 			&:after
 				content: ''
 				position: absolute
 				left: -13px
-				top: 20px
+				top: 13px
 				width: 4px
 				height: 4px
 				background-color: $color4
 				border-radius: 50%
+				+sm
+					top: 9px
 			&:not(:first-child)
 				margin-top: 16px
