@@ -219,6 +219,8 @@
 				color: $color6
 		#{$parent}.is-fixed &
 			color: $color6
+		+md
+			margin-right: -5px
 		+sm
 			+f('MullerMedium',14,32,0)
 			margin-top: -18px
@@ -262,14 +264,14 @@
 						+trs
 						+md
 							bottom: auto
-							top: 16px
+							top: 13px
 							left: calc(100% + 2px)
 			a
 				display: block
 				position: relative
 				padding: 0 15px
-				+sm
-					padding: 0 7px
+				+md
+					padding: 0 10px
 				+trs
 				.no-touch &:hover
 					color: $color8

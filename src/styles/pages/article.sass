@@ -63,8 +63,22 @@
 	+sm
 		padding-top: 42px
 	
+	&__hash
+		margin-top: 25px
+		+clr
+		a
+			float: left
+			margin-right: 10px
+			+f('MullerBold',12,20,0)
+			color: $color4
+			opacity: 0.3
+			text-transform: uppercase
+			+trs
+			.no-touch &:hover
+				opacity: 1
+	
 	&__share
-		margin-top: 40px
+		margin-top: 35px
 		text-align: center
 		&-in
 			display: inline-flex
@@ -95,46 +109,12 @@
 				margin-left: 12px
 			.icon
 				display: block
+				+trs
+				.no-touch &:hover
+					color: $color4
 			&-icon-wrap
 				position: relative
 				&:not(:first-child)
 					margin-left: 15px
 					+sm
 						margin-left: 5px
-				&:before,
-				&:after
-					pointer-events: none
-					content: ''
-					position: absolute
-					top: calc(100% + 5px)
-					left: calc(50% - 2px)
-					width: 4px
-					height: 4px
-					border-radius: 50%
-					background-color: $color8
-					opacity: 0
-					+trs
-				.no-touch &:hover
-					&:before
-						opacity: 1
-						left: calc(50% - 12px)
-					&:after
-						opacity: 1
-						left: calc(50% + 8px)
-			&-icon
-				&:before
-					pointer-events: none
-					content: ''
-					position: absolute
-					top: calc(100% + 5px)
-					left: calc(50% - 2px)
-					width: 4px
-					height: 4px
-					border-radius: 50%
-					background-color: $color8
-					opacity: 0
-					+trs
-				.no-touch &:hover
-					&:before
-						opacity: 1
-		
