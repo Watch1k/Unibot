@@ -1683,6 +1683,15 @@ var detectIE = exports.detectIE = function detectIE() {
 	return false;
 };
 
+/**
+ * @param email {String}
+ * @return {boolean}
+ */
+var validateEmail = exports.validateEmail = function validateEmail(email) {
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(String(email).toLowerCase());
+};
+
 /***/ }),
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -70313,10 +70322,13 @@ var Chat = function () {
 	}, {
 		key: 'animHuman',
 		value: function animHuman(text) {
+			var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
 			var _this = this;
 			var textContainer = document.createElement('div');
 			var human = this.contentChat.appendChild(this.divHuman.cloneNode(true));
 			var humanInner = human.children[0];
+			var mailState = (0, _helpers.validateEmail)(data.toString());
 
 			humanInner.appendChild(textContainer);
 			textContainer.innerHTML = text;
@@ -70336,7 +70348,15 @@ var Chat = function () {
 				immediateRender: false,
 				onComplete: function onComplete() {
 					setTimeout(function () {
-						_this.animBot(_this.eventTarget);
+						if (data) {
+							if (mailState) {
+								_this.animBot('submit', data);
+							} else {
+								_this.animBot('rejected');
+							}
+						} else {
+							_this.animBot(_this.eventTarget);
+						}
 					}, 750);
 				}
 			});
@@ -70376,7 +70396,12 @@ var Chat = function () {
 					phraseInner.appendChild(currentTextContainer);
 					_gsap.TweenMax.set(currentTextContainer, { alpha: 0 });
 					if (data) {
-						currentTextContainer.innerHTML = phraseArray[i].innerHTML + (' ' + data);
+						var lang = document.querySelector('html').lang;
+						if (lang === 'ru') {
+							currentTextContainer.innerHTML = phraseArray[i].innerHTML + (' ' + data);
+						} else {
+							currentTextContainer.innerHTML = phraseArray[i].innerHTML;
+						}
 					} else {
 						currentTextContainer.innerHTML = phraseArray[i].innerHTML;
 					}
@@ -70418,7 +70443,7 @@ var Chat = function () {
 				var data = form.querySelector('[type="email"]').value;
 
 				tl.to(_this4.btnContainer, 0.5, { alpha: 0 }).add(function () {
-					_this4.animBot('submit', data);
+					_this4.animHuman(data, data);
 				});
 			});
 		}

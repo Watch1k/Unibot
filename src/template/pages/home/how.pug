@@ -24,7 +24,7 @@
 				-btnClass = '_default __content-controls-btn'
 				-btnText = ''
 				include ../../components/btn
-			+e.FORM.content-controls-form(action='#')
+			+e.FORM.content-controls-form(action='#' novalidate)
 				.form-group
 					+e.INPUT.content-controls-form-input(type='email' placeholder='Введите ваш e-mail')
 					+e.BUTTON.content-controls-form-submit(type='submit')
@@ -45,6 +45,8 @@
 					p Ну что ты начинаешь, оставь свой e-mail. Я еду с вином.
 				div(data-bot='submit')
 					p Спасибо, заявка принята на указанную почту:
+				div(data-bot='rejected')
+					p Это не почта, бро!
 			+e.data-btn
 				div(data-btn='0')
 					p(data-btn-event-target='1') Лучше не бывает!

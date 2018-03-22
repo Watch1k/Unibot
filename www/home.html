@@ -426,7 +426,7 @@
                 </div>
               </a>
             </div>
-            <form class="chat__content-controls-form" action="#">
+            <form class="chat__content-controls-form" action="#" novalidate="novalidate">
               <div class="form-group">
                 <input class="chat__content-controls-form-input" type="email" placeholder="Введите ваш e-mail" />
                 <button class="chat__content-controls-form-submit" type="submit">
@@ -457,6 +457,9 @@
               </div>
               <div data-bot="submit">
                 <p>Спасибо, заявка принята на указанную почту:</p>
+              </div>
+              <div data-bot="rejected">
+                <p>Это не почта, бро!</p>
               </div>
             </div>
             <div class="chat__data-btn">

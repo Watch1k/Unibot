@@ -1,7 +1,7 @@
 import { TimelineMax, TweenMax } from 'gsap';
 import 'gsap/ScrollToPlugin';
 import PerfectScrollbar from 'perfect-scrollbar';
-import { css, Resp } from '../../modules/dev/helpers';
+import { css, Resp, validateEmail } from '../../modules/dev/helpers';
 
 class Chat {
 	constructor() {
@@ -91,11 +91,12 @@ class Chat {
 		}
 	}
 	
-	animHuman(text) {
+	animHuman(text, data = false) {
 		const _this = this;
 		const textContainer = document.createElement('div');
 		const human = this.contentChat.appendChild(this.divHuman.cloneNode(true));
 		const humanInner = human.children[0];
+		const mailState = validateEmail(data.toString());
 		
 		humanInner.appendChild(textContainer);
 		textContainer.innerHTML = text;
@@ -115,7 +116,15 @@ class Chat {
 			immediateRender: false,
 			onComplete() {
 				setTimeout(() => {
-					_this.animBot(_this.eventTarget);
+					if (data) {
+						if (mailState) {
+							_this.animBot('submit', data);
+						} else {
+							_this.animBot('rejected');
+						}
+					} else {
+						_this.animBot(_this.eventTarget);
+					}
 				}, 750);
 			}
 		});
@@ -154,7 +163,12 @@ class Chat {
 					phraseInner.appendChild(currentTextContainer);
 					TweenMax.set(currentTextContainer, { alpha: 0 });
 					if (data) {
-						currentTextContainer.innerHTML = phraseArray[i].innerHTML + ` ${data}`;
+						const lang = document.querySelector('html').lang;
+						if (lang === 'ru') {
+							currentTextContainer.innerHTML = phraseArray[i].innerHTML + ` ${data}`;
+						} else {
+							currentTextContainer.innerHTML = phraseArray[i].innerHTML;
+						}
 					} else {
 						currentTextContainer.innerHTML = phraseArray[i].innerHTML;
 					}
@@ -199,7 +213,7 @@ class Chat {
 			tl
 				.to(this.btnContainer, 0.5, { alpha: 0 })
 				.add(() => {
-					this.animBot('submit', data);
+					this.animHuman(data, data);
 				});
 		});
 	}
