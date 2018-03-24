@@ -162,16 +162,7 @@ class Chat {
 				.add(() => {
 					phraseInner.appendChild(currentTextContainer);
 					TweenMax.set(currentTextContainer, { alpha: 0 });
-					if (data) {
-						const lang = document.querySelector('html').lang;
-						if (lang === 'ru') {
-							currentTextContainer.innerHTML = phraseArray[i].innerHTML + ` ${data}`;
-						} else {
-							currentTextContainer.innerHTML = phraseArray[i].innerHTML;
-						}
-					} else {
-						currentTextContainer.innerHTML = phraseArray[i].innerHTML;
-					}
+					currentTextContainer.innerHTML = phraseArray[i].innerHTML;
 				})
 				.set(phraseInner, { width: 'auto', height: 'auto' })
 				.add(() => {
