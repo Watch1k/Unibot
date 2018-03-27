@@ -70246,6 +70246,7 @@ var Chat = function () {
 		this.divMail = this.container.querySelector('.chat__content-controls-form');
 
 		this.firstInitInd = true;
+		this.mailInit = false;
 
 		this.paddingBottom = _helpers.Resp.isMobile ? 180 : 120;
 		this.controlsMinHeight = _helpers.Resp.isMobile ? 38 : 83;
@@ -70395,16 +70396,7 @@ var Chat = function () {
 				tl.add(function () {
 					phraseInner.appendChild(currentTextContainer);
 					_gsap.TweenMax.set(currentTextContainer, { alpha: 0 });
-					if (data) {
-						var lang = document.querySelector('html').lang;
-						if (lang === 'ru') {
-							currentTextContainer.innerHTML = phraseArray[i].innerHTML + (' ' + data);
-						} else {
-							currentTextContainer.innerHTML = phraseArray[i].innerHTML;
-						}
-					} else {
-						currentTextContainer.innerHTML = phraseArray[i].innerHTML;
-					}
+					currentTextContainer.innerHTML = phraseArray[i].innerHTML;
 				}).set(phraseInner, { width: 'auto', height: 'auto' }).add(function () {
 					_gsap.TweenMax.to(_this.contentChat, 0.35, {
 						scrollTo: { y: _this.contentChat.scrollHeight - _this.contentChat.clientHeight, autoKill: false },
@@ -70421,6 +70413,7 @@ var Chat = function () {
 					if (i < phraseArray.length) {
 						genMsg.call(_this3, i);
 					} else {
+						if (targetIndex === 'rejected') _this3.eventTarget = 'rejected';
 						_this3.showButtons(_this3.eventTarget);
 					}
 				};
@@ -70431,26 +70424,32 @@ var Chat = function () {
 	}, {
 		key: 'mail',
 		value: function mail() {
-			var _this4 = this;
-
+			var _this = this;
 			var tl = new _gsap.TimelineMax();
 			var form = this.divMail;
+
 			this.btnContainer.appendChild(form);
-
 			tl.fromTo(form, 0.5, { y: 20 }, { alpha: 1, y: 0 });
-			form.addEventListener('submit', function (e) {
-				e.preventDefault();
-				var data = form.querySelector('[type="email"]').value;
 
-				tl.to(_this4.btnContainer, 0.5, { alpha: 0 }).add(function () {
-					_this4.animHuman(data, data);
-				});
-			});
+			if (!this.mailInit) {
+				var submit = function submit(e) {
+					e.preventDefault();
+					var data = form.querySelector('[type="email"]').value;
+
+					tl.to(_this.btnContainer, 0.5, { alpha: 0 }).add(function () {
+						_this.animHuman(data, data);
+					});
+				};
+
+				form.addEventListener('submit', submit);
+
+				this.mailInit = true;
+			}
 		}
 	}, {
 		key: 'showButtons',
 		value: function showButtons(targetIndex) {
-			var _this5 = this;
+			var _this4 = this;
 
 			this.moveBtns();
 
@@ -70460,8 +70459,14 @@ var Chat = function () {
 				var tl = new _gsap.TimelineMax();
 				var btnArray = this.dataBtnContainer.querySelector('[data-btn=\'' + targetIndex + '\']').children;
 
+				if (targetIndex === 'rejected') {
+					this.btnContainer.removeChild(this.btnContainer.firstChild);
+					this.divMail.reset();
+					tl.set(this.btnContainer, { alpha: 1 });
+				}
+
 				var _loop = function _loop(i, len) {
-					var btn = _this5.btnContainer.appendChild(_this5.divBtn.cloneNode(true));
+					var btn = _this4.btnContainer.appendChild(_this4.divBtn.cloneNode(true));
 					btn.querySelector('.btn__text').innerHTML = btnArray[i].innerHTML;
 					btn.setAttribute('data-btn-event-target', btnArray[i].getAttribute('data-btn-event-target'));
 
@@ -70481,8 +70486,8 @@ var Chat = function () {
 						}, 0).to(btn, 0.20, {
 							alpha: 0
 						}, '-=0.20').add(function () {
-							_this5.eventTarget = btn.getAttribute('data-btn-event-target');
-							_this5.animHuman(btn.querySelector('.btn__text').innerHTML);
+							_this4.eventTarget = btn.getAttribute('data-btn-event-target');
+							_this4.animHuman(btn.querySelector('.btn__text').innerHTML);
 						}, 0).to(siblingsBtn, 0.1, { alpha: 0, y: 10 }, 0).add(function () {
 							[].concat(_toConsumableArray(btn.parentElement.children)).forEach(function (el) {
 								return el.remove();
@@ -70524,7 +70529,7 @@ var Chat = function () {
 	}, {
 		key: 'openChat',
 		value: function openChat() {
-			var _this6 = this;
+			var _this5 = this;
 
 			var offsetTop = _helpers.Resp.isDesk ? 50 : 150;
 
@@ -70543,7 +70548,7 @@ var Chat = function () {
 
 			if (this.firstInitInd) {
 				tl.add(function () {
-					return _this6.initChat();
+					return _this5.initChat();
 				}, '-=0.5');
 				this.firstInitInd = false;
 			}

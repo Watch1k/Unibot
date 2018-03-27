@@ -25,6 +25,7 @@ class Chat {
 		this.divMail = this.container.querySelector('.chat__content-controls-form');
 		
 		this.firstInitInd = true;
+		this.mailInit = false;
 		
 		this.paddingBottom = Resp.isMobile ? 180 : 120;
 		this.controlsMinHeight = Resp.isMobile ? 38 : 83;
@@ -183,6 +184,7 @@ class Chat {
 				if (i < phraseArray.length) {
 					this::genMsg(i);
 				} else {
+					if (targetIndex === 'rejected') this.eventTarget = 'rejected';
 					this.showButtons(this.eventTarget);
 				}
 			};
@@ -192,21 +194,29 @@ class Chat {
 	}
 	
 	mail() {
+		const _this = this;
 		const tl = new TimelineMax();
 		const form = this.divMail;
-		this.btnContainer.appendChild(form);
 		
+		this.btnContainer.appendChild(form);
 		tl.fromTo(form, 0.5, { y: 20 }, { alpha: 1, y: 0 });
-		form.addEventListener('submit', (e) => {
-			e.preventDefault();
-			const data = form.querySelector('[type="email"]').value;
+		
+		if (!this.mailInit) {
+			form.addEventListener('submit', submit);
 			
-			tl
-				.to(this.btnContainer, 0.5, { alpha: 0 })
-				.add(() => {
-					this.animHuman(data, data);
-				});
-		});
+			function submit(e) {
+				e.preventDefault();
+				const data = form.querySelector('[type="email"]').value;
+				
+				tl
+					.to(_this.btnContainer, 0.5, { alpha: 0 })
+					.add(() => {
+						_this.animHuman(data, data);
+					});
+			}
+			
+			this.mailInit = true;
+		}
 	}
 	
 	showButtons(targetIndex) {
@@ -217,6 +227,12 @@ class Chat {
 		} else {
 			const tl = new TimelineMax();
 			const btnArray = this.dataBtnContainer.querySelector(`[data-btn='${targetIndex}']`).children;
+			
+			if (targetIndex === 'rejected') {
+				this.btnContainer.removeChild(this.btnContainer.firstChild);
+				this.divMail.reset();
+				tl.set(this.btnContainer, { alpha: 1 });
+			}
 			
 			for (let i = 0, len = btnArray.length; i < len; i++) {
 				const btn = this.btnContainer.appendChild(this.divBtn.cloneNode(true));
