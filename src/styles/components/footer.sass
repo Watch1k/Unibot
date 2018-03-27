@@ -298,6 +298,9 @@
 		display: flex
 		justify-content: center
 		+f('MullerRegular',16,32,0)
+		+sm
+			font-size: 12px
+			line-height: 24px
 		&-link
 			position: relative
 			color: rgba($color6, .5)
@@ -312,6 +315,8 @@
 					bottom: 10px
 					width: 2px
 					background-color: rgba($color6, .35)
+					+sm
+						bottom: 8px
 			.no-touch &:hover
 				color: $color6
 			
