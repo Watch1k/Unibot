@@ -294,6 +294,27 @@
 			font-size: 12px
 			line-height: 24px
 			
+	&__load
+		display: flex
+		justify-content: center
+		+f('MullerRegular',16,32,0)
+		&-link
+			position: relative
+			color: rgba($color6, .5)
+			&:not(:first-child)
+				margin-left: 15px
+				&:before
+					pointer-events: none
+					content: ''
+					position: absolute
+					top: 6px
+					left: -8px
+					bottom: 10px
+					width: 2px
+					background-color: rgba($color6, .35)
+			.no-touch &:hover
+				color: $color6
+			
 	// callback
 	&__callback
 		padding-top: 202px

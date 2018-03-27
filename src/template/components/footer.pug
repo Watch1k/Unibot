@@ -22,6 +22,10 @@ if !footerOff
 									li: a(href='#!')= el
 
 				+e.P.copy Copyright  2018 Unibot. All rights reserved.
+				+e.load
+					+e.load-link(href='#!') Terms
+					+e.load-link(href='#!') Privesy
+
 	else if footerContacts
 		+b.FOOTER.footer_contacts#footer
 			+e.mobile-top.js-to-top
@@ -84,6 +88,9 @@ if !footerOff
 									li: a(href='#!')= el
 
 				+e.P.copy Copyright  2018 Unibot. All rights reserved.
+				+e.load
+					+e.load-link(href='#!') Terms
+					+e.load-link(href='#!') Privesy
 
 	else
 		+b.FOOTER.footer#footer(data-scroll-section)
@@ -144,3 +151,6 @@ if !footerOff
 								li: a(href='home.html') Контакты
 
 				+e.P.copy Copyright  2018 Unibot. All rights reserved.
+				+e.load
+					+e.load-link(href='#!') Terms
+					+e.load-link(href='#!') Privesy
