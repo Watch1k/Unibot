@@ -132,6 +132,8 @@ class Chat {
 	}
 	
 	animBot(targetIndex, data = false) {
+		if (targetIndex === 'null') return;
+		
 		const _this = this;
 		const tl = new TimelineMax();
 		const phraseArray = this.dataBotContainer.querySelector(`[data-bot='${targetIndex}']`).children;
@@ -258,7 +260,7 @@ class Chat {
 							alpha: 0
 						}, '-=0.20')
 						.add(() => {
-							this.eventTarget = btn.getAttribute('data-btn-event-target');
+							this.eventTarget = btn.getAttribute('data-btn-event-target') || false;
 							this.animHuman(btn.querySelector('.btn__text').innerHTML);
 						}, 0)
 						.to(siblingsBtn, 0.1, { alpha: 0, y: 10 }, 0)

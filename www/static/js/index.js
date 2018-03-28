@@ -70367,6 +70367,8 @@ var Chat = function () {
 		value: function animBot(targetIndex) {
 			var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
+			if (targetIndex === 'null') return;
+
 			var _this = this;
 			var tl = new _gsap.TimelineMax();
 			var phraseArray = this.dataBotContainer.querySelector('[data-bot=\'' + targetIndex + '\']').children;
@@ -70486,7 +70488,7 @@ var Chat = function () {
 						}, 0).to(btn, 0.20, {
 							alpha: 0
 						}, '-=0.20').add(function () {
-							_this4.eventTarget = btn.getAttribute('data-btn-event-target');
+							_this4.eventTarget = btn.getAttribute('data-btn-event-target') || false;
 							_this4.animHuman(btn.querySelector('.btn__text').innerHTML);
 						}, 0).to(siblingsBtn, 0.1, { alpha: 0, y: 10 }, 0).add(function () {
 							[].concat(_toConsumableArray(btn.parentElement.children)).forEach(function (el) {
