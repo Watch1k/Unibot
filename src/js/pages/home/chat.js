@@ -187,7 +187,7 @@ class Chat {
 					this::genMsg(i);
 				} else {
 					if (targetIndex === 'rejected') this.eventTarget = 'rejected';
-					this.showButtons(this.eventTarget);
+					if (targetIndex !== 'stop') this.showButtons(this.eventTarget);
 				}
 			};
 		}

@@ -70416,7 +70416,7 @@ var Chat = function () {
 						genMsg.call(_this3, i);
 					} else {
 						if (targetIndex === 'rejected') _this3.eventTarget = 'rejected';
-						_this3.showButtons(_this3.eventTarget);
+						if (targetIndex !== 'stop') _this3.showButtons(_this3.eventTarget);
 					}
 				};
 			}

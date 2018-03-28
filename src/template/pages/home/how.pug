@@ -47,9 +47,11 @@
 					p Спасибо, заявка принята на указанную почту:
 				div(data-bot='rejected')
 					p Это не почта, бро!
+				div(data-bot='stop')
+					p lol stop it please
 			+e.data-btn
 				div(data-btn='rejected')
-					p Начало
+					p(data-btn-event-target='stop') Начало
 					p(data-btn-event-target='last') Почту
 				div(data-btn='0')
 					p(data-btn-event-target='1') Лучше не бывает!
