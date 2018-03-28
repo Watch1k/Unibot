@@ -47629,7 +47629,9 @@ var HomeExample = function () {
 			if (_helpers.Resp.isMobile) {
 				_gsap.TweenMax.to(this.sliderCounterCurrent.parentNode, 0.4, { y: height + heightLeft });
 				_gsap.TweenMax.to(this.container.querySelectorAll('button[data-controls]'), 0.4, { y: height + heightLeft });
-				_gsap.TweenMax.set(this.container.querySelectorAll(this.chatName)[info.index], { y: height + heightLeft });
+				if (info.slideItems[info.index].querySelector(this.chatName)) {
+					_gsap.TweenMax.set(info.slideItems[info.index].querySelector(this.chatName), { y: height + heightLeft });
+				}
 			}
 		}
 	}, {

@@ -72,7 +72,9 @@ export default class HomeExample {
 		if (Resp.isMobile) {
 			TweenMax.to(this.sliderCounterCurrent.parentNode, 0.4, { y: height + heightLeft });
 			TweenMax.to(this.container.querySelectorAll('button[data-controls]'), 0.4, { y: height + heightLeft });
-			TweenMax.set(this.container.querySelectorAll(this.chatName)[info.index], { y: height + heightLeft });
+			if (info.slideItems[info.index].querySelector(this.chatName)) {
+				TweenMax.set(info.slideItems[info.index].querySelector(this.chatName), { y: height + heightLeft });
+			}
 		}
 	}
 	
