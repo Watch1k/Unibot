@@ -13,7 +13,7 @@ import './components/PublicAPI';
 /** Import page controllers */
 import { currentPage } from './modules/dev/helpers';
 import Article from './pages/article';
-import Blog from './pages/blog';
+import { BlogAPI } from './pages/blog';
 import { ContactsAPI } from './pages/contacts';
 import Home from './pages/Home';
 
@@ -33,7 +33,7 @@ switch (currentPage) {
 		break;
 	
 	case 'blog':
-		new Blog;
+		BlogAPI.init();
 		break;
 	
 	case 'article':

@@ -1,6 +1,7 @@
 import { Resp } from '../modules/dev/helpers';
+import '../modules/dep/clamp';
 
-export default class Blog {
+class Blog {
 	constructor() {
 		this.container = document.querySelector('.blog');
 		if (!this.container) return;
@@ -22,7 +23,6 @@ export default class Blog {
 		
 		this.cards().forEach(card => {
 			const heightMax = card.classList.contains('card_large') ? Resp.isDesk ? 178 : 204 : 204;
-			console.log(heightMax);
 			const title = card.querySelector(this.cardTitleName);
 			const text = card.querySelector(this.cardTextName);
 			
@@ -35,3 +35,5 @@ export default class Blog {
 		});
 	}
 }
+
+export const BlogAPI = new Blog();

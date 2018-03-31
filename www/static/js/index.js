@@ -40533,8 +40533,6 @@ var _article2 = _interopRequireDefault(_article);
 
 var _blog = __webpack_require__(445);
 
-var _blog2 = _interopRequireDefault(_blog);
-
 var _contacts = __webpack_require__(173);
 
 var _Home = __webpack_require__(446);
@@ -40559,7 +40557,7 @@ switch (_helpers.currentPage) {
 		break;
 
 	case 'blog':
-		new _blog2.default();
+		_blog.BlogAPI.init();
 		break;
 
 	case 'article':
@@ -46681,6 +46679,8 @@ exports.PublicAPI = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _blog = __webpack_require__(445);
+
 var _contacts = __webpack_require__(173);
 
 var _modal = __webpack_require__(172);
@@ -46696,6 +46696,11 @@ var PublicAPI = exports.PublicAPI = function () {
 		key: 'ContactsSuccess',
 		value: function ContactsSuccess() {
 			_contacts.ContactsAPI.initTy();
+		}
+	}, {
+		key: 'refreshBlog',
+		value: function refreshBlog() {
+			_blog.BlogAPI.initClamp();
 		}
 	}, {
 		key: 'Modal',
@@ -46771,10 +46776,13 @@ exports.default = Article;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+exports.BlogAPI = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _helpers = __webpack_require__(12);
+
+__webpack_require__(588);
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
@@ -46813,7 +46821,6 @@ var Blog = function () {
 
 			this.cards().forEach(function (card) {
 				var heightMax = card.classList.contains('card_large') ? _helpers.Resp.isDesk ? 178 : 204 : 204;
-				console.log(heightMax);
 				var title = card.querySelector(_this2.cardTitleName);
 				var text = card.querySelector(_this2.cardTextName);
 
@@ -46830,7 +46837,7 @@ var Blog = function () {
 	return Blog;
 }();
 
-exports.default = Blog;
+var BlogAPI = exports.BlogAPI = new Blog();
 
 /***/ }),
 /* 446 */
