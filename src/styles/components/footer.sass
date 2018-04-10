@@ -306,8 +306,12 @@
 		&-link
 			position: relative
 			color: rgba($color6, .5)
+			text-align: right
+			+sm
+				line-height: 16px
 			&:not(:first-child)
 				margin-left: 15px
+				text-align: left
 				&:before
 					pointer-events: none
 					content: ''
@@ -318,7 +322,8 @@
 					width: 2px
 					background-color: rgba($color6, .35)
 					+sm
-						bottom: 8px
+						top: 2px
+						bottom: 4px
 			.no-touch &:hover
 				color: $color6
 			
